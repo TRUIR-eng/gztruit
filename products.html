@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -29,6 +29,7 @@
       --green: #00A650;
       --green-light: #92D050;
       --gold: #D4A843;
+      --green-light: #92D050;
       --bg: #F5F7FA;
       --white: #FFFFFF;
       --text: #1A1A1A;
@@ -91,14 +92,54 @@
     .page-hero {
       background: linear-gradient(135deg, #001f3f 0%, #003d6b 50%, #005A9C 100%);
       color: white;
-      padding: 3rem 1.5rem;
+      padding: 3.5rem 1.5rem 2.5rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-hero > * { position: relative; }
     
-    .page-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .page-hero p { opacity: 0.8; max-width: 600px; margin: 0 auto; }
+    .page-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .page-hero p { opacity: 0.85; max-width: 600px; margin: 0 auto 1.5rem; font-size: 1.05rem; }
     
     /* Search Section */
+        .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 0.3rem 1rem;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+    .hero-stat strong {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--green-light);
+    }
+    .hero-stat span {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      letter-spacing: 0.05em;
+    }
     .search-section {
       max-width: 1200px;
       margin: -1.5rem auto 1.5rem;
@@ -138,23 +179,41 @@
       opacity: 0.5;
     }
     
-    .category-dropdown {
+    .filter-row {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+    .filter-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .filter-label {
+      font-size: 0.7rem;
+      color: var(--text-gray);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .select-wrap {
       position: relative;
     }
-    .category-select {
+    .filter-select {
       appearance: none;
       -webkit-appearance: none;
-      padding: 0.6rem 2.5rem 0.6rem 1rem;
-      border: 2px solid var(--border);
+      padding: 0.55rem 2.2rem 0.55rem 0.85rem;
+      border: 1.5px solid var(--border);
       border-radius: 8px;
-      background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 0.8rem center;
-      font-size: 0.9rem;
+      background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23666' d='M5 7L1 2h8z'/%3E%3C/svg%3E") no-repeat right 0.7rem center;
+      font-size: 0.88rem;
       color: var(--text);
       cursor: pointer;
-      min-width: 260px;
+      min-width: 180px;
       transition: border-color 0.2s;
     }
-    .category-select:focus { outline: none; border-color: var(--blue); }
+    .filter-select:focus { outline: none; border-color: var(--blue); }
     
     .filter-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .filter-btn {
@@ -441,34 +500,56 @@
   
   <div class="page-hero">
     <div class="hero-badge">CE & ISO 认证 | 出口品质</div>
-    <h1 data-en="Products">涂料检测仪器产品中心</h1>
-    <p data-en="Browse and search our full range of coating testing instruments and laboratory equipment">专业生产粘度计、盐雾箱、冲击仪、色差仪、老化箱等检测仪器，全球客户信赖</p>
-  </div>
-  
-  <div class="search-section">
-    <div class="search-box">
-      <div class="search-input-wrap">
-        <span class="search-icon">🔍</span>
-        <input type="text" class="search-input" id="searchInput" 
-               placeholder="搜索产品名称、型号或规格..." 
-               data-en-placeholder="Search product name, model or specs..."
-               oninput="filterProducts()">
-      </div>
-      <div class="filter-group" id="filterGroup">
-        <div class="category-dropdown">
-          <select class="category-select" id="categorySelect" onchange="setCategory(this.value)">
-            <option value="all">全部 (All)</option>
-            <option value="lab">实验室通用仪器 | General Lab</option>
-            <option value="raw">原料性能检验 | Raw Material Testing</option>
-            <option value="film">成膜后检验 | Coating Testing</option>
-            <option value="grind">分散/搅拌/研磨 | Dispersion/Mixing</option>
-            <option value="aging">环境老化 | Environmental Aging</option>
-          </select>
-        </div>
-      </div>
-      <div class="results-count" id="resultsCount">共 0 个产品</div>
+    <h1>涂料检测仪器产品中心</h1>
+    <p>专业生产粘度计、盐雾箱、冲击仪、色差仪、老化箱等检测仪器，全球客户信赖</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>17+</strong><span>产品型号</span></div>
+      <div class="hero-stat"><strong>5</strong><span>产品大类</span></div>
+      <div class="hero-stat"><strong>20年</strong><span>制造经验</span></div>
     </div>
   </div>
+
+  </div>
+  
+    <div class="search-section">
+    <div class="search-box">
+      <div class="search-row">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="searchInput"
+                 placeholder="搜索产品名称、型号或规格..."
+                 data-en-placeholder="Search product name, model or specs..."
+                 oninput="filterProducts()">
+        </div>
+        <div class="filter-row">
+          <div class="filter-cell">
+            <label class="filter-label" id="catLabel">产品大类</label>
+            <div class="select-wrap">
+              <select class="filter-select" id="categorySelect" onchange="setCategory(this.value)">
+                <option value="all">全部</option>
+                <option value="lab">实验室通用仪器</option>
+                <option value="raw">原料性能检验</option>
+                <option value="film">成膜后检验</option>
+                <option value="grind">分散 / 搅拌 / 研磨</option>
+                <option value="aging">环境老化</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-cell" id="subcatCell" style="display:none;">
+            <label class="filter-label" id="subcatLabel">产品小类</label>
+            <div class="select-wrap">
+              <select class="filter-select" id="subcatSelect" onchange="setSubcat(this.value)">
+                <option value="all">全部</option>
+              </select>
+            </div>
+          </div>
+          <div class="results-count" id="resultsCount">共 17 个产品</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-container"></div>
   
   <div class="products-container">
     <div class="products-grid" id="productsGrid"></div>
@@ -482,7 +563,8 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <strong>腾瑞仪器 TRUIT</strong> — 专注仪器制造二十年
+        <strong>腾瑞仪器 TRUIT</strong>
+        <p>专注仪器制造二十年 | 出口品质 · CE/ISO认证</p>
       </div>
       <div class="footer-links">
         <a href="index.html">首页</a>
@@ -493,7 +575,7 @@
         📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com
       </div>
     </div>
-    <p style="margin-top:1rem; opacity: 0.6;">© 2024 腾瑞仪器（广州）有限公司 TRUIT Instruments (Guangzhou) Co., Ltd. All rights reserved.</p>
+    <p class="footer-copy">© 2024 腾瑞仪器（广州）有限公司 TRUIT Instruments (Guangzhou) Co., Ltd. All rights reserved.</p>
   </footer>
   
   <script>
@@ -501,7 +583,8 @@
     const products = [
       {
         model: "TR 1168/1",
-        image: "products/TR1168_1_electronic_stopwatch.png", name: { zh: "电子秒表", en: "Digital Stopwatch" },
+        image: "products/TR1168_1_electronic_stopwatch.png",
+        subcat: "stopwatch", name: { zh: "电子秒表", en: "Digital Stopwatch" },
         category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment" },
         specs: {
           zh: "显示：LCD大屏幕数字显示；计时精度：1/100秒；最大计时：59分59秒99；电源：纽扣电池；防水等级：生活防水；表壳：ABS工程塑料；尺寸：约Ø55×15mm；温度：-10℃~+45℃；执行标准：QB/T 2108-1995",
@@ -516,7 +599,8 @@
       },
       {
         model: "TR 1168/2",
-        image: "products/TR1168_2_mechanical_stopwatch.png", name: { zh: "机械秒表", en: "Mechanical Stopwatch" },
+        image: "products/TR1168_2_mechanical_stopwatch.png",
+        subcat: "stopwatch", name: { zh: "机械秒表", en: "Mechanical Stopwatch" },
         category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment" },
         specs: {
           zh: "最小刻度值：1/10s；分针：15秒/圈；秒针：30秒/圈；延续走时：6h；钻数：13钻；表壳：不锈钢；尺寸：Ø55×77.4×14mm；温度：-10℃~+45℃；执行标准：QB/T 153-2006",
@@ -531,7 +615,8 @@
       },
       {
         model: "TR 5202/F1",
-        image: "products/TR5202_F1_impact_tester.jpeg", name: { zh: "圆管冲击仪", en: "Pipe Impact Tester" },
+        image: "products/TR5202_F1_impact_tester.jpeg",
+        subcat: "impact", name: { zh: "圆管冲击仪", en: "Pipe Impact Tester" },
         category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
         specs: {
           zh: "落锤重量：13.3N（3磅）；冲头直径：15.9mm；管高：1.52m；模座直径：16.3mm；管径：Ø110-125mm；冲击深度：0-5mm可调；符合AS/NZS4158:2003+A1-2005、ASTMG14-04(2024)",
@@ -545,7 +630,8 @@
         pdfFiles: { en: "TR 5202_F1 冲击仪产品资料.pdf", zh: "TR 5202_F1 冲击仪产品资料.pdf" }
       },
       {
-        model: "TR 5202/F2", name: { zh: "厚工件冲击仪", en: "Thick Workpiece Impact Tester" },
+        model: "TR 5202/F2",
+        subcat: "impact", name: { zh: "厚工件冲击仪", en: "Thick Workpiece Impact Tester" },
         category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
         specs: {
           zh: "落锤重量：13.3N（3磅）；冲头直径：15.9mm；管高：1.52m；模座直径：16.3mm；工件厚度：最厚30mm；冲击深度：0-5mm可调；符合AS/NZS4158、ASTMG14标准",
@@ -559,7 +645,8 @@
         pdfFiles: { en: "TR 5202_F1 冲击仪产品资料.pdf", zh: "TR 5202_F1 冲击仪产品资料.pdf" }
       },
       {
-        model: "TR 1101-5&8", name: { zh: "数显旋转粘度计", en: "Digital Rotational Viscometer" },
+        model: "TR 1101-5&8",
+        subcat: "viscometer", name: { zh: "数显旋转粘度计", en: "Digital Rotational Viscometer" },
         category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing" },
         specs: {
           zh: "数显旋转粘度计，5号/8号转子设计，适用于不同粘度范围的流体测量",
@@ -573,7 +660,8 @@
         pdfFiles: {}
       },
       {
-        model: "TR 1123-1", name: { zh: "斯托默粘度计", en: "Stormer Viscometer" },
+        model: "TR 1123-1",
+        subcat: "viscometer", name: { zh: "斯托默粘度计", en: "Stormer Viscometer" },
         category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing" },
         specs: {
           zh: "斯托默粘度计，用于测量涂料、油墨等流体的粘度，符合GB/T标准",
@@ -586,7 +674,8 @@
         docFiles: { en: "TR 1123-1斯托默粘度计产品介绍.doc", zh: "TR 1123-1斯托默粘度计产品介绍.doc" }, pdfFiles: { en: "TR 1123-1S斯托默粘度计产品介绍.pdf", zh: "TR 1123-1S斯托默粘度计产品介绍.pdf" }
       },
       {
-        model: "TR 1001", name: { zh: "蔡恩杯（Zahn杯）", en: "Zahn Cup" },
+        model: "TR 1001",
+        subcat: "zahn", name: { zh: "蔡恩杯（Zahn杯）", en: "Zahn Cup" },
         category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing" },
         specs: {
           zh: "蔡恩杯（Zahn杯），用于测量涂料、油墨等流体的流出时间进而计算粘度",
@@ -599,7 +688,8 @@
         docFiles: { en: "TR 1001蔡恩杯.doc", zh: "TR 1001蔡恩杯.doc" }, pdfFiles: {}
       },
       {
-        model: "TR 5206", name: { zh: "落球冲击仪", en: "Ball Drop Impact Tester" },
+        model: "TR 5206",
+        subcat: "impact", name: { zh: "落球冲击仪", en: "Ball Drop Impact Tester" },
         category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
         specs: {
           zh: "落球冲击仪，用于测定涂层抵抗冲击的能力",
@@ -612,7 +702,8 @@
         docFiles: {}, pdfFiles: { en: "TR 5206 落球冲击仪产品资料.pdf", zh: "TR 5206 落球冲击仪产品资料.pdf" }
       },
       {
-        model: "TR 5310", name: { zh: "落砂耐磨试验仪", en: "Falling Sand Abrasion Tester" },
+        model: "TR 5310",
+        subcat: "abrasion", name: { zh: "落砂耐磨试验仪", en: "Falling Sand Abrasion Tester" },
         category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
         specs: {
           zh: "落砂耐磨试验仪，用于测定涂层耐磨性能，符合GB/T标准",
@@ -625,7 +716,8 @@
         docFiles: {}, pdfFiles: { en: "TR 5310 落砂耐磨试验仪产品资料.pdf", zh: "TR 5310 落砂耐磨试验仪产品资料.pdf" }
       },
       {
-        model: "TR 5311/1", name: { zh: "耐划痕测试仪", en: "Scratch Resistance Tester" },
+        model: "TR 5311/1",
+        subcat: "scratch", name: { zh: "耐划痕测试仪", en: "Scratch Resistance Tester" },
         category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
         specs: {
           zh: "耐划痕测试仪，用于测定涂层抵抗划痕的能力",
@@ -638,7 +730,8 @@
         docFiles: {}, pdfFiles: { en: "TR 5311_1 耐划痕测试仪产品资料.pdf", zh: "TR 5311_1 耐划痕测试仪产品资料.pdf" }
       },
       {
-        model: "TR 5402", name: { zh: "分光测色仪", en: "Spectrophotometer" },
+        model: "TR 5402",
+        subcat: "color", name: { zh: "分光测色仪", en: "Spectrophotometer" },
         category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
         specs: {
           zh: "分光测色仪，用于精确测量颜色和色差，适用于涂料、油墨、塑料等行业",
@@ -651,7 +744,8 @@
         docFiles: { en: "TR 5402 分光测色仪产品资料.doc", zh: "TR 5402 分光测色仪产品资料.doc" }, pdfFiles: { en: "TR 5402 分光测色仪产品资料.pdf", zh: "TR 5402 分光测色仪产品资料.pdf" }
       },
       {
-        model: "TR 5464-7", name: { zh: "涂层检测仪器", en: "Coating Testing Instrument" },
+        model: "TR 5464-7",
+        subcat: "color", name: { zh: "涂层检测仪器", en: "Coating Testing Instrument" },
         category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
         specs: {
           zh: "涂层检测仪器，符合相关检测标准，精度高，稳定性好",
@@ -664,7 +758,8 @@
         docFiles: {}, pdfFiles: { en: "TR 5464-7 产品资料.pdf", zh: "TR 5464-7 产品资料.pdf" }
       },
       {
-        model: "TR 2200", name: { zh: "防爆型篮式砂磨机", en: "Explosion-Proof Basket Mill" },
+        model: "TR 2200",
+        subcat: "basket", name: { zh: "防爆型篮式砂磨机", en: "Explosion-Proof Basket Mill" },
         category: "grind", categoryName: { zh: "分散/搅拌/研磨", en: "Dispersion / Mixing / Grinding" },
         specs: {
           zh: "防爆型篮式砂磨机，用于涂料、油墨的研磨分散，篮式研磨结构，效率高",
@@ -677,7 +772,8 @@
         docFiles: { en: "TR 2200 防爆型篮式砂磨机.doc", zh: "TR 2200 防爆型篮式砂磨机.doc" }, pdfFiles: {}
       },
       {
-        model: "TR 6302", name: { zh: "腐蚀划痕器", en: "Corrosion Scratch Tester" },
+        model: "TR 6302",
+        subcat: "corrosion", name: { zh: "腐蚀划痕器", en: "Corrosion Scratch Tester" },
         category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
         specs: {
           zh: "腐蚀划痕器，用于测定涂层耐腐蚀性能",
@@ -690,7 +786,8 @@
         docFiles: {}, pdfFiles: { en: "TR 6302 腐蚀划痕器.pdf", zh: "TR 6302 腐蚀划痕器.pdf" }
       },
       {
-        model: "复合式盐干湿", name: { zh: "复合式盐干湿试验机", en: "Combined Salt Spray Tester" },
+        model: "复合式盐干湿",
+        subcat: "salt", name: { zh: "复合式盐干湿试验机", en: "Combined Salt Spray Tester" },
         category: "aging", categoryName: { zh: "环境老化", en: "Environmental Aging" },
         specs: {
           zh: "复合式盐干湿试验机，用于测试涂层耐盐雾腐蚀性能，盐雾、干燥、湿热多种试验模式",
@@ -703,7 +800,8 @@
         docFiles: { en: "复合式盐干湿试验机.doc", zh: "复合式盐干湿试验机.doc" }, pdfFiles: {}
       },
       {
-        model: "TR 6413", name: { zh: "氙灯（风冷）老化试验箱", en: "Xenon Arc Aging Test Chamber" },
+        model: "TR 6413",
+        subcat: "xenon", name: { zh: "氙灯（风冷）老化试验箱", en: "Xenon Arc Aging Test Chamber" },
         category: "aging", categoryName: { zh: "环境老化", en: "Environmental Aging" },
         specs: {
           zh: "氙灯老化试验箱，用于模拟日光老化测试，氙灯光源，模拟真实日光",
@@ -716,7 +814,8 @@
         docFiles: {}, pdfFiles: { en: "TR 6413 氙灯（风冷）老化试验箱.pdf", zh: "TR 6413 氙灯（风冷）老化试验箱.pdf" }
       },
       {
-        model: "TR 6010", name: { zh: "防爆鼓风干燥箱", en: "Explosion-Proof Blast Drying Oven" },
+        model: "TR 6010",
+        subcat: "oven", name: { zh: "防爆鼓风干燥箱", en: "Explosion-Proof Blast Drying Oven" },
         category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment" },
         specs: {
           zh: "防爆鼓风干燥箱，用于样品干燥、加热，鼓风循环，温度均匀",
@@ -733,6 +832,7 @@
     // ===== State =====
     let currentLang = 'zh';
     let currentCategory = 'all';
+    let currentSubcat = 'all';
     let searchQuery = '';
 
     // ===== Fuzzy Search =====
@@ -756,6 +856,7 @@
     function renderProducts() {
       const filtered = products.filter(p => {
         const matchCat = currentCategory === 'all' || p.category === currentCategory;
+        const matchSubcat = currentSubcat === 'all' || p.subcat === currentSubcat;
         const q = searchQuery;
         const matchSearch = !q || 
           fuzzyMatch(p.name.zh, q) ||
@@ -765,7 +866,7 @@
           fuzzyMatch(p.specs.en, q) ||
           fuzzyMatch(p.categoryName.zh, q) ||
           fuzzyMatch(p.categoryName.en, q);
-        return matchCat && matchSearch;
+        return matchCat && matchSubcat && matchSearch;
       });
 
       const grid = document.getElementById('productsGrid');
@@ -835,8 +936,54 @@
       renderProducts();
     }
 
+    const SUBCATS = {
+      lab: { stopwatch: '秒表', oven: '干燥箱' },
+      raw: { viscometer: '粘度计', zahn: '蔡恩杯' },
+      film: { impact: '冲击测试', abrasion: '耐磨测试', scratch: '耐划痕测试', color: '色彩测量', salt: '盐雾测试', corrosion: '腐蚀测试' },
+      grind: { basket: '篮式砂磨机', disperser: '高速分散机' },
+      aging: { xenon: '氙灯老化' },
+    };
+    const SUBCATS_EN = {
+      lab: { stopwatch: 'Stopwatch', oven: 'Drying Oven' },
+      raw: { viscometer: 'Viscometer', zahn: 'Zahn Cup' },
+      film: { impact: 'Impact Test', abrasion: 'Abrasion Test', scratch: 'Scratch Test', color: 'Color Measurement', salt: 'Salt Spray Test', corrosion: 'Corrosion Test' },
+      grind: { basket: 'Basket Mill', disperser: 'High-Speed Disperser' },
+      aging: { xenon: 'Xenon Arc Aging' },
+    };
+
     function setCategory(cat) {
+        currentCategory = cat;
+        currentSubcat = 'all';
         document.getElementById('categorySelect').value = cat;
+
+        var subcatCell = document.getElementById('subcatCell');
+        var subcatSelect = document.getElementById('subcatSelect');
+        var catLabel = document.getElementById('catLabel');
+        var subcatLabel = document.getElementById('subcatLabel');
+
+        if (cat === 'all' || !SUBCATS[cat]) {
+            subcatCell.style.display = 'none';
+        } else {
+            subcatCell.style.display = 'flex';
+            var subcats = SUBCATS[cat];
+            var subcatsEn = SUBCATS_EN[cat];
+            var options = '<option value="all">全部 (All)</option>';
+            for (var k in subcats) {
+                if (k === 'all') continue;
+                var label = currentLang === 'zh' ? subcats[k] : (subcatsEn[k] || subcats[k]);
+                options += '<option value="' + k + '">' + label + '</option>';
+            }
+            subcatSelect.innerHTML = options;
+            if (catLabel) catLabel.textContent = currentLang === 'zh' ? '产品大类' : 'Category';
+            if (subcatLabel) subcatLabel.textContent = currentLang === 'zh' ? '产品小类' : 'Sub-category';
+        }
+        filterProducts();
+    }
+
+    function setSubcat(sub) {
+        currentSubcat = sub;
+        filterProducts();
+    }
       currentCategory = cat;
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.cat === cat);
@@ -902,3 +1049,4 @@
   </script>
 </body>
 </html>
+
