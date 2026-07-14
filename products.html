@@ -50,10 +50,11 @@
     /* Header */
     .top-bar {
       background: var(--blue-dark);
-      color: rgba(255,255,255,0.75);
+      color: rgba(255,255,255,0.8);
       font-size: 0.8rem;
       padding: 0.4rem 0;
       text-align: center;
+      letter-spacing: 0.02em;
     }
     
     header {
@@ -106,13 +107,15 @@
     
     .search-box {
       background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.09);
       display: flex;
       gap: 1rem;
       align-items: center;
       flex-wrap: wrap;
+      margin-top: -1rem;
+      border: 1px solid rgba(0,0,0,0.04);
     }
     
     .search-input-wrap { flex: 1; min-width: 250px; position: relative; }
@@ -134,6 +137,24 @@
       font-size: 1.1rem;
       opacity: 0.5;
     }
+    
+    .category-dropdown {
+      position: relative;
+    }
+    .category-select {
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 0.6rem 2.5rem 0.6rem 1rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 0.8rem center;
+      font-size: 0.9rem;
+      color: var(--text);
+      cursor: pointer;
+      min-width: 260px;
+      transition: border-color 0.2s;
+    }
+    .category-select:focus { outline: none; border-color: var(--blue); }
     
     .filter-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .filter-btn {
@@ -165,108 +186,106 @@
     
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
     
     .product-card {
       background: white;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
     }
     
     .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.13);
     }
     
     .product-card-link {
       display: block;
       text-decoration: none;
       color: inherit;
+      flex: 1;
     }
     
-    .product-image { height: 160px; background: #f8f8f8; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .product-image img { width: 100%; height: 160px; object-fit: contain; padding: 8px; }
-    .product-image-placeholder { font-size: 3rem; opacity: 0.2; display: none; width: 100%; height: 100%; align-items: center; justify-content: center; }
-    
-    .product-header {
-      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
-      color: white;
-      padding: 1rem 1.2rem;
+    .product-image-wrap {
+      height: 180px;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
       display: flex;
-      align-items: flex-start;
-      gap: 0.8rem;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
     }
-    
-    .product-icon { font-size: 1.8rem; }
-    
-    .product-title { flex: 1; }
-    .product-model {
-      font-size: 0.75rem;
-      opacity: 0.8;
-      margin-bottom: 0.2rem;
-      font-family: monospace;
+    .product-image-wrap img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      padding: 12px;
+      transition: transform 0.3s ease;
     }
-    .product-name { font-size: 1.05rem; font-weight: 700; }
-    .product-name-en { font-size: 0.75rem; opacity: 0.75; margin-top: 0.15rem; }
-    
-    .product-category-badge {
-      background: rgba(255,255,255,0.2);
-      padding: 0.2rem 0.6rem;
-      border-radius: 12px;
-      font-size: 0.7rem;
-      white-space: nowrap;
+    .product-card:hover .product-image-wrap img { transform: scale(1.04); }
+    .product-image-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+      gap: 0.5rem;
     }
+    .product-image-placeholder span { font-size: 3rem; }
+    .product-image-placeholder small { font-size: 0.75rem; }
     
-    .product-body { padding: 1rem 1.2rem; }
-    
-    .product-specs {
-      background: #f8fbff;
-      border-radius: 8px;
-      padding: 0.8rem;
-      margin-bottom: 0.8rem;
-      font-size: 0.82rem;
-      color: var(--text-gray);
-      line-height: 1.6;
+    .product-body {
+      padding: 0.9rem 1rem 0.6rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
-    
-    .product-specs-label {
-      font-weight: 600;
+    .product-cat-tag {
+      display: inline-block;
+      background: rgba(0,90,156,0.08);
       color: var(--blue);
-      margin-bottom: 0.3rem;
-      font-size: 0.75rem;
-    }
-    
-    .product-features {
-      margin-bottom: 1rem;
-    }
-    .product-features-label {
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
       font-weight: 600;
-      color: var(--text);
-      font-size: 0.8rem;
       margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
     }
-    .feature-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.4rem;
-      font-size: 0.8rem;
+    .product-model-row { margin-bottom: 0.2rem; }
+    .product-model {
+      font-size: 0.72rem;
       color: var(--text-gray);
-      margin-bottom: 0.3rem;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.05em;
     }
-    .feature-dot { color: var(--green); font-weight: bold; flex-shrink: 0; margin-top: 0.05rem; }
+    .product-name-main { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.15rem; line-height: 1.3; }
+    .product-name-en { font-size: 0.75rem; color: var(--text-gray); margin-bottom: 0.5rem; }
+    .product-specs-preview {
+      font-size: 0.78rem;
+      color: var(--text-gray);
+      line-height: 1.5;
+      margin-bottom: 0.6rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
     
     .product-footer {
-      padding: 0.8rem 1.2rem;
+      padding: 0.6rem 1rem 0.8rem;
       border-top: 1px solid var(--border);
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
+      margin-top: auto;
     }
-    
     .download-btn {
       display: inline-flex;
       align-items: center;
@@ -325,6 +344,15 @@
       .search-box { flex-direction: column; align-items: stretch; }
       .filter-group { justify-content: center; }
     }
+  
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .page-hero * { animation: fadeInUp 0.5s ease forwards; }
+    .page-hero h1 { animation-delay: 0.1s; }
+    .page-hero p { animation-delay: 0.2s; }
+    .hero-badge { animation-delay: 0s; }
   </style>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -412,8 +440,9 @@
   </header>
   
   <div class="page-hero">
-    <h1 data-en="Products">产品中心</h1>
-    <p data-en="Browse and search our full range of coating testing instruments and laboratory equipment">浏览并搜索我们的涂料检测仪器和实验室设备完整产品线</p>
+    <div class="hero-badge">CE & ISO 认证 | 出口品质</div>
+    <h1 data-en="Products">涂料检测仪器产品中心</h1>
+    <p data-en="Browse and search our full range of coating testing instruments and laboratory equipment">专业生产粘度计、盐雾箱、冲击仪、色差仪、老化箱等检测仪器，全球客户信赖</p>
   </div>
   
   <div class="search-section">
@@ -426,12 +455,16 @@
                oninput="filterProducts()">
       </div>
       <div class="filter-group" id="filterGroup">
-        <button class="filter-btn active" data-cat="all" onclick="setCategory('all')" data-en="All">全部</button>
-        <button class="filter-btn" data-cat="grind" onclick="setCategory('grind')" data-en="Dispersion/Mixing">分散/搅拌/研磨</button>
-        <button class="filter-btn" data-cat="raw" onclick="setCategory('raw')" data-en="Raw Material Testing">原料性能检验</button>
-        <button class="filter-btn" data-cat="film" onclick="setCategory('film')" data-en="Coating Testing">成膜后检验</button>
-        <button class="filter-btn" data-cat="lab" onclick="setCategory('lab')" data-en="Lab Equipment">实验室通用仪器</button>
-        <button class="filter-btn" data-cat="aging" onclick="setCategory('aging')" data-en="Aging Tests">环境老化</button>
+        <div class="category-dropdown">
+          <select class="category-select" id="categorySelect" onchange="setCategory(this.value)">
+            <option value="all">全部 (All)</option>
+            <option value="lab">实验室通用仪器 | General Lab</option>
+            <option value="raw">原料性能检验 | Raw Material Testing</option>
+            <option value="film">成膜后检验 | Coating Testing</option>
+            <option value="grind">分散/搅拌/研磨 | Dispersion/Mixing</option>
+            <option value="aging">环境老化 | Environmental Aging</option>
+          </select>
+        </div>
       </div>
       <div class="results-count" id="resultsCount">共 0 个产品</div>
     </div>
@@ -447,10 +480,20 @@
   </div>
   
   <footer>
-    <p>© 2024 腾瑞仪器（广州）有限公司 TRUIT Instruments (Guangzhou) Co., Ltd.</p>
-    <p style="margin-top:0.5rem;">
-      <a href="index.html">首页</a> · <a href="index.html#patents">核心技术</a> · <a href="products.html">产品中心</a> · <a href="index.html#contact">联系我们</a>
-    </p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>腾瑞仪器 TRUIT</strong> — 专注仪器制造二十年
+      </div>
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="products.html">产品中心</a>
+        <a href="index.html#contact">联系我们</a>
+      </div>
+      <div class="footer-contact">
+        📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com
+      </div>
+    </div>
+    <p style="margin-top:1rem; opacity: 0.6;">© 2024 腾瑞仪器（广州）有限公司 TRUIT Instruments (Guangzhou) Co., Ltd. All rights reserved.</p>
   </footer>
   
   <script>
@@ -757,30 +800,25 @@
         return `
         <a href="product.html?model=${encodeURIComponent(p.model)}&lang=${currentLang}" class="product-card-link">
         <div class="product-card">
-          <div class="product-image"><img src="${p.image || ''}" alt="${name}" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" /><div class="product-image-placeholder">📷</div></div>
-          <div class="product-header">
-            <div class="product-icon">📊</div>
-            <div class="product-title">
-              <div class="product-model">${p.model}</div>
-              <div class="product-name">${name}</div>
-              <div class="product-name-en">${p.name.en}</div>
-            </div>
-            <div class="product-category-badge">${catName}</div>
+          <div class="product-image-wrap">
+            ${p.image ? '<img src="${p.image}" alt="${name}" loading="lazy" />' : '<div class="product-image-placeholder"><span>📷</span><small>No Image</small></div>'}
           </div>
           <div class="product-body">
+            <div class="product-cat-tag">${catName}</div>
+            <div class="product-model-row">
+              <span class="product-model">${p.model}</span>
+            </div>
+            <div class="product-name-main">${name}</div>
+            <div class="product-name-en">${p.name.en}</div>
+            <div class="product-specs-preview">${specs}</div>
+          </div>
+          <div class="product-footer">
             <div class="product-specs">
               <div class="product-specs-label">${specLabel}</div>
               ${specs}
             </div>
             <div class="product-features">
-              <div class="product-features-label">${featLabel}</div>
-              ${features.slice(0, 3).map(f => `
-                <div class="feature-item">
-                  <span class="feature-dot">•</span>
-                  <span>${f}</span>
-                </div>
-              `).join('')}
-            </div>
+              <div class="product-specs-preview">${specs}</div>
           </div>
           <div class="product-footer" onclick="event.stopPropagation(); event.preventDefault();">
             ${currentDoc ? `<a href="products/${currentDoc}" class="download-btn doc" download onclick="event.stopPropagation()">📥 ${downloadLabel} ${docLabel}</a>` : `<span class="download-btn disabled">${noDocLabel}</span>`}
@@ -798,6 +836,7 @@
     }
 
     function setCategory(cat) {
+        document.getElementById('categorySelect').value = cat;
       currentCategory = cat;
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.cat === cat);
