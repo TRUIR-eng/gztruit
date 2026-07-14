@@ -29,7 +29,6 @@
       --green: #00A650;
       --green-light: #92D050;
       --gold: #D4A843;
-      --green-light: #92D050;
       --bg: #F5F7FA;
       --white: #FFFFFF;
       --text: #1A1A1A;
@@ -90,56 +89,25 @@
     
     /* Page Hero */
     .page-hero {
-      background: linear-gradient(135deg, #001f3f 0%, #003d6b 50%, #005A9C 100%);
+      background: linear-gradient(135deg, #1a2a3a 0%, #2a3a4a 40%, #1a2a3a 100%);
       color: white;
       padding: 3.5rem 1.5rem 2.5rem;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
+    
+
     .page-hero::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background: radial-gradient(ellipse at 30% 50%, rgba(230,92,0,0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(230,92,0,0.08) 0%, transparent 60%);
     }
     .page-hero > * { position: relative; }
-    
-    .page-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .page-hero p { opacity: 0.85; max-width: 600px; margin: 0 auto 1.5rem; font-size: 1.05rem; }
+    .page-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+    .page-hero p { opacity: 0.75; max-width: 600px; margin: 0 auto 1.5rem; font-size: 1.05rem; }
     
     /* Search Section */
-        .hero-badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 20px;
-      padding: 0.3rem 1rem;
-      font-size: 0.8rem;
-      margin-bottom: 1rem;
-    }
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-    .hero-stat {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.2rem;
-    }
-    .hero-stat strong {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--green-light);
-    }
-    .hero-stat span {
-      font-size: 0.75rem;
-      opacity: 0.7;
-      letter-spacing: 0.05em;
-    }
     .search-section {
       max-width: 1200px;
       margin: -1.5rem auto 1.5rem;
@@ -192,7 +160,7 @@
     }
     .filter-label {
       font-size: 0.7rem;
-      color: var(--text-gray);
+      color: #999;
       font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -204,16 +172,16 @@
       appearance: none;
       -webkit-appearance: none;
       padding: 0.55rem 2.2rem 0.55rem 0.85rem;
-      border: 1.5px solid var(--border);
+      border: 1.5px solid #ddd;
       border-radius: 8px;
       background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23666' d='M5 7L1 2h8z'/%3E%3C/svg%3E") no-repeat right 0.7rem center;
       font-size: 0.88rem;
       color: var(--text);
       cursor: pointer;
       min-width: 180px;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .filter-select:focus { outline: none; border-color: var(--blue); }
+    .filter-select:focus { outline: none; border-color: #E65C00; box-shadow: 0 0 0 3px rgba(230,92,0,0.1); }
     
     .filter-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .filter-btn {
@@ -498,20 +466,23 @@
     </div>
   </header>
   
+  
   <div class="page-hero">
-    <div class="hero-badge">CE & ISO 认证 | 出口品质</div>
-    <h1>涂料检测仪器产品中心</h1>
-    <p>专业生产粘度计、盐雾箱、冲击仪、色差仪、老化箱等检测仪器，全球客户信赖</p>
+    <div class="hero-badge">精准可靠 · 灵活交付</div>
+    <h1>涂料检测仪器 · 产品中心</h1>
+    <p>粘度计 · 盐雾箱 · 冲击仪 · 色差仪 · 老化箱 · 定制方案</p>
     <div class="hero-stats">
-      <div class="hero-stat"><strong>17+</strong><span>产品型号</span></div>
-      <div class="hero-stat"><strong>5</strong><span>产品大类</span></div>
+      <div class="hero-stat"><strong>快速</strong><span>当日响应</span></div>
+      <div class="hero-stat"><strong>灵活</strong><span>非标定制</span></div>
+      <div class="hero-stat"><strong>全面</strong><span>产品线宽广</span></div>
       <div class="hero-stat"><strong>20年</strong><span>制造经验</span></div>
     </div>
   </div>
 
-  </div>
   
-    <div class="search-section">
+  
+  
+  <div class="search-section">
     <div class="search-box">
       <div class="search-row">
         <div class="search-input-wrap">
@@ -549,7 +520,7 @@
     </div>
   </div>
 
-  <div class="products-container"></div>
+  <div class="products-container">
   
   <div class="products-container">
     <div class="products-grid" id="productsGrid"></div>
@@ -564,7 +535,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <strong>腾瑞仪器 TRUIT</strong>
-        <p>专注仪器制造二十年 | 出口品质 · CE/ISO认证</p>
+        <p>涂料检测仪器专业制造商 | 出口品质 · 全球供货</p>
       </div>
       <div class="footer-links">
         <a href="index.html">首页</a>
