@@ -140,6 +140,9 @@
         <select class="lang-select" onchange="switchLang(this.value)">
           <option value="zh">中文</option>
           <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="ar">العربية</option>
+          <option value="ru">Русский</option>
         </select>
       </nav>
     </div>
@@ -247,12 +250,9 @@
     const allProducts = [
       {
         model: "TR 1168/1",
-        name: { zh: "电子秒表", en: "Digital Stopwatch" },
-        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment" },
-        description: {
-          zh: "TR 1168/1 电子秒表是一款高精度电子计时仪器，采用先进电子计时技术，广泛应用于粘度测量计时、实验室及工业现场时间测量。具备大屏幕LCD显示，读数清晰直观。符合相关国家标准要求。",
-          en: "The TR 1168/1 Digital Stopwatch is a high-precision electronic timing instrument using advanced electronic timing technology, widely used in viscosity measurement timing, laboratory and industrial time measurement. Features large-screen LCD display with clear and intuitive reading."
-        },
+        name: { zh: "电子秒表", en: "Digital Stopwatch", es: "Cronómetro Digital", ar: "ساعة الإيقاف الرقمية", ru: "Электронный секундомер" },
+        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment", es: "Equipo General de Laboratorio", ar: "معدات المختبر العامة", ru: "Общее лабораторное оборудование" },
+        description: { zh: "TR 1168/1 电子秒表是一款高精度电子计时仪器，采用先进电子计时技术，广泛应用于粘度测量计时、实验室及工业现场时间测量。具备大屏幕LCD显示，读数清晰直观。符合相关国家标准要求。", en: "The TR 1168/1 Digital Stopwatch is a high-precision electronic timing instrument using advanced electronic timing technology, widely used in viscosity measurement timing, laboratory and industrial time measurement. Features large-screen LCD display with clear and intuitive reading.", es: "El TR 1168/1 Cronómetro Digital es un instrumento de cronometraje electrónico de alta precisión que utiliza tecnología avanzada de cronometraje electrónico, ampliamente utilizado en el cronometraje de medición de viscosidad, laboratorio y medición de tiempo en campo industrial. Cuenta con pantalla LCD grande, lectura clara e intuitiva. Cumple con los requisitos de las normas nacionales relevantes.", ar: "ساعة الإيقاف الرقمية TR 1168/1 هي جهاز قياس زمني إلكتروني عالي الدقة يستخدم تقنية قياس زمني إلكترونية متقدمة، تُستخدم على نطاق واسع في قياس اللزوجة والمختبرات وقياس الوقت في الموقع الصناعي. مجهزة بشاشة LCD كبيرة، قراءة واضحة وبديهية. تتوافق مع متطلبات المعايير الوطنية ذات الصلة.", ru: "TR 1168/1 Электронный секундомер — это высокоточный электронный прибор для измерения времени, использующий передовую технологию электронного хронометража, широко применяемый для измерения вязкости, в лабораторных и промышленных условиях. Оснащён большим ЖК-дисплеем, показания чёткие и наглядные. Соответствует требованиям соответствующих национальных стандартов." },
         specs: {
           zh: [
             ["显示方式", "LCD大屏幕数字显示"],
@@ -275,6 +275,39 @@
             ["Dimensions", "Approx. Ø55×15mm"],
             ["Operating Temp", "-10℃~+45℃"],
             ["Standard", "QB/T 2108-1995"]
+          ],
+          es: [
+            ["Método de visualización", "Pantalla digital LCD grande"],
+            ["Precisión de cronometraje", "1/100 segundos"],
+            ["Tiempo máximo", "59 minutos 59 segundos 99"],
+            ["Alimentación", "Batería de botón"],
+            ["Grado impermeable", "Resistente al agua cotidiano"],
+            ["Material de la caja", "Plástico ABS de ingeniería"],
+            ["Dimensiones", "Aprox. Ø55×15mm"],
+            ["Temperatura de uso", "-10℃~+45℃"],
+            ["Estándar aplicado", "QB/T 2108-1995"]
+          ],
+          ar: [
+            ["طريقة العرض", "شاشة رقمية LCD كبيرة"],
+            ["دقة القياس", "1/100 ثانية"],
+            ["الحد الأقصى للوقت", "59 دقيقة 59 ثانية 99"],
+            ["مصدر الطاقة", "بطارية زر"],
+            ["درجة مقاومة الماء", "مقاوم للماء للاستخدام اليومي"],
+            ["مادة الهيكل", "بلاستيك ABS هندسي"],
+            ["الأبعاد", "تقريباً Ø55×15 مم"],
+            ["درجة حرارة التشغيل", "-10 درجة مئوية ~ +45 درجة مئوية"],
+            ["المعيار المنفذ", "QB/T 2108-1995"]
+          ],
+          ru: [
+            ["Способ отображения", "Большой цифровой ЖК-дисплей"],
+            ["Точность измерения", "1/100 секунды"],
+            ["Макс. время", "59 минут 59 секунд 99"],
+            ["Питание", "Батарейка-таблетка"],
+            ["Класс водозащиты", "Бытовой водонепроницаемый"],
+            ["Материал корпуса", "Инженерный пластик ABS"],
+            ["Размеры", "Прибл. Ø55×15 мм"],
+            ["Температура эксплуатации", "-10℃~+45℃"],
+            ["Стандарт", "QB/T 2108-1995"]
           ]
         },
         features: {
@@ -297,20 +330,63 @@
             "Daily water resistant design for various environments",
             "Widely used in paint coating viscosity measurement timing, industry, research, healthcare and sports",
             "Button cell battery powered, long battery life, easy replacement"
+          ],
+          es: [
+            "Tecnología de cronometraje electrónico, alta precisión y lectura intuitiva",
+            "Pantalla LCD grande, números claros y llamativos",
+            "Cronometraje de alta precisión 1/100s, satisface necesidades de medición precisa",
+            "Modo multifunción: cronometraje normal, cuenta atrás, cronometraje fraccionado",
+            "Carcasa de plástico ABS de ingeniería, robusta y duradera",
+            "Diseño resistente al agua cotidiano, se adapta a múltiples entornos de uso",
+            "Ampliamente utilizado en el cronometraje de medición de viscosidad de pintura y recubrimiento, empresas industriales y mineras, investigación científica, atención médica y sistemas deportivos",
+            "Alimentado por batería de botón, larga duración, fácil reemplazo"
+          ],
+          ar: [
+            "تقنية قياس زمني إلكترونية، دقة عالية وقراءة بديهية",
+            "شاشة LCD كبيرة، أرقام واضحة ومميزة",
+            "قياس زمني عالي الدقة 1/100 ثانية، يلبي احتياجات القياس الدقيق",
+            "وضع متعدد الوظائف: قياس زمني عادي، عد تنازلي، قياس زمني جزئي",
+            "هيكل بلاستيك ABS هندسي، متين ومقاوم",
+            "تصميم مقاوم للماء للاستخدام اليومي، يتكيف مع بيئات الاستخدام المختلفة",
+            "تُستخدم على نطاق واسع في قياس لزوجة الدهانات والطلاءات، المؤسسات الصناعية والتعدينية، البحث العلمي، الرعاية الصحية والأنظمة الرياضية",
+            "تعمل ببطاريات زر، عمر طويل وسهولة الاستبدال"
+          ],
+          ru: [
+            "Электронная технология измерения времени, высокая точность и наглядное считывание",
+            "Большой ЖК-дисплей, чёткие и заметные цифры",
+            "Высокоточное измерение 1/100 секунды, удовлетворяет потребности точных измерений",
+            "Многофункциональный режим: обычный хронограф, обратный отсчёт, промежуточное время",
+            "Корпус из инженерного пластика ABS, прочный и износостойкий",
+            "Водонепроницаемый бытовой дизайн, адаптируется к различным условиям использования",
+            "Широко применяется для измерения вязкости красок и покрытий, на промышленных предприятиях, в научных исследованиях, здравоохранении и спортивных системах",
+            "Питание от батарейки-таблетки, долгий срок службы, удобная замена"
           ]
         },
-        ordering: { zh: [{ code: "TR 1168/1", name: "电子秒表" }], en: [{ code: "TR 1168/1", name: "Digital Stopwatch" }] },
+        ordering: {
+          zh: [
+            { code: "TR 1168/1", name: "电子秒表" }
+          ],
+          en: [
+            { code: "TR 1168/1", name: "Digital Stopwatch" }
+          ],
+          es: [
+            { code: "TR 1168/1", name: "Cronómetro Digital" }
+          ],
+          ar: [
+            { code: "TR 1168/1", name: "ساعة الإيقاف الرقمية" }
+          ],
+          ru: [
+            { code: "TR 1168/1", name: "Электронный секундомер" }
+          ]
+        },
         docFiles: { en: "TR 1168_1_电子秒表_介绍.docx", zh: "TR 1168_1_电子秒表_介绍.docx" }, pdfFiles: { en: "TR 1168_1_电子秒表_介绍.pdf", zh: "TR 1168_1_电子秒表_介绍.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 1168/2",
-        name: { zh: "机械秒表", en: "Mechanical Stopwatch" },
-        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment" },
-        description: {
-          zh: "TR 1168/2 机械秒表是测量时间间隔的精密仪器，广泛应用于粘度测量计时。采用不锈钢表壳，机芯装有13颗宝石，精度高、寿命长。符合QB/T 153-2006标准。",
-          en: "The TR 1168/2 Mechanical Stopwatch is a precision instrument for measuring time intervals, widely used in viscosity measurement timing. Features stainless steel case with 13-jewel movement, high precision and long service life. Conforms to QB/T 153-2006."
-        },
+        name: { zh: "机械秒表", en: "Mechanical Stopwatch", es: "Cronómetro Mecánico", ar: "ساعة الإيقاف الميكانيكية", ru: "Механический секундомер" },
+        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment", es: "Equipo General de Laboratorio", ar: "معدات المختبر العامة", ru: "Общее лабораторное оборудование" },
+        description: { zh: "TR 1168/2 机械秒表是测量时间间隔的精密仪器，广泛应用于粘度测量计时。采用不锈钢表壳，机芯装有13颗宝石，精度高、寿命长。符合QB/T 153-2006标准。", en: "The TR 1168/2 Mechanical Stopwatch is a precision instrument for measuring time intervals, widely used in viscosity measurement timing. Features stainless steel case with 13-jewel movement, high precision and long service life. Conforms to QB/T 153-2006.", es: "El TR 1168/2 Cronómetro Mecánico es un instrumento de precisión para medir intervalos de tiempo, ampliamente utilizado en el cronometraje de medición de viscosidad. Con carcasa de acero inoxidable y mecanismo con 13 rubíes, alta precisión y larga vida útil. Cumple con la norma QB/T 153-2006.", ar: "ساعة الإيقاف الميكانيكية TR 1168/2 هي أداة دقيقة لقياس الفترات الزمنية، تُستخدم على نطاق واسع في قياس لزوجة اللزوجة. تتميز بعلبة من الفولاذ المقاوم للصدأ وآلية مزودة بـ 13 جوهرة، عالية الدقة وعمر طويل. تتوافق مع معيار QB/T 153-2006.", ru: "TR 1168/2 Механический секундомер — это прецизионный прибор для измерения временных интервалов, широко применяемый для измерения вязкости. Корпус из нержавеющей стали, механизм с 13 рубинами, высокая точность и долгий срок службы. Соответствует стандарту QB/T 153-2006." },
         specs: {
           zh: [
             ["最小刻度值", "1/10s"],
@@ -335,6 +411,42 @@
             ["Operating Temp", "-10℃~+45℃"],
             ["Operating Humidity", "≤60%RH"],
             ["Standard", "QB/T 153-2006"]
+          ],
+          es: [
+            ["Escala mínima", "1/10s"],
+            ["Aguja minutero", "15 segundos/círculo"],
+            ["Aguja segundero", "30 segundos/círculo"],
+            ["Autonomía", "6h"],
+            ["Rubíes", "13 rubíes"],
+            ["Material de la caja", "Acero inoxidable"],
+            ["Dimensiones", "Ø55×77.4×14mm"],
+            ["Temperatura de uso", "-10℃~+45℃"],
+            ["Humedad de uso", "≤60%HR"],
+            ["Estándar aplicado", "QB/T 153-2006"]
+          ],
+          ar: [
+            ["أصغر تدريج", "1/10 ثانية"],
+            ["عقرب الدقائق", "15 ثانية/دورة"],
+            ["عقرب الثواني", "30 ثانية/دورة"],
+            ["زمن التشغيل المستمر", "6 ساعات"],
+            ["عدد الجواهر", "13 جوهرة"],
+            ["مادة العلبة", "فولاذ مقاوم للصدأ"],
+            ["الأبعاد", "Ø55×77.4×14 مم"],
+            ["درجة حرارة التشغيل", "-10 درجة مئوية ~ +45 درجة مئوية"],
+            ["رطوبة التشغيل", "≤60% رطوبة نسبية"],
+            ["المعيار المنفذ", "QB/T 153-2006"]
+          ],
+          ru: [
+            ["Наименьшее деление", "1/10 с"],
+            ["Минутная стрелка", "15 секунд/оборот"],
+            ["Секундная стрелка", "30 секунд/оборот"],
+            ["Непрерывный ход", "6 ч"],
+            ["Количество рубинов", "13"],
+            ["Материал корпуса", "Нержавеющая сталь"],
+            ["Размеры", "Ø55×77.4×14 мм"],
+            ["Температура эксплуатации", "-10℃~+45℃"],
+            ["Влажность при эксплуатации", "≤60%RH"],
+            ["Стандарт", "QB/T 153-2006"]
           ]
         },
         features: {
@@ -355,20 +467,60 @@
             "Widely used in industry, research, military, healthcare and sports",
             "Widely adopted by primary and secondary schools nationwide",
             "First choice for paint coating viscosity measurement timing"
+          ],
+          es: [
+            "Mecanismo con resorte de acero inoxidable y rueda de balance de metal único",
+            "Espiral de aleación de base de níquel y órgano de anclaje",
+            "Mecanismo con 13 rubíes, alta precisión y durabilidad",
+            "Carcasa de acero inoxidable, robusta y duradera",
+            "Ampliamente utilizado en empresas industriales y mineras, investigación científica, defensa militar, atención médica y sistemas deportivos",
+            "Ampliamente adoptado por escuelas primarias y secundarias de todo el país",
+            "Primera elección para el cronometraje de medición de viscosidad de pintura y recubrimiento"
+          ],
+          ar: [
+            "آلية ذات زنبرك من الفولاذ المقاوم للصدأ وعجلة توازن معدنية واحدة",
+            "شريط شعر من سبيكة أساس النيكل وآلية مرساة عمودية",
+            "آلية مزودة بـ 13 جوهرة، عالية الدقة ومقاومة للتلف",
+            "علبة من الفولاذ المقاوم للصدأ، متينة ومقاومة",
+            "تُستخدم على نطاق واسع في المؤسسات الصناعية والتعدينية، البحث العلمي، الدفاع العسكري، الرعاية الصحية والأنظمة الرياضية والثقافية",
+            "اعتمدت على نطاق واسع من قبل المدارس الابتدائية والثانوية في جميع أنحاء البلاد",
+            "الخيار الأول لقياس لزوجة الدهانات والطلاءات"
+          ],
+          ru: [
+            "Механизм с пружиной из нержавеющей стали и однометаллическим балансом",
+            "Никелевое основание сплава спирали и анкерный механизм",
+            "Механизм с 13 рубинами, высокая точность и износостойкость",
+            "Корпус из нержавеющей стали, прочный и долговечный",
+            "Широко применяется на промышленных предприятиях, в научных исследованиях, военном деле, здравоохранении и спортивных системах",
+            "Широко используется в школах по всей стране",
+            "Первый выбор для измерения вязкости красок и покрытий"
           ]
         },
-        ordering: { zh: [{ code: "TR 1168/2", name: "机械秒表" }], en: [{ code: "TR 1168/2", name: "Mechanical Stopwatch" }] },
-        docFiles: { en: "TR1168_2_机械秒表_介绍.docx", zh: "TR1168_2_机械秒表_介绍.docx" }, pdfFiles: {},
+        ordering: {
+          zh: [
+            { code: "TR 1168/2", name: "机械秒表" }
+          ],
+          en: [
+            { code: "TR 1168/2", name: "Mechanical Stopwatch" }
+          ],
+          es: [
+            { code: "TR 1168/2", name: "Cronómetro Mecánico" }
+          ],
+          ar: [
+            { code: "TR 1168/2", name: "ساعة الإيقاف الميكانيكية" }
+          ],
+          ru: [
+            { code: "TR 1168/2", name: "Механический секундомер" }
+          ]
+        },
+        docFiles: { en: "TR1168_2_机械秒表_介绍.docx", zh: "TR1168_2_机械秒表_介绍.docx" }, pdfFiles: { en: "", zh: "" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 5202/F1",
-        name: { zh: "圆管冲击仪", en: "Pipe Impact Tester" },
-        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
-        description: {
-          zh: "TR 5202/F 是TRUIT专为管道及厚工件设计的冲击仪，符合 AS/NZS4158:2003+A1-2005 标准及 ASTMG14-04(2024) 标准。用于管道涂层抗冲击性能试验，评定涂层在冲击条件下的完整性和抗裂性。通过弹性压紧适配多种外径管道，螺纹限位可调冲击深度。",
-          en: "The TR 5202/F is an impact tester designed by TRUIT specifically for pipes and thick workpieces, conforming to AS/NZS4158:2003+A1-2005 and ASTM G14-04(2024) standards. Used for pipe coating impact resistance testing, evaluating coating integrity and crack resistance under impact conditions."
-        },
+        name: { zh: "圆管冲击仪", en: "Pipe Impact Tester", es: "Ensayador de Impacto para Tuberías", ar: "جهاز اختبار الصدمة للأنابيب", ru: "Ударный тестер для труб" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5202/F 是TRUIT专为管道及厚工件设计的冲击仪，符合 AS/NZS4158:2003+A1-2005 标准及 ASTMG14-04(2024) 标准。用于管道涂层抗冲击性能试验，评定涂层在冲击条件下的完整性和抗裂性。通过弹性压紧适配多种外径管道，螺纹限位可调冲击深度。", en: "The TR 5202/F is an impact tester designed by TRUIT specifically for pipes and thick workpieces, conforming to AS/NZS4158:2003+A1-2005 and ASTM G14-04(2024) standards. Used for pipe coating impact resistance testing, evaluating coating integrity and crack resistance under impact conditions.", es: "El TR 5202/F es un ensayador de impacto diseñado por TRUIT específicamente para tuberías y piezas gruesas, conforme a las normas AS/NZS4158:2003+A1-2005 y ASTM G14-04(2024). Se utiliza para pruebas de resistencia al impacto de recubrimientos de tuberías, evaluando la integridad y resistencia a grietas del recubrimiento bajo condiciones de impacto. Se adapta a tuberías de varios diámetros exteriores mediante presión elástica, la profundidad de impacto se ajusta mediante limitación roscada.", ar: "TR 5202/F هو جهاز اختبار صدمة مصمم بواسطة TRUIT خصيصًا للأنابيب والقطع السميكة، يتوافق مع معايير AS/NZS4158:2003+A1-2005 و ASTM G14-04(2024). يُستخدم لاختبار مقاومة الصدمة لطلاءات الأنابيب، وتقييم سلامة الطلاء ومقاومته للتشقق تحت ظروف الصدمة. يتكيف مع أنابيب بأقطار خارجية مختلفة من خلال الضغط المرن، وعمق الصدمة القابل للتعديل من خلال تحديد لولبي.", ru: "TR 5202/F — ударный тестер, разработанный TRUIT специально для труб и толстых изделий, соответствует стандартам AS/NZS4158:2003+A1-2005 и ASTM G14-04(2024). Применяется для испытания ударной прочности покрытий труб, оценки целостности и трещиностойкости покрытия при ударных нагрузках. Адаптируется к различным наружным диаметрам труб через упругое прижимание, глубина удара регулируется резьбовым упором." },
         specs: {
           zh: [
             ["落锤重量", "13.3N（3磅）"],
@@ -387,6 +539,33 @@
             ["Applicable Pipe Diameter", "Ø110-125mm (other sizes available)"],
             ["Impact Depth", "0-5mm adjustable"],
             ["Standards", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          es: [
+            ["Peso del martillo", "13.3N (3 libras)"],
+            ["Diámetro del punzón", "15.9mm"],
+            ["Altura del tubo", "1.52m"],
+            ["Diámetro del dado", "16.3mm"],
+            ["Diámetro de tubería aplicable", "Ø110-125mm (otros tamaños disponibles)"],
+            ["Profundidad de impacto", "0-5mm ajustable"],
+            ["Normas aplicadas", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          ar: [
+            ["وزن المطرقة الساقطة", "13.3 نيوتن (3 أرطال)"],
+            ["قطر الخارق", "15.9 مم"],
+            ["ارتفاع الأنبوب", "1.52 م"],
+            ["قطر القالب", "16.3 مم"],
+            ["قطر الأنبوب القابل للتطبيق", "Ø110-125 مم (أحجام أخرى متاحة)"],
+            ["عمق الصدمة", "0-5 مم قابل للتعديل"],
+            ["المعايير المتوافقة", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          ru: [
+            ["Вес падающего молотка", "13,3 Н (3 фунта)"],
+            ["Диаметр пуансона", "15,9 мм"],
+            ["Высота трубы", "1,52 м"],
+            ["Диаметр матрицы", "16,3 мм"],
+            ["Применяемый диаметр трубы", "Ø110-125 мм (другие размеры доступны)"],
+            ["Глубина удара", "0-5 мм регулируемая"],
+            ["Соответствующие стандарты", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
           ]
         },
         features: {
@@ -403,20 +582,59 @@
             "For pipe coating impact resistance testing",
             "Evaluates coating integrity and crack resistance under impact",
             "Other pipe diameters available for customization"
+          ],
+          es: [
+            "Se adapta a varios diámetros exteriores de tuberías mediante presión elástica",
+            "La profundidad de impacto se ajusta mediante limitación roscada",
+            "Para pruebas de resistencia al impacto de recubrimientos de tuberías",
+            "Evalúa la integridad y resistencia a grietas del recubrimiento bajo impacto",
+            "Otros diámetros de tubería disponibles para personalización"
+          ],
+          ar: [
+            "يتكيف مع أنابيب بأقطار خارجية مختلفة من خلال الضغط المرن",
+            "عمق الصدمة القابل للتعديل من خلال تحديد لولبي",
+            "لاختبار مقاومة الصدمة لطلاءات الأنابيب",
+            "تقييم سلامة الطلاء ومقاومته للتشقق تحت الصدمة",
+            "أقطار أنابيب أخرى متاحة للتصميم"
+          ],
+          ru: [
+            "Упругое прижимание адаптируется к различным наружным диаметрам труб",
+            "Резьбовой упор регулирует глубину удара",
+            "Для испытания ударной прочности покрытий труб",
+            "Оценка целостности и трещиностойкости покрытия при ударе",
+            "Другие диаметры труб доступны для изготовления"
           ]
         },
-        ordering: { zh: [{ code: "TR 5202/F1", name: "圆管冲击仪（管径Ø110-125mm）" }, { code: "TR 5202/F2", name: "厚工件冲击仪（厚度≤30mm）" }], en: [{ code: "TR 5202/F1", name: "Pipe Impact Tester (Ø110-125mm)" }, { code: "TR 5202/F2", name: "Thick Workpiece Impact Tester (≤30mm)" }] },
+        ordering: {
+          zh: [
+            { code: "TR 5202/F1", name: "圆管冲击仪（管径Ø110-125mm）" },
+            { code: "TR 5202/F2", name: "厚工件冲击仪（厚度≤30mm）" }
+          ],
+          en: [
+            { code: "TR 5202/F1", name: "Pipe Impact Tester (Ø110-125mm)" },
+            { code: "TR 5202/F2", name: "Thick Workpiece Impact Tester (≤30mm)" }
+          ],
+          es: [
+            { code: "TR 5202/F1", name: "Ensayador de Impacto para Tuberías (Ø110-125mm)" },
+            { code: "TR 5202/F2", name: "Ensayador de Impacto para Piezas Gruesas (≤30mm)" }
+          ],
+          ar: [
+            { code: "TR 5202/F1", name: "جهاز اختبار الصدمة للأنابيب (Ø110-125 مم)" },
+            { code: "TR 5202/F2", name: "جهاز اختبار الصدمة للقطع السميكة (≤30 مم)" }
+          ],
+          ru: [
+            { code: "TR 5202/F1", name: "Ударный тестер для труб (Ø110-125 мм)" },
+            { code: "TR 5202/F2", name: "Ударный тестер для толстых изделий (≤30 мм)" }
+          ]
+        },
         docFiles: { en: "TR 5202_F1 冲击仪产品资料.docx", zh: "TR 5202_F1 冲击仪产品资料.docx" }, pdfFiles: { en: "TR 5202_F1 冲击仪产品资料.pdf", zh: "TR 5202_F1 冲击仪产品资料.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 5202/F2",
-        name: { zh: "厚工件冲击仪", en: "Thick Workpiece Impact Tester" },
-        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
-        description: {
-          zh: "TR 5202/F2 厚工件冲击仪是 TR 5202 系列的一员，专为厚工件涂层抗冲击性能测试设计，符合 AS/NZS4158:2003+A1-2005 和 ASTMG14-04(2024) 标准。适用厚度最厚30mm，不同厚度可定做。",
-          en: "The TR 5202/F2 Thick Workpiece Impact Tester is part of the TR 5202 series, designed for thick workpiece coating impact resistance testing, conforming to AS/NZS4158:2003+A1-2005 and ASTM G14-04(2024) standards. Maximum thickness 30mm, other thicknesses available for customization."
-        },
+        name: { zh: "厚工件冲击仪", en: "Thick Workpiece Impact Tester", es: "Ensayador de Impacto para Piezas Gruesas", ar: "جهاز اختبار الصدمة للقطع السميكة", ru: "Ударный тестер для толстых изделий" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5202/F2 厚工件冲击仪是 TR 5202 系列的一员，专为厚工件涂层抗冲击性能测试设计，符合 AS/NZS4158:2003+A1-2005 和 ASTMG14-04(2024) 标准。适用厚度最厚30mm，不同厚度可定做。", en: "The TR 5202/F2 Thick Workpiece Impact Tester is part of the TR 5202 series, designed for thick workpiece coating impact resistance testing, conforming to AS/NZS4158:2003+A1-2005 and ASTM G14-04(2024) standards. Maximum thickness 30mm, other thicknesses available for customization.", es: "El TR 5202/F2 Ensayador de Impacto para Piezas Gruesas es parte de la serie TR 5202, diseñado para pruebas de resistencia al impacto de recubrimientos de piezas gruesas, conforme a las normas AS/NZS4158:2003+A1-2005 y ASTM G14-04(2024). Grosor máximo aplicable 30mm, otros grosores disponibles para personalización.", ar: "TR 5202/F2 هو جهاز اختبار صدمة للقطع السميكة من سلسلة TR 5202، مصمم لاختبار مقاومة صدمة طلاء القطع السميكة، يتوافق مع معايير AS/NZS4158:2003+A1-2005 و ASTM G14-04(2024). أقصى سمك قابل للتطبيق 30 مم، سمكات أخرى متاحة للتصميم.", ru: "TR 5202/F2 Ударный тестер для толстых изделий является частью серии TR 5202, разработан для испытания ударной прочности покрытий толстых изделий, соответствует стандартам AS/NZS4158:2003+A1-2005 и ASTM G14-04(2024). Максимальная толщина 30 мм, другие толщины доступны для изготовления." },
         specs: {
           zh: [
             ["落锤重量", "13.3N（3磅）"],
@@ -435,6 +653,33 @@
             ["Workpiece Thickness", "Max 30mm (other thicknesses available)"],
             ["Impact Depth", "0-5mm adjustable"],
             ["Standards", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          es: [
+            ["Peso del martillo", "13.3N (3 libras)"],
+            ["Diámetro del punzón", "15.9mm"],
+            ["Altura del tubo", "1.52m"],
+            ["Diámetro del dado", "16.3mm"],
+            ["Grosor de la pieza", "Máx. 30mm (otros grosores disponibles)"],
+            ["Profundidad de impacto", "0-5mm ajustable"],
+            ["Normas aplicadas", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          ar: [
+            ["وزن المطرقة الساقطة", "13.3 نيوتن (3 أرطال)"],
+            ["قطر الخارق", "15.9 مم"],
+            ["ارتفاع الأنبوب", "1.52 م"],
+            ["قطر القالب", "16.3 مم"],
+            ["سمك القطعة", "30 مم كحد أقصى (سمكات أخرى متاحة)"],
+            ["عمق الصدمة", "0-5 مم قابل للتعديل"],
+            ["المعايير المتوافقة", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          ru: [
+            ["Вес падающего молотка", "13,3 Н (3 фунта)"],
+            ["Диаметр пуансона", "15,9 мм"],
+            ["Высота трубы", "1,52 м"],
+            ["Диаметр матрицы", "16,3 мм"],
+            ["Толщина изделия", "Макс. 30 мм (другие толщины доступны)"],
+            ["Глубина удара", "0-5 мм регулируемая"],
+            ["Соответствующие стандарты", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
           ]
         },
         features: {
@@ -449,20 +694,51 @@
             "Thread limit adjusts impact depth",
             "For thick workpiece coating impact resistance testing",
             "Other workpiece thicknesses available for customization"
+          ],
+          es: [
+            "Se adapta a piezas de varios grosores mediante presión elástica",
+            "La profundidad de impacto se ajusta mediante limitación roscada",
+            "Para pruebas de resistencia al impacto de recubrimientos de piezas gruesas",
+            "Otros grosores de piezas disponibles para personalización"
+          ],
+          ar: [
+            "يتكيف مع قطع بسمكات مختلفة من خلال الضغط المرن",
+            "عمق الصدمة القابل للتعديل من خلال تحديد لولبي",
+            "لاختبار مقاومة صدمة طلاء القطع السميكة",
+            "سمكات قطع أخرى متاحة للتصميم"
+          ],
+          ru: [
+            "Упругое прижимание адаптируется к изделиям различной толщины",
+            "Резьбовой упор регулирует глубину удара",
+            "Для испытания ударной прочности покрытий толстых изделий",
+            "Другие толщины изделий доступны для изготовления"
           ]
         },
-        ordering: { zh: [{ code: "TR 5202/F2", name: "厚工件冲击仪（厚度≤30mm）" }], en: [{ code: "TR 5202/F2", name: "Thick Workpiece Impact Tester (≤30mm)" }] },
+        ordering: {
+          zh: [
+            { code: "TR 5202/F2", name: "厚工件冲击仪（厚度≤30mm）" }
+          ],
+          en: [
+            { code: "TR 5202/F2", name: "Thick Workpiece Impact Tester (≤30mm)" }
+          ],
+          es: [
+            { code: "TR 5202/F2", name: "Ensayador de Impacto para Piezas Gruesas (≤30mm)" }
+          ],
+          ar: [
+            { code: "TR 5202/F2", name: "جهاز اختبار الصدمة للقطع السميكة (≤30 مم)" }
+          ],
+          ru: [
+            { code: "TR 5202/F2", name: "Ударный тестер для толстых изделий (≤30 мм)" }
+          ]
+        },
         docFiles: { en: "TR 5202_F1 冲击仪产品资料.docx", zh: "TR 5202_F1 冲击仪产品资料.docx" }, pdfFiles: { en: "TR 5202_F1 冲击仪产品资料.pdf", zh: "TR 5202_F1 冲击仪产品资料.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 1101-5&8",
-        name: { zh: "数显旋转粘度计", en: "Digital Rotational Viscometer" },
-        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing" },
-        description: {
-          zh: "TR 1101-5&8 数显旋转粘度计是一款用于测量流体粘度的精密仪器，配备5号和8号两种转子，适用于不同粘度范围的流体测量。数字显示，读数直观，操作简便，精度高。",
-          en: "The TR 1101-5&8 Digital Rotational Viscometer is a precision instrument for measuring fluid viscosity, equipped with No.5 and No.8 rotors for different viscosity ranges. Digital display, intuitive reading, easy operation, high precision."
-        },
+        name: { zh: "数显旋转粘度计", en: "Digital Rotational Viscometer", es: "Viscosímetro Rotativo Digital", ar: "مقياس اللزوجة الدوراني الرقمي", ru: "Цифровой ротационный вискозиметр" },
+        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing", es: "Pruebas de Materias Primas", ar: "اختبار خصائص المواد الخام", ru: "Испытание сырьевых материалов" },
+        description: { zh: "TR 1101-5&8 数显旋转粘度计是一款用于测量流体粘度的精密仪器，配备5号和8号两种转子，适用于不同粘度范围的流体测量。数字显示，读数直观，操作简便，精度高。", en: "The TR 1101-5&8 Digital Rotational Viscometer is a precision instrument for measuring fluid viscosity, equipped with No.5 and No.8 rotors for different viscosity ranges. Digital display, intuitive reading, easy operation, high precision.", es: "El TR 1101-5&8 Viscosímetro Rotativo Digital es un instrumento de precisión para medir la viscosidad de fluidos, equipado con dos rotores No.5 y No.8, aplicable a rangos de viscosidad diferentes. Visualización digital, lectura intuitiva, operación sencilla, alta precisión.", ar: "TR 1101-5&8 مقياس اللزوجة الدوراني الرقمي هو جهاز دقيق لقياس لزوجة السوائل، مجهز باثنين من الروتورات رقم 5 ورقم 8، قابل للتطبيق على نطاقات لزوجة مختلفة. العرض الرقمي، قراءة بديهية، تشغيل بسيط، دقة عالية.", ru: "TR 1101-5&8 Цифровой ротационный вискозиметр — это прецизионный прибор для измерения вязкости жидкостей, оснащённый двумя роторами №5 и №8, пригодными для измерения жидкостей с различными диапазонами вязкости. Цифровой дисплей, наглядное считывание, простое управление, высокая точность." },
         specs: {
           zh: [
             ["显示方式", "数显屏幕"],
@@ -477,24 +753,91 @@
             ["Measurement Range", "Wide viscosity range coverage by different rotors"],
             ["Accuracy", "High precision"],
             ["Operation", "Digital key operation"]
+          ],
+          es: [
+            ["Método de visualización", "Pantalla digital"],
+            ["Rotores aplicables", "Rotor No.5 / No.8"],
+            ["Rango de medición", "Amplio rango de viscosidad cubierto por diferentes rotores"],
+            ["Precisión", "Alta precisión"],
+            ["Método de operación", "Operación con teclas digitales"]
+          ],
+          ar: [
+            ["طريقة العرض", "شاشة رقمية"],
+            ["الروتورات القابلة للتطبيق", "روتور رقم 5 / رقم 8"],
+            ["نطاق القياس", "تغطية نطاق لزوجة واسع من خلال روترات مختلفة"],
+            ["الدقة", "دقة عالية"],
+            ["طريقة التشغيل", "تشغيل بأزرار رقمية"]
+          ],
+          ru: [
+            ["Способ отображения", "Цифровой экран"],
+            ["Применяемые роторы", "Ротор №5 / №8"],
+            ["Диапазон измерения", "Широкий диапазон вязкости в зависимости от ротора"],
+            ["Точность", "Высокая точность"],
+            ["Способ управления", "Цифровые кнопки"]
           ]
         },
         features: {
-          zh: ["数显屏幕，直接读数", "多种转子可选，测量范围广", "操作简便，精度高", "稳定性好，重复性佳"],
-          en: ["Digital display for direct reading", "Multiple rotors available, wide measurement range", "Easy operation, high precision", "Good stability and repeatability"]
+          zh: [
+            "数显屏幕，直接读数",
+            "多种转子可选，测量范围广",
+            "操作简便，精度高",
+            "稳定性好，重复性佳"
+          ],
+          en: [
+            "Digital display for direct reading",
+            "Multiple rotors available, wide measurement range",
+            "Easy operation, high precision",
+            "Good stability and repeatability"
+          ],
+          es: [
+            "Pantalla digital para lectura directa",
+            "Múltiples rotores opcionales, amplio rango de medición",
+            "Operación sencilla, alta precisión",
+            "Buena estabilidad y repetibilidad"
+          ],
+          ar: [
+            "شاشة رقمية للقراءة المباشرة",
+            "روترات متعددة اختيارية، نطاق قياس واسع",
+            "تشغيل بسيط، دقة عالية",
+            "استقرار جيد وقابلية تكرار"
+          ],
+          ru: [
+            "Цифровой экран, прямое считывание",
+            "Несколько роторов на выбор, широкий диапазон измерения",
+            "Простое управление, высокая точность",
+            "Хорошая стабильность и повторяемость"
+          ]
         },
-        ordering: { zh: [{ code: "TR 1101-5", name: "数显旋转粘度计（5号转子）" }, { code: "TR 1101-8", name: "数显旋转粘度计（8号转子）" }], en: [{ code: "TR 1101-5", name: "Digital Rotational Viscometer (No.5 rotor)" }, { code: "TR 1101-8", name: "Digital Rotational Viscometer (No.8 rotor)" }] },
-        docFiles: { en: "TR 1101-5&8数显旋转粘度计产品介绍.doc", zh: "TR 1101-5&8数显旋转粘度计产品介绍.doc" }, pdfFiles: {},
+        ordering: {
+          zh: [
+            { code: "TR 1101-5", name: "数显旋转粘度计（5号转子）" },
+            { code: "TR 1101-8", name: "数显旋转粘度计（8号转子）" }
+          ],
+          en: [
+            { code: "TR 1101-5", name: "Digital Rotational Viscometer (No.5 rotor)" },
+            { code: "TR 1101-8", name: "Digital Rotational Viscometer (No.8 rotor)" }
+          ],
+          es: [
+            { code: "TR 1101-5", name: "Viscosímetro Rotativo Digital (Rotor No.5)" },
+            { code: "TR 1101-8", name: "Viscosímetro Rotativo Digital (Rotor No.8)" }
+          ],
+          ar: [
+            { code: "TR 1101-5", name: "مقياس اللزوجة الدوراني الرقمي (روتور رقم 5)" },
+            { code: "TR 1101-8", name: "مقياس اللزوجة الدوراني الرقمي (روتور رقم 8)" }
+          ],
+          ru: [
+            { code: "TR 1101-5", name: "Цифровой ротационный вискозиметр (ротор №5)" },
+            { code: "TR 1101-8", name: "Цифровой ротационный вискозиметр (ротор №8)" }
+          ]
+        },
+        docFiles: { en: "TR 1101-5&8数显旋转粘度计产品介绍.doc", zh: "TR 1101-5&8数显旋转粘度计产品介绍.doc" }, pdfFiles: { en: "", zh: "" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 1123-1",
-        name: { zh: "斯托默粘度计", en: "Stormer Viscometer" },
-        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing" },
-        description: {
-          zh: "TR 1123-1 斯托默粘度计是用于测量涂料、油墨等流体粘度的专用仪器，通过测量摆动叶片在流体中停止所需的时间来计算粘度值，符合GB/T标准要求，操作简便，重复性好，广泛应用于涂料行业。",
-          en: "The TR 1123-1 Stormer Viscometer is a specialized instrument for measuring viscosity of coatings, inks and other fluids by measuring the time required for a oscillating blade to stop in the fluid, conforming to GB/T standards. Easy operation, good repeatability, widely used in coating industry."
-        },
+        name: { zh: "斯托默粘度计", en: "Stormer Viscometer", es: "Viscosímetro Stormer", ar: "مقياس لزوجة ستورمر", ru: "Вискозиметр Стормера" },
+        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing", es: "Pruebas de Materias Primas", ar: "اختبار خصائص المواد الخام", ru: "Испытание сырьевых материалов" },
+        description: { zh: "TR 1123-1 斯托默粘度计是用于测量涂料、油墨等流体粘度的专用仪器，通过测量摆动叶片在流体中停止所需的时间来计算粘度值，符合GB/T标准要求，操作简便，重复性好，广泛应用于涂料行业。", en: "The TR 1123-1 Stormer Viscometer is a specialized instrument for measuring viscosity of coatings, inks and other fluids by measuring the time required for a oscillating blade to stop in the fluid, conforming to GB/T standards. Easy operation, good repeatability, widely used in coating industry.", es: "El TR 1123-1 Viscosímetro Stormer es un instrumento especializado para medir la viscosidad de recubrimientos, tintas y otros fluidos, midiendo el tiempo requerido para que una cuchilla oscilante se detenga en el fluido para calcular el valor de viscosidad, conforme a los requisitos de la norma GB/T, operación sencilla y buena repetibilidad, ampliamente utilizado en la industria de recubrimientos.", ar: "TR 1123-1 مقياس لزوجة ستورمر هو جهاز متخصص لقياس لزوجة الطلاءات والحبر والسوائل الأخرى، من خلال قياس الوقت المطلوب لشفرة متذبذبة للتوقف في السائل لحساب قيمة اللزوجة، يتوافق مع متطلبات معيار GB/T، تشغيل بسيط وقابلية تكرار جيدة، يُستخدم على نطاق واسع في صناعة الطلاء.", ru: "TR 1123-1 Вискозиметр Стормера — это специализированный прибор для измерения вязкости покрытий, чернил и других жидкостей путём измерения времени, необходимого колеблющейся лопасти для остановки в жидкости, для расчёта значения вязкости, соответствует требованиям стандарта GB/T, простое управление, хорошая повторяемость, широко применяется в лакокрасочной промышленности." },
         specs: {
           zh: [
             ["测量原理", "斯托默（Stormer）摆动式"],
@@ -509,24 +852,86 @@
             ["Standards", "GB/T standards"],
             ["Operation", "Easy"],
             ["Repeatability", "Good"]
+          ],
+          es: [
+            ["Principio de medición", "Tipo oscilante Stormer"],
+            ["Ámbito de aplicación", "Recubrimientos, tintas y otros fluidos"],
+            ["Norma aplicable", "Norma GB/T"],
+            ["Operación", "Sencilla"],
+            ["Repetibilidad", "Buena"]
+          ],
+          ar: [
+            ["مبدأ القياس", "نوع تذبذبي ستورمر"],
+            ["نطاق التطبيق", "الطلاءات والحبر والسوائل الأخرى"],
+            ["المعيار المتوافق", "معيار GB/T"],
+            ["التشغيل", "بسيط"],
+            ["قابلية التكرار", "جيدة"]
+          ],
+          ru: [
+            ["Принцип измерения", "Осцилляционный тип Стормера"],
+            ["Область применения", "Покрытия, чернила и другие жидкости"],
+            ["Соответствующий стандарт", "Стандарт GB/T"],
+            ["Управление", "Простое"],
+            ["Повторяемость", "Хорошая"]
           ]
         },
         features: {
-          zh: ["符合GB/T国家标准", "操作简便，重复性好", "广泛应用于涂料行业", "测量精度高"],
-          en: ["Conforms to GB/T national standards", "Easy operation, good repeatability", "Widely used in coating industry", "High measurement accuracy"]
+          zh: [
+            "符合GB/T国家标准",
+            "操作简便，重复性好",
+            "广泛应用于涂料行业",
+            "测量精度高"
+          ],
+          en: [
+            "Conforms to GB/T national standards",
+            "Easy operation, good repeatability",
+            "Widely used in coating industry",
+            "High measurement accuracy"
+          ],
+          es: [
+            "Conforme a la norma nacional GB/T",
+            "Operación sencilla, buena repetibilidad",
+            "Ampliamente utilizado en la industria de recubrimientos",
+            "Alta precisión de medición"
+          ],
+          ar: [
+            "يتوافق مع معيار GB/T الوطني",
+            "تشغيل بسيط وقابلية تكرار جيدة",
+            "يُستخدم على نطاق واسع في صناعة الطلاء",
+            "دقة قياس عالية"
+          ],
+          ru: [
+            "Соответствует национальному стандарту GB/T",
+            "Простое управление, хорошая повторяемость",
+            "Широко применяется в лакокрасочной промышленности",
+            "Высокая точность измерения"
+          ]
         },
-        ordering: { zh: [{ code: "TR 1123-1", name: "斯托默粘度计" }], en: [{ code: "TR 1123-1", name: "Stormer Viscometer" }] },
+        ordering: {
+          zh: [
+            { code: "TR 1123-1", name: "斯托默粘度计" }
+          ],
+          en: [
+            { code: "TR 1123-1", name: "Stormer Viscometer" }
+          ],
+          es: [
+            { code: "TR 1123-1", name: "Viscosímetro Stormer" }
+          ],
+          ar: [
+            { code: "TR 1123-1", name: "مقياس لزوجة ستورمر" }
+          ],
+          ru: [
+            { code: "TR 1123-1", name: "Вискозиметр Стормера" }
+          ]
+        },
         docFiles: { en: "TR 1123-1斯托默粘度计产品介绍.doc", zh: "TR 1123-1斯托默粘度计产品介绍.doc" }, pdfFiles: { en: "TR 1123-1S斯托默粘度计产品介绍.pdf", zh: "TR 1123-1S斯托默粘度计产品介绍.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 1001",
-        name: { zh: "蔡恩杯（Zahn杯）", en: "Zahn Cup" },
-        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing" },
-        description: {
-          zh: "TR 1001 蔡恩杯（Zahn杯）是测量涂料、油墨等流体流出时间的标准仪器，通过测量流体从标准孔径流出的时间（秒），对照换算表得出动力粘度值。广泛应用于涂料检测行业，是油漆涂料粘度测量的常规仪器。",
-          en: "The TR 1001 Zahn Cup is a standard instrument for measuring the efflux time of coatings, inks and other fluids. By measuring the time (seconds) for fluid to flow through a standard orifice, the kinematic viscosity can be calculated using conversion tables. Widely used in coating testing industry."
-        },
+        name: { zh: "蔡恩杯（Zahn杯）", en: "Zahn Cup", es: "Copa Zahn", ar: "كوب زان", ru: "Чашка Цана (Zahn Cup)" },
+        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing", es: "Pruebas de Materias Primas", ar: "اختبار خصائص المواد الخام", ru: "Испытание сырьевых материалов" },
+        description: { zh: "TR 1001 蔡恩杯（Zahn杯）是测量涂料、油墨等流体流出时间的标准仪器，通过测量流体从标准孔径流出的时间（秒），对照换算表得出动力粘度值。广泛应用于涂料检测行业，是油漆涂料粘度测量的常规仪器。", en: "The TR 1001 Zahn Cup is a standard instrument for measuring the efflux time of coatings, inks and other fluids. By measuring the time (seconds) for fluid to flow through a standard orifice, the kinematic viscosity can be calculated using conversion tables. Widely used in coating testing industry.", es: "La TR 1001 Copa Zahn es un instrumento estándar para medir el tiempo de efflux de recubrimientos, tintas y otros fluidos. Midiendo el tiempo (segundos) que tarda el fluido en fluir a través de un orificio estándar, se puede obtener la viscosidad cinemática mediante tablas de conversión. Ampliamente utilizada en la industria de detección de recubrimientos.", ar: "TR 1001 كوب زان هو أداة قياسية لقياس زمن التدفق للطلاءات والحبر والسوائل الأخرى. من خلال قياس الوقت (بالثواني) الذي يستغرقه السائل للتدفق عبر فتحة قياسية، يمكن الحصول على اللزوجة الحركية باستخدام جداول التحويل. يُستخدم على نطاق واسع في صناعة اختبار الطلاء.", ru: "TR 1001 Чашка Цана — это стандартный прибор для измерения времени истечения покрытий, чернил и других жидкостей. Измеряя время (в секундах), за которое жидкость вытекает через стандартное отверстие, и используя таблицу пересчёта, получают кинематическую вязкость. Широко применяется в индустрии лакокрасочных покрытий." },
         specs: {
           zh: [
             ["类型", "蔡恩杯（Zahn Cup）"],
@@ -541,84 +946,343 @@
             ["Application", "Coatings, inks and other fluids"],
             ["Measurement", "Efflux time method"],
             ["Conversion", "Kinematic viscosity via conversion table"]
+          ],
+          es: [
+            ["Tipo", "Copa Zahn"],
+            ["Material", "Acero inoxidable"],
+            ["Ámbito de aplicación", "Recubrimientos, tintas y otros fluidos"],
+            ["Método de medición", "Método de tiempo de efflux"],
+            ["Conversión", "Viscosidad cinemática mediante tabla de conversión"]
+          ],
+          ar: [
+            ["النوع", "كوب زان"],
+            ["المادة", "فولاذ مقاوم للصدأ"],
+            ["نطاق التطبيق", "الطلاءات والحبر والسوائل الأخرى"],
+            ["طريقة القياس", "طريقة زمن التدفق"],
+            ["التحويل", "اللزوجة الحركية عبر جدول التحويل"]
+          ],
+          ru: [
+            ["Тип", "Чашка Цана (Zahn Cup)"],
+            ["Материал", "Нержавеющая сталь"],
+            ["Область применения", "Покрытия, чернила и другие жидкости"],
+            ["Метод измерения", "Метод времени истечения"],
+            ["Пересчёт", "Кинематическая вязкость по таблице пересчёта"]
           ]
         },
         features: {
-          zh: ["标准蔡恩杯设计", "不锈钢材质，耐用防腐", "操作简便快捷", "广泛应用于涂料检测行业", "油漆涂料粘度测量常规仪器"],
-          en: ["Standard Zahn cup design", "Stainless steel, durable and corrosion-resistant", "Simple and fast operation", "Widely used in coating testing industry", "Standard instrument for paint coating viscosity measurement"]
+          zh: [
+            "标准蔡恩杯设计",
+            "不锈钢材质，耐用防腐",
+            "操作简便快捷",
+            "广泛应用于涂料检测行业",
+            "油漆涂料粘度测量常规仪器"
+          ],
+          en: [
+            "Standard Zahn cup design",
+            "Stainless steel, durable and corrosion-resistant",
+            "Simple and fast operation",
+            "Widely used in coating testing industry",
+            "Standard instrument for paint coating viscosity measurement"
+          ],
+          es: [
+            "Diseño estándar de copa Zahn",
+            "Acero inoxidable, duradero y resistente a la corrosión",
+            "Operación sencilla y rápida",
+            "Ampliamente utilizada en la industria de detección de recubrimientos",
+            "Instrumento convencional para medición de viscosidad de pintura"
+          ],
+          ar: [
+            "تصميم كوب زان القياسي",
+            "فولاذ مقاوم للصدأ، متين ومقاوم للتآكل",
+            "تشغيل بسيط وسريع",
+            "يُستخدم على نطاق واسع في صناعة اختبار الطلاء",
+            "أداة قياسية لقياس لزوجة الدهانات"
+          ],
+          ru: [
+            "Стандартный дизайн чашки Цана",
+            "Нержавеющая сталь, долговечная и коррозионностойкая",
+            "Простое и быстрое управление",
+            "Широко применяется в индустрии лакокрасочных покрытий",
+            "Стандартный прибор для измерения вязкости красок и покрытий"
+          ]
         },
-        ordering: { zh: [{ code: "TR 1001", name: "蔡恩杯（Zahn杯）" }], en: [{ code: "TR 1001", name: "Zahn Cup" }] },
-        docFiles: { en: "TR 1001蔡恩杯.doc", zh: "TR 1001蔡恩杯.doc" }, pdfFiles: {},
+        ordering: {
+          zh: [
+            { code: "TR 1001", name: "蔡恩杯（Zahn杯）" }
+          ],
+          en: [
+            { code: "TR 1001", name: "Zahn Cup" }
+          ],
+          es: [
+            { code: "TR 1001", name: "Copa Zahn" }
+          ],
+          ar: [
+            { code: "TR 1001", name: "كوب زان" }
+          ],
+          ru: [
+            { code: "TR 1001", name: "Чашка Цана (Zahn Cup)" }
+          ]
+        },
+        docFiles: { en: "TR 1001蔡恩杯.doc", zh: "TR 1001蔡恩杯.doc" }, pdfFiles: { en: "", zh: "" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 5206",
-        name: { zh: "落球冲击仪", en: "Ball Drop Impact Tester" },
-        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
-        description: {
-          zh: "TR 5206 落球冲击仪用于测定涂层抵抗冲击的能力，通过不同重量的钢球从指定高度自由落下冲击涂层表面，观察涂层破坏情况来评价其抗冲击性能。符合GB/T等相关国家标准。",
-          en: "The TR 5206 Ball Drop Impact Tester is used to determine coating resistance to impact by dropping steel balls of different weights from specified heights onto the coating surface and observing damage to evaluate impact resistance. Conforms to GB/T and other national standards."
-        },
+        name: { zh: "落球冲击仪", en: "Ball Drop Impact Tester", es: "Ensayador de Impacto por Caída de Bola", ar: "جهاز اختبار الصدمة بسقوط الكرة", ru: "Ударный тестер падающим шариком" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5206 落球冲击仪用于测定涂层抵抗冲击的能力，通过不同重量的钢球从指定高度自由落下冲击涂层表面，观察涂层破坏情况来评价其抗冲击性能。符合GB/T等相关国家标准。", en: "The TR 5206 Ball Drop Impact Tester is used to determine coating resistance to impact by dropping steel balls of different weights from specified heights onto the coating surface and observing damage to evaluate impact resistance. Conforms to GB/T and other national standards.", es: "El TR 5206 Ensayador de Impacto por Caída de Bola se utiliza para determinar la resistencia al impacto de recubrimientos, dejando caer bolas de acero de diferentes pesos desde alturas especificadas sobre la superficie del recubrimiento y observando el daño para evaluar la resistencia al impacto. Conforme a GB/T y otras normas nacionales relevantes.", ar: "TR 5206 جهاز اختبار الصدمة بسقوط الكرة يُستخدم لتحديد مقاومة الطلاء للصدمات، من خلال إسقاط كرات فولاذية بأوزان مختلفة من ارتفاعات محددة على سطح الطلاء ومراقبة تلف الطلاء لتقييم مقاومة الصدمة. يتوافق مع GB/T والمعايير الوطنية الأخرى ذات الصلة.", ru: "TR 5206 Ударный тестер падающим шариком применяется для определения стойкости покрытий к удару, путём сбрасывания стальных шариков различной массы с заданной высоты на поверхность покрытия и наблюдения за разрушением покрытия для оценки его ударной стойкости. Соответствует GB/T и другим соответствующим национальным стандартам." },
         specs: {
-          zh: [["测试方法", "落球冲击法"], ["适用标准", "GB/T 相关标准"], ["用途", "测定涂层抗冲击性能"]],
-          en: [["Test Method", "Ball drop impact"], ["Standards", "GB/T relevant standards"], ["Application", "Coating impact resistance testing"]]
+          zh: [
+            ["测试方法", "落球冲击法"],
+            ["适用标准", "GB/T 相关标准"],
+            ["用途", "测定涂层抗冲击性能"]
+          ],
+          en: [
+            ["Test Method", "Ball drop impact"],
+            ["Standards", "GB/T relevant standards"],
+            ["Application", "Coating impact resistance testing"]
+          ],
+          es: [
+            ["Método de prueba", "Método de impacto por caída de bola"],
+            ["Normas aplicables", "Normas GB/T relevantes"],
+            ["Aplicación", "Determinación de la resistencia al impacto de recubrimientos"]
+          ],
+          ar: [
+            ["طريقة الاختبار", "طريقة الصدمة بسقوط الكرة"],
+            ["المعايير القابلة للتطبيق", "معايير GB/T ذات الصلة"],
+            ["الاستخدام", "تحديد مقاومة الصدمة للطلاء"]
+          ],
+          ru: [
+            ["Метод испытания", "Метод падающего шарика"],
+            ["Применимые стандарты", "Соответствующие стандарты GB/T"],
+            ["Назначение", "Определение ударной стойкости покрытий"]
+          ]
         },
         features: {
-          zh: ["落球法测试，操作简便", "适用于多种涂层检测", "符合相关国家标准", "结构稳定可靠"],
-          en: ["Ball drop method, easy to operate", "Suitable for various coating testing", "Conforms to relevant national standards", "Stable and reliable structure"]
+          zh: [
+            "落球法测试，操作简便",
+            "适用于多种涂层检测",
+            "符合相关国家标准",
+            "结构稳定可靠"
+          ],
+          en: [
+            "Ball drop method, easy to operate",
+            "Suitable for various coating testing",
+            "Conforms to relevant national standards",
+            "Stable and reliable structure"
+          ],
+          es: [
+            "Prueba por caída de bola, operación sencilla",
+            "Aplicable a varios tipos de detección de recubrimientos",
+            "Conforme a normas nacionales relevantes",
+            "Estructura estable y confiable"
+          ],
+          ar: [
+            "اختبار طريقة سقوط الكرة، تشغيل بسيط",
+            "مناسب لمختلف اختبارات الطلاء",
+            "يتوافق مع المعايير الوطنية ذات الصلة",
+            "هيكل مستقر وموثوق"
+          ],
+          ru: [
+            "Испытание методом падающего шарика, простое управление",
+            "Подходит для различных испытаний покрытий",
+            "Соответствует соответствующим национальным стандартам",
+            "Стабильная и надёжная конструкция"
+          ]
         },
-        ordering: { zh: [{ code: "TR 5206", name: "落球冲击仪" }], en: [{ code: "TR 5206", name: "Ball Drop Impact Tester" }] },
-        docFiles: {}, pdfFiles: { en: "TR 5206 落球冲击仪产品资料.pdf", zh: "TR 5206 落球冲击仪产品资料.pdf" },
+        ordering: {
+          zh: [
+            { code: "TR 5206", name: "落球冲击仪" }
+          ],
+          en: [
+            { code: "TR 5206", name: "Ball Drop Impact Tester" }
+          ],
+          es: [
+            { code: "TR 5206", name: "Ensayador de Impacto por Caída de Bola" }
+          ],
+          ar: [
+            { code: "TR 5206", name: "جهاز اختبار الصدمة بسقوط الكرة" }
+          ],
+          ru: [
+            { code: "TR 5206", name: "Ударный тестер падающим шариком" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 5206 落球冲击仪产品资料.pdf", zh: "TR 5206 落球冲击仪产品资料.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 5310",
-        name: { zh: "落砂耐磨试验仪", en: "Falling Sand Abrasion Tester" },
-        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
-        description: {
-          zh: "TR 5310 落砂耐磨试验仪用于测定涂层耐磨性能，通过标准砂粒从一定高度落下冲刷涂层表面，以涂层磨损程度评价其耐磨性。符合GB/T标准，结构稳定可靠。",
-          en: "The TR 5310 Falling Sand Abrasion Tester is used to determine coating abrasion resistance by dropping standard sand particles from a certain height onto the coating surface and evaluating abrasion degree. Conforms to GB/T standards with stable and reliable structure."
-        },
+        name: { zh: "落砂耐磨试验仪", en: "Falling Sand Abrasion Tester", es: "Ensayador de Abrasión por Caída de Arena", ar: "جهاز اختبار التآكل بسقوط الرمل", ru: "Тестер истирания падающим песком" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5310 落砂耐磨试验仪用于测定涂层耐磨性能，通过标准砂粒从一定高度落下冲刷涂层表面，以涂层磨损程度评价其耐磨性。符合GB/T标准，结构稳定可靠。", en: "The TR 5310 Falling Sand Abrasion Tester is used to determine coating abrasion resistance by dropping standard sand particles from a certain height onto the coating surface and evaluating abrasion degree. Conforms to GB/T standards with stable and reliable structure.", es: "El TR 5310 Ensayador de Abrasión por Caída de Arena se utiliza para determinar la resistencia a la abrasión de recubrimientos, dejando caer partículas de arena estándar desde una cierta altura sobre la superficie del recubrimiento y evaluando el grado de desgaste. Conforme a la norma GB/T, estructura estable y confiable.", ar: "TR 5310 جهاز اختبار التآكل بسقوط الرمل يُستخدم لتحديد مقاومة التآكل للطلاء، من خلال إسقاط جزيئات رملية قياسية من ارتفاع معين على سطح الطلاء وتقييم درجة تآكل الطلاء. يتوافق مع معيار GB/T، هيكل مستقر وموثوق.", ru: "TR 5310 Тестер истирания падающим песком применяется для определения износостойкости покрытий, путём сбрасывания стандартных песчинок с определённой высоты на поверхность покрытия и оценки степени износа покрытия. Соответствует стандарту GB/T, стабильная и надёжная конструкция." },
         specs: {
-          zh: [["测试方法", "落砂法"], ["适用标准", "GB/T 标准"], ["用途", "测定涂层耐磨性能"]],
-          en: [["Test Method", "Falling sand method"], ["Standards", "GB/T standards"], ["Application", "Coating abrasion resistance testing"]]
+          zh: [
+            ["测试方法", "落砂法"],
+            ["适用标准", "GB/T 标准"],
+            ["用途", "测定涂层耐磨性能"]
+          ],
+          en: [
+            ["Test Method", "Falling sand method"],
+            ["Standards", "GB/T standards"],
+            ["Application", "Coating abrasion resistance testing"]
+          ],
+          es: [
+            ["Método de prueba", "Método de caída de arena"],
+            ["Normas aplicables", "Norma GB/T"],
+            ["Aplicación", "Determinación de la resistencia a la abrasión de recubrimientos"]
+          ],
+          ar: [
+            ["طريقة الاختبار", "طريقة سقوط الرمل"],
+            ["المعايير القابلة للتطبيق", "معيار GB/T"],
+            ["الاستخدام", "تحديد مقاومة التآكل للطلاء"]
+          ],
+          ru: [
+            ["Метод испытания", "Метод падающего песка"],
+            ["Применимые стандарты", "Стандарт GB/T"],
+            ["Назначение", "Определение износостойкости покрытий"]
+          ]
         },
         features: {
-          zh: ["落砂法测试涂层耐磨性", "符合GB/T标准", "结构稳定可靠", "重复性好"],
-          en: ["Falling sand method for coating abrasion testing", "Conforms to GB/T standards", "Stable and reliable structure", "Good repeatability"]
+          zh: [
+            "落砂法测试涂层耐磨性",
+            "符合GB/T标准",
+            "结构稳定可靠",
+            "重复性好"
+          ],
+          en: [
+            "Falling sand method for coating abrasion testing",
+            "Conforms to GB/T standards",
+            "Stable and reliable structure",
+            "Good repeatability"
+          ],
+          es: [
+            "Prueba de resistencia a la abrasión por caída de arena",
+            "Conforme a la norma GB/T",
+            "Estructura estable y confiable",
+            "Buena repetibilidad"
+          ],
+          ar: [
+            "اختبار مقاومة التآكل بسقوط الرمل",
+            "يتوافق مع معيار GB/T",
+            "هيكل مستقر وموثوق",
+            "قابلية تكرار جيدة"
+          ],
+          ru: [
+            "Испытание износостойкости покрытий методом падающего песка",
+            "Соответствует стандарту GB/T",
+            "Стабильная и надёжная конструкция",
+            "Хорошая повторяемость"
+          ]
         },
-        ordering: { zh: [{ code: "TR 5310", name: "落砂耐磨试验仪" }], en: [{ code: "TR 5310", name: "Falling Sand Abrasion Tester" }] },
-        docFiles: {}, pdfFiles: { en: "TR 5310 落砂耐磨试验仪产品资料.pdf", zh: "TR 5310 落砂耐磨试验仪产品资料.pdf" },
+        ordering: {
+          zh: [
+            { code: "TR 5310", name: "落砂耐磨试验仪" }
+          ],
+          en: [
+            { code: "TR 5310", name: "Falling Sand Abrasion Tester" }
+          ],
+          es: [
+            { code: "TR 5310", name: "Ensayador de Abrasión por Caída de Arena" }
+          ],
+          ar: [
+            { code: "TR 5310", name: "جهاز اختبار التآكل بسقوط الرمل" }
+          ],
+          ru: [
+            { code: "TR 5310", name: "Тестер истирания падающим песком" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 5310 落砂耐磨试验仪产品资料.pdf", zh: "TR 5310 落砂耐磨试验仪产品资料.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 5311/1",
-        name: { zh: "耐划痕测试仪", en: "Scratch Resistance Tester" },
-        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
-        description: {
-          zh: "TR 5311/1 耐划痕测试仪用于测定涂层抵抗划痕的能力，通过金刚石针头或钢针在涂层表面划动，测量涂层被划破所需的力值，评价涂层硬度及耐划痕性能。适用于多种涂层材料的检测。",
-          en: "The TR 5311/1 Scratch Resistance Tester is used to determine coating scratch resistance by moving a diamond or steel needle across the coating surface and measuring the force required to scratch through. Suitable for various coating materials."
-        },
+        name: { zh: "耐划痕测试仪", en: "Scratch Resistance Tester", es: "Ensayador de Resistencia al Rayado", ar: "جهاز اختبار مقاومة الخدش", ru: "Тестер устойчивости к царапанию" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5311/1 耐划痕测试仪用于测定涂层抵抗划痕的能力，通过金刚石针头或钢针在涂层表面划动，测量涂层被划破所需的力值，评价涂层硬度及耐划痕性能。适用于多种涂层材料的检测。", en: "The TR 5311/1 Scratch Resistance Tester is used to determine coating scratch resistance by moving a diamond or steel needle across the coating surface and measuring the force required to scratch through. Suitable for various coating materials.", es: "El TR 5311/1 Ensayador de Resistencia al Rayado se utiliza para determinar la capacidad de resistencia al rayado de recubrimientos, moviendo una aguja de diamante o acero sobre la superficie del recubrimiento y midiendo la fuerza requerida para rayar. Aplicable a varios materiales de recubrimiento.", ar: "TR 5311/1 جهاز اختبار مقاومة الخدش يُستخدم لتحديد قدرة الطلاء على مقاومة الخدش، من خلال تحريك إبرة ماسية أو فولاذية على سطح الطلاء وقياس القوة المطلوبة لخدش الطلاء. مناسب لمختلف مواد الطلاء.", ru: "TR 5311/1 Тестер устойчивости к царапанию применяется для определения способности покрытий сопротивляться царапинам, путём перемещения алмазной или стальной иглы по поверхности покрытия и измерения усилия, необходимого для процарапывания покрытия. Подходит для различных материалов покрытий." },
         specs: {
-          zh: [["测试原理", "划痕法"], ["用途", "测定涂层耐划痕能力"], ["适用材料", "多种涂层材料"]],
-          en: [["Test Principle", "Scratch method"], ["Application", "Coating scratch resistance testing"], ["Materials", "Various coating materials"]]
+          zh: [
+            ["测试原理", "划痕法"],
+            ["用途", "测定涂层耐划痕能力"],
+            ["适用材料", "多种涂层材料"]
+          ],
+          en: [
+            ["Test Principle", "Scratch method"],
+            ["Application", "Coating scratch resistance testing"],
+            ["Materials", "Various coating materials"]
+          ],
+          es: [
+            ["Principio de prueba", "Método de rayado"],
+            ["Aplicación", "Determinación de la resistencia al rayado de recubrimientos"],
+            ["Materiales aplicables", "Varios materiales de recubrimiento"]
+          ],
+          ar: [
+            ["مبدأ الاختبار", "طريقة الخدش"],
+            ["الاستخدام", "تحديد قدرة مقاومة الخدش للطلاء"],
+            ["المواد القابلة للتطبيق", "مختلف مواد الطلاء"]
+          ],
+          ru: [
+            ["Принцип испытания", "Метод царапания"],
+            ["Назначение", "Определение устойчивости покрытий к царапанию"],
+            ["Применимые материалы", "Различные материалы покрытий"]
+          ]
         },
         features: {
-          zh: ["精确测定涂层硬度", "操作简便", "适用于多种涂层材料", "评价客观准确"],
-          en: ["Accurate coating hardness measurement", "Easy operation", "Suitable for various coating materials", "Objective and accurate evaluation"]
+          zh: [
+            "精确测定涂层硬度",
+            "操作简便",
+            "适用于多种涂层材料",
+            "评价客观准确"
+          ],
+          en: [
+            "Accurate coating hardness measurement",
+            "Easy operation",
+            "Suitable for various coating materials",
+            "Objective and accurate evaluation"
+          ],
+          es: [
+            "Medición precisa de la dureza del recubrimiento",
+            "Operación sencilla",
+            "Aplicable a varios materiales de recubrimiento",
+            "Evaluación objetiva y precisa"
+          ],
+          ar: [
+            "قياس دقيق لصلابة الطلاء",
+            "تشغيل بسيط",
+            "مناسب لمختلف مواد الطلاء",
+            "تقييم موضوعي ودقيق"
+          ],
+          ru: [
+            "Точное измерение твёрдости покрытия",
+            "Простое управление",
+            "Подходит для различных материалов покрытий",
+            "Объективная и точная оценка"
+          ]
         },
-        ordering: { zh: [{ code: "TR 5311/1", name: "耐划痕测试仪" }], en: [{ code: "TR 5311/1", name: "Scratch Resistance Tester" }] },
-        docFiles: {}, pdfFiles: { en: "TR 5311_1 耐划痕测试仪产品资料.pdf", zh: "TR 5311_1 耐划痕测试仪产品资料.pdf" },
+        ordering: {
+          zh: [
+            { code: "TR 5311/1", name: "耐划痕测试仪" }
+          ],
+          en: [
+            { code: "TR 5311/1", name: "Scratch Resistance Tester" }
+          ],
+          es: [
+            { code: "TR 5311/1", name: "Ensayador de Resistencia al Rayado" }
+          ],
+          ar: [
+            { code: "TR 5311/1", name: "جهاز اختبار مقاومة الخدش" }
+          ],
+          ru: [
+            { code: "TR 5311/1", name: "Тестер устойчивости к царапанию" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 5311_1 耐划痕测试仪产品资料.pdf", zh: "TR 5311_1 耐划痕测试仪产品资料.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 5402",
-        name: { zh: "分光测色仪", en: "Spectrophotometer" },
-        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
-        description: {
-          zh: "TR 5402 分光测色仪用于精确测量颜色和色差，采用分光光度原理，能够测量样品的光谱反射率，进而计算各种色度指标。广泛应用于涂料、油墨、塑料、纺织等行业，满足颜色质量控制需求。",
-          en: "The TR 5402 Spectrophotometer is used for precise color and color difference measurement using spectrophotometric principles, measuring spectral reflectance of samples to calculate various chromaticity indicators. Widely used in coatings, inks, plastics, textiles industries."
-        },
+        name: { zh: "分光测色仪", en: "Spectrophotometer", es: "Espectrofotómetro", ar: "مقياس الطيف الضوئي", ru: "Спектрофотометр" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5402 分光测色仪用于精确测量颜色和色差，采用分光光度原理，能够测量样品的光谱反射率，进而计算各种色度指标。广泛应用于涂料、油墨、塑料、纺织等行业，满足颜色质量控制需求。", en: "The TR 5402 Spectrophotometer is used for precise color and color difference measurement using spectrophotometric principles, measuring spectral reflectance of samples to calculate various chromaticity indicators. Widely used in coatings, inks, plastics, textiles industries.", es: "El TR 5402 Espectrofotómetro se utiliza para la medición precisa del color y la diferencia de color, utilizando el principio de espectrofotometría, midiendo la reflectancia espectral de las muestras para calcular varios indicadores cromáticos. Ampliamente utilizado en industrias de recubrimientos, tintas, plásticos, textiles, etc.", ar: "TR 5402 مقياس الطيف الضوئي يُستخدم لقياس اللون وفرق اللون بدقة، باستخدام مبدأ الطيف الضوئي، قياس الانعكاسية الطيفية للعينات لحساب مختلف مؤشرات اللون. يُستخدم على نطاق واسع في صناعات الطلاء والحبر والبلاستيك والمنسوجات.", ru: "TR 5402 Спектрофотометр применяется для точного измерения цвета и цветовой разницы с использованием принципа спектрофотометрии, измеряя спектральное отражение образцов для расчёта различных колориметрических показателей. Широко применяется в лакокрасочной, типографической, пластмассовой и текстильной промышленности." },
         specs: {
           zh: [
             ["测量原理", "分光光度法"],
@@ -631,38 +1295,157 @@
             ["Measurements", "Color, color difference, spectral reflectance, etc."],
             ["Industries", "Coatings, inks, plastics, textiles, etc."],
             ["Color Spaces", "Multiple color space support"]
+          ],
+          es: [
+            ["Principio de medición", "Espectrofotometría"],
+            ["Elementos de medición", "Color, diferencia de color, reflectancia espectral, etc."],
+            ["Industrias de aplicación", "Recubrimientos, tintas, plásticos, textiles, etc."],
+            ["Espacios de color", "Soporte de múltiples espacios de color"]
+          ],
+          ar: [
+            ["مبدأ القياس", "الطيف الضوئي"],
+            ["عناصر القياس", "اللون وفرق اللون والانعكاسية الطيفية وغيرها"],
+            ["صناعات التطبيق", "الطلاء والحبر والبلاستيك والمنسوجات وغيرها"],
+            ["مساحات اللون", "دعم مساحات لون متعددة"]
+          ],
+          ru: [
+            ["Принцип измерения", "Спектрофотометрия"],
+            ["Измеряемые параметры", "Цвет, цветовая разница, спектральное отражение и т.д."],
+            ["Отрасли применения", "Лакокрасочная, типографическая, пластмассовая, текстильная и др."],
+            ["Цветовые пространства", "Поддержка множества цветовых пространств"]
           ]
         },
         features: {
-          zh: ["高精度颜色测量", "多种色空间支持", "适用于涂料、油墨、塑料等行业", "满足颜色质量控制需求"],
-          en: ["High precision color measurement", "Multiple color space support", "Used in coatings, inks, plastics industries", "Meets color quality control requirements"]
+          zh: [
+            "高精度颜色测量",
+            "多种色空间支持",
+            "适用于涂料、油墨、塑料等行业",
+            "满足颜色质量控制需求"
+          ],
+          en: [
+            "High precision color measurement",
+            "Multiple color space support",
+            "Used in coatings, inks, plastics industries",
+            "Meets color quality control requirements"
+          ],
+          es: [
+            "Medición de color de alta precisión",
+            "Soporte de múltiples espacios de color",
+            "Utilizado en industrias de recubrimientos, tintas, plásticos",
+            "Satisface las necesidades de control de calidad del color"
+          ],
+          ar: [
+            "قياس لون عالي الدقة",
+            "دعم مساحات لون متعددة",
+            "يُستخدم في صناعات الطلاء والحبر والبلاستيك",
+            "يلبي متطلبات التحكم في جودة اللون"
+          ],
+          ru: [
+            "Высокоточный измеритель цвета",
+            "Поддержка множества цветовых пространств",
+            "Применяется в лакокрасочной, типографической, пластмассовой промышленности",
+            "Удовлетворяет требованиям контроля качества цвета"
+          ]
         },
-        ordering: { zh: [{ code: "TR 5402", name: "分光测色仪" }], en: [{ code: "TR 5402", name: "Spectrophotometer" }] },
+        ordering: {
+          zh: [
+            { code: "TR 5402", name: "分光测色仪" }
+          ],
+          en: [
+            { code: "TR 5402", name: "Spectrophotometer" }
+          ],
+          es: [
+            { code: "TR 5402", name: "Espectrofotómetro" }
+          ],
+          ar: [
+            { code: "TR 5402", name: "مقياس الطيف الضوئي" }
+          ],
+          ru: [
+            { code: "TR 5402", name: "Спектрофотометр" }
+          ]
+        },
         docFiles: { en: "TR 5402 分光测色仪产品资料.doc", zh: "TR 5402 分光测色仪产品资料.doc" }, pdfFiles: { en: "TR 5402 分光测色仪产品资料.pdf", zh: "TR 5402 分光测色仪产品资料.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 5464-7",
-        name: { zh: "涂层检测仪器", en: "Coating Testing Instrument" },
-        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
-        description: {
-          zh: "TR 5464-7 涂层检测仪器，用于测定涂层各项性能指标，符合相关检测标准，精度高，稳定性好。",
-          en: "TR 5464-7 Coating Testing Instrument for measuring various coating performance indicators, conforming to relevant testing standards with high precision and good stability."
+        name: { zh: "涂层检测仪器", en: "Coating Testing Instrument", es: "Instrumento de Detección de Recubrimientos", ar: "جهاز فحص الطلاء", ru: "Прибор для контроля покрытий" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5464-7 涂层检测仪器，用于测定涂层各项性能指标，符合相关检测标准，精度高，稳定性好。", en: "TR 5464-7 Coating Testing Instrument for measuring various coating performance indicators, conforming to relevant testing standards with high precision and good stability.", es: "TR 5464-7 Instrumento de Detección de Recubrimientos, utilizado para determinar varios indicadores de rendimiento de recubrimientos, conforme a normas de detección relevantes, alta precisión y buena estabilidad.", ar: "TR 5464-7 جهاز فحص الطلاء، يُستخدم لقياس مختلف مؤشرات أداء الطلاء، يتوافق مع معايير الفحص ذات الصلة، دقة عالية واستقرار جيد.", ru: "TR 5464-7 Прибор для контроля покрытий, применяется для определения различных показателей свойств покрытий, соответствует соответствующим стандартам контроля, высокая точность и хорошая стабильность." },
+        specs: {
+          zh: [
+            ["符合标准", "相关检测标准"],
+            ["精度", "高"],
+            ["稳定性", "良好"]
+          ],
+          en: [
+            ["Standards", "Relevant testing standards"],
+            ["Accuracy", "High"],
+            ["Stability", "Good"]
+          ],
+          es: [
+            ["Normas aplicadas", "Normas de detección relevantes"],
+            ["Precisión", "Alta"],
+            ["Estabilidad", "Buena"]
+          ],
+          ar: [
+            ["المعايير المتوافقة", "معايير الفحص ذات الصلة"],
+            ["الدقة", "عالية"],
+            ["الاستقرار", "جيد"]
+          ],
+          ru: [
+            ["Соответствующие стандарты", "Соответствующие стандарты контроля"],
+            ["Точность", "Высокая"],
+            ["Стабильность", "Хорошая"]
+          ]
         },
-        specs: { zh: [["符合标准", "相关检测标准"], ["精度", "高"], ["稳定性", "良好"]], en: [["Standards", "Relevant testing standards"], ["Accuracy", "High"], ["Stability", "Good"]] },
-        features: { zh: ["符合相关检测标准", "精度高，稳定性好"], en: ["Conforms to testing standards", "High precision, good stability"] },
-        ordering: { zh: [{ code: "TR 5464-7", name: "涂层检测仪器" }], en: [{ code: "TR 5464-7", name: "Coating Testing Instrument" }] },
-        docFiles: {}, pdfFiles: { en: "TR 5464-7 产品资料.pdf", zh: "TR 5464-7 产品资料.pdf" },
+        features: {
+          zh: [
+            "符合相关检测标准",
+            "精度高，稳定性好"
+          ],
+          en: [
+            "Conforms to testing standards",
+            "High precision, good stability"
+          ],
+          es: [
+            "Conforme a normas de detección relevantes",
+            "Alta precisión, buena estabilidad"
+          ],
+          ar: [
+            "يتوافق مع معايير الفحص ذات الصلة",
+            "دقة عالية واستقرار جيد"
+          ],
+          ru: [
+            "Соответствует соответствующим стандартам контроля",
+            "Высокая точность, хорошая стабильность"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 5464-7", name: "涂层检测仪器" }
+          ],
+          en: [
+            { code: "TR 5464-7", name: "Coating Testing Instrument" }
+          ],
+          es: [
+            { code: "TR 5464-7", name: "Instrumento de Detección de Recubrimientos" }
+          ],
+          ar: [
+            { code: "TR 5464-7", name: "جهاز فحص الطلاء" }
+          ],
+          ru: [
+            { code: "TR 5464-7", name: "Прибор для контроля покрытий" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 5464-7 产品资料.pdf", zh: "TR 5464-7 产品资料.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 2200",
-        name: { zh: "防爆型篮式砂磨机", en: "Explosion-Proof Basket Mill" },
-        category: "grind", categoryName: { zh: "分散/搅拌/研磨", en: "Dispersion / Mixing / Grinding" },
-        description: {
-          zh: "TR 2200 防爆型篮式砂磨机是用于涂料、油墨等行业颜料研磨分散的专用设备。篮式研磨结构，研磨效率高；防爆设计，安全可靠；适用于溶剂型涂料的研磨分散加工。",
-          en: "The TR 2200 Explosion-Proof Basket Mill is a specialized equipment for pigment grinding and dispersing in coatings and inks industries. Basket grinding structure with high efficiency, explosion-proof design for safety and reliability, suitable for solvent-based coating grinding and dispersing."
-        },
+        name: { zh: "防爆型篮式砂磨机", en: "Explosion-Proof Basket Mill", es: "Molino de Cesta Antiexplosivo", ar: "طاحونة سلة مانعة للانفجار", ru: "Взрывозащищённая корзиночная мельница" },
+        category: "grind", categoryName: { zh: "分散/搅拌/研磨", en: "Dispersion / Mixing / Grinding", es: "Dispersión / Mezcla / Molienda", ar: "التشتيت / الخلط / الطحن", ru: "Диспергирование / Смешивание / Измельчение" },
+        description: { zh: "TR 2200 防爆型篮式砂磨机是用于涂料、油墨等行业颜料研磨分散的专用设备。篮式研磨结构，研磨效率高；防爆设计，安全可靠；适用于溶剂型涂料的研磨分散加工。", en: "The TR 2200 Explosion-Proof Basket Mill is a specialized equipment for pigment grinding and dispersing in coatings and inks industries. Basket grinding structure with high efficiency, explosion-proof design for safety and reliability, suitable for solvent-based coating grinding and dispersing.", es: "El TR 2200 Molino de Cesta Antiexplosivo es un equipo especializado para la molienda y dispersión de pigmentos en industrias de recubrimientos y tintas. Estructura de molienda tipo cesta, alta eficiencia; diseño antiexplosivo, seguro y confiable; aplicable al procesamiento de molienda y dispersión de recubrimientos base solvente.", ar: "TR 2200 طاحونة سلة مانعة للانفجار هي معدات متخصصة لطحن وتispersing الأصباغ في صناعات الطلاء والحبر. هيكل طحن بالسلة، كفاءة عالية؛ تصميم مانعة للانفجار، آمنة وموثوقة؛ مناسبة لطحن وتispersing الطلاءات القائمة على المذيبات.", ru: "TR 2200 Взрывозащищённая корзиночная мельница — это специализированное оборудование для измельчения и диспергирования пигментов в лакокрасочной и типографической промышленности. Корзиночная конструкция измельчения, высокая эффективность; взрывозащищённый дизайн, безопасность и надёжность; подходит для измельчения и диспергирования покрытий на основе растворителей." },
         specs: {
           zh: [
             ["类型", "防爆型篮式砂磨机"],
@@ -675,44 +1458,167 @@
             ["Grinding Structure", "Basket type"],
             ["Safety", "Explosion-proof design"],
             ["Application", "Solvent-based coatings, inks"]
+          ],
+          es: [
+            ["Tipo", "Molino de cesta antiexplosivo"],
+            ["Estructura de molienda", "Tipo cesta"],
+            ["Seguridad", "Diseño antiexplosivo"],
+            ["Materiales aplicables", "Recubrimientos base solvente, tintas"]
+          ],
+          ar: [
+            ["النوع", "طاحونة سلة مانعة للانفجار"],
+            ["هيكل الطحن", "نوع السلة"],
+            ["الأمان", "تصميم مانعة للانفجار"],
+            ["المواد القابلة للتطبيق", "طلاءات قائمة على المذيبات، حبر"]
+          ],
+          ru: [
+            ["Тип", "Взрывозащищённая корзиночная мельница"],
+            ["Конструкция измельчения", "Корзиночного типа"],
+            ["Безопасность", "Взрывозащищённый дизайн"],
+            ["Применимые материалы", "Покрытия на основе растворителей, чернила"]
           ]
         },
         features: {
-          zh: ["篮式研磨结构，效率高", "防爆设计，安全可靠", "适用于溶剂型涂料", "研磨分散效果好"],
-          en: ["Basket grinding structure, high efficiency", "Explosion-proof design, safe and reliable", "Suitable for solvent-based coatings", "Excellent grinding and dispersing effect"]
+          zh: [
+            "篮式研磨结构，效率高",
+            "防爆设计，安全可靠",
+            "适用于溶剂型涂料",
+            "研磨分散效果好"
+          ],
+          en: [
+            "Basket grinding structure, high efficiency",
+            "Explosion-proof design, safe and reliable",
+            "Suitable for solvent-based coatings",
+            "Excellent grinding and dispersing effect"
+          ],
+          es: [
+            "Estructura de molienda tipo cesta, alta eficiencia",
+            "Diseño antiexplosivo, seguro y confiable",
+            "Aplicable a recubrimientos base solvente",
+            "Excelente efecto de molienda y dispersión"
+          ],
+          ar: [
+            "هيكل طحن بالسلة، كفاءة عالية",
+            "تصميم مانعة للانفجار، آمنة وموثوقة",
+            "مناسبة للطلاءات القائمة على المذيبات",
+            "تأثير طحن وتispersing ممتاز"
+          ],
+          ru: [
+            "Корзиночная конструкция измельчения, высокая эффективность",
+            "Взрывозащищённый дизайн, безопасность и надёжность",
+            "Подходит для покрытий на основе растворителей",
+            "Отличный эффект измельчения и диспергирования"
+          ]
         },
-        ordering: { zh: [{ code: "TR 2200", name: "防爆型篮式砂磨机" }], en: [{ code: "TR 2200", name: "Explosion-Proof Basket Mill" }] },
-        docFiles: { en: "TR 2200 防爆型篮式砂磨机.doc", zh: "TR 2200 防爆型篮式砂磨机.doc" }, pdfFiles: {},
+        ordering: {
+          zh: [
+            { code: "TR 2200", name: "防爆型篮式砂磨机" }
+          ],
+          en: [
+            { code: "TR 2200", name: "Explosion-Proof Basket Mill" }
+          ],
+          es: [
+            { code: "TR 2200", name: "Molino de Cesta Antiexplosivo" }
+          ],
+          ar: [
+            { code: "TR 2200", name: "طاحونة سلة مانعة للانفجار" }
+          ],
+          ru: [
+            { code: "TR 2200", name: "Взрывозащищённая корзиночная мельница" }
+          ]
+        },
+        docFiles: { en: "TR 2200 防爆型篮式砂磨机.doc", zh: "TR 2200 防爆型篮式砂磨机.doc" }, pdfFiles: { en: "", zh: "" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 6302",
-        name: { zh: "腐蚀划痕器", en: "Corrosion Scratch Tester" },
-        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing" },
-        description: {
-          zh: "TR 6302 腐蚀划痕器用于测定涂层耐腐蚀性能，通过在涂层表面制造标准划痕，然后进行盐雾等腐蚀试验，观察划痕处涂层的腐蚀蔓延情况，评价涂层对金属基材的保护性能。",
-          en: "The TR 6302 Corrosion Scratch Tester is used for determining coating corrosion resistance by creating standard scratches on the coating surface, then conducting salt spray or other corrosion tests to observe corrosion spread at the scratch to evaluate coating protection performance."
-        },
+        name: { zh: "腐蚀划痕器", en: "Corrosion Scratch Tester", es: "Ensayador de Rayado para Corrosión", ar: "جهاز خدش التآكل", ru: "Прибор для испытания коррозии царапанием" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 6302 腐蚀划痕器用于测定涂层耐腐蚀性能，通过在涂层表面制造标准划痕，然后进行盐雾等腐蚀试验，观察划痕处涂层的腐蚀蔓延情况，评价涂层对金属基材的保护性能。", en: "The TR 6302 Corrosion Scratch Tester is used for determining coating corrosion resistance by creating standard scratches on the coating surface, then conducting salt spray or other corrosion tests to observe corrosion spread at the scratch to evaluate coating protection performance.", es: "El TR 6302 Ensayador de Rayado para Corrosión se utiliza para determinar la resistencia a la corrosión de recubrimientos, creando rayados estándar en la superficie del recubrimiento y luego realizando pruebas de corrosión como niebla salina, observando la propagación de la corrosión en los rayados para evaluar el rendimiento de protección del recubrimiento sobre el metal base.", ar: "TR 6302 جهاز خدش التآكل يُستخدم لتحديد مقاومة التآكل للطلاء، من خلال إنشاء خدوش قياسية على سطح الطلاء، ثم إجراء اختبارات تآكل مثل رذاذ الملح، ومراقبة انتشار التآكل عند الخدوش لتقييم أداء حماية الطلاء للمعدن الأساسي.", ru: "TR 6302 Прибор для испытания коррозии царапанием применяется для определения коррозионной стойкости покрытий, путём создания стандартных царапин на поверхности покрытия и последующего проведения коррозионных испытаний, таких как соляной туман, наблюдения за распространением коррозии на царапинах для оценки защитных свойств покрытия по отношению к металлической основе." },
         specs: {
-          zh: [["测试方法", "划痕后腐蚀试验"], ["用途", "测定涂层耐腐蚀性能"], ["适用对象", "金属涂层"]],
-          en: [["Test Method", "Corrosion test after scratching"], ["Application", "Coating corrosion resistance testing"], ["対象", "Metal coatings"]]
+          zh: [
+            ["测试方法", "划痕后腐蚀试验"],
+            ["用途", "测定涂层耐腐蚀性能"],
+            ["适用对象", "金属涂层"]
+          ],
+          en: [
+            ["Test Method", "Corrosion test after scratching"],
+            ["Application", "Coating corrosion resistance testing"],
+            ["対象", "Metal coatings"]
+          ],
+          es: [
+            ["Método de prueba", "Prueba de corrosión después de rayado"],
+            ["Aplicación", "Determinación de la resistencia a la corrosión de recubrimientos"],
+            ["Objeto aplicable", "Recubrimientos metálicos"]
+          ],
+          ar: [
+            ["طريقة الاختبار", "اختبار التآكل بعد الخدش"],
+            ["الاستخدام", "تحديد مقاومة التآكل للطلاء"],
+            ["الكائن القابل للتطبيق", "طلاءات المعادن"]
+          ],
+          ru: [
+            ["Метод испытания", "Коррозионное испытание после царапания"],
+            ["Назначение", "Определение коррозионной стойкости покрытий"],
+            ["Применимые объекты", "Металлические покрытия"]
+          ]
         },
         features: {
-          zh: ["划痕后测试腐蚀性能", "精确控制划痕深度", "适用于金属涂层检测", "评价客观准确"],
-          en: ["Test corrosion after scratching", "Precise scratch depth control", "Suitable for metal coating testing", "Objective and accurate evaluation"]
+          zh: [
+            "划痕后测试腐蚀性能",
+            "精确控制划痕深度",
+            "适用于金属涂层检测",
+            "评价客观准确"
+          ],
+          en: [
+            "Test corrosion after scratching",
+            "Precise scratch depth control",
+            "Suitable for metal coating testing",
+            "Objective and accurate evaluation"
+          ],
+          es: [
+            "Prueba de rendimiento de corrosión después de rayado",
+            "Control preciso de la profundidad del rayado",
+            "Aplicable a la detección de recubrimientos metálicos",
+            "Evaluación objetiva y precisa"
+          ],
+          ar: [
+            "اختبار أداء التآكل بعد الخدش",
+            "تحكم دقيق في عمق الخدش",
+            "مناسب لفحص طلاءات المعادن",
+            "تقييم موضوعي ودقيق"
+          ],
+          ru: [
+            "Испытание коррозионных свойств после царапания",
+            "Точный контроль глубины царапины",
+            "Подходит для испытания металлических покрытий",
+            "Объективная и точная оценка"
+          ]
         },
-        ordering: { zh: [{ code: "TR 6302", name: "腐蚀划痕器" }], en: [{ code: "TR 6302", name: "Corrosion Scratch Tester" }] },
-        docFiles: {}, pdfFiles: { en: "TR 6302 腐蚀划痕器.pdf", zh: "TR 6302 腐蚀划痕器.pdf" },
+        ordering: {
+          zh: [
+            { code: "TR 6302", name: "腐蚀划痕器" }
+          ],
+          en: [
+            { code: "TR 6302", name: "Corrosion Scratch Tester" }
+          ],
+          es: [
+            { code: "TR 6302", name: "Ensayador de Rayado para Corrosión" }
+          ],
+          ar: [
+            { code: "TR 6302", name: "جهاز خدش التآكل" }
+          ],
+          ru: [
+            { code: "TR 6302", name: "Прибор для испытания коррозии царапанием" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 6302 腐蚀划痕器.pdf", zh: "TR 6302 腐蚀划痕器.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "复合式盐干湿",
-        name: { zh: "复合式盐干湿试验机", en: "Combined Salt Spray Tester" },
-        category: "aging", categoryName: { zh: "环境老化", en: "Environmental Aging" },
-        description: {
-          zh: "复合式盐干湿试验机用于测试涂层耐盐雾腐蚀性能，集盐雾、干燥、湿热多种试验模式于一体，精确控制温湿度，能够模拟海洋等恶劣环境对涂层的腐蚀作用。适用于海洋环境涂层、汽车配件涂层等检测。",
-          en: "The Combined Salt Spray Tester is used for testing coating salt spray corrosion resistance, integrating salt spray, dry, and wet heat test modes with precise temperature and humidity control to simulate marine and other harsh environments on coatings. Suitable for marine environment coatings, automotive parts coatings, etc."
-        },
+        name: { zh: "复合式盐干湿试验机", en: "Combined Salt Spray Tester", es: "Cámara de Ensayo de Niebla Salina, Secado y Humedad Combinados", ar: "جهاز اختبار الضباب الملحي والتجفيف والرطوبة المركب", ru: "Комбинированная камера солевого тумана, сушки и влажности" },
+        category: "aging", categoryName: { zh: "环境老化", en: "Environmental Aging", es: "Envejecimiento Ambiental", ar: "الشيخوخة البيئية", ru: "Ускоренное старение" },
+        description: { zh: "复合式盐干湿试验机用于测试涂层耐盐雾腐蚀性能，集盐雾、干燥、湿热多种试验模式于一体，精确控制温湿度，能够模拟海洋等恶劣环境对涂层的腐蚀作用。适用于海洋环境涂层、汽车配件涂层等检测。", en: "The Combined Salt Spray Tester is used for testing coating salt spray corrosion resistance, integrating salt spray, dry, and wet heat test modes with precise temperature and humidity control to simulate marine and other harsh environments on coatings. Suitable for marine environment coatings, automotive parts coatings, etc.", es: "La Cámara de Ensayo de Niebla Salina, Secado y Humedad Combinados se utiliza para probar la resistencia a la corrosión por niebla salina de los recubrimientos, integrando múltiples modos de ensayo de niebla salina, secado y humedad, con control preciso de temperatura y humedad, capaz de simular la corrosión de recubrimientos en ambientes marinos hostiles. Aplicable a la detección de recubrimientos de ambientes marinos y recubrimientos de piezas de automóviles.", ar: "جهاز اختبار الضباب الملحي والتجفيف والرطوبة المركب يُستخدم لاختبار مقاومة التآكل بالضباب الملحي للطلاءات، يجمع بين أوضاع اختبار متعددة تشمل الضباب الملحي والتجفيف والرطوبة، مع تحكم دقيق في درجة الحرارة والرطوبة، قادر على محاكاة تأثير التآكل للطلاءات في البيئات البحرية القاسية. مناسب لفحص طلاءات البيئات البحرية وطلاءات قطع غيار السيارات.", ru: "Комбинированная камера солевого тумана, сушки и влажности применяется для испытания стойкости покрытий к коррозии солевым туманом, объединяет несколько режимов испытаний: солевой туман, сушка, горячая влажность, с точным контролем температуры и влажности, способна имитировать коррозионное воздействие на покрытия в суровых морских средах. Подходит для испытания покрытий морской среды и покрытий автозапчастей." },
         specs: {
           zh: [
             ["试验模式", "盐雾、干燥、湿热"],
@@ -725,24 +1631,83 @@
             ["Temp/Humidity Control", "Precise"],
             ["Applications", "Marine environment coatings, automotive parts coatings"],
             ["Simulated Environment", "Salt spray corrosion environment"]
+          ],
+          es: [
+            ["Modos de ensayo", "Niebla salina, secado, humedad"],
+            ["Control de temperatura/humedad", "Preciso"],
+            ["Campos de aplicación", "Recubrimientos de ambientes marinos, recubrimientos de piezas de automóviles"],
+            ["Ambiente simulado", "Ambiente de corrosión por niebla salina"]
+          ],
+          ar: [
+            ["أوضاع الاختبار", "ضباب ملحي وتجفيف ورطوبة"],
+            ["تحكم درجة الحرارة/الرطوبة", "دقيق"],
+            ["مجالات التطبيق", "طلاءات البيئات البحرية وطلاءات قطع غيار السيارات"],
+            ["البيئة المحاكاة", "بيئة تآكل الضباب الملحي"]
+          ],
+          ru: [
+            ["Режимы испытания", "Солевой туман, сушка, горячая влажность"],
+            ["Контроль температуры/влажности", "Точный"],
+            ["Области применения", "Покрытия морской среды, покрытия автозапчастей"],
+            ["Имитируемая среда", "Среда коррозии солевого тумана"]
           ]
         },
         features: {
-          zh: ["盐雾、干燥、湿热多种试验模式", "精确温湿度控制", "适用于海洋环境涂层测试", "可模拟多种腐蚀环境"],
-          en: ["Salt spray, dry, wet heat multiple test modes", "Precise temperature and humidity control", "Suitable for marine environment coating testing", "Simulates multiple corrosion environments"]
+          zh: [
+            "盐雾、干燥、湿热多种试验模式",
+            "精确温湿度控制",
+            "适用于海洋环境涂层测试",
+            "可模拟多种腐蚀环境"
+          ],
+          en: [
+            "Salt spray, dry, wet heat multiple test modes",
+            "Precise temperature and humidity control",
+            "Suitable for marine environment coating testing",
+            "Simulates multiple corrosion environments"
+          ],
+          es: [
+            "Múltiples modos de ensayo de niebla salina, secado y humedad",
+            "Control preciso de temperatura y humedad",
+            "Aplicable a la prueba de recubrimientos de ambientes marinos",
+            "Capaz de simular múltiples ambientes de corrosión"
+          ],
+          ar: [
+            "أوضاع اختبار متعددة تشمل الضباب الملحي والتجفيف والرطوبة",
+            "تحكم دقيق في درجة الحرارة والرطوبة",
+            "مناسب لاختبار طلاءات البيئات البحرية",
+            "قادر على محاكاة بيئات تآكل متعددة"
+          ],
+          ru: [
+            "Несколько режимов испытания: солевой туман, сушка, горячая влажность",
+            "Точный контроль температуры и влажности",
+            "Подходит для испытания покрытий морской среды",
+            "Способность имитировать различные коррозионные среды"
+          ]
         },
-        ordering: { zh: [{ code: "复合式盐干湿", name: "复合式盐干湿试验机" }], en: [{ code: "Combined Salt Spray", name: "Combined Salt Spray Tester" }] },
-        docFiles: { en: "复合式盐干湿试验机.doc", zh: "复合式盐干湿试验机.doc" }, pdfFiles: {},
+        ordering: {
+          zh: [
+            { code: "复合式盐干湿", name: "复合式盐干湿试验机" }
+          ],
+          en: [
+            { code: "Combined Salt Spray", name: "Combined Salt Spray Tester" }
+          ],
+          es: [
+            { code: "Cámara Combinada", name: "Cámara de Ensayo de Niebla Salina, Secado y Humedad Combinados" }
+          ],
+          ar: [
+            { code: "مركب ضباب ملحي", name: "جهاز اختبار الضباب الملحي والتجفيف والرطوبة المركب" }
+          ],
+          ru: [
+            { code: "Комбинированный солевой туман", name: "Комбинированная камера солевого тумана, сушки и влажности" }
+          ]
+        },
+        docFiles: { en: "复合式盐干湿试验机.doc", zh: "复合式盐干湿试验机.doc" }, pdfFiles: { en: "", zh: "" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 6413",
-        name: { zh: "氙灯（风冷）老化试验箱", en: "Xenon Arc Aging Test Chamber" },
-        category: "aging", categoryName: { zh: "环境老化", en: "Environmental Aging" },
-        description: {
-          zh: "TR 6413 氙灯（风冷）老化试验箱用于模拟日光老化测试，采用氙灯光源，能够真实模拟日光中的紫外、可见光部分，对涂层进行加速老化试验，评价涂层耐候性能。风冷设计，节能高效。",
-          en: "The TR 6413 Xenon Arc (Air-Cooled) Aging Test Chamber is used for simulating sunlight aging testing with xenon light source that realistically simulates UV and visible light in sunlight for accelerated aging testing to evaluate coating weather resistance. Air-cooled design for energy efficiency."
-        },
+        name: { zh: "氙灯（风冷）老化试验箱", en: "Xenon Arc Aging Test Chamber", es: "Cámara de Envejecimiento por Lámpara de Xenón (Refrigeración por Aire)", ar: "حجرة اختبار الشيخوخة بضوء زينون (تبريد بالهواء)", ru: "Камера старения с ксеноновой лампой (воздушное охлаждение)" },
+        category: "aging", categoryName: { zh: "环境老化", en: "Environmental Aging", es: "Envejecimiento Ambiental", ar: "الشيخوخة البيئية", ru: "Ускоренное старение" },
+        description: { zh: "TR 6413 氙灯（风冷）老化试验箱用于模拟日光老化测试，采用氙灯光源，能够真实模拟日光中的紫外、可见光部分，对涂层进行加速老化试验，评价涂层耐候性能。风冷设计，节能高效。", en: "The TR 6413 Xenon Arc (Air-Cooled) Aging Test Chamber is used for simulating sunlight aging testing with xenon light source that realistically simulates UV and visible light in sunlight for accelerated aging testing to evaluate coating weather resistance. Air-cooled design for energy efficiency.", es: "La TR 6413 Cámara de Envejecimiento por Lámpara de Xenón (Refrigeración por Aire) se utiliza para pruebas de envejecimiento por simulación de luz solar, utilizando fuente de luz de xenón que puede simular fielmente las partes ultravioleta y visible de la luz solar, realizando pruebas de envejecimiento acelerado en recubrimientos para evaluar la resistencia a la intemperie. Diseño de refrigeración por aire, ahorro de energía y alta eficiencia.", ar: "TR 6413 حجرة اختبار الشيخوخة بضوء زينون (تبريد بالهواء) تُستخدم لاختبارات شيخوخة محاكاة ضوء الشمس، باستخدام مصدر ضوء زينون قادر على محاكاة أجزاء الأشعة فوق البنفسجية والضوء المرئي في ضوء الشمس بشكل حقيقي، وإجراء اختبارات شيخوخة متسارعة على الطلاءات لتقييم مقاومة الطقس. تصميم تبريد بالهواء، توفير الطاقة وكفاءة عالية.", ru: "TR 6413 Камера старения с ксеноновой лампой (воздушное охлаждение) применяется для моделирования испытаний на старение при солнечном свете, используя ксеноновый источник света, способный реалистично имитировать ультрафиолетовую и видимую части солнечного света, для проведения ускоренных испытаний на старение покрытий и оценки их погодостойкости. Конструкция с воздушным охлаждением, энергосбережение и высокая эффективность." },
         specs: {
           zh: [
             ["光源", "氙灯"],
@@ -757,24 +1722,86 @@
             ["Simulated Spectrum", "UV, visible light"],
             ["Application", "Coating weather resistance evaluation"],
             ["Suitable For", "Outdoor coating testing"]
+          ],
+          es: [
+            ["Fuente de luz", "Lámpara de xenón"],
+            ["Método de refrigeración", "Refrigeración por aire"],
+            ["Espectro simulado", "UV, luz visible"],
+            ["Aplicación", "Evaluación de la resistencia a la intemperie de recubrimientos"],
+            ["Aplicable a", "Prueba de recubrimientos para exteriores"]
+          ],
+          ar: [
+            ["مصدر الضوء", "مصباح زينون"],
+            ["طريقة التبريد", "تبريد بالهواء"],
+            ["الطيف المحاكى", "أشعة فوق بنفسجية وضوء مرئي"],
+            ["الاستخدام", "تقييم مقاومة الطقس للطلاء"],
+            ["مناسب لـ", "اختبار طلاءات الاستخدام الخارجي"]
+          ],
+          ru: [
+            ["Источник света", "Ксеноновая лампа"],
+            ["Способ охлаждения", "Воздушное охлаждение"],
+            ["Имитируемый спектр", "Ультрафиолетовое, видимый свет"],
+            ["Назначение", "Оценка погодостойкости покрытий"],
+            ["Применение", "Испытание покрытий для наружного применения"]
           ]
         },
         features: {
-          zh: ["氙灯光源，模拟真实日光", "风冷设计，节能高效", "适用于户外用涂层测试", "加速老化评价耐候性"],
-          en: ["Xenon lamp simulating natural sunlight", "Air-cooled design, energy efficient", "Suitable for outdoor coating testing", "Accelerated aging for weather resistance evaluation"]
+          zh: [
+            "氙灯光源，模拟真实日光",
+            "风冷设计，节能高效",
+            "适用于户外用涂层测试",
+            "加速老化评价耐候性"
+          ],
+          en: [
+            "Xenon lamp simulating natural sunlight",
+            "Air-cooled design, energy efficient",
+            "Suitable for outdoor coating testing",
+            "Accelerated aging for weather resistance evaluation"
+          ],
+          es: [
+            "Fuente de luz de xenón que simula la luz solar natural",
+            "Diseño de refrigeración por aire, ahorro de energía y alta eficiencia",
+            "Aplicable a pruebas de recubrimientos para exteriores",
+            "Evaluación de envejecimiento acelerado de la resistencia a la intemperie"
+          ],
+          ar: [
+            "مصباح زينون يحاكي ضوء الشمس الطبيعي",
+            "تصميم تبريد بالهواء، توفير الطاقة وكفاءة عالية",
+            "مناسب لاختبار طلاءات الاستخدام الخارجي",
+            "تقييم شيخوخة متسارعة لمقاومة الطقس"
+          ],
+          ru: [
+            "Ксеноновая лампа, имитирующая естественный солнечный свет",
+            "Конструкция с воздушным охлаждением, энергосбережение и высокая эффективность",
+            "Подходит для испытания покрытий для наружного применения",
+            "Ускоренное старение для оценки погодостойкости"
+          ]
         },
-        ordering: { zh: [{ code: "TR 6413", name: "氙灯（风冷）老化试验箱" }], en: [{ code: "TR 6413", name: "Xenon Arc Aging Test Chamber" }] },
-        docFiles: {}, pdfFiles: { en: "TR 6413 氙灯（风冷）老化试验箱.pdf", zh: "TR 6413 氙灯（风冷）老化试验箱.pdf" },
+        ordering: {
+          zh: [
+            { code: "TR 6413", name: "氙灯（风冷）老化试验箱" }
+          ],
+          en: [
+            { code: "TR 6413", name: "Xenon Arc Aging Test Chamber" }
+          ],
+          es: [
+            { code: "TR 6413", name: "Cámara de Envejecimiento por Lámpara de Xenón (Refrigeración por Aire)" }
+          ],
+          ar: [
+            { code: "TR 6413", name: "حجرة اختبار الشيخوخة بضوء زينون (تبريد بالهواء)" }
+          ],
+          ru: [
+            { code: "TR 6413", name: "Камера старения с ксеноновой лампой (воздушное охлаждение)" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 6413 氙灯（风冷）老化试验箱.pdf", zh: "TR 6413 氙灯（风冷）老化试验箱.pdf" },
         videoUrl: null, qrCode: null
       },
       {
         model: "TR 6010",
-        name: { zh: "防爆鼓风干燥箱", en: "Explosion-Proof Blast Drying Oven" },
-        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment" },
-        description: {
-          zh: "TR 6010 防爆鼓风干燥箱用于样品干燥、加热处理，采用鼓风循环系统，确保箱内温度均匀。防爆设计，安全可靠，适用于易燃易爆样品的干燥处理。",
-          en: "The TR 6010 Explosion-Proof Blast Drying Oven is used for sample drying and heating treatment with forced air circulation system ensuring uniform temperature inside the chamber. Explosion-proof design for safety and reliability, suitable for drying flammable and explosive samples."
-        },
+        name: { zh: "防爆鼓风干燥箱", en: "Explosion-Proof Blast Drying Oven", es: "Horno de Secado de Aire Forzado Antiexplosivo", ar: "فرن تجفيف بالهواء القسري مانعة للانفجار", ru: "Взрывозащищённая сушильная печь с принудительной вентиляцией" },
+        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment", es: "Equipo General de Laboratorio", ar: "معدات المختبر العامة", ru: "Общее лабораторное оборудование" },
+        description: { zh: "TR 6010 防爆鼓风干燥箱用于样品干燥、加热处理，采用鼓风循环系统，确保箱内温度均匀。防爆设计，安全可靠，适用于易燃易爆样品的干燥处理。", en: "The TR 6010 Explosion-Proof Blast Drying Oven is used for sample drying and heating treatment with forced air circulation system ensuring uniform temperature inside the chamber. Explosion-proof design for safety and reliability, suitable for drying flammable and explosive samples.", es: "El TR 6010 Horno de Secado de Aire Forzado Antiexplosivo se utiliza para el secado de muestras y tratamiento térmico, utilizando un sistema de circulación de aire forzado que garantiza una temperatura uniforme dentro de la cámara. Diseño antiexplosivo, seguro y confiable, aplicable al secado de muestras inflamables y explosivas.", ar: "TR 6010 فرن تجفيف بالهواء القسري مانعة للانفجار يُستخدم لتجفيف العينات ومعالجة التسخين، باستخدام نظام دوران الهواء القسري لضمان درجة حرارة موحدة داخل الحجرة. تصميم مانعة للانفجار، آمن وموثوق، مناسب لتجفيف العينات القابلة للاشتعال والانفجار.", ru: "TR 6010 Взрывозащищённая сушильная печь с принудительной вентиляцией применяется для сушки образцов и термообработки, используя систему принудительной циркуляции воздуха, обеспечивающую равномерную температуру внутри камеры. Взрывозащищённый дизайн, безопасность и надёжность, подходит для сушки легковоспламеняющихся и взрывоопасных образцов." },
         specs: {
           zh: [
             ["加热方式", "鼓风循环"],
@@ -787,36 +1814,81 @@
             ["Temperature", "Uniform"],
             ["Safety", "Explosion-proof"],
             ["Samples", "Flammable and explosive samples"]
+          ],
+          es: [
+            ["Método de calefacción", "Circulación de aire forzado"],
+            ["Característica de temperatura", "Temperatura uniforme"],
+            ["Diseño de seguridad", "Antiexplosivo"],
+            ["Muestras aplicables", "Muestras inflamables y explosivas"]
+          ],
+          ar: [
+            ["طريقة التسخين", "دورة الهواء القسري"],
+            ["خاصية درجة الحرارة", "درجة حرارة موحدة"],
+            ["تصميم السلامة", "مانعة للانفجار"],
+            ["العينات القابلة للتطبيق", "عينات قابلة للاشتعال والانفجار"]
+          ],
+          ru: [
+            ["Способ нагрева", "Принудительная циркуляция воздуха"],
+            ["Характеристика температуры", "Равномерная температура"],
+            ["Конструкция безопасности", "Взрывозащищённый"],
+            ["Применимые образцы", "Легковоспламеняющиеся и взрывоопасные образцы"]
           ]
         },
         features: {
-          zh: ["防爆设计，安全可靠", "鼓风循环，温度均匀", "适用于易燃易爆样品", "控温精确"],
-          en: ["Explosion-proof design, safe and reliable", "Forced air circulation, uniform temperature", "Suitable for flammable and explosive samples", "Precise temperature control"]
+          zh: [
+            "防爆设计，安全可靠",
+            "鼓风循环，温度均匀",
+            "适用于易燃易爆样品",
+            "控温精确"
+          ],
+          en: [
+            "Explosion-proof design, safe and reliable",
+            "Forced air circulation, uniform temperature",
+            "Suitable for flammable and explosive samples",
+            "Precise temperature control"
+          ],
+          es: [
+            "Diseño antiexplosivo, seguro y confiable",
+            "Circulación de aire forzado, temperatura uniforme",
+            "Aplicable a muestras inflamables y explosivas",
+            "Control de temperatura preciso"
+          ],
+          ar: [
+            "تصميم مانعة للانفجار، آمن وموثوق",
+            "دورة هواء قسري، درجة حرارة موحدة",
+            "مناسب للعينات القابلة للاشتعال والانفجار",
+            "تحكم دقيق في درجة الحرارة"
+          ],
+          ru: [
+            "Взрывозащищённый дизайн, безопасность и надёжность",
+            "Принудительная циркуляция воздуха, равномерная температура",
+            "Подходит для легковоспламеняющихся и взрывоопасных образцов",
+            "Точный контроль температуры"
+          ]
         },
-        ordering: { zh: [{ code: "TR 6010", name: "防爆鼓风干燥箱" }], en: [{ code: "TR 6010", name: "Explosion-Proof Blast Drying Oven" }] },
+        ordering: {
+          zh: [
+            { code: "TR 6010", name: "防爆鼓风干燥箱" }
+          ],
+          en: [
+            { code: "TR 6010", name: "Explosion-Proof Blast Drying Oven" }
+          ],
+          es: [
+            { code: "TR 6010", name: "Horno de Secado de Aire Forzado Antiexplosivo" }
+          ],
+          ar: [
+            { code: "TR 6010", name: "فرن تجفيف بالهواء القسري مانعة للانفجار" }
+          ],
+          ru: [
+            { code: "TR 6010", name: "Взрывозащищённая сушильная печь с принудительной вентиляцией" }
+          ]
+        },
         docFiles: { en: "TR 6010 防爆鼓风干燥箱.doc", zh: "TR 6010 防爆鼓风干燥箱.doc" }, pdfFiles: { en: "TR 6010 防爆鼓风干燥箱.pdf", zh: "TR 6010 防爆鼓风干燥箱.pdf" },
         videoUrl: null, qrCode: null
       }
-    ];
+    ]
 
-    // ===== Parse URL & Render =====
-    const urlParams = new URLSearchParams(window.location.search);
-    const modelParam = urlParams.get('model');
-
-    const product = allProducts.find(p => p.model === modelParam);
-
-    if (!product) {
-      document.body.innerHTML = '<div style="padding:3rem;text-align:center;"><h2>产品未找到</h2><a href="products.html">返回产品中心</a></div>';
-    } else {
-      let currentLang = 'zh';
-
-      function render() {
-        document.title = `${product.name[currentLang]} - 腾瑞仪器`;
-        document.getElementById('pageTitle').textContent = `${product.name[currentLang]} - 腾瑞仪器`;
-
-        // Header
-        document.getElementById('modelDisplay').textContent = product.model;
-        document.getElementById('nameDisplay').textContent = product.name[currentLang];
+    
         document.getElementById('nameEnDisplay').textContent = product.name.en;
         document.getElementById('catDisplay').textContent = product.categoryName[currentLang];
         document.getElementById('breadcrumbName').textContent = product.name[currentLang];
@@ -901,6 +1973,13 @@
       }
 
       render();
+
+      // RTL support for Arabic
+      if (currentLang === 'ar') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
 
       // Expose for onclick
       window.switchLang = switchLang;
