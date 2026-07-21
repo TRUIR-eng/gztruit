@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>产品详情 - 腾瑞仪器 TRUIT</title>
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="index, follow">
+  <meta name="description" id="metaDesc" content="腾瑞仪器产品中心 - 涂料检测仪器专业制造商">
+  <meta property="og:title" id="ogTitle" content="产品详情 - 腾瑞仪器">
+  <meta property="og:description" id="ogDesc" content="涂料检测仪器产品详情">
+  <meta property="og:type" content="website">
+  <meta property="og:url" id="ogUrl" content="https://truir-eng.github.io/gztruit/products.html">
+  <meta property="og:site_name" content="腾瑞仪器 TRUIT">
   <style>
     :root { --blue: #005A9C; --blue-light: #0070C0; --blue-dark: #003d6b; --green: #00A650; --green-light: #92D050; --bg: #F5F7FA; --white: #FFFFFF; --text: #1A1A1A; --text-gray: #666666; --border: #E8ECF0; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -171,6 +177,10 @@
       const backLabel = lang === 'zh' ? '← 返回产品中心' : '← Back to Products';
 
       document.title = `${name} ${product.model} - 腾瑞仪器 TRUIT`;
+      document.getElementById('metaDesc').content = `${name} ${product.model}，${product.categoryName.zh}，${product.specs.zh.substring(0, 60)}...`;
+      document.getElementById('ogTitle').content = `${name} ${product.model} - 腾瑞仪器`;
+      document.getElementById('ogDesc').content = `${product.specs.zh.substring(0, 100)}`;
+      document.getElementById('ogUrl').content = `https://truir-eng.github.io/gztruit/product.html?model=${encodeURIComponent(product.model)}`;
 
       contentDiv.innerHTML = `
         <div class="product-hero">
