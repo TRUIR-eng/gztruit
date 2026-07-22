@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品资料下载 | 仪器说明书 | 检测设备技术文档 - 腾瑞仪器 TRUIT</title>
+  <meta name="description" content="腾瑞仪器产品资料下载中心，免费提供涂料检测仪器、粘度计、盐雾箱、硬度计、测厚仪等设备的产品说明书、技术文档下载。持续更新中，支持关键词搜索。">
+  <meta name="keywords" content="产品资料下载, 仪器说明书, 涂料检测仪器文档, 粘度计说明书, 盐雾箱规格书, 硬度计技术文档, 测厚仪PDF, TRUIT产品资料, 腾瑞仪器文档下载, 实验室仪器说明书">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://truir-eng.github.io/gztruit/documents.html">
+  <style>
+    :root {
+      --blue: #005A9C; --blue-light: #0070C0; --blue-dark: #003d6b;
+      --green: #00A650; --green-light: #92D050; --gold: #D4A843;
+      --bg: #F5F7FA; --white: #FFFFFF; --text: #1A1A1A; --text-gray: #666;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); }
+    a { text-decoration: none; color: inherit; }
+    .top-bar { background: var(--blue-dark); color: rgba(255,255,255,0.8); font-size: 0.8rem; padding: 0.4rem 0; text-align: center; }
+    header { background: var(--white); box-shadow: 0 1px 4px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0.7rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; }
+    .header-logo { height: 70px; }
+    .header-brand h1 { font-size: 1.4rem; color: var(--blue); font-weight: 800; }
+    .header-brand h1 span { color: var(--green); }
+    nav { display: flex; gap: 0.3rem; margin-left: auto; }
+    nav a { padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; color: var(--text); transition: all 0.2s; }
+    nav a:hover, nav a.active { background: var(--blue); color: white; }
+    .page-hero { background: linear-gradient(135deg, #1a2a3a 0%, #2a3a4a 40%, #1a2a3a 100%); color: white; padding: 3.5rem 1.5rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 30% 50%, rgba(230,92,0,0.12) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(230,92,0,0.08) 0%, transparent 60%); }
+    .page-hero > * { position: relative; }
+    .page-hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .page-hero p { opacity: 0.75; max-width: 650px; margin: 0 auto 1.5rem; font-size: 1.05rem; }
+    .hero-stats { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .hero-stat strong { display: block; font-size: 1.8rem; font-weight: 800; color: var(--gold); }
+    .hero-stat span { font-size: 0.85rem; opacity: 0.8; }
+    .search-section { max-width: 1200px; margin: -1.5rem auto 1.5rem; padding: 0 1.5rem; }
+    .search-box { background: white; border-radius: 14px; padding: 1.2rem 1.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.09); display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: -1rem; }
+    .search-box input { flex: 1; min-width: 200px; padding: 0.7rem 1rem; border: 2px solid #E8ECF0; border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.2s; }
+    .search-box input:focus { border-color: var(--blue-light); }
+    .search-box button { padding: 0.7rem 1.5rem; background: var(--blue); color: white; border: none; border-radius: 8px; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; }
+    .search-box button:hover { background: var(--blue-dark); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+    .doc-intro { background: white; border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .doc-intro h2 { font-size: 1.2rem; color: var(--blue); margin-bottom: 0.5rem; }
+    .doc-intro p { color: var(--text-gray); font-size: 0.92rem; line-height: 1.7; }
+    .category-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .category-tab { padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 0.88rem; cursor: pointer; border: 2px solid transparent; background: white; transition: all 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .category-tab:hover, .category-tab.active { border-color: var(--blue-light); background: var(--blue-light); color: white; }
+    .category-tab .count { background: rgba(255,255,255,0.25); border-radius: 10px; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 0.3rem; }
+    .category-tab.active .count { background: rgba(255,255,255,0.3); }
+    .doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+    .doc-card { background: white; border-radius: 10px; padding: 1rem 1.2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.05); border: 1px solid #E8ECF0; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.5rem; }
+    .doc-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-color: var(--blue-light); transform: translateY(-2px); }
+    .doc-card-name { font-weight: 700; font-size: 0.92rem; color: var(--text); line-height: 1.4; }
+    .doc-card-meta { font-size: 0.78rem; color: var(--text-gray); display: flex; gap: 1rem; flex-wrap: wrap; }
+    .doc-card-link { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 1rem; background: var(--blue-light); color: white; border-radius: 6px; font-size: 0.82rem; font-weight: 600; transition: background 0.2s; width: fit-content; margin-top: 0.3rem; }
+    .doc-card-link:hover { background: var(--blue); }
+    .doc-card-link svg { width: 14px; height: 14px; }
+    .doc-section-title { font-size: 1.1rem; color: var(--blue-dark); margin: 1.5rem 0 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green-light); display: flex; align-items: center; gap: 0.5rem; }
+    .doc-section-title span { background: var(--blue); color: white; font-size: 0.75rem; padding: 0.15rem 0.6rem; border-radius: 4px; }
+    .no-results { text-align: center; padding: 3rem; color: var(--text-gray); }
+    .no-results h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    footer { background: var(--blue-dark); color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-size: 0.85rem; margin-top: 2rem; }
+    footer a { color: var(--gold); }
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 1.6rem; }
+      .header-brand h1 { font-size: 1.1rem; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">腾瑞仪器 — 出口品质 · 全球信赖 · 源头工厂</div>
+  <header>
+    <div class="header-inner">
+      <img src="logo.png" alt="TRUIT LOGO" class="header-logo" onerror="this.style.display='none'">
+      <div class="header-brand"><h1>腾瑞仪器 <span>TRUIT</span></h1></div>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="products.html">产品中心</a>
+        <a href="documents.html" class="active">资料下载</a>
+        <a href="https://github.com/TRUIR-eng/gztruit" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <h1>📥 产品资料下载中心</h1>
+    <p>腾瑞仪器全系列产品技术文档、产品说明书免费开放下载，持续更新中。涵盖涂料检测、粘度测量、硬度测试、环境老化等七大品类。</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>167+</strong><span>产品资料</span></div>
+      <div class="hero-stat"><strong>7</strong><span>产品品类</span></div>
+      <div class="hero-stat"><strong>100%</strong><span>免费下载</span></div>
+      <div class="hero-stat"><strong>持续</strong><span>更新中</span></div>
+    </div>
+  </div>
+
+  <div class="search-section">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索产品型号或名称，如：粘度计、盐雾箱、TR 1002、硬度计...">
+      <button onclick="filterDocs()">🔍 搜索</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="doc-intro">
+      <h2>📚 关于产品资料</h2>
+      <p>本页面收录腾瑞仪器（TRUIT）全部产品技术文档，包含产品介绍、规格参数、应用说明、安装指南等内容。所有资料均为 Word 文档格式，可直接下载阅读。如需了解更多产品信息，请访问 <a href="products.html" style="color: var(--blue-light);">产品中心</a> 或联系销售人员。</p>
+    </div>
+
+    <div class="category-tabs" id="categoryTabs">
+      <button class="category-tab active" onclick="filterCategory('all')">全部 <span class="count" id="count-all">167</span></button>
+      <button class="category-tab" onclick="filterCategory('分散搅拌研磨')">分散搅拌研磨 <span class="count" id="count-分散搅拌研磨">11</span></button>
+      <button class="category-tab" onclick="filterCategory('原料性能检验')">原料性能检验 <span class="count" id="count-原料性能检验">36</span></button>
+      <button class="category-tab" onclick="filterCategory('制备试样')">制备试样 <span class="count" id="count-制备试样">23</span></button>
+      <button class="category-tab" onclick="filterCategory('成膜后检测')">成膜后检测 <span class="count" id="count-成膜后检测">57</span></button>
+      <button class="category-tab" onclick="filterCategory('实验室通用仪器')">实验室通用仪器 <span class="count" id="count-实验室通用仪器">19</span></button>
+      <button class="category-tab" onclick="filterCategory('环境老化')">环境老化 <span class="count" id="count-环境老化">8</span></button>
+      <button class="category-tab" onclick="filterCategory('耗材')">耗材 <span class="count" id="count-耗材">1</span></button>
+    </div>
+
+    <div id="docGrid" class="doc-grid"></div>
+    <div id="noResults" class="no-results" style="display:none;">
+      <h3>未找到匹配的资料</h3>
+      <p>请尝试其他关键词，或浏览全部产品资料</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024-2026 腾瑞仪器 TRUIT — 广州腾瑞仪器有限公司 | <a href="https://github.com/TRUIR-eng/gztruit" target="_blank">GitHub 开源资料库</a></p>
+    <p style="margin-top:0.4rem;opacity:0.6;">产品资料存储于 GitHub 全球公开仓库，永久有效，支持直接下载</p>
+  </footer>
+
+  <script>
+  const docs = [
+    // 1分散搅拌研磨 (11)
+    {name:"TR 2001 高速分散机",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202001%20%E9%AB%98%E9%80%9F%E5%88%86%E6%95%A3%E6%9C%BA.doc",size:"13.5MB"},
+    {name:"TR 2003 油墨搅拌机",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202003%20%E6%B2%B9%E5%A2%A8%E6%90%95%E6%8B%89%E6%9C%BA.doc",size:"424KB"},
+    {name:"TR 2030 悬臂式电动搅拌器",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202030%E6%82%9F%E8%87%82%E5%BC%8F%E7%94%B5%E5%8A%A8%E6%90%95%E6%8B%89%E5%99%A8.doc",size:"82KB"},
+    {name:"TR 2037 气动搅拌机",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202037%E6%B0%94%E5%8A%A8%E6%90%95%E6%8B%89%E6%9C%BA.doc",size:"629KB"},
+    {name:"TR 2200 篮式砂磨机",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202200%20%E7%AF%AE%E5%BC%8F%E7%A0%94%E7%A0%94%E6%9C%BA.doc",size:"196KB"},
+    {name:"TR 2250 卧式砂磨机",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202250%20%E5%8D%A7%E5%BC%8F%E7%A0%94%E7%A0%94%E6%9C%BA.doc",size:"612KB"},
+    {name:"TR 2280 三辊机",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202280%E4%B8%89%E8%BD%AE%E6%9C%BA.doc",size:"1.0MB"},
+    {name:"TR 2310 自动旋转混匀机",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202310%20%E8%87%AA%E5%8A%A8%E6%97%8B%E8%BD%AC%E6%B7%B7%E5%8C%80%E6%9C%BA.doc",size:"838KB"},
+    {name:"TR 2311 自动振荡混匀机",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/TR%202311%20%E8%87%AA%E5%8A%A8%E6%8C%AF%E8%8D%89%E6%B7%B7%E5%8C%80%E6%9C%BA.doc",size:"831KB"},
+    {name:"数显磁力搅拌器",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/%E6%95%B0%E6%98%BE%E7%A3%81%E5%8A%9B%E6%90%95%E6%8B%89%E5%99%A8.doc",size:"193KB"},
+    {name:"涂料快速分散试验机（快手）",category:"分散搅拌研磨",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/1%E5%88%86%E6%95%A3%E6%90%95%E6%8B%89%E7%A0%94/%E6%B8%B8%E6%96%99%E5%BF%85%E9%80%9F%E5%88%86%E6%95%A3%E8%AF%95%E9%AA%8C%E6%9C%BA%EF%BC%88%E5%BF%85%E6%89%8B%EF%BC%89.doc",size:"496KB"},
+    // 2原料性能检验 (36)
+    {name:"TR 1001 蔡恩杯",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201001%E8%92%99%E6%81%A9%E6%9D%AF.doc",size:"557KB"},
+    {name:"TR 1002 福特杯",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201002%E7%A6%8F%E7%89%B9%E6%9D%AF.doc",size:"1.8MB"},
+    {name:"TR 1004 法国标准杯（NF杯）",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201004%E6%B3%95%E5%9B%BD%E6%A0%87%E5%87%86%E6%9D%AF%EF%BC%88NF%E6%9D%AF%EF%BC%89.doc",size:"5.7MB"},
+    {name:"TR 1005&1006 DIN杯",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201005&1006DIN%E6%9D%AF.doc",size:"6.4MB"},
+    {name:"TR 1008 ISO粘度杯",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201008ISO%E9%BB%8F%E5%BA%A6%E6%9D%AF.doc",size:"6.7MB"},
+    {name:"TR 1009 岩田杯",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201009%E5%B2%99%E7%94%B0%E6%9D%AF%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"101KB"},
+    {name:"TR 1010 涂-4杯（T-4杯）+秒表",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201010%E6%B6%82-4%E6%9D%AF%EF%BC%88T-4%E6%9D%AF%EF%BC%89+%E7%A7%92%E8%A1%A8.doc",size:"1.9MB"},
+    {name:"TR 1013 粘度杯支架",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201013%E9%BB%8F%E5%BA%A6%E6%9D%AF%E6%94%AF%E6%9E%B6%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"9.9MB"},
+    {name:"TR 1101-1&4 表盘式旋转粘度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201101-1&4%E8%A1%A8%E7%9B%A4%E5%BC%8F%E6%97%8B%E8%BD%AC%E9%BB%8F%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"76KB"},
+    {name:"TR 1101-5&8 数显旋转粘度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201101-5&8%E6%95%B0%E6%98%BE%E6%97%8B%E8%BD%AC%E9%BB%8F%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"6.5MB"},
+    {name:"TR 1123-1 斯托默粘度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201123-1%E6%96%AF%E6%89%98%E9%BB%98%E9%BB%8F%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"5.2MB"},
+    {name:"TR 1123-2 智能斯托默粘度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201123-2%E6%99%BA%E8%83%BD%E6%96%AF%E6%89%98%E9%BB%98%E9%BB%8F%E5%BA%A6%E8%AE%A1.doc",size:"276KB"},
+    {name:"TR 1130 锥板粘度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201130%20%E9%94%8C%E6%9D%BF%E9%BB%8F%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"222KB"},
+    {name:"TR 1155 落球粘度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201155%20%E8%90%BD%E7%90%83%E9%BB%8F%E5%BA%A6%E8%AE%A1.doc",size:"52KB"},
+    {name:"TR 1158 平板粘度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201158%20%E5%B9%B3%E6%9D%BF%E9%BB%8F%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"2.0MB"},
+    {name:"TR 1160 数显电子油墨黏性仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201160%E6%95%B0%E6%98%BE%E7%94%B5%E5%AD%90%E6%B2%B9%E5%A2%A8%E9%BB%8F%E6%80%A7%E4%BB%AA.doc",size:"346KB"},
+    {name:"TR 1201 1202 1203 细度板",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201201%201202%201203%E7%BB%86%E5%BA%A6%E6%9D%BF%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"17.4MB"},
+    {name:"TR 1220&1222 比重杯",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201220&1222%E6%AF%94%E9%87%8D%E6%9D%AF%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"9.7MB"},
+    {name:"TR 1226 液体密度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201226%E6%B6%B2%E4%BD%93%E5%AF%86%E5%BA%A6%E8%AE%A1.doc",size:"349KB"},
+    {name:"TR 1300 液体比色计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201300%E6%B6%B2%E4%BD%93%E6%AF%94%E8%89%B2%E8%AE%A1.doc",size:"814KB"},
+    {name:"TR 1303 铂钴比色计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201303%E9%93%9D%E9%92%9A%E6%AF%94%E8%89%B2%E8%AE%A1.doc",size:"857KB"},
+    {name:"TR 1305 铁钴比色计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201305%E9%93%81%E9%92%9A%E6%AF%94%E8%89%B2%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"1.1MB"},
+    {name:"TR 1306 透明度测定仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201306%E9%80%8F%E6%98%8E%E5%BA%A6%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"269KB"},
+    {name:"TR 1308 罗维朋比色计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201308%E7%BD%97%E7%BB%B4%E8%85%AE%E6%AF%94%E8%89%B2%E8%AE%A1.doc",size:"2.1MB"},
+    {name:"TR 1330 阿贝折射仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201330%20%E9%98%BF%E8%B4%9D%E6%8A%98%E5%B0%84%E4%BB%AA.doc",size:"70KB"},
+    {name:"TR 1350 分光光度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201350%E5%88%86%E5%85%89%E5%85%89%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"676KB"},
+    {name:"TR 1353 紫外可见分光光度计",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201353%E7%B4%AB%E5%A4%96%E5%8F%AF%E8%A7%81%E5%88%86%E5%85%89%E5%85%89%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"29.4MB"},
+    {name:"TR 1361 白度仪&粉末成型器",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201361%E7%99%BD%E5%BA%A6%E4%BB%AA&%E7%B2%89%E6%9C%AB%E6%88%90%E5%9E%8B%E5%99%A8%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"9.3MB"},
+    {name:"TR 1370 浊度仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201370%E6%B5%8A%E5%BA%A6%E4%BB%AA%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"78KB"},
+    {name:"TR 1380 自动水分滴定仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201380%E8%87%AA%E5%8A%A8%E6%B0%B4%E5%88%86%E6%BB%B4%E5%AE%9A%E4%BB%AA.doc",size:"3.2MB"},
+    {name:"TR 1385 微量水分测定仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201385%E5%BE%AE%E9%87%8F%E6%B0%B4%E5%88%86%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"644KB"},
+    {name:"TR 1392 卤素水分仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201392%E5%8D%A4%E7%B4%A0%E6%B0%B4%E5%88%86%E4%BB%AA.doc",size:"341KB"},
+    {name:"TR 1395 自动闪点测定仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201395%20%E8%87%AA%E5%8A%A8%E9%97%AA%E7%82%B9%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"6.5MB"},
+    {name:"TR 1603 腻子稠度仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201603%E8%85%90%E5%AD%90%E7%A8%94%E5%BA%A6%E4%BB%AA.doc",size:"7.0MB"},
+    {name:"TR 1860 激光粒度分布仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%201860%E6%BF%BE%E5%85%89%E7%B2%92%E5%BA%A6%E5%88%86%E5%B8%83%E4%BB%AA.doc",size:"411KB"},
+    {name:"TR 3301 渗透杯",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%203301%20%E6%B8%97%E9%80%8A%E6%9D%AF.doc",size:"4.1MB"},
+    {name:"TR 5901 建筑涂料不透水漏斗",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%205901%20%E5%BB%BA%E7%AD%91%E6%B8%B8%E6%96%99%E4%B8%8D%E9%80%8A%E6%B0%B4%E6%BC%8F%E6%BC%86.doc",size:"11.5MB"},
+    {name:"TR 6500 表界面张力仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%206500%20%E8%A1%A8%E7%95%8C%E9%9D%A2%E5%BC%A0%E5%8A%9B%E4%BB%AA.doc",size:"1.5MB"},
+    {name:"TR 6510 接触角测定仪",category:"原料性能检验",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/2%E5%8E%9F%E6%96%99%E6%80%A7%E8%83%BD%E6%A3%80%E9%AA%8C/TR%206510%20%E6%8E%A5%E8%A7%81%E8%A7%92%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"3.9MB"},
+    // 3制备试样 (23)
+    {name:"RDS线棒",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/RDS%E7%BA%BF%E6%A3%95.doc",size:"552KB"},
+    {name:"TR 3060 流挂仪",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203060%E6%B5%81%E6%8C%82%E4%BB%AA%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"2.2MB"},
+    {name:"TR 3080 流平仪",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203080%E6%B5%81%E5%B9%B3%E4%BB%AA%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"4.5MB"},
+    {name:"TR 3330 静电喷枪",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203330%E9%9D%99%E7%94%B5%E5%99%A8%E6%9E%AA.doc",size:"163KB"},
+    {name:"TR 3380 线棒手柄",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203380%E7%BA%BF%E6%A3%95%E6%89%8B%E6%9F%84.doc",size:"6.7MB"},
+    {name:"TR 3501~3502 涂布台",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203501~3502%E6%B6%82%E5%B8%83%E5%8F%B0.doc",size:"24MB"},
+    {name:"TR 3508 自动涂膜机",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203508%E8%87%AA%E5%8A%A8%E6%B6%82%E8%86%9C%E6%9C%BA.doc",size:"15.4MB"},
+    {name:"TR 3562 水帘式喷板柜",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203562%20%E6%B0%B4%E5%B8%9A%E5%BC%8F%E5%99%A8%E6%9D%BF%E6%9F%9C.doc",size:"498KB"},
+    {name:"TR 3605 漆膜干燥时间测定器",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203605%20%E6%BF%94%E8%86%9C%E5%B9%B2%E7%87%A5%E6%97%B6%E9%97%B4%E6%B5%8B%E5%AE%9A%E5%99%A8.doc",size:"285KB"},
+    {name:"TR 3610 不粘胎时间测定仪",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203610%20%E4%B8%8D%E7%B2%98%E8%83%8E%E6%97%B6%E9%97%B4%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"2.3MB"},
+    {name:"TR 3620 漆膜回粘性测定器",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203620%20%E6%BF%94%E8%86%9C%E5%9B%9E%E7%B2%98%E6%80%A7%E6%B5%8B%E5%AE%9A%E5%99%A8.doc",size:"44KB"},
+    {name:"TR 3630 漆膜无印痕试验仪",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203630%20%E6%BF%94%E8%86%9C%E6%97%A0%E5%8D%B0%E7%97%95%E8%AF%95%E9%AA%8C%E4%BB%AA.doc",size:"42KB"},
+    {name:"TR 3680 最低成膜温度测试仪",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203680%20%E6%9C%80%E4%BD%8E%E6%88%90%E8%86%9C%E6%B8%A9%E5%BA%A6%E6%B5%8B%E8%AF%95%E4%BB%AA.doc",size:"2.0MB"},
+    {name:"TR 3803 腻子涂刮器",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203803%20%E8%85%90%E5%AD%90%E6%B6%82%E5%88%80%E5%99%A8.doc",size:"1.0MB"},
+    {name:"TR 3900 弹性建筑涂料制样框",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203900%20%E5%BC%B9%E6%80%A7%E5%BB%BA%E7%AD%91%E6%B8%B8%E6%96%99%E5%88%B6%E6%A0%B7%E6%A1%86.doc",size:"7.5MB"},
+    {name:"TR 3902 手动展色轮",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203902%20%E6%89%8B%E5%8A%A8%E5%B1%95%E8%89%B2%E8%BD%AE.doc",size:"215KB"},
+    {name:"TR 3903 油墨展色仪",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203903%20%E6%B2%B9%E5%A2%A8%E5%B1%95%E8%89%B2%E4%BB%AA.doc",size:"282KB"},
+    {name:"TR 3911 油墨凹板打样机",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203911%20%E6%B2%B9%E5%A2%A8%E5%9B%9B%E6%9D%BF%E6%89%93%E6%A0%B7%E6%9C%BA.doc",size:"245KB"},
+    {name:"TR 3955 平磨仪",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%203955%20%E5%B9%B3%E7%A0%94%E4%BB%AA.doc",size:"7.2MB"},
+    {name:"TR 6580 喷粉柜",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%206580%20%E5%99%A8%E7%B2%89%E6%9F%9C.doc",size:"1.1MB"},
+    {name:"TR 线棒产品介绍",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/TR%20%E7%BA%BF%E6%A3%95%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"17.8MB"},
+    {name:"制备器产品介绍",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/%E5%88%B6%E5%A4%87%E5%99%A8%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"11.7MB"},
+    {name:"可调式涂膜器",category:"制备试样",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/3%E5%88%B6%E5%A4%87%E8%AF%95%E6%A0%B7/%E5%8F%AF%E8%B0%83%E5%BC%8F%E6%B6%82%E8%86%9C%E5%99%A8.doc",size:"18.2MB"},
+    // 4成膜后检测 (57)
+    {name:"MPO测厚仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/MPO%E6%B5%8B%E5%8E%9F%E4%BB%AA.doc",size:"10.9MB"},
+    {name:"TR 3599-2 划圈法测试仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%203599-2%E5%88%92%E5%9C%86%E6%B3%95%E6%B5%8B%E8%AF%95%E4%BB%AA.doc",size:"279KB"},
+    {name:"TR 3700 黑白格测定板",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%203700%20%E9%BB%91%E7%99%BD%E6%A0%BC%E6%B5%8B%E5%AE%9A%E6%9D%BF.doc",size:"82KB"},
+    {name:"TR 5001 划格器",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205001%20%E5%88%92%E6%A0%BC%E5%99%A8.doc",size:"17.6MB"},
+    {name:"TR 5006 划格板",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205006%20%E5%88%92%E6%A0%BC%E6%9D%BF.doc",size:"4.6MB"},
+    {name:"TR 5011 铅笔硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205011%E9%94%80%E7%AD%86%E7%A1%AC%E5%BA%A6%E8%AE%A1.doc",size:"4.8MB"},
+    {name:"TR 5020 拉拔法测试仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205020%E6%8B%89%E6%8B%94%E6%B3%95%E6%B5%8B%E8%AF%95%E4%BB%AA.doc",size:"2.5MB"},
+    {name:"TR 5021 自动拉拔法测试仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205021%E8%87%AA%E5%8A%A8%E6%8B%89%E6%8B%94%E6%B3%95%E6%B5%8B%E8%AF%95%E4%BB%AA.doc",size:"125KB"},
+    {name:"TR 5023 智能粘结强度拉拔仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205023%20%E6%99%BA%E8%83%BD%E7%B2%98%E7%BB%93%E5%BC%BA%E5%BA%A6%E6%8B%89%E6%8B%94%E4%BB%AA.doc",size:"248KB"},
+    {name:"TR 5105-1 台式铅笔硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205105-1%20%E5%8F%B0%E5%BC%8F%E9%94%80%E7%AD%86%E7%A1%AC%E5%BA%A6%E8%AE%A1.doc",size:"1.3MB"},
+    {name:"TR 5105-A 台式电动铅笔硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205105-A%20%E5%8F%B0%E5%BC%8F%E7%94%B5%E5%8A%A8%E9%94%80%E7%AD%86%E7%A1%AC%E5%BA%A6%E8%AE%A1.doc",size:"25.3MB"},
+    {name:"TR 5120~5122 摆杆硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205120~5122%E6%91%86%E6%9D%86%E7%A1%AC%E5%BA%A6%E8%AE%A1.doc",size:"21.6MB"},
+    {name:"TR 5130 压痕硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205130%20%E5%8E%8B%E7%97%95%E7%A1%AC%E5%BA%A6%E8%AE%A1.doc",size:"9.1MB"},
+    {name:"TR 5140 韦氏硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205140%E9%9F%A6%E6%B0%8F%E7%A1%AC%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"48KB"},
+    {name:"TR 5141 数显韦氏硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205141%E6%95%B0%E6%98%BE%E9%9F%A6%E6%B0%8F%E7%A1%AC%E5%BA%A6%E8%AE%A1.doc",size:"72KB"},
+    {name:"TR 5150 邵氏硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205150%E9%82%B5%E6%B0%8F%E7%A1%AC%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"287KB"},
+    {name:"TR 5151 数显邵氏硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205151%E6%95%B0%E6%98%BE%E9%82%B5%E6%B0%8F%E7%A1%AC%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"189KB"},
+    {name:"TR 5155 邵氏硬度计支架",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205155%E9%82%B5%E6%B0%8F%E7%A1%AC%E5%BA%A6%E8%AE%A1%E6%94%AF%E6%9E%B6.doc",size:"454KB"},
+    {name:"TR 5160-1 巴氏硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205160-1%E5%B7%B4%E6%B0%8F%E7%A1%AC%E5%BA%A6%E8%AE%A1.doc",size:"64KB"},
+    {name:"TR 5160-2 数显巴氏硬度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205160-2%E6%95%B0%E6%98%BE%E5%B7%B4%E6%B0%8F%E7%A1%AC%E5%BA%A6%E8%AE%A1.doc",size:"211KB"},
+    {name:"TR 5170 弹簧硬度笔",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205170%E5%BC%B9%E7%B0%A7%E7%A1%AC%E5%BA%A6%E7%AC%94.doc",size:"3.5MB"},
+    {name:"TR 5210 杜邦冲击仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205210%E6%9D%9C%E9%82%A6%E5%86%B2%E5%87%BB%E4%BB%AA.doc",size:"159KB"},
+    {name:"TR 5211 漆膜圆柱弯曲测试仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205211%20%E6%BF%94%E8%86%9C%E5%9C%86%E6%9F%B1%E5%BC%80%E6%9B%B2%E6%B5%8B%E8%AF%95%E4%BB%AA.doc",size:"3.8MB"},
+    {name:"TR 5212 圆柱弯曲仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205212%20%E5%9C%86%E6%9F%B1%E5%BC%80%E6%9B%B2%E4%BB%AA.doc",size:"12.1MB"},
+    {name:"TR 5214 圆锥弯曲仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205214%E5%9C%86%E9%94%A5%E5%BC%80%E6%9B%B2%E4%BB%AA.doc",size:"5.8MB"},
+    {name:"TR 5220 T型弯折试验机",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205220%20T%E5%9E%8B%E5%BC%80%E6%8A%98%E8%AF%95%E9%AA%8C%E6%9C%BA.doc",size:"2.3MB"},
+    {name:"TR 5230 漆膜柔韧性测定仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205230%20%E6%BF%94%E8%86%9C%E6%9F%94%E9%9F%A8%E6%80%A7%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"7.9MB"},
+    {name:"TR 5240 腻子柔韧性测定仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205240%20%E8%85%90%E5%AD%90%E6%9F%94%E9%9F%A8%E6%80%A7%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"9.1MB"},
+    {name:"TR 5250 打磨性测定仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205250%20%E6%89%93%E7%A0%81%E6%80%A7%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"2.4MB"},
+    {name:"TR 5260 动态抗裂性试验机",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205260%20%E5%8A%A8%E6%80%81%E6%8A%97%E8%A3%82%E6%80%A7%E8%AF%95%E9%AA%8C%E6%9C%BA.doc",size:"2.7MB"},
+    {name:"TR 5261 初期干燥抗裂性试验机",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205261%E5%88%9D%E6%9C%9F%E5%B9%B2%E7%87%A5%E6%8A%97%E8%A3%82%E6%80%A7%E8%AF%95%E9%AA%8C%E6%9C%BA.doc",size:"136KB"},
+    {name:"TR 5262 抗裂缝疲劳试验仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205262%E6%8A%97%E8%A3%82%E7%BA%BF%E7%96%B2%E5%8A%B3%E8%AF%95%E9%AA%8C%E4%BB%AA.doc",size:"13.8MB"},
+    {name:"TR 5300 涂层耐码垛试验仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205300%20%E6%B5%81%E5%B1%82%E8%80%90%E7%A0%81%E5%A0%90%E8%AF%95%E9%AA%8C%E4%BB%AA.doc",size:"2.5MB"},
+    {name:"TR 5301-A 酒精橡皮耐磨仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205301-A%20%E9%85%92%E7%B2%BE%E6%A9%84%E7%9A%AE%E8%80%90%E6%91%A9%E4%BB%AA.doc",size:"9.7MB"},
+    {name:"TR 5302 耐溶剂测试仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205302%20%E8%80%90%E6%BA%BB%E5%89%A7%E6%B5%8B%E8%AF%95%E4%BB%AA.doc",size:"1.2MB"},
+    {name:"TR 5303 油墨脱色试验机",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205303%20%E6%B2%B9%E5%A2%A8%E8%84%B1%E8%89%B2%E8%AF%95%E9%AA%8C%E6%9C%BA.doc",size:"4.9MB"},
+    {name:"TR 5304 皮革摩擦色牢度试验机",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205304%20%E7%9A%AE%E9%9D%A9%E6%91%A9%E6%93%A6%E8%89%B2%E7%89%A2%E5%BA%A6%E8%AF%95%E9%AA%8C%E6%9C%BA.doc",size:"567KB"},
+    {name:"TR 5307 漆膜磨耗仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205307%20%E6%BF%94%E8%86%9C%E7%A0%94%E8%80%90%E4%BB%AA.doc",size:"8.7MB"},
+    {name:"TR 5309 RCA纸带耐磨测试机",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205309%20RCA%E7%BA%B8%E5%B8%AF%E8%80%90%E6%91%A9%E6%B5%8B%E8%AF%95%E6%9C%BA.doc",size:"97KB"},
+    {name:"TR 5310 落砂耐磨试验机",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205310%20%20%E8%90%BD%E7%A0%94%E8%80%90%E6%91%A9%E8%AF%95%E9%AA%8C%E6%9C%BA.doc",size:"514KB"},
+    {name:"TR 5312 耐洗刷试验仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205312%E8%80%90%E6%B4%97%E5%88%B7%E8%AF%95%E9%AA%8C%E4%BB%AA.doc",size:"35.3MB"},
+    {name:"TR 5314 耐沾污试验机",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205314%20%20%E8%80%90%E6%B1%9B%E6%B1%81%E8%AF%95%E9%AA%8C%E6%9C%BA.doc",size:"3.8MB"},
+    {name:"TR 5334 木制暗箱",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205334%20%20%E6%9C%A8%E5%88%B6%E6%9A%97%E7%AE%B1.doc",size:"392KB"},
+    {name:"TR 5402 70D 便携式分光测色仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205402%2070D%E4%BE%BF%E6%90%BA%E5%BC%8F%E5%88%86%E5%85%89%E6%B5%8B%E8%89%B2%E4%BB%AA.doc",size:"526KB"},
+    {name:"TR 5402 82N 台式分光测色仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205402%2082N%E5%8F%B0%E5%BC%8F%E5%88%86%E5%85%89%E6%B5%8B%E8%89%B2%E4%BB%AA.doc",size:"1.2MB"},
+    {name:"TR 5402 分光测色仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205402%E5%88%86%E5%85%89%E6%B5%8B%E8%89%B2%E4%BB%AA.doc",size:"266KB"},
+    {name:"TR 5420 鲜映性测定仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205420%20%E9%B2%9C%E6%98%8D%E6%80%A7%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"619KB"},
+    {name:"TR 5430-6 标准光源对色箱",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205430-6%20%E6%A0%87%E5%87%86%E5%85%89%E6%BA%90%E5%AF%B9%E8%89%B2%E7%AE%B1.doc",size:"11.3MB"},
+    {name:"TR 5451 反射率测定仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205451%20%20%E5%8F%8D%E5%B0%84%E7%8E%87%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"34KB"},
+    {name:"TR 5452 便携式反射率测试仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205452%E4%BE%BF%E6%90%BA%E5%BC%8F%E5%8F%8D%E5%B0%84%E7%8E%87%E6%B5%8B%E8%AF%95%E4%BB%AA.doc",size:"3.8MB"},
+    {name:"TR 5455 智能反射率测试仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205455%E6%99%BA%E8%83%BD%E5%8F%8D%E5%B0%84%E7%8E%87%E6%B5%8B%E8%AF%95%E4%BB%AA.doc",size:"3.5MB"},
+    {name:"TR 5462 智能光泽度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205462%20%E6%99%BA%E8%83%BD%E5%85%89%E6%B3%8C%E5%BA%A6%E8%AE%A1.doc",size:"5.2MB"},
+    {name:"TR 5464 光泽度计",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205464%E5%85%89%E6%B3%8C%E5%BA%A6%E8%AE%A1.doc",size:"4.0MB"},
+    {name:"TR 5508 湿膜轮",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205508%20%E6%B9%BF%E8%86%9C%E8%BD%AE.doc",size:"15.3MB"},
+    {name:"TR 5510-1 测厚仪（整体式）",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205510-1%E6%B5%8B%E5%8E%9B%E4%BB%AA%EF%BC%88%E6%95%B4%E4%BD%93%E5%BC%8F%EF%BC%89.doc",size:"2.3MB"},
+    {name:"TR 5510-2 测厚仪（分体式）",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205510-2%E6%B5%8B%E5%8E%9B%E4%BB%AA%EF%BC%88%E5%88%86%E4%BD%93%E5%BC%8F%EF%BC%89.doc",size:"9.1MB"},
+    {name:"TR 5511 测厚仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205511%20%E6%B5%8B%E5%8E%9B%E4%BB%AA.doc",size:"10.0MB"},
+    {name:"TR 5520 破坏性测厚仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205520%20%E7%A0%8F%E5%9F%8B%E6%80%A7%E6%B5%8B%E5%8E%9B%E4%BB%AA.doc",size:"1.2MB"},
+    {name:"TR 5801 漆膜粉化率测定仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205801%20%E6%BF%94%E8%86%9C%E7%B2%89%E5%8C%96%E7%8E%87%E6%B5%8B%E5%AE%9A%E4%BB%AA.doc",size:"88KB"},
+    {name:"TR 5802 防静电工程电阻测量套件",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%205802%E9%98%B2%E9%9D%99%E7%94%B5%E5%B7%A5%E7%A8%8B%E7%94%B5%E9%98%81%E6%B5%8B%E9%87%8F%E5%A5%97%E4%BB%B6.doc",size:"64KB"},
+    {name:"TR 6521 表面粗糙度仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/TR%206521%E8%A1%A8%E9%9D%A2%E7%B2%97%E7%B3%99%E5%BA%A6%E4%BB%AA.doc",size:"211KB"},
+    {name:"尼克斯测厚仪",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/%E5%B0%BC%E5%85%8B%E6%96%AF%E6%B5%8B%E5%8E%9B%E4%BB%AA.doc",size:"2.8MB"},
+    {name:"湿膜片",category:"成膜后检测",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/4%E6%88%90%E8%86%9C%E5%90%8E%E6%A3%80%E6%B5%8B/%E6%B9%BF%E8%86%9C%E7%89%87.doc",size:"1.8MB"},
+    // 5实验室通用仪器 (19)
+    {name:"TR 6004 电子分析天平",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206004%20%E7%94%B5%E5%AD%90%E5%88%86%E6%9E%90%E5%A4%A9%E5%B9%B3.doc",size:"21.4MB"},
+    {name:"TR 6005 电子天平",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206005%20%E7%94%B5%E5%AD%90%E5%A4%A9%E5%B9%B3.doc",size:"26.1MB"},
+    {name:"TR 6010 鼓风干燥箱",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206010%E9%BC%93%E9%A3%8E%E5%B9%B2%E7%87%A5%E7%AE%B1.doc",size:"285KB"},
+    {name:"TR 6040 箱式电阻炉",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206040%20%E7%AE%B1%E5%BC%8F%E7%94%B5%E9%98%81%E7%84%AF.doc",size:"719KB"},
+    {name:"TR 6050 实验室加热板",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206050%20%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%8A%A0%E7%83%AD%E6%9D%BF.doc",size:"86KB"},
+    {name:"TR 6100 炉温跟踪仪",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206100%E7%84%BC%E6%B8%A9%E8%B7%AF%E8%B8%AA%E4%BB%AA.doc",size:"8.9MB"},
+    {name:"TR 6130 红外测温仪",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206130%E7%BA%A4%E5%A4%96%E6%B5%8B%E6%B8%A9%E4%BB%AA.doc",size:"55KB"},
+    {name:"TR 6134 磁铁温度计",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206134%20%E7%A3%81%E9%93%81%E6%B8%A9%E5%BA%A6%E8%AE%A1.doc",size:"329KB"},
+    {name:"TR 6135 温湿度计",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206135%20%E6%B8%A9%E6%B9%BF%E5%BA%A6%E8%AE%A1.doc",size:"164KB"},
+    {name:"TR 6150 水浴锅",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206150%E6%B0%B4%E6%B5%B7%E9%94%80.doc",size:"532KB"},
+    {name:"TR 6151 电热恒温培养箱",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206151%20%E7%94%B5%E7%83%AD%E8%85%BE%E6%B8%A9%E5%9F%B9%E5%85%BB%E7%AE%B1.doc",size:"92KB"},
+    {name:"TR 6152 电热套",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206152%20%E7%94%B5%E7%83%AD%E5%A5%97.doc",size:"108KB"},
+    {name:"TR 6153 低温恒温水槽",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206153%20%E4%BD%8E%E6%B8%A9%E8%85%BE%E6%B8%A9%E6%B0%B4%E6%B7%9A.doc",size:"174KB"},
+    {name:"TR 6183 不锈钢升降台",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206183%20%E4%B8%8D%E9%94%88%E9%92%A1%E5%8D%87%E9%99%8D%E5%8F%B0.doc",size:"183KB"},
+    {name:"TR 6540 UV固化机",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206540%20UV%E5%9B%BA%E5%8C%96%E6%9C%BA.doc",size:"180KB"},
+    {name:"TR 6550 UV能量计",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206550%20UV%E8%83%BD%E9%87%8F%E8%AE%A1.doc",size:"1.4MB"},
+    {name:"TR 6800 台式酸度计",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206800%E5%8F%B0%E5%BC%8F%E9%85%B8%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"7.6MB"},
+    {name:"TR 6801 便携式酸度计",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206801%E4%BE%BF%E6%90%BA%E5%BC%8F%E9%85%B8%E5%BA%A6%E8%AE%A1%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"270KB"},
+    {name:"TR 6802 笔式酸度计",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206802%E7%AC%94%E5%BC%8F%E9%85%B8%E5%BA%A6%E8%AE%A1.doc",size:"185KB"},
+    {name:"TR 6806 台式电导率仪",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206806%E5%8F%B0%E5%BC%8F%E7%94%B5%E5%AF%BC%E7%8E%87%E4%BB%AA%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.doc",size:"5.6MB"},
+    {name:"TR 6807 便携式电导率仪",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/TR%206807%E4%BE%BF%E6%90%BA%E5%BC%8F%E7%94%B5%E5%AF%BC%E7%8E%87%E4%BB%AA.doc",size:"244KB"},
+    {name:"真空干燥箱",category:"实验室通用仪器",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/5%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%80%9A%E7%94%A8%E4%BB%AA%E5%99%A8/%E7%9C%9F%E7%A9%BA%E5%B9%B2%E7%87%A5%E7%AE%B1.doc",size:"767KB"},
+    // 6环境老化 (8)
+    {name:"TR 6301 盐雾箱",category:"环境老化",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/6%E7%8E%AF%E5%A2%83%E8%80%81%E5%8C%96/TR%206301%E7%9B%90%E9%9B%BE%E7%AE%B1.doc",size:"1.5MB"},
+    {name:"TR 6360 冷热冲击试验箱",category:"环境老化",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/6%E7%8E%AF%E5%A2%83%E8%80%81%E5%8C%96/TR%206360%20%E5%86%B7%E7%83%AD%E5%86%B2%E5%87%BB%E8%AF%95%E9%AA%8C%E7%AE%B1.doc",size:"364KB"},
+    {name:"TR 6412 氙灯老化试验箱",category:"环境老化",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/6%E7%8E%AF%E5%A2%83%E8%80%81%E5%8C%96/TR%206412%E6%B0%9F%E7%81%AF%E8%80%81%E5%8C%96%E8%AF%95%E9%AA%8C%E7%AE%B1.doc",size:"4.9MB"},
+    {name:"TR 6420 桌上型UV紫外老化试验箱",category:"环境老化",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/6%E7%8E%AF%E5%A2%83%E8%80%81%E5%8C%96/TR%206420%E6%A1%8C%E4%B8%8A%E5%9E%8BUV%E7%B4%AB%E5%A4%96%E8%80%81%E5%8C%96%E8%AF%95%E9%AA%8C%E7%AE%B1.doc",size:"81KB"},
+    {name:"TR 6421 UV紫外老化试验箱",category:"环境老化",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/6%E7%8E%AF%E5%A2%83%E8%80%81%E5%8C%96/TR%206421%20UV%E7%B4%AB%E5%A4%96%E8%80%81%E5%8C%96%E8%AF%95%E9%AA%8C%E7%AE%B1.doc",size:"8.8MB"},
+    {name:"TR 6422 电池防爆试验箱",category:"环境老化",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/6%E7%8E%AF%E5%A2%83%E8%80%81%E5%8C%96/TR%206422%20%E7%94%B5%E6%B1%A0%E9%98%B2%E7%88%86%E8%AF%95%E9%AA%8C%E7%AE%B1.doc",size:"745KB"},
+    {name:"TR 6424 恒温恒湿试验箱",category:"环境老化",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/6%E7%8E%AF%E5%A2%83%E8%80%81%E5%8C%96/TR%206424%20%E8%85%BE%E6%B8%A9%E8%85%BE%E6%B9%BF%E8%AF%95%E9%AA%8C%E7%AE%B1.doc",size:"549KB"},
+    {name:"TR 6480 大气暴晒架",category:"环境老化",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/6%E7%8E%AF%E5%A2%83%E8%80%81%E5%8C%96/TR%206480%20%E5%A4%A7%E6%B0%94%E6%9A%B4%E6%99%92%E6%9E%B6.doc",size:"159KB"},
+    // 7耗材 (1)
+    {name:"耗材资料",category:"耗材",url:"https://raw.githubusercontent.com/TRUIR-eng/gztruit/main/7%E8%80%97%E6%9D%90/%E8%80%97%E6%9D%90%E8%B5%84%E6%96%99(2).docx",size:"7.2MB"},
+  ];
+
+  let currentCategory = 'all';
+
+  function renderDocs(filtered) {
+    const grid = document.getElementById('docGrid');
+    const noResults = document.getElementById('noResults');
+    if (filtered.length === 0) {
+      grid.innerHTML = '';
+      noResults.style.display = 'block';
+      return;
+    }
+    noResults.style.display = 'none';
+    grid.innerHTML = filtered.map(doc => `
+      <div class="doc-card" data-category="${doc.category}">
+        <div class="doc-card-name">${doc.name}</div>
+        <div class="doc-card-meta">
+          <span>📁 ${doc.category}</span>
+          <span>📦 ${doc.size}</span>
+        </div>
+        <a href="${doc.url}" target="_blank" class="doc-card-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 16l-4-4m0 0l4-4m-4 4h14M5 12a7 7 0 0114 0"/></svg>
+          下载资料
+        </a>
+      </div>
+    `).join('');
+  }
+
+  function filterCategory(cat) {
+    currentCategory = cat;
+    document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector(`.category-tab[onclick*="${cat}"]`).classList.add('active');
+    const searchVal = document.getElementById('searchInput').value.trim();
+    applyFilters(searchVal, cat);
+  }
+
+  function applyFilters(search, cat) {
+    let filtered = docs;
+    if (cat !== 'all') filtered = filtered.filter(d => d.category === cat);
+    if (search) {
+      const s = search.toLowerCase();
+      filtered = filtered.filter(d => d.name.toLowerCase().includes(s) || d.category.toLowerCase().includes(s));
+    }
+    renderDocs(filtered);
+  }
+
+  function filterDocs() {
+    const search = document.getElementById('searchInput').value.trim();
+    applyFilters(search, currentCategory);
+  }
+
+  document.getElementById('searchInput').addEventListener('input', function() {
+    filterDocs();
+  });
+  document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') filterDocs();
+  });
+
+  // Initial render
+  renderDocs(docs);
+  </script>
+</body>
+</html>
