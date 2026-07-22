@@ -3,489 +3,1987 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-// Dynamic per-product SEO - set meta keywords and description based on URL parameter
-(function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const model = urlParams.get('model') || '';
-  if (model && typeof getProductSeoKeywords === 'function') {
-    const kwEl = document.getElementById('seo-keywords');
-    const descEl = document.getElementById('seo-description');
-    if (kwEl) kwEl.setAttribute('content', getProductSeoKeywords(model));
-    if (descEl) descEl.setAttribute('content', getProductSeoDescription(model));
-  }
-})();
-</script>
-
-  <title>产品详情 - 腾瑞仪器 TRUIT</title>
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="腾瑞仪器专业生产涂料检测仪器，油墨检测仪器、涂层检测仪器，厂家直销，品质保证。" id="seo-desc">
-  <meta name="keywords" content="腾瑞仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器" id="seo-kw">
-  <link rel="canonical" href="https://truir-eng.github.io/gztruit/product.html">
-  <meta property="og:title" id="ogTitle" content="产品详情 - 腾瑞仪器">
-  <meta property="og:description" id="ogDesc" content="涂料检测仪器产品详情">
-  <meta property="og:type" content="website">
-  <meta property="og:url" id="ogUrl" content="https://truir-eng.github.io/gztruit/product.html">
-  <meta property="og:site_name" content="腾瑞仪器 TRUIT">
-  <meta property="og:image" content="https://truir-eng.github.io/gztruit/logo.png">
-  <script type="application/ld+json" id="schemaData">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "腾瑞仪器产品中心",
-    "description": "腾瑞仪器（广州）有限公司产品中心 - 涂料检测仪器专业制造商,供应蔡恩杯,粘度计,光泽度仪,盐雾试验箱,氙灯老化箱,UV紫外老化箱,划格器,冲击试验仪,耐磨试验仪等各类涂料检测仪器,符合GB/T ISO ASTM标准",
-    "url": "https://truir-eng.github.io/gztruit/product.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "腾瑞仪器（广州）有限公司",
-      "alternateName": "TRUIT Instruments",
-      "url": "https://www.gztruit.com",
-      "logo": "https://truir-eng.github.io/gztruit/logo.png",
-      "telephone": "+86-020-31706520",
-      "email": "sales@gztruit.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "增城区宁西街香山大道44号8号楼1单元1201",
-        "addressLocality": "广州市",
-        "addressRegion": "广东省",
-        "postalCode": "511300",
-        "addressCountry": "CN"
-      }
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "name": "涂料检测仪器产品列表",
-      "numberOfItems": 53,
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "蔡恩杯 Zahn Cup", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1001"},
-        {"@type": "ListItem", "position": 2, "name": "福特杯 Ford Cup", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1002"},
-        {"@type": "ListItem", "position": 3, "name": "法国标准杯 NF Cup", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1004"},
-        {"@type": "ListItem", "position": 4, "name": "DIN杯", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1005&1006"},
-        {"@type": "ListItem", "position": 5, "name": "岩田杯 Iwata Cup", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1009"},
-        {"@type": "ListItem", "position": 6, "name": "涂-4杯", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1010"},
-        {"@type": "ListItem", "position": 7, "name": "粘度杯支架", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1013"},
-        {"@type": "ListItem", "position": 8, "name": "表盘式旋转粘度计", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1101-1&4"},
-        {"@type": "ListItem", "position": 9, "name": "布式粘度计 液晶显示", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1101-1CH"},
-        {"@type": "ListItem", "position": 10, "name": "数显旋转粘度计", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1101-5&8"},
-        {"@type": "ListItem", "position": 11, "name": "智能流变仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1104"},
-        {"@type": "ListItem", "position": 12, "name": "斯托默粘度计", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1123-1"},
-        {"@type": "ListItem", "position": 13, "name": "电子秒表", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1168/1"},
-        {"@type": "ListItem", "position": 14, "name": "机械秒表", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1168/2"},
-        {"@type": "ListItem", "position": 15, "name": "激光粒度仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 1860"},
-        {"@type": "ListItem", "position": 16, "name": "高速分散机", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 2001"},
-        {"@type": "ListItem", "position": 17, "name": "防爆型高速分散机", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 2002"},
-        {"@type": "ListItem", "position": 18, "name": "悬臂式电动搅拌器", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 2030"},
-        {"@type": "ListItem", "position": 19, "name": "防爆型篮式砂磨机", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 2200"},
-        {"@type": "ListItem", "position": 20, "name": "智能振荡箱", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 2311"},
-        {"@type": "ListItem", "position": 21, "name": "胶粘剂涂布器", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 3002-F1"},
-        {"@type": "ListItem", "position": 22, "name": "可调制备器", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 3101"},
-        {"@type": "ListItem", "position": 23, "name": "无油真空泵", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 3502-P1-1"},
-        {"@type": "ListItem", "position": 24, "name": "直线干燥时间记录仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 3600"},
-        {"@type": "ListItem", "position": 25, "name": "完全干燥时间测定仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 3606"},
-        {"@type": "ListItem", "position": 26, "name": "AI油墨打样机", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 3910A"},
-        {"@type": "ListItem", "position": 27, "name": "划格器 单刃", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5001"},
-        {"@type": "ListItem", "position": 28, "name": "划格器 八刃", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5003"},
-        {"@type": "ListItem", "position": 29, "name": "阴极剥离试验机箱", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5030"},
-        {"@type": "ListItem", "position": 30, "name": "圆管冲击仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5202/F"},
-        {"@type": "ListItem", "position": 31, "name": "圆管冲击仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5202/F1"},
-        {"@type": "ListItem", "position": 32, "name": "落球冲击仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5206"},
-        {"@type": "ListItem", "position": 33, "name": "涂层柔韧性试验仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5213"},
-        {"@type": "ListItem", "position": 34, "name": "耐擦伤测定仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5306"},
-        {"@type": "ListItem", "position": 35, "name": "落砂耐磨试验仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5310"},
-        {"@type": "ListItem", "position": 36, "name": "耐划痕测试仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5311/1"},
-        {"@type": "ListItem", "position": 37, "name": "耐洗刷试验仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5312"},
-        {"@type": "ListItem", "position": 38, "name": "分光测色仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5402"},
-        {"@type": "ListItem", "position": 39, "name": "多角度便携式分光测色仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5403"},
-        {"@type": "ListItem", "position": 40, "name": "光泽度计", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5464"},
-        {"@type": "ListItem", "position": 41, "name": "光泽度仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5464-7"},
-        {"@type": "ListItem", "position": 42, "name": "便携式测厚仪", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 5512"},
-        {"@type": "ListItem", "position": 43, "name": "防爆鼓风干燥箱", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 6010"},
-        {"@type": "ListItem", "position": 44, "name": "腐蚀划痕器", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 6302"},
-        {"@type": "ListItem", "position": 45, "name": "氙灯老化试验箱", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 6412"},
-        {"@type": "ListItem", "position": 46, "name": "氙灯风冷老化试验箱", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 6413"},
-        {"@type": "ListItem", "position": 47, "name": "UV紫外老化试验箱", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 6421"},
-        {"@type": "ListItem", "position": 48, "name": "Irradiance Calibrator", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 6421-001"},
-        {"@type": "ListItem", "position": 49, "name": "大气暴晒架", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 6480"},
-        {"@type": "ListItem", "position": 50, "name": "UV能量计", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 6551"},
-        {"@type": "ListItem", "position": 51, "name": "线棒", "url": "https://truir-eng.github.io/gztruit/product.html?model=TR 线棒"},
-        {"@type": "ListItem", "position": 52, "name": "复合式盐干湿试验机", "url": "https://truir-eng.github.io/gztruit/product.html?model=复合式盐干湿"},
-        {"@type": "ListItem", "position": 53, "name": "高低温交变湿热试验箱", "url": "https://truir-eng.github.io/gztruit/product.html?model=高低温交变湿热"}
-      ]
-    }
-  }
-  </script>
-  <meta property="og:type" content="website">
-  <meta property="og:url" id="ogUrl" content="https://truir-eng.github.io/gztruit/products.html">
-  <meta property="og:site_name" content="腾瑞仪器 TRUIT">
+  <title id="pageTitle">产品详情 - 腾瑞仪器</title>
   <style>
-    :root { --blue: #005A9C; --blue-light: #0070C0; --blue-dark: #003d6b; --green: #00A650; --green-light: #92D050; --bg: #F5F7FA; --white: #FFFFFF; --text: #1A1A1A; --text-gray: #666666; --border: #E8ECF0; }
+    :root {
+      --blue: #005A9C;
+      --blue-light: #0070C0;
+      --blue-dark: #003d6b;
+      --green: #00A650;
+      --green-light: #92D050;
+      --gold: #D4A843;
+      --bg: #F5F7FA;
+      --white: #FFFFFF;
+      --text: #1A1A1A;
+      --text-gray: #666666;
+      --border: #E8ECF0;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     a { text-decoration: none; color: inherit; }
-    .top-bar { background: var(--blue-dark); color: rgba(255,255,255,0.8); font-size: 0.8rem; padding: 0.4rem 0; text-align: center; }
+
+    .top-bar { background: var(--blue-dark); color: rgba(255,255,255,0.75); font-size: 0.8rem; padding: 0.4rem 0; text-align: center; }
+
     header { background: var(--white); box-shadow: 0 1px 4px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
     .header-inner { max-width: 1200px; margin: 0 auto; padding: 0.7rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; }
     .header-logo { height: 70px; }
     .header-brand h1 { font-size: 1.4rem; color: var(--blue); font-weight: 800; }
     .header-brand h1 span { color: var(--green); }
-    nav { display: flex; gap: 0.3rem; margin-left: auto; }
+    nav { display: flex; gap: 0.3rem; margin-left: auto; align-items: center; }
     nav a { padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; color: var(--text); transition: all 0.2s; }
     nav a:hover, nav a.active { background: var(--blue); color: white; }
-    .product-hero { background: linear-gradient(135deg, #1a2a3a, #2a3a4a); color: white; padding: 3rem 1.5rem; text-align: center; }
-    .product-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .product-hero .model-badge { font-family: 'Courier New', monospace; font-size: 1.1rem; opacity: 0.85; margin-bottom: 0.8rem; background: rgba(255,255,255,0.1); display: inline-block; padding: 0.2rem 1rem; border-radius: 20px; }
-    .product-hero .category-tag { display: inline-block; background: rgba(255,255,255,0.15); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; margin-left: 0.5rem; }
-    .product-detail { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--blue-light); margin-bottom: 1.5rem; font-size: 0.9rem; }
-    .back-link:hover { text-decoration: underline; }
-    .detail-card { background: white; border-radius: 14px; padding: 1.8rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.07); margin-bottom: 1.5rem; }
-    .detail-card h2 { font-size: 1.15rem; color: var(--blue); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green-light); display: flex; align-items: center; gap: 0.5rem; }
-    .detail-card p { color: var(--text-gray); line-height: 1.9; font-size: 0.95rem; }
-    .detail-card ul { padding-left: 1.5rem; color: var(--text-gray); }
-    .detail-card li { margin-bottom: 0.6rem; font-size: 0.95rem; line-height: 1.7; }
-    .download-section { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
-    .download-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.5rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; transition: all 0.2s; }
-    .download-btn.doc { background: var(--blue-light); color: white; }
-    .download-btn.doc:hover { background: var(--blue); transform: translateY(-1px); }
-    .download-btn.pdf { background: #E65100; color: white; }
-    .download-btn.pdf:hover { background: #bf360c; transform: translateY(-1px); }
-    .download-btn.disabled { background: #ddd; color: #999; cursor: not-allowed; }
-    .no-doc { color: var(--text-gray); font-style: italic; }
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 0.5rem; }
-    .contact-item { background: var(--bg); padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.75rem; }
-    .contact-item .icon { font-size: 1.5rem; }
-    .contact-item .label { font-size: 0.75rem; color: var(--text-gray); }
-    .contact-item .value { font-size: 0.95rem; font-weight: 600; }
-    .not-found { text-align: center; padding: 4rem 1.5rem; }
-    .not-found h2 { color: var(--text); margin-bottom: 1rem; }
-    .not-found p { color: var(--text-gray); margin-bottom: 1.5rem; }
-    .not-found a { color: var(--blue-light); text-decoration: underline; }
-    footer { background: var(--blue-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 1.5rem; font-size: 0.8rem; margin-top: 3rem; }
+    .lang-select { padding: 0.35rem 0.5rem; border-radius: 6px; font-size: 0.82rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.4); color: white; outline: none; margin-left: 0.5rem; }
+    .lang-select option { background: var(--blue-dark); }
+
+    /* Breadcrumb */
+    .breadcrumb { max-width: 1200px; margin: 1rem auto 0; padding: 0 1.5rem; font-size: 0.85rem; color: var(--text-gray); }
+    .breadcrumb a { color: var(--blue); }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 0.4rem; }
+
+    /* Detail Layout */
+    .detail-wrap { max-width: 1200px; margin: 1rem auto 3rem; padding: 0 1.5rem; display: grid; grid-template-columns: 1fr 360px; gap: 1.5rem; align-items: start; }
+
+    /* Main Info */
+    .detail-main { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+
+    .detail-header { background: linear-gradient(135deg, #001f3f 0%, #003d6b 50%, var(--blue) 100%); color: white; padding: 2rem; }
+    .detail-header .model { font-family: monospace; font-size: 0.85rem; opacity: 0.75; margin-bottom: 0.3rem; }
+    .detail-header .name { font-size: 1.8rem; font-weight: 800; }
+    .detail-header .name-en { font-size: 1rem; opacity: 0.75; margin-top: 0.2rem; }
+    .detail-header .category { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.25rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-top: 0.8rem; }
+
+    .detail-body { padding: 1.5rem 2rem; }
+
+    .section { margin-bottom: 2rem; }
+    .section:last-child { margin-bottom: 0; }
+
+    .section-title { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green-light); display: flex; align-items: center; gap: 0.5rem; }
+    .section-title .icon { font-size: 1.2rem; }
+
+    .desc-text { font-size: 0.95rem; color: var(--text-gray); line-height: 1.8; }
+
+    .specs-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .specs-table tr:nth-child(even) { background: #f8fbff; }
+    .specs-table td { padding: 0.55rem 0.8rem; border-bottom: 1px solid var(--border); }
+    .specs-table td:first-child { font-weight: 600; color: var(--blue); width: 35%; white-space: nowrap; }
+    .specs-table td:last-child { color: var(--text-gray); }
+
+    .features-list { list-style: none; }
+    .features-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.9rem; color: var(--text-gray); }
+    .features-list li:last-child { border-bottom: none; }
+    .features-list .dot { color: var(--green); font-weight: bold; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+
+    .order-info { background: #f8fbff; border-radius: 10px; padding: 1.2rem; }
+    .order-item { display: flex; align-items: center; gap: 0.8rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .order-item:last-child { border-bottom: none; }
+    .order-item .tag { background: var(--blue); color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
+
+    /* Sidebar */
+    .detail-sidebar { display: flex; flex-direction: column; gap: 1rem; }
+
+    .sidebar-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+
+    .sidebar-card .card-header { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); color: white; padding: 0.9rem 1.2rem; font-weight: 700; font-size: 0.95rem; }
+    .sidebar-card .card-body { padding: 1.2rem; }
+
+    .download-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.7rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.6rem; cursor: pointer; border: none; transition: all 0.2s; text-decoration: none; }
+    .download-btn:last-child { margin-bottom: 0; }
+    .download-btn.doc { background: #EDF3FA; color: var(--blue-light); }
+    .download-btn.doc:hover { background: var(--blue); color: white; }
+    .download-btn.pdf { background: #FFF3E0; color: #E65100; }
+    .download-btn.pdf:hover { background: #E65100; color: white; }
+    .download-btn.disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+
+    .qr-section { text-align: center; }
+    .qr-section .qr-label { font-size: 0.85rem; color: var(--text-gray); margin-top: 0.6rem; }
+    .qr-placeholder { width: 140px; height: 140px; background: #f5f7fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 0.8rem; color: var(--text-gray); border: 2px dashed var(--border); }
+    .qr-placeholder.has-qr { background: white; border: none; }
+    .qr-placeholder.has-qr img { width: 140px; height: 140px; object-fit: contain; }
+
+    .video-section { text-align: center; }
+    .video-placeholder { width: 100%; aspect-ratio: 16/9; background: #1a1a1a; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.85rem; cursor: pointer; }
+    .video-placeholder:hover { background: #2a2a2a; }
+    .video-placeholder .play-icon { font-size: 2.5rem; margin-bottom: 0.3rem; }
+
+    /* Footer */
+    footer { background: var(--blue-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 1.5rem; font-size: 0.8rem; margin-top: 2rem; }
     footer a { color: rgba(255,255,255,0.9); }
-    @media (max-width: 768px) { .header-inner { flex-wrap: wrap; } nav { margin-left: 0; } .detail-card { padding: 1.2rem; } }
+
+    @media (max-width: 900px) {
+      .detail-wrap { grid-template-columns: 1fr; }
+      .detail-sidebar { order: -1; }
+    }
+    @media (max-width: 768px) {
+      .header-inner { flex-wrap: wrap; }
+      nav { margin-left: 0; }
+      .detail-body { padding: 1rem; }
+      .detail-header { padding: 1.2rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="top-bar">📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com &nbsp;|&nbsp; 专注仪器制造二十年</div>
+
+  <div class="top-bar">
+    📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com &nbsp;|&nbsp; 专注仪器制造二十年
+  </div>
+
   <header>
     <div class="header-inner">
       <a href="index.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
       <div class="header-brand"><h1>腾瑞<span>仪器</span></h1></div>
       <nav>
-        <a href="index.html">首页</a>
-        <a href="products.html" class="active">产品中心</a>
-        <a href="index.html#contact">联系我们</a>
+        <a href="index.html" data-en="Home">首页</a>
+        <a href="index.html#patents" data-en="Core Tech">核心技术</a>
+        <a href="products.html" class="active" data-en="Products">产品中心</a>
+        <a href="index.html#contact" data-en="Contact">联系我们</a>
+        <select class="lang-select" onchange="switchLang(this.value)">
+          <option value="zh">中文</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="ar">العربية</option>
+          <option value="ru">Русский</option>
+        </select>
       </nav>
     </div>
   </header>
 
-  <div id="productContent">
-    <h1 style="font-size:1.5rem;color:#005A9C;margin:2rem 0 1rem;text-align:center;">腾瑞仪器 · 产品详情</h1>
-    <!-- JS动态内容 -->
+  <div class="breadcrumb" id="breadcrumb">
+    <a href="index.html">首页</a> <span>›</span>
+    <a href="products.html">产品中心</a> <span>›</span>
+    <span id="breadcrumbName">—</span>
+  </div>
+
+  <div class="detail-wrap">
+    <div class="detail-main">
+      <div class="detail-header">
+        <div class="model" id="modelDisplay">—</div>
+        <div class="name" id="nameDisplay">—</div>
+        <div class="name-en" id="nameEnDisplay">—</div>
+        <div class="category" id="catDisplay">—</div>
+      </div>
+      <div class="detail-body">
+
+        <div class="section" id="sectionDesc">
+          <div class="section-title"><span class="icon">📋</span> <span data-en="Product Description">产品说明</span></div>
+          <div class="desc-text" id="descDisplay">—</div>
+        </div>
+
+        <div class="section" id="sectionSpecs">
+          <div class="section-title"><span class="icon">📐</span> <span data-en="Specifications">技术参数</span></div>
+          <table class="specs-table" id="specsDisplay">
+            <tbody>—</tbody>
+          </table>
+        </div>
+
+        <div class="section" id="sectionFeatures">
+          <div class="section-title"><span class="icon">✨</span> <span data-en="Features">产品特点</span></div>
+          <ul class="features-list" id="featuresDisplay">—</ul>
+        </div>
+
+        <div class="section" id="sectionOrder">
+          <div class="section-title"><span class="icon">📦</span> <span data-en="Ordering Info">订购信息</span></div>
+          <div class="order-info" id="orderDisplay">—</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="detail-sidebar">
+
+      <div class="sidebar-card">
+        <div class="card-header" data-en="Downloads">📥 下载资料</div>
+        <div class="card-body">
+          <a href="#" class="download-btn doc" id="docBtn" download>📄 Word 文档</a>
+          <a href="#" class="download-btn pdf" id="pdfBtn" download>📕 PDF 文件</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-header" data-en="Product Video">🎬 产品视频</div>
+        <div class="card-body">
+          <div class="video-section" id="videoSection">
+            <div class="video-placeholder" id="videoPlaceholder" onclick="playVideo()">
+              <div>
+                <div class="play-icon">▶</div>
+                <div id="videoText" data-en="Click to play video">点击播放视频介绍</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-header" data-en="Mobile QR Code">📱 手机查看</div>
+        <div class="card-body">
+          <div class="qr-section" id="qrSection">
+            <div class="qr-placeholder" id="qrPlaceholder">
+              请扫描二维码
+            </div>
+            <div class="qr-label" id="qrLabel" data-en="Scan with WeChat/phone">用微信/手机扫描查看</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="card-header" data-en="Contact Us">📞 联系我们</div>
+        <div class="card-body">
+          <p style="font-size:0.85rem; color:var(--text-gray); margin-bottom:0.6rem;">如需进一步了解产品信息，欢迎联系我们。</p>
+          <p style="font-size:0.85rem;"><strong>📞</strong> 020-31706520</p>
+          <p style="font-size:0.85rem;"><strong>📧</strong> sales@gztruit.com</p>
+          <p style="font-size:0.85rem;"><strong>🌐</strong> www.gztruit.com</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <footer>
-    <strong>腾瑞仪器 TRUIT</strong> | 涂料检测仪器专业制造商 | 📞 020-31706520 | 📧 sales@gztruit.com
-    <p style="margin-top:0.5rem;">© 2024 腾瑞仪器（广州）有限公司 TRUIT Instruments (Guangzhou) Co., Ltd.</p>
+    <p>© 2024 腾瑞仪器（广州）有限公司 TRUIT Instruments (Guangzhou) Co., Ltd.</p>
+    <p style="margin-top:0.5rem;">
+      <a href="index.html">首页</a> · <a href="products.html">产品中心</a> · <a href="index.html#contact">联系我们</a>
+    </p>
   </footer>
 
   <script>
-    // 所有产品数据
-    const products = [
-      {"model":"TR 1001","image":"products/TR1168_1_electronic_stopwatch.png","subcat":"zahn","name":{"zh":"蔡恩杯（Zahn杯）","en":"Zahn Cup"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"蔡恩杯（Zahn杯），用于测量涂料、油墨等流体的流出时间进而计算粘度。符合GB/T标准设计。","en":"Zahn cup for measuring efflux time of coatings and inks to calculate viscosity."},"features":{"zh":["标准蔡恩杯设计","不锈钢材质，耐用防腐","操作简便快捷","广泛应用于涂料检测"],"en":["Standard Zahn cup design","Stainless steel, durable and corrosion-resistant","Simple and fast operation","Widely used in coating testing"]},"docFiles":{"zh":"TR 1001蔡恩杯.doc","en":"TR 1001蔡恩杯.doc"},"pdfFiles":{}},
-      {"model":"TR 1002","image":"","subcat":"zahn","name":{"zh":"福特杯","en":"Ford Cup"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"福特杯（Ford Cup），用于测量涂料、油墨等流体的流出时间进而计算粘度。","en":"Ford Cup for measuring efflux time of coatings and inks."},"features":{"zh":["标准福特杯设计","不锈钢材质，耐用防腐","操作简便快捷","广泛应用于涂料检测"],"en":["Standard Ford cup design","Stainless steel, durable","Simple and fast operation","Widely used in coating testing"]},"docFiles":{"zh":"TR 1002福特杯.doc","en":"TR 1002福特杯.doc"},"pdfFiles":{}},
-      {"model":"TR 1004","image":"","subcat":"zahn","name":{"zh":"法国标准杯（NF杯）","en":"NF Cup"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"法国标准杯（NF杯），符合NF标准设计，用于测量流体粘度。","en":"NF Cup, compliant with French NF standard for viscosity measurement."},"features":{"zh":["符合NF法国标准","不锈钢材质","操作简便","广泛应用于涂料检测"],"en":["NF standard compliant","Stainless steel","Simple operation","Widely used in coating testing"]},"docFiles":{"zh":"TR 1004法国标准杯（NF杯）.doc","en":"TR 1004法国标准杯（NF杯）.doc"},"pdfFiles":{}},
-      {"model":"TR 1005&1006","image":"","subcat":"zahn","name":{"zh":"DIN杯","en":"DIN Cup"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"DIN杯，符合DIN标准，用于测量涂料、油墨等流体粘度。","en":"DIN Cup compliant with German DIN standard for viscosity measurement."},"features":{"zh":["符合DIN德国标准","不锈钢材质","操作简便","广泛应用于涂料检测"],"en":["DIN standard compliant","Stainless steel","Simple operation","Widely used"]},"docFiles":{"zh":"TR 1005&1006DIN杯.doc","en":"TR 1005&1006DIN杯.doc"},"pdfFiles":{}},
-      {"model":"TR 1009","image":"","subcat":"zahn","name":{"zh":"岩田杯","en":"Iwata Cup"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"岩田杯（Iwata Cup），用于测量涂料、油墨等流体的流出时间进而计算粘度。","en":"Iwata Cup for measuring efflux time of coatings and inks."},"features":{"zh":["标准岩田杯设计","不锈钢材质","操作简便","广泛应用于涂料检测"],"en":["Standard Iwata cup design","Stainless steel","Simple operation","Widely used"]},"docFiles":{"zh":"TR 1009岩田杯产品介绍.doc","en":"TR 1009岩田杯产品介绍.doc"},"pdfFiles":{}},
-      {"model":"TR 1010","image":"","subcat":"zahn","name":{"zh":"涂-4杯（T-4杯）","en":"T-4 Cup"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"涂-4杯（T-4杯），用于测量涂料粘度，符合GB/T 1723标准。","en":"T-4 Cup for coating viscosity measurement, GB/T 1723 compliant."},"features":{"zh":["符合GB/T 1723标准","不锈钢材质","操作简便","广泛应用于涂料检测"],"en":["GB/T 1723 compliant","Stainless steel","Simple operation","Widely used"]},"docFiles":{"zh":"TR 1010涂-4杯（T-4杯）+秒表.doc","en":"TR 1010涂-4杯（T-4杯）+秒表.doc"},"pdfFiles":{}},
-      {"model":"TR 1013","image":"","subcat":"zahn","name":{"zh":"粘度杯支架","en":"Viscosity Cup Stand"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"粘度杯支架，用于支撑和固定各种流出杯，确保测量精度。","en":"Viscosity cup stand for supporting and fixing various efflux cups."},"features":{"zh":["坚固耐用","设计合理","适用多种粘度杯"],"en":["Sturdy and durable","Reasonable design","Fits various cups"]},"docFiles":{"zh":"TR 1013粘度杯支架产品介绍.doc","en":"TR 1013粘度杯支架产品介绍.doc"},"pdfFiles":{}},
-      {"model":"TR 1101-1&4","image":"","subcat":"viscometer","name":{"zh":"表盘式旋转粘度计","en":"Dial Rotational Viscometer"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"表盘式旋转粘度计，1号/4号转子设计，适用于不同粘度范围的流体测量。","en":"Dial rotational viscometer with No.1/No.4 rotor for different viscosity ranges."},"features":{"zh":["表盘直接读数","多种转子可选","测量范围广","操作简便"],"en":["Direct dial reading","Multiple rotors","Wide measurement range","Easy operation"]},"docFiles":{"zh":"TR 1101-1&4表盘式旋转粘度计产品介绍.doc","en":"TR 1101-1&4表盘式旋转粘度计产品介绍.doc"},"pdfFiles":{}},
-      {"model":"TR 1101-1CH","image":"","subcat":"viscometer","name":{"zh":"布式粘度计（液晶显示）","en":"Brookfield Viscometer (LCD)"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"布式粘度计（Brookfield），液晶显示设计，适用于测量各种流体粘度。","en":"Brookfield viscometer with LCD display for various viscosity measurements."},"features":{"zh":["液晶显示，读数直观","精度高","多种转子可选","操作简便"],"en":["LCD display, intuitive reading","High precision","Multiple rotors","Easy operation"]},"docFiles":{"zh":"TR 1101-1CH布式粘度计 （液晶显示）.docx","en":"TR 1101-1CH布式粘度计 （液晶显示）.docx"},"pdfFiles":{}},
-      {"model":"TR 1101-5&8","image":"","subcat":"viscometer","name":{"zh":"数显旋转粘度计","en":"Digital Rotational Viscometer"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"数显旋转粘度计，5号/8号转子设计，适用于不同粘度范围的流体测量。","en":"Digital rotational viscometer with No.5/No.8 rotor for different viscosity ranges."},"features":{"zh":["数显屏幕，直接读数","精度高","多种转子可选","测量范围广"],"en":["Digital display","High precision","Multiple rotors","Wide range"]},"docFiles":{"zh":"TR 1101-5&8数显旋转粘度计产品介绍.doc","en":"TR 1101-5&8数显旋转粘度计产品介绍.doc"},"pdfFiles":{}},
-      {"model":"TR 1104","image":"","subcat":"viscometer","name":{"zh":"智能流变仪","en":"Intelligent Rheometer"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"智能流变仪，用于测量流体的流变特性，包括粘度、触变性等参数。","en":"Intelligent rheometer for measuring rheological properties including viscosity and thixotropy."},"features":{"zh":["智能控制系统","多功能测量","精度高","数据处理方便"],"en":["Intelligent control system","Multi-function","High precision","Easy data processing"]},"docFiles":{"zh":"TR 1104智能流变仪.doc","en":"TR 1104智能流变仪.doc"},"pdfFiles":{}},
-      {"model":"TR 1123-1","image":"","subcat":"viscometer","name":{"zh":"斯托默粘度计","en":"Stormer Viscometer"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"斯托默粘度计（Stormer），用于测量涂料、油墨等流体的粘度，符合GB/T标准。","en":"Stormer viscometer for coatings and inks viscosity measurement, GB/T compliant."},"features":{"zh":["符合GB/T国家标准","操作简便","重复性好","广泛应用于涂料行业"],"en":["GB/T compliant","Easy operation","Good repeatability","Widely used in coating industry"]},"docFiles":{"zh":"TR 1123-1斯托默粘度计产品介绍.doc","en":"TR 1123-1斯托默粘度计产品介绍.doc"},"pdfFiles":{}},
-      {"model":"TR 1168/1","image":"products/TR1168_1_electronic_stopwatch.png","subcat":"stopwatch","name":{"zh":"电子秒表","en":"Digital Stopwatch"},"category":"lab","categoryName":{"zh":"实验室通用仪器","en":"General Lab Equipment"},"specs":{"zh":"显示：LCD大屏幕数字显示；计时精度：1/100秒；最大计时：59分59秒99；电源：纽扣电池；防水等级：生活防水；执行标准：QB/T 2108-1995","en":"Display: LCD; Accuracy: 1/100s; Max: 59min 59.99s; Battery: Button cell; Water resistant; Standard: QB/T 2108-1995"},"features":{"zh":["电子计时技术，精度高、读数直观","1/100秒高精度计时","多功能模式：正常计时、倒计时、分段计时","ABS工程塑料外壳，坚固耐用","生活防水设计"],"en":["Electronic timing, high precision","1/100s high precision","Multi-mode: normal, countdown, split","ABS plastic shell","Water resistant design"]},"docFiles":{"zh":"TR 1168_1_电子秒表_介绍.docx","en":"TR 1168_1_电子秒表_介绍.docx"},"pdfFiles":{}},
-      {"model":"TR 1168/2","image":"products/TR1168_2_mechanical_stopwatch.png","subcat":"stopwatch","name":{"zh":"机械秒表","en":"Mechanical Stopwatch"},"category":"lab","categoryName":{"zh":"实验室通用仪器","en":"General Lab Equipment"},"specs":{"zh":"最小刻度值：1/10s；分针：15秒/圈；秒针：30秒/圈；延续走时：6h；钻数：13钻；表壳：不锈钢；执行标准：QB/T 153-2006","en":"Min scale: 1/10s; Minute: 15s/circle; Second: 30s/circle; Running: 6h; Jewels: 13; Case: stainless steel; Standard: QB/T 153-2006"},"features":{"zh":["机芯采用不锈钢发条，单金属光摆轮","镍基合金游丝及锚式纵机构","机芯装有13颗宝石，精度高耐用","不锈钢表壳，坚固耐用","广泛应用于工矿企业、科学研究、医疗卫生"],"en":["Stainless steel mainspring, single metal balance wheel","Nickel-based alloy hairspring","13-jewel movement","Stainless steel case","Used in industry, research, military, healthcare"]},"docFiles":{"zh":"TR1168_2_机械秒表_介绍.docx","en":"TR1168_2_机械秒表_介绍.docx"},"pdfFiles":{}},
-      {"model":"TR 1860","image":"","subcat":"granularity","name":{"zh":"激光粒度仪","en":"Laser Particle Size Analyzer"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"激光粒度仪，用于测量颗粒物料的粒度分布，适用于涂料、油墨、颜料等行业。","en":"Laser particle size analyzer for measuring particle size distribution."},"features":{"zh":["激光散射原理","测量范围宽","精度高","操作简便"],"en":["Laser scattering principle","Wide range","High precision","Easy operation"]},"docFiles":{"zh":"TR 1860激光粒度仪发货清单（不带电脑）.docx","en":"TR 1860激光粒度仪发货清单（不带电脑）.docx"},"pdfFiles":{}},
-      {"model":"TR 2001","image":"","subcat":"disperser","name":{"zh":"高速分散机","en":"High-Speed Disperser"},"category":"grind","categoryName":{"zh":"分散/搅拌/研磨","en":"Dispersion/Mixing/Grinding"},"specs":{"zh":"高速分散机，用于涂料、油墨、颜料等的分散和混合，高效均匀。","en":"High-speed disperser for dispersion and mixing of coatings, inks and pigments."},"features":{"zh":["高速分散，效率高","分散均匀","操作简便","适用范围广"],"en":["High speed dispersion, high efficiency","Uniform dispersion","Easy operation","Wide application"]},"docFiles":{"zh":"TR 2001 高速分散机.doc","en":"TR 2001 高速分散机.doc"},"pdfFiles":{}},
-      {"model":"TR 2002","image":"","subcat":"disperser","name":{"zh":"防爆型高速分散机","en":"Explosion-Proof High-Speed Disperser"},"category":"grind","categoryName":{"zh":"分散/搅拌/研磨","en":"Dispersion/Mixing/Grinding"},"specs":{"zh":"防爆型高速分散机，适用于易燃易爆溶剂型涂料、油墨的分散和混合。","en":"Explosion-proof high-speed disperser for flammable solvent-based coatings and inks."},"features":{"zh":["防爆设计，安全可靠","高速分散，效率高","适用于溶剂型产品","操作简便"],"en":["Explosion-proof, safe and reliable","High efficiency","For solvent-based products","Easy operation"]},"docFiles":{"zh":"TR 2002 防爆型高速分散机.doc","en":"TR 2002 防爆型高速分散机.doc"},"pdfFiles":{}},
-      {"model":"TR 2030","image":"","subcat":"mixer","name":{"zh":"悬臂式电动搅拌器","en":"Cantilever Electric Mixer"},"category":"grind","categoryName":{"zh":"分散/搅拌/研磨","en":"Dispersion/Mixing/Grinding"},"specs":{"zh":"悬臂式电动搅拌器，用于液体物料的搅拌和混合，结构稳固，操作方便。","en":"Cantilever electric mixer for stirring and mixing liquid materials."},"features":{"zh":["悬臂式设计，稳定性好","电动驱动，搅拌均匀","速度可调","适用范围广"],"en":["Cantilever design, good stability","Electric drive, uniform mixing","Adjustable speed","Wide application"]},"docFiles":{"zh":"TR 2030悬臂式电动搅拌器.doc","en":"TR 2030悬臂式电动搅拌器.doc"},"pdfFiles":{}},
-      {"model":"TR 2200","image":"","subcat":"basket","name":{"zh":"防爆型篮式砂磨机","en":"Explosion-Proof Basket Mill"},"category":"grind","categoryName":{"zh":"分散/搅拌/研磨","en":"Dispersion/Mixing/Grinding"},"specs":{"zh":"防爆型篮式砂磨机，用于涂料、油墨的研磨分散，篮式研磨结构，效率高。","en":"Explosion-proof basket mill for grinding and dispersing coatings and inks."},"features":{"zh":["篮式研磨结构，效率高","防爆设计，安全可靠","适用于溶剂型涂料","操作简便"],"en":["Basket grinding structure, high efficiency","Explosion-proof design","For solvent-based coatings","Easy operation"]},"docFiles":{"zh":"TR 2200 防爆型篮式砂磨机.doc","en":"TR 2200 防爆型篮式砂磨机.doc"},"pdfFiles":{}},
-      {"model":"TR 2311","image":"","subcat":"mixer","name":{"zh":"智能振荡箱","en":"Intelligent Shaking Box"},"category":"grind","categoryName":{"zh":"分散/搅拌/研磨","en":"Dispersion/Mixing/Grinding"},"specs":{"zh":"智能振荡箱，用于样品振荡、混匀等实验，智能控制，操作简便。","en":"Intelligent shaking box for sample shaking and mixing."},"features":{"zh":["智能控制系统","多种振荡模式","操作简便","稳定性好"],"en":["Intelligent control","Multiple modes","Easy operation","Good stability"]},"docFiles":{"zh":"TR 2311智能振荡箱.doc","en":"TR 2311智能振荡箱.doc"},"pdfFiles":{}},
-      {"model":"TR 3002-F1","image":"","subcat":"applicator","name":{"zh":"胶粘剂涂布器","en":"Adhesive Applicator"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"胶粘剂涂布器，用于将胶粘剂均匀涂布在基材上，涂布宽度和厚度可调。","en":"Adhesive applicator for uniform coating of adhesives on substrates."},"features":{"zh":["涂布均匀","宽度厚度可调","操作简便","适用于各种胶粘剂"],"en":["Uniform coating","Adjustable width/thickness","Easy operation","Suitable for various adhesives"]},"docFiles":{"zh":"TR 3002-F1胶粘剂涂布器1.doc","en":"TR 3002-F1胶粘剂涂布器1.doc"},"pdfFiles":{}},
-      {"model":"TR 3101","image":"","subcat":"applicator","name":{"zh":"可调制备器","en":"Adjustable Applicator"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"可调制备器，用于涂布各种涂层样品，厚度可调，精度高。","en":"Adjustable applicator for coating various samples with adjustable thickness."},"features":{"zh":["厚度可调，精度高","涂布均匀","操作简便","适用于实验室"],"en":["Adjustable thickness, high precision","Uniform coating","Easy operation","For laboratory use"]},"docFiles":{"zh":"制备器产品介绍.doc","en":"制备器产品介绍.doc"},"pdfFiles":{}},
-      {"model":"TR 3502-P1-1","image":"","subcat":"vacuum","name":{"zh":"无油真空泵","en":"Oil-Free Vacuum Pump"},"category":"lab","categoryName":{"zh":"实验室通用仪器","en":"General Lab Equipment"},"specs":{"zh":"无油真空泵，用于实验室真空过滤、干燥等操作，无油设计，清洁环保。","en":"Oil-free vacuum pump for laboratory vacuum filtration and drying."},"features":{"zh":["无油设计，清洁环保","维护简便","噪音低","真空度高"],"en":["Oil-free, clean and eco-friendly","Easy maintenance","Low noise","High vacuum degree"]},"docFiles":{"zh":"TR 3502-P1-1无油真空泵.doc","en":"TR 3502-P1-1无油真空泵.doc"},"pdfFiles":{}},
-      {"model":"TR 3600","image":"","subcat":"drying","name":{"zh":"直线干燥时间记录仪","en":"Linear Drying Time Recorder"},"category":"lab","categoryName":{"zh":"实验室通用仪器","en":"General Lab Equipment"},"specs":{"zh":"直线干燥时间记录仪，用于测定涂层干燥时间，记录干燥全过程。","en":"Linear drying time recorder for measuring coating drying time."},"features":{"zh":["直线记录，精度高","自动记录干燥时间","操作简便","适用于各种涂层"],"en":["Linear recording, high precision","Automatic recording","Easy operation","Suitable for various coatings"]},"docFiles":{"zh":"TR 3600直线干燥时间记录仪.doc","en":"TR 3600直线干燥时间记录仪.doc"},"pdfFiles":{}},
-      {"model":"TR 3606","image":"","subcat":"drying","name":{"zh":"完全干燥时间测定仪","en":"Complete Drying Time Tester"},"category":"lab","categoryName":{"zh":"实验室通用仪器","en":"General Lab Equipment"},"specs":{"zh":"完全干燥时间测定仪，用于测定涂层完全干燥时间，精度高。","en":"Complete drying time tester for measuring coating complete drying time."},"features":{"zh":["精度高","自动测定","操作简便","数据可靠"],"en":["High precision","Automatic measurement","Easy operation","Reliable data"]},"docFiles":{"zh":"TR 3606完全干燥时间测定仪(1).docx","en":"TR 3606完全干燥时间测定仪(1).docx"},"pdfFiles":{}},
-      {"model":"TR 3910A","image":"","subcat":"proofing","name":{"zh":"AI油墨打样机","en":"AI Ink Proofing Machine"},"category":"lab","categoryName":{"zh":"实验室通用仪器","en":"General Lab Equipment"},"specs":{"zh":"AI油墨打样机，用于油墨打样和颜色校对，AI智能控制，精度高。","en":"AI ink proofing machine for ink proofing and color calibration."},"features":{"zh":["AI智能控制","精度高","打样快速","适用于油墨行业"],"en":["AI intelligent control","High precision","Fast proofing","For ink industry"]},"docFiles":{"zh":"TR 3910A AI油墨打样机.doc","en":"TR 3910A AI油墨打样机.doc"},"pdfFiles":{}},
-      {"model":"TR 5001","image":"","subcat":"adhesion","name":{"zh":"划格器（单刃）","en":"Cross-Cut Tester (Single Blade)"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"划格器（单刃），用于测定涂层附着力，符合GB/T 9286标准。","en":"Cross-cut tester (single blade) for coating adhesion testing, GB/T 9286 compliant."},"features":{"zh":["符合GB/T 9286标准","单刃设计，切割精准","操作简便","广泛应用于涂层检测"],"en":["GB/T 9286 compliant","Single blade, precise cutting","Easy operation","Widely used"]},"docFiles":{"zh":"TR 5001 划格器（单刃）.doc","en":"TR 5001 划格器（单刃）.doc"},"pdfFiles":{}},
-      {"model":"TR 5003","image":"","subcat":"adhesion","name":{"zh":"划格器（八刃）","en":"Cross-Cut Tester (8-Blade)"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"划格器（八刃），用于测定涂层附着力，多刃设计，效率高。","en":"Cross-cut tester (8-blade) for coating adhesion testing."},"features":{"zh":["八刃设计，效率高","切割精准","操作简便","适用于大面积检测"],"en":["8-blade design, high efficiency","Precise cutting","Easy operation","For large area testing"]},"docFiles":{"zh":"TR 5003 划格器（八刃）.doc","en":"TR 5003 划格器（八刃）.doc"},"pdfFiles":{}},
-      {"model":"TR 5030","image":"","subcat":"adhesion","name":{"zh":"阴极剥离试验机箱","en":"Cathodic Disbonding Test Chamber"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"阴极剥离试验机箱，用于测定涂层在阴极保护下的剥离性能。","en":"Cathodic disbonding test chamber for coating disbondment testing under cathodic protection."},"features":{"zh":["专用阴极剥离试验设备","温控精确","操作简便","符合相关标准"],"en":["Specialized equipment","Precise temperature control","Easy operation","Standards compliant"]},"docFiles":{"zh":"TR 5030阴极剥离试验机箱.doc","en":"TR 5030阴极剥离试验机箱.doc"},"pdfFiles":{}},
-      {"model":"TR 5202/F1","image":"products/TR5202_F1_impact_tester.jpeg","subcat":"impact","name":{"zh":"圆管冲击仪","en":"Pipe Impact Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"落锤重量：13.3N（3磅）；冲头直径：15.9mm；管高：1.52m；模座直径：16.3mm；管径：Ø110-125mm；冲击深度：0-5mm可调；符合AS/NZS4158:2003、ASTMG14标准","en":"Hammer: 13.3N; Punch: Ø15.9mm; Height: 1.52m; Die: Ø16.3mm; Pipe: Ø110-125mm; Depth: 0-5mm adjustable; Standards: AS/NZS4158, ASTM G14"},"features":{"zh":["通过弹性压紧适配多种外径管道","通过螺纹限位可调合适冲击深度","用于管道涂层抗冲击性能试验","评定涂层在冲击条件下的完整性和抗裂性"],"en":["Elastic clamping adapts to various pipe diameters","Thread limit adjusts impact depth","For pipe coating impact resistance testing","Evaluates coating integrity and crack resistance"]},"docFiles":{"zh":"TR 5202／F1 冲击仪产品资料.docx","en":"TR 5202／F1 冲击仪产品资料.docx"},"pdfFiles":{}},
-      {"model":"TR 5202/F","image":"","subcat":"impact","name":{"zh":"圆管冲击仪","en":"Pipe Impact Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"圆管冲击仪，用于测定管道涂层抗冲击性能。","en":"Pipe impact tester for determining pipe coating impact resistance."},"features":{"zh":["适用于管道涂层检测","冲击深度可调","操作简便","符合相关标准"],"en":["For pipe coating testing","Adjustable impact depth","Easy operation","Standards compliant"]},"docFiles":{"zh":"TR 5202-F圆管冲击仪.doc","en":"TR 5202-F圆管冲击仪.doc"},"pdfFiles":{}},
-      {"model":"TR 5206","image":"","subcat":"impact","name":{"zh":"落球冲击仪","en":"Ball Drop Impact Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"落球冲击仪，用于测定涂层抵抗冲击的能力，符合GB/T标准。","en":"Ball drop impact tester for determining coating impact resistance, GB/T compliant."},"features":{"zh":["落球法测试，操作简便","适用于多种涂层检测","符合GB/T国家标准","结构稳定可靠"],"en":["Ball drop method, easy to operate","Suitable for various coatings","GB/T compliant","Stable and reliable"]},"docFiles":{},"pdfFiles":{"zh":"TR 5206 落球冲击仪产品资料.pdf","en":"TR 5206 落球冲击仪产品资料.pdf"}},
-      {"model":"TR 5213","image":"","subcat":"flexibility","name":{"zh":"涂层柔韧性试验仪","en":"Coating Flexibility Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"涂层柔韧性试验仪，用于测定涂层柔韧性，通过绕轴弯曲方式检测。","en":"Coating flexibility tester for determining coating flexibility via bend testing."},"features":{"zh":["测定涂层柔韧性","多种轴径可选","操作简便","符合相关标准"],"en":["Tests coating flexibility","Multiple mandrel sizes","Easy operation","Standards compliant"]},"docFiles":{"zh":"TR 5213涂层柔韧性试验仪.doc","en":"TR 5213涂层柔韧性试验仪.doc"},"pdfFiles":{}},
-      {"model":"TR 5306","image":"","subcat":"scratch","name":{"zh":"耐擦伤测定仪","en":"Scratch Resistance Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"耐擦伤测定仪，用于测定涂层耐擦伤性能，评估涂层表面硬度。","en":"Scratch resistance tester for determining coating scratch resistance."},"features":{"zh":["精确测定涂层硬度","操作简便","适用于多种涂层材料","符合相关标准"],"en":["Accurate hardness measurement","Easy operation","Suitable for various coatings","Standards compliant"]},"docFiles":{"zh":"TR 5306耐擦伤测定仪.doc","en":"TR 5306耐擦伤测定仪.doc"},"pdfFiles":{}},
-      {"model":"TR 5310","image":"","subcat":"abrasion","name":{"zh":"落砂耐磨试验仪","en":"Falling Sand Abrasion Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"落砂耐磨试验仪，用于测定涂层耐磨性能，符合GB/T标准。","en":"Falling sand abrasion tester for coating abrasion resistance, GB/T compliant."},"features":{"zh":["落砂法测试涂层耐磨性","符合GB/T标准","结构稳定可靠","操作简便"],"en":["Falling sand method","GB/T compliant","Stable and reliable","Easy operation"]},"docFiles":{},"pdfFiles":{"zh":"TR 5310 落砂耐磨试验仪产品资料.pdf","en":"TR 5310 落砂耐磨试验仪产品资料.pdf"}},
-      {"model":"TR 5311/1","image":"","subcat":"scratch","name":{"zh":"耐划痕测试仪","en":"Scratch Resistance Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"耐划痕测试仪，用于测定涂层抵抗划痕的能力，评估涂层附着力。","en":"Scratch resistance tester for determining coating scratch resistance."},"features":{"zh":["精确测定涂层耐划痕性","操作简便","适用于多种涂层材料","符合相关标准"],"en":["Accurate measurement","Easy operation","Suitable for various coatings","Standards compliant"]},"docFiles":{},"pdfFiles":{"zh":"TR 5311_1 耐划痕测试仪产品资料.pdf","en":"TR 5311_1 耐划痕测试仪产品资料.pdf"}},
-      {"model":"TR 5312","image":"","subcat":"scrub","name":{"zh":"耐洗刷试验仪","en":"Scrub Resistance Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"耐洗刷试验仪，用于测定涂层耐洗刷性能，符合GB/T标准。","en":"Scrub resistance tester for coating scrub resistance, GB/T compliant."},"features":{"zh":["符合GB/T标准","耐洗刷测试","操作简便","适用于内墙涂料检测"],"en":["GB/T compliant","Scrub resistance testing","Easy operation","For interior wall coatings"]},"docFiles":{"zh":"TR 5312耐洗刷试验仪.doc","en":"TR 5312耐洗刷试验仪.doc"},"pdfFiles":{}},
-      {"model":"TR 5402","image":"","subcat":"color","name":{"zh":"分光测色仪","en":"Spectrophotometer"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"分光测色仪，用于精确测量颜色和色差，适用于涂料、油墨、塑料等行业。","en":"Spectrophotometer for precise color and color difference measurement."},"features":{"zh":["高精度颜色测量","多种色空间支持","适用于涂料、油墨、塑料等行业","符合相关标准"],"en":["High precision color measurement","Multiple color space support","Used in coatings, inks, plastics","Standards compliant"]},"docFiles":{"zh":"TR 5402 分光测色仪产品资料.doc","en":"TR 5402 分光测色仪产品资料.doc"},"pdfFiles":{}},
-      {"model":"TR 5403","image":"","subcat":"color","name":{"zh":"多角度便携式分光测色仪","en":"Multi-Angle Portable Spectrophotometer"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"多角度便携式分光测色仪，用于测量多角度颜色数据，适用于金属闪光涂料等。","en":"Multi-angle portable spectrophotometer for measuring multi-angle color data."},"features":{"zh":["多角度测量","便携设计","精度高","适用于金属涂料检测"],"en":["Multi-angle measurement","Portable design","High precision","For metallic coatings"]},"docFiles":{"zh":"TR 5403多角度便携式分光测色仪.doc","en":"TR 5403多角度便携式分光测色仪.doc"},"pdfFiles":{}},
-      {"model":"TR 5464","image":"","subcat":"gloss","name":{"zh":"光泽度计","en":"Glossmeter"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"光泽度计，用于测量涂层表面光泽度，评价涂层外观质量。","en":"Glossmeter for measuring coating surface gloss."},"features":{"zh":["测量光泽度","便携设计","操作简便","适用于各种涂层"],"en":["Gloss measurement","Portable design","Easy operation","Suitable for various coatings"]},"docFiles":{"zh":"TR 5464光泽度计.doc","en":"TR 5464光泽度计.doc"},"pdfFiles":{}},
-      {"model":"TR 5464-7","image":"","subcat":"gloss","name":{"zh":"光泽度仪","en":"Glossmeter"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"光泽度仪，用于测量涂层表面光泽度，符合相关检测标准。","en":"Glossmeter for measuring coating surface gloss, standards compliant."},"features":{"zh":["符合相关检测标准","精度高，稳定性好"],"en":["Standards compliant","High precision, good stability"]},"docFiles":{},"pdfFiles":{"zh":"TR 5464-7 产品资料.pdf","en":"TR 5464-7 产品资料.pdf"}},
-      {"model":"TR 5512","image":"","subcat":"thickness","name":{"zh":"便携式测厚仪","en":"Portable Thickness Gauge"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"便携式测厚仪，用于测量涂层厚度，磁性/涡流两用设计。","en":"Portable thickness gauge for measuring coating thickness, magnetic/eddy current dual design."},"features":{"zh":["磁性/涡流两用","便携设计","精度高","操作简便"],"en":["Magnetic/eddy current dual","Portable design","High precision","Easy operation"]},"docFiles":{"zh":"TR 5512便携式测厚仪.doc","en":"TR 5512便携式测厚仪.doc"},"pdfFiles":{}},
-      {"model":"TR 6010","image":"","subcat":"oven","name":{"zh":"防爆鼓风干燥箱","en":"Explosion-Proof Blast Drying Oven"},"category":"lab","categoryName":{"zh":"实验室通用仪器","en":"General Lab Equipment"},"specs":{"zh":"防爆鼓风干燥箱，用于样品干燥、加热，鼓风循环，温度均匀，防爆设计。","en":"Explosion-proof blast drying oven with forced air circulation."},"features":{"zh":["防爆设计，安全可靠","鼓风循环，温度均匀","适用于易燃易爆样品","温度控制精确"],"en":["Explosion-proof, safe and reliable","Forced air circulation, uniform temperature","For flammable and explosive samples","Precise temperature control"]},"docFiles":{"zh":"TR 6010防爆鼓风干燥箱.doc","en":"TR 6010防爆鼓风干燥箱.doc"},"pdfFiles":{}},
-      {"model":"TR 6302","image":"","subcat":"corrosion","name":{"zh":"腐蚀划痕器","en":"Corrosion Scratch Tester"},"category":"film","categoryName":{"zh":"成膜后检验","en":"Coating Testing"},"specs":{"zh":"腐蚀划痕器，用于测定涂层耐腐蚀性能，通过划痕后进行盐雾等腐蚀试验。","en":"Corrosion scratch tester for determining coating corrosion resistance."},"features":{"zh":["划痕后测试腐蚀性能","精确控制划痕深度","适用于金属涂层检测","符合相关标准"],"en":["Test corrosion after scratching","Precise scratch depth control","For metal coating testing","Standards compliant"]},"docFiles":{},"pdfFiles":{"zh":"TR 6302 腐蚀划痕器.pdf","en":"TR 6302 腐蚀划痕器.pdf"}},
-      {"model":"TR 6412","image":"","subcat":"xenon","name":{"zh":"氙灯老化试验箱","en":"Xenon Arc Aging Test Chamber"},"category":"aging","categoryName":{"zh":"环境老化","en":"Environmental Aging"},"specs":{"zh":"氙灯老化试验箱，用于模拟日光老化测试，氙灯光源，模拟真实日光效果。","en":"Xenon arc aging test chamber for simulating natural sunlight aging."},"features":{"zh":["氙灯光源，模拟真实日光","温度湿度可控","适用于户外用涂层测试","符合相关标准"],"en":["Xenon lamp simulating natural sunlight","Controllable temperature and humidity","For outdoor coating testing","Standards compliant"]},"docFiles":{"zh":"TR 6412氙灯老化试验箱.doc","en":"TR 6412氙灯老化试验箱.doc"},"pdfFiles":{}},
-      {"model":"TR 6413","image":"","subcat":"xenon","name":{"zh":"氙灯（风冷）老化试验箱","en":"Xenon Arc (Air-Cooled) Aging Test Chamber"},"category":"aging","categoryName":{"zh":"环境老化","en":"Environmental Aging"},"specs":{"zh":"氙灯（风冷）老化试验箱，用于模拟日光老化测试，风冷设计，节能高效。","en":"Xenon arc (air-cooled) aging test chamber for natural sunlight aging simulation."},"features":{"zh":["氙灯光源，模拟真实日光","风冷设计，节能高效","适用于户外用涂层测试","符合相关标准"],"en":["Xenon lamp simulating natural sunlight","Air-cooled, energy efficient","For outdoor coating testing","Standards compliant"]},"docFiles":{},"pdfFiles":{"zh":"TR 6413 氙灯（风冷）老化试验箱.pdf","en":"TR 6413 氙灯（风冷）老化试验箱.pdf"}},
-      {"model":"TR 6421","image":"","subcat":"uv","name":{"zh":"UV紫外老化试验箱","en":"UV Aging Test Chamber"},"category":"aging","categoryName":{"zh":"环境老化","en":"Environmental Aging"},"specs":{"zh":"UV紫外老化试验箱，用于模拟紫外线老化测试，测试涂层耐紫外光性能。","en":"UV aging test chamber for simulating UV light aging testing."},"features":{"zh":["UV紫外光源","模拟紫外线老化","适用于户外用涂层测试","符合相关标准"],"en":["UV light source","Simulates UV aging","For outdoor coating testing","Standards compliant"]},"docFiles":{"zh":"TR 6421 UV紫外老化试验箱.doc","en":"TR 6421 UV紫外老化试验箱.doc"},"pdfFiles":{}},
-      {"model":"TR 6421-001","image":"","subcat":"uv","name":{"zh":"Irradiance Calibrator","en":"Irradiance Calibrator"},"category":"aging","categoryName":{"zh":"环境老化","en":"Environmental Aging"},"specs":{"zh":"Irradiance Calibrator，用于校准UV老化试验箱的辐照度。","en":"Irradiance calibrator for calibrating UV aging test chamber irradiance."},"features":{"zh":["辐照度校准","精度高","用于UV试验箱校准"],"en":["Irradiance calibration","High precision","For UV chamber calibration"]},"docFiles":{"zh":"TR 6421-001 Irradiance Calibrator.doc","en":"TR 6421-001 Irradiance Calibrator.doc"},"pdfFiles":{}},
-      {"model":"TR 6480","image":"","subcat":"weather","name":{"zh":"大气暴晒架","en":"Natural Weathering Rack"},"category":"aging","categoryName":{"zh":"环境老化","en":"Environmental Aging"},"specs":{"zh":"大气暴晒架，用于自然环境下涂层老化试验，实测自然阳光老化效果。","en":"Natural weathering rack for coating aging test in natural environment."},"features":{"zh":["自然阳光暴晒","真实老化效果","适用于长期老化测试","安装简便"],"en":["Natural sunlight exposure","Real aging effect","For long-term aging testing","Easy installation"]},"docFiles":{"zh":"TR 6480大气暴晒架.doc","en":"TR 6480大气暴晒架.doc"},"pdfFiles":{}},
-      {"model":"TR 6551","image":"","subcat":"uv","name":{"zh":"UV能量计","en":"UV Energy Meter"},"category":"aging","categoryName":{"zh":"环境老化","en":"Environmental Aging"},"specs":{"zh":"UV能量计，用于测量UV光源的辐照能量，校准UV设备。","en":"UV energy meter for measuring UV light irradiance and calibrating UV equipment."},"features":{"zh":["测量UV辐照能量","精度高","用于UV设备校准","操作简便"],"en":["Measures UV irradiance","High precision","For UV equipment calibration","Easy operation"]},"docFiles":{"zh":"TR 6551 UV能量计.doc","en":"TR 6551 UV能量计.doc"},"pdfFiles":{}},
-      {"model":"TR 线棒","image":"","subcat":"zahn","name":{"zh":"线棒","en":"Wire Rod"},"category":"raw","categoryName":{"zh":"原料性能检验","en":"Raw Material Testing"},"specs":{"zh":"线棒（Wire Rod），用于涂布制备涂层样品，线径多种可选。","en":"Wire rod for coating sample preparation, multiple wire diameters available."},"features":{"zh":["线径精确","涂布均匀","多种规格可选","适用于实验室"],"en":["Precise wire diameter","Uniform coating","Multiple specifications","For laboratory use"]},"docFiles":{"zh":"TR 线棒产品介绍.doc","en":"TR 线棒产品介绍.doc"},"pdfFiles":{}},
-      {"model":"复合式盐干湿","image":"","subcat":"salt","name":{"zh":"复合式盐干湿试验机","en":"Combined Salt Spray Tester"},"category":"aging","categoryName":{"zh":"环境老化","en":"Environmental Aging"},"specs":{"zh":"复合式盐干湿试验机，用于测试涂层耐盐雾腐蚀性能，盐雾、干燥、湿热多种试验模式。","en":"Combined salt spray tester with salt spray, dry, wet heat test modes."},"features":{"zh":["盐雾、干燥、湿热多种试验模式","精确温湿度控制","适用于海洋环境涂层测试","符合相关标准"],"en":["Salt spray, dry, wet heat multiple modes","Precise temperature and humidity control","For marine environment coating testing","Standards compliant"]},"docFiles":{"zh":"复合式盐干湿试验机.doc","en":"复合式盐干湿试验机.doc"},"pdfFiles":{}},
-      {"model":"高低温交变湿热","image":"","subcat":"climate","name":{"zh":"高低温交变湿热试验箱","en":"Thermal Cycle Humidity Chamber"},"category":"aging","categoryName":{"zh":"环境老化","en":"Environmental Aging"},"specs":{"zh":"高低温交变湿热试验箱，用于测试涂层在高低温交变环境下的性能。","en":"Thermal cycle humidity chamber for testing coatings under temperature cycling."},"features":{"zh":["高低温交变测试","湿热测试","精确温湿度控制","适用于各种涂层测试"],"en":["Thermal cycle testing","Humidity testing","Precise control","Suitable for various coatings"]},"docFiles":{"zh":"高低温交变湿热试验箱.doc","en":"高低温交变湿热试验箱.doc"},"pdfFiles":{}}
-    ];
-
-
-    // Per-product SEO data
-    const PRODUCT_SEO_KEYWORDS = {
-    "TR 1002":"福特杯,产品说明,腾瑞智科生产,的福特杯是符,标准,用来测量油墨,涂料,油漆的黏度,它由底部开有,小孔,容量约为,的优质铝杯精,制作而成,通过测定杯中,一定容量的试,料由底部的小,孔中流出所需,要的时间来评,价物料的黏性,系列有多种孔,径规格可以选,产品参数,主体材质,高级铝合金,阳极氧化,流嘴材质,不锈钢,精度,容量,订购信息,订购编号,产品名称,流出孔径,测量范围,流出时间,手柄式福特杯,选购配件,三脚支架,方型支架,电子秒表,机械秒表,镜面玻璃,标准粘度油,Ford Cup,福特粘度杯,Ford粘度杯,ASTM D1200,测量油墨粘度,测量涂料粘度,测量油漆粘度,阳极氧化铝合金,不锈钢流嘴,测量范围cst,TR 1002福特杯,100m,0.1mm,1m,TR 1002,TR 1002/1,TR 1002/2,TR 1002/3,TR 1002/4,TR 1002/5,TR 1002/A1,TR 1002/A2,TR 1002/A3,TR 1002/A4,TR 1002/A5,TR 1013/1---,TR 1013/3---,TR 1168/1---,TR 1168/2---,TR 9410A----,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术",
-    "TR 1004":"法国标准杯,产品说明,腾瑞智科生产,粘度杯是符合,标准设计,用于测量油墨,涂料,油漆和其它牛,顿型或接近牛,顿型液体的粘,它由底部开有,小孔,杯子容量为,的高级铝材精,密制作而成,通过测定杯中,一定容量的试,料由底部的小,孔中流出所需,要的时间来评,价物料的粘性,广泛用于欧美,及法国企业,系列有多种孔,径规格可以选,产品参数,高级铝合金,阳极氧化,流出时间,订购编号,流出孔径,测量范围,订购信息,选购配件,三脚支架,方型支架,电子秒表,机械秒表,镜面玻璃,标准粘度油,NF杯,NF Cup,NF粘度杯,法国标准粘度杯,NF杯TR 1004,108m,TR 1004,TR 1004/2,TR 1004/4,TR 1004/6,TR 1004/8,TR 1013/1---,TR 1013/3---,TR 1168/1---,TR 1168/2---,TR 9410A----,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器",
-    "TR 1005&1006":"粘度杯,丁杯,产品说明,腾瑞智科生产,杯是符合,标准设计,用于测量油墨,涂料,油漆和其它牛,顿型或接近牛,顿型液体的粘,通过测定杯中,一定容量的试,料由底部的小,孔中流出所需,要的时间来评,价物料的粘性,通常适应于测,试粘度比较低,的稀薄液体,系列有多种孔,径规格可以选,产品参数,杯体材质,高级铝合金,阳极氧化,流嘴材质,优质不锈钢,订购编号,产品名称,流出孔径,测量范围,流出时间,手柄式,组合式,标配,流嘴,可拆换,订购信息,选购配件,三脚支架,方型支架,电子秒表,机械秒表,镜面玻璃,标准粘度油,适合,DIN杯,DIN粘度杯,DIN Cup,德国DIN杯,DIN53211,ISO流出杯,DIN杯TR 1005,100m,1mm,2mm,3mm,4mm,5mm,6mm,TR 1005,TR 1006,TR 1005/2,TR 1005/4,TR 1005/6,TR 1005/8,TR 1006/2,TR 1006/4,TR 1006/6,TR 1006/8,TR 1005/A,TR 1013/1---,TR 1013/3---,TR 1168/1---,TR 1168/2---,TR 9410A----,TR 1005/P01-1mm,TR 1005/P02-2mm,TR 1005/P03-3mm,TR 1005/P04-4mm,TR 1005/P05-5mm,TR 1005/P06-6mm,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测",
-    "TR 1009":"岩田杯,产品说明,腾瑞智科,粘度杯是符合,日本,标准,在电子产品,塑料用涂料行,业较广泛使用,适用于实验室,或施工现场快,速测量液体粘,通过测定杯中,一定容量的试,料由底部的小,孔中流出所需,要的时间来评,价物料的粘性,产品参数,铜制镀镍,测量范围,订购信息,Iwata杯,Iwata Cup,日本岩田杯,岩田粘度杯,岩田流出杯,JIS岩田杯,岩田杯TR 1009,50m,3.5mm,70cst,370cst,TR 1009,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器,QC仪器",
-    "TR 1010":"秒表,产品说明,腾瑞智科生产,的涂,杯是符合,标准设计,通常适用于流,出时间在,秒以下的产品,的粘度测量,在一定量的试,样及一定温度,下从规定孔径,的孔所流出的,时间,用秒,表示,将得到的试样,流出时间,用以下公式换,算成运动粘度,产品参数,嘴孔内径,流孔长度,内椎体角度,订购信息,手提式涂,铜杯,支架,电子秒表,机械秒表,涂-4杯,涂4杯,T-4杯,T4杯,GB/T1723,涂4杯标准,涂-4粘度杯,涂料粘度测量,涂4杯TR 1010,1m,0.2mm,0.02mm,GB/T 1723,TR 1010/1--,TR 1010/2--,TR 1168/1--,TR 1168/2--,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器,QC仪器",
-    "TR 1013":"粘度杯支架,产品说明,腾瑞智科生产,的粘度杯支架,系列可适用于,福特杯,法国标准杯,丁杯,标准杯等,支架内置水平,可以通过调节,水平功能提供,一个水平的测,试平台,订购信息,订购编号,产品名称,内孔径,三脚支架,杯和,杯等,方型支架,全金属,流出杯支架,蔡恩杯支架,福特杯支架,粘度杯架,TR 1013支架,58.5mm,TR 1013/1,TR 1013/2,TR 1013/3,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器,QC仪器",
-    "TR 1101-1&4":"旋转粘度计,表盘式,产品说明,旋转式粘度计,用于测量液体,的粘性阻力与,液体绝对粘度,广泛适用于测,定油脂,油漆,塑料,食品,药物,胶粘剂等各种,流体的粘度,是监测和控制,生产中产品质,量稳定的精密,仪器,技术参数,输入电源,频率,功率,显示方式,指针显示,测量范围,转子转速,转子规格,转子,选配,号转子可以测,粘度至,测量精度,牛顿液体,重复误差,净重,产品尺寸,订购信息,表盘式旋转粘度计,布式粘度计,Brookfield粘度计,指针粘度计,表盘粘度计,旋转粘度测量,粘度计TR 1101,10%,10m,5%,2%,TR 1101/1,TR 1101/4,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器",
-    "TR 1101-5&8":"数显旋转粘度,产品说明,腾瑞智科生产,的粘度计是符,标准设计,仪器具有测量,灵敏度高,测试结果可靠,使用操作方便,造型美观大方,等特点,是用来测量牛,顿型液体的绝,对粘度和非牛,顿型液体的表,观相对粘度的,精密仪器,可广泛应用于,油脂,油漆,塑料,药物,食品,涂料,胶水,胶粘剂,树脂,化工原料等产,订购信息,技术参数,输入电源,频率,测量范围,转子转速,转子规格,转子,测量精度,牛顿液体,重复误差,净重,产品尺寸,量程表,数显旋转粘度计,数字粘度计,触摸屏粘度计,旋转粘度计,NDJ粘度计,数显粘度测量,粘度计TR 1101-5&8,3%,0.5%,100mm,130mm,150mm,GB/T 2794,ISO 2884,ISO 2555,ASTM D2196,TR 1101/5,TR 1101/8,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法",
-    "TR 1104":"智能触控黏度,产品说明,腾瑞智科是生,产智能粘度计,厂家,系列黏度计广,泛应用于油墨,胶水,乳胶,溶剂型粘剂,聚合物溶液,石油,油漆涂料,溶剂化妆品,牛奶制品,药品,果汁等等,产品特点,寸宽大触摸屏,操作方便,显示信息丰富,选配,数据采集和程,控软件可测量,流变特性,屏幕可直接显,示流变曲线,显示剪切速率,和剪切应力指,防静电外壳,金属升降杆设,内置式,温度探头,芯片处理器,更快的处理数,据速度,经久耐用的全,新小轴设计,强大的人机交,互界面,千兆网口数据,通讯传输,传输数据快速,可靠,支持外部,盘数据存储,单点,连续,定时三种保存,方式任选,密码保护温度,和粘度修正系,允许用户在有,可靠准确数据,的前提下,自行修正温度,支持无极变速,测量粘度,输入任何一个,转速,都直接反映各,个转子下的满,量程,方便用户选取,测试条件,动力粘度与运,动粘度的自动,换算,多种粘度单位,的任意互换,多种人性化的,操作风格界面,互换,随机附带强大,的操作向导帮,粘度值显示连,续变化,超出测量范围,有报警声提示,计算机全量程,线性校正,交流电源适配,抗干扰性好,可选附件,控软件,专用粘度测量,恒温水槽,超低粘度适配,小量样品适配,标准液,微型打印机,外循环玻璃烧,应用,溶剂,化妆品,技术参数,百万,测量范围,转子转速,分钟",
-    "TR 1123-1":"斯托默粘度计,产品说明,腾瑞智科生产,的斯托默粘度,计是符合,标准设计,适用于测量牛,顿液体和大多,数非牛顿液体,产品特点,液晶显示,操作方便,同时显示单位,内置过载保护,程序,超量自动停机,可锁定测试结,产品参数,测量范围,显示精度,转子速度,准确度,满量程,重复性,输入电压,外形尺寸,订购信息,Stormer粘度计,KU值,克雷默粘度计,斯托默粘度测量,油墨粘度测量,KU值粘度计,Stormer杯,TR 1123斯托默,141.0 KU,1099 g,0.1 KU,1 g,1.5%,1.0%,180mm,210mm,470mm,10kg,GB/T 9269,TR 1123/1--,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器,QC仪器",
-    "TR 2001":"高速分散机,产品说明,腾瑞智科,系列分散,搅拌,砂磨多功能机,为一体的优点,广泛应用于涂,染料,油墨,颜料,造纸,化妆品,食品,树脂,胶粘剂,乳液,医药,石油,农药,日化等领域的,液体及液体凝,固物料进行高,速的搅拌,研磨,溶解和分散,产品详情,采用高品质无,刷电机,适用过程中不,会产生火花,长时间使用电,机不发烫,采用变频器调,调速范围广显,示及操作方便,高速工作时设,备稳定,工作时低噪音,震动小,使用寿命长,料筒采用双层,壁水循环及快,速接头设计,用户可自由拆,换分散盘或研,磨盘,夹具设计对卡,最小可夹,瓶子,订购信息,参数,电机功率,调速范围,升降方式,手动,电动,升降行程,最小夹紧,最大搅拌体积,标配,分散盘,电源,外形尺寸,整机重量,配件信息,图片,厚度,不锈钢,研磨盘,分散罐,双层,容积约,分散机,涂料分散机,油墨分散机,实验室分散机,高速分散机TR 2001,50mm,550w,750w,1100w,2200w,320mm,1.5L,60mm,120mm,30mm,1.2mm,35mm,40mm,80mm,1.5mm,100mm,2mm,150mm,1L,2L,3L,5L",
-    "TR 2002":"高速分散机,产品说明,腾瑞智科,系列分散,搅拌,砂磨多功能机,为一体的优点,广泛应用于涂,染料,油墨,颜料,造纸,化妆品,食品,树脂,胶粘剂,乳液,医药,石油,农药,日化等领域的,液体及液体凝,固物料进行高,速的搅拌,研磨,溶解和分散,产品详情,采用高品质无,刷电机,适用过程中不,会产生火花,长时间使用电,机不发烫,采用变频器调,调速范围广显,示及操作方便,高速工作时设,备稳定,工作时低噪音,震动小,使用寿命长,料筒采用双层,壁水循环及快,速接头设计,用户可自由拆,换分散盘或研,磨盘,夹具设计对卡,最小可夹,瓶子,订购信息,参数,电机功率,调速范围,升降方式,手动,电动,升降行程,最小夹紧,最大搅拌体积,标配,分散盘,电源,外形尺寸,整机重量,配件信息,图片,厚度,不锈钢,研磨盘,分散罐,双层,容积约,防爆型高速分散机,防爆分散机,防爆搅拌机,防爆型分散机,溶剂型分散机,防爆分散机TR 2002,50mm,550w,750w,1100w,2200w,320mm,1.5L,60mm,120mm,30mm,1.2mm,35mm,40mm,80mm,1.5mm,100mm,2mm,150mm,1L,2L,3L",
-    "TR 2030":"悬臂式电动搅,拌器,产品说明,拌器适用于实,验室低,高黏度液体的,混合搅拌,腾瑞智科搅拌,主机采用优质,工程塑胶为机,运行状态稳定,输出端应用变,速增力机构,使输出转矩成,倍增加,运行转速可按,实验所需任意,设定,数字显示直观,的搅拌转速,确保数据采集,具有内置软启,自动过载保护,全程恒功补偿,等特性,产品详情,全视角,液晶彩屏,同时显示设定,转速及实际转,直观清晰,直流电机,低噪音,免维护,运行平稳,旋钮调速度,方便快捷,恒定转速,可根据样品黏,度变化自动调,整扭矩,采用开放式机,适用于多种容,可调式搅拌棒,夹头,装卸简便,微电脑控制系,过载安全保护,保障运行安全,启动平稳,有效防止样品,溢出,自动记忆最终,设定的工作参,订购信息,参数,功率,最大搅拌量,建议搅拌量,搅拌最大黏度,显示方式,显示,转速范围,转速控制精度,升降行程,电机类型,直流永磁电机,定时范围,电压,频率,产品尺寸,包装尺寸,纸箱包装,净重,序号,名称,数量,主机,电源适配器,立杆,含子杆,母杆,材质,金属底座,十字固定夹,适用于直径,容器,不锈钢搅拌桨,工具,六角扳手,资料,证书,悬臂式电动搅拌器,悬臂搅拌器,电动搅拌器,实验室搅拌机,搅拌器TR 2030,72w,120w,200w",
-    "TR 2200":"篮式砂磨机,产品说明,实验室篮式砂,磨机是针对科,研机构和企事,业单位研制的,一款经济型湿,法分散研磨设,该设备可长时,间运行,速度稳定且噪,音小,并且分散和研,磨两道生产工,艺同时完成,从而在短时间,内有效降低中,低粘度物料的,细度,应用于物料粘,对细度要求比,较高的物料如,内墙乳胶漆,工业漆,木器漆,各类色浆,水性,油性油墨,农药悬浮剂等,产品特点,研磨效率高,产品细度好,易操作,清洗方便,温升小,产品稳定,非标性强,订购信息,功率,转速,篮体容积,标配容器,升降方式,研磨介质,研磨介质粒径,升降行程,双层,手动,氧化锆珠,自动,防爆型篮式砂磨机,砂磨机,研磨机,实验室砂磨机,防爆砂磨机,砂磨机TR 2200,5000 cps,TR 2200/15EX,TR 2200A/15EX,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准",
-    "TR 2311":"智能振荡箱,产品说明,在新材料产品,的研发,应用与生产环,节中,样品的充分混,匀是确保数据,准确性与配方,稳定性的基石,腾瑞智科自主,研发的智能振,荡混匀机,秉承工程学设,为实验室带来,革命性的混匀,解决方案,模拟并优化了,其他设备的摇,晃动作,以更强劲,更均匀,更智能可控的,方式,轻松应对从低,粘度到高粘度,的各种物料样,产品特点,运行平稳,噪声小,强力高频振荡,混合效果更快,操作简单,可选混合时间,分钟,间隔运行,简单的电气结,维修方便,配置支脚和滚,方便移动机器,机芯与机箱分,高速振动时不,会影响到机箱,振动电机双重,保护,离心开关,过热保护,有效延长电机,寿命,智能操控,采用触摸屏控,更加人性化,根据物料容器,的大小自动调,整适当的夹紧,压力,夹紧物料容器,压力大小可调,可视化温度,设定时间和当,前运行时间,散热风扇运行,状态,英文操作界面,可选,可程式运行,振荡频率,可调,运行模式,可设定连续工,作时间,设定间歇性工,作运行模式,不同振荡频率,工作不同速度,模式,监控物料升温,情况和运行模,保存,可储存四组程,每组可以编,段命令程序,温度监控及降,温度显示,物料温度变化,监控显示,设备内部空间,温度监控显示,散热风扇,同步振荡运行,可以设定振荡,停止后持续对,物料降温,安全监控,设备带有设备,急停装置,自动监控未关,门时不工作,强制开门时自,动停止工作",
-    "TR 3002-F1":"涂布器,产品说明,腾瑞仪器,广州,有限公司是涂,布器生产厂家,符合,热塑性塑料管,道系统用胶粘,剂第,部分,粘膜性能的测,将待测胶粘剂,使用专门设计,的涂布器以预,定速度和给定,长度涂布到测,试板上,并通过评分系,统与参考图案,进行比较来评,估其涂布性,检查胶粘膜的,连续性和是否,存在结块或异,有两个不同的,边缘,一个用于非触,变性胶粘剂,另一个用于触,产品详情,材质,高级耐磨耐腐,蚀合金钢,总长,涂布,面尺寸,深度,宽度,光洁度,订购信息,涂覆宽度,和厚度,该涂布器仅用,于触变性胶粘,外形尺寸,有效,涂布厚度,胶粘剂涂布器,胶粘剂涂布,薄膜涂布器,刮涂器,涂布器TR 3002,130mm,4mm,100mm,2mm,120mm,ISO 9311,TR 3002/F1,TR 3008/100/F2,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法",
-    "TR 3502-P1-1":"无油真空泵,产品说明,自主研发生产,的无油真空泵,拥有卓越的抽,气性能,不断完善内部,结构确保了快,速的抽真空速,度和稳定的极,限真空度,运行时低振动,与低噪音设计,适用于实验室,科研,真空涂布台,分析仪器配套,电子与半导体,环境监测等,产品特点,低噪音,真空吸力大,真空吸力大小,可调,订购信息,参数,功率,真空度,流量,正压,输送介质,空气,驱动方式,电动,电源,外形尺寸,重量,配置,真空泵,无油泵,实验室真空泵,耐腐蚀真空泵,防腐真空泵,抽滤泵,循环水真空泵,真空泵TR 3502,140w,35L,0.25M,TR 3502/P1/1,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器,QC仪器",
-    "TR 3600":"时间干燥记录,产品说明,腾瑞智科生产,的直线式干燥,时间记录仪是,符合,标准设计,专为油漆,涂料和高分子,材料研发应用,开发,该设备配备一,个可安装六根,球形端针的针,由恒速电机提,供稳定驱动,仪器可以放置,六条规格为,的玻璃板,针座可依操作,者任意设定的,时间匀速走完,全程,测试完成后,操作人员只需,取下玻璃测试,参照时间刻度,即可清晰分析,样品在不同时,间段的干燥状,态变化,刻度板标记有,对应四种速度,的时间刻度,干燥时间记录,仪原理根据数,学公式,距离,速度,时间,产品特点,触摸屏控制,操作方便,屏幕可以直接,显示设定的参,数和实际距离,玻璃固定架,方便测试结束,后刻度对比,运行低噪音,免维护,移动平稳,技术参数,划针数量,可同时测,个样品,针头直径,负载重量,砝码重量,标配,选配,移动距离,时间设定,任意设置,也可以设定,输入电压,电机功率,仪器外形尺寸,序号,名称,数量,主机,新款触摸屏操,电源适配器,测试玻璃,砝码,资料,证书,订购信息,划针,玻璃制膜滑轨,方形制备器,直线干燥时间记录仪,干燥时间记录仪,干燥时间测定仪,涂层干燥时间,直线干燥仪,干燥记录仪,干燥时间TR 3600,365mm,25mm,2mm,9g,5g,10g,300 mm,10 W,173 mm,3mm,ISO 9117",
-    "TR 3910A":"油墨打样机,产品说明,自主研发的,油墨印刷打样,又称油墨印刷,验证机,是一款专为实,验室环境打造,的凹版打样设,它采用平面雕,刻版直接印刷,技术,能在塑料薄膜,纸张等多种柔,性底材上,精准复刻实际,印刷条件,快速完成打样,本设备是进行,油墨适应性检,印刷效果评估,及新品研发的,理想解决方案,智能驱动,革新传统操作,模式,支持智能语音,与触控交互,大幅简化工作,流程,有效解放操作,人员双手,提升工作效率,与使用体验,精准模拟,采用平面雕刻,版直接印刷技,能在多种柔性,底材上精准复,刻实际凹印效,确保打样与量,产结果高度一,高效便捷,专为实验室场,景优化设计,显著加速油墨,适应性检验与,新配方的开发,进程,缩短研发周,实测展示,参数信息,参数,仪器型号,操控,智能语音控制,系统,寸触摸屏,打样速度,可调,打样行程,胶辊规格,胶辊硬度,刮刀规格,版尺寸,标准,版任选一块,仪器尺寸,语言,中文,英文,电源,整机重量,打样版参数,选购,订购型号,版型,线数,英寸,图案密度梯度,备注,单网样,三网样,双排,网样,油墨定量仪,最小定量单位,铜版打样,双面铜版纸,尺寸,号为定做版型,序号,名称,主机,打样版,刮墨刀,电源线,说明书,出厂证书,AI油墨打样机",
-    "TR 5001":"划格器,单刃,产品说明,腾瑞智科生产,的划格器是符,标准设计,它主要用于涂,层附着力的测,不仅适用于实,验室,也可用于各种,条件下的施工,现场,易操作方便携,产品特点,人体工程学握,手设计,使用时不费力,刀片可方便更,刀片材料,高级合金钢,刀片硬度,刀刃顶宽,小于,刀刃夹角,间距的多刃切,割刀适用于漆,膜厚度,的硬质底材,金属,的硬质底材或,厚度,的软性底材,木材,塑料,软性底材,订购信息,刀间距,刀齿数,工作面,配置,划格器主体,胶带,放大镜,毛刷,工具,手提箱,塑料盒,刀片,任选,划格器单刃,单刃划格器,附着力划格器,划格测试器,涂层划格器,GB/T9286,百格刀,单刃附着力测试器,划格器TR 5001,0.05mm,1mm,2mm,3mm,3M,GB/T 9286,ASTM D3359,ASTM D3002,ISO 2409,TR 5001/1,TR 5001/2,TR 5001/3,TR 5001/4,TR 5001/5,TR 5001/1S,TR 5001/2S,TR 5001/3S,TR 5001/4S,TR 5001/5S,TR 5001/P1/1,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器",
-    "TR 5003":"划格器,八刃,产品说明,腾瑞智科生产,的划格器是符,标准设计,它主要用于涂,层附着力的测,不仅适用于实,验室,也可用于各种,条件下的施工,现场,易操作方便携,产品特点,人体工程学握,手设计,使用时不费力,刀片可方便更,刀片材料,高级合金钢,刀片硬度,刀刃顶宽,小于,刀刃夹角,间距的多刃切,割刀适用于漆,膜厚度,的硬质底材,金属,的硬质底材或,厚度,的软性底材,木材,塑料,软性底材,订购信息,刀间距,刀齿数,工作面,配置,划格器主体,胶带,放大镜,毛刷,工具,手提箱,塑料盒,刀头,任选,划格器八刃,八刃划格器,多刃划格器,附着力划格器,GB/T9286,百格刀,8刃划格器,划格器TR 5003,0.05mm,1mm,2mm,3mm,3M,GB/T 9286,ASTM D3359,ASTM D3002,ISO 2409,TR 5003/1,TR 5003/2,TR 5003/3,TR 5003/4,TR 5003/5,TR 5003/1S,TR 5003/2S,TR 5003/3S,TR 5003/4S,TR 5003/5S,TR 5003/P1/1,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准",
-    "TR 5030":"阴极剥离试验,机箱,产品说明,腾瑞智科生产,的阴极剥离试,验箱是符合,标准,该设备是专用,于评估防护涂,层在阴极保护,环境下的耐久,性能,其核心原理是,将预制样品浸,没于电解液中,并对其施加恒,定的阴极电位,以加速模拟严,苛的腐蚀环境,通过定期检测,涂层下的金属,界面,可精确分析涂,层的抗渗透与,附着力的丧失,情况,从而科学评估,其防护性能,产品详情,采用触摸屏控,操作方便,智能温控,气体鼓泡,多路报警及人,机交互等系统,内胆由耐腐蚀,板材焊接而成,箱体为经久耐,用的喷漆钣金,外壳,机玻璃上盖,便于实时观察,箱内试验状况,带有,法样品架和,法样品架,启动平稳,有效防止样品,溢出,自动记忆最终,设定的工作参,订购信息,参数,温度,分辨率,温度波动,温度均匀度,循环控温介质,人造海水,鼔气装置,管微孔鼓泡,温度控制精度,热平衡方式,电加热,平衡调节控制,工作室尺寸,内箱尺寸,外形尺寸,电源,最大负荷容量,最大电流,配件,温度传感器,控制仪表,达温控器,系列,调功组件,固态继电器,西门子,阴极剥离试验机箱,阴极剥离仪,阴极剥离试验机,剥离试验箱,涂层剥离测试仪,阴极剥离TR 5030,20℃,80℃,0.1℃,0.5℃,1.5℃,0.02m,730m,1000mm,3KW,GB/T 7790,ISO 15711,TR 5030/1,腾瑞仪器,TRUIT,广州腾瑞",
-    "TR 5202/F":"流挂仪,产品说明,腾瑞智科生产,的流挂仪符合,标准设计,测定湿膜在垂,直状态下的上,端涂料向下端,流动变厚情况,以便通过控制,涂料物理性能,选择一个合适,的湿膜厚度保,证获得一个均,匀膜厚,此流挂性能有,利于对垂直,边角,圆孔,圆弧工件的涂,装控制,粘度,细度,厚度是影响流,挂的主要因素,产品参数,材质,高级耐磨耐腐,蚀合金钢,外形尺寸,条不同厚度的,涂膜,湿膜宽度为,条膜间距为,订购信息,产品名称,订购编号,厚度,备注,为了满足广大,用户的需求腾,瑞智科支持非,标定做流挂仪,圆管冲击仪,管道冲击仪,管道冲击试验仪,落锤冲击仪,冲击试验仪,管道涂层冲击仪,冲击仪TR 5202,127mm,45mm,32mm,6.35mm,1.6mm,12 M,6M,60 M,24 M,TR 3061/1,TR 3061/2,TR 3061/3,TR 3061/4,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购",
-    "TR 5206":"冲击仪,产品说明,生产冲击仪是,一款模拟实际,冲击条件对涂,层的抗冲击程,度进行客观定,性的评价,一个自由下落,的物体冲击涂,层及其底材导,致开裂,剥离的破坏程,大部分起保护,作用的涂料必,须进行冲击测,涂料,电镀,塑料,清漆,塑胶漆,树脂,化合物,卷材涂料,复合物,片材和金属材,料等,工作原理,本设备基于能,量守恒定律设,测试时,将试样平放在,模座上,将规定质量的,落锤提升并固,定至预设高度,释放后,落锤在重力作,用下自由落体,垂直冲击试样,表面,通过观察试样,是否产生裂纹,破损或穿孔等,现象,来判定其抗冲,击能力,产品特点,高精度与稳定,采用精密导管,底座配有水平,泡及水平调节,机脚,确保钢球下落,路径垂直无偏,保证测试结果,的准确性和重,复性,人性化操作,刻度标尺,冲击高度简单,直观,采用圆环卡槽,式拨动释放结,构简易,便捷,灵活可调,冲击高度可通,过刻度尺直观,反馈,对应高度连续,可调,并可搭配不同,质量的落锤,测试范围广泛,坚固耐用,主体结构采用,优质材料制造,稳固可靠,确保长期使用,的稳定性,订购信息,参数,符合标准,落锤重量,冲头直径,模座直径,管标尺,管单位,厘米,分辨率,冲击深度,水平调节,水平仪装置,净重,总重量,仪器外形尺寸,运输包装尺寸,运输包装材料,配件清单",
-    "TR 5213":"涂层柔韧性试,验仪,产品说明,生产的涂层柔,韧性试验仪是,符合,标准设计制造,的专用测试设,主要用于评估,涂层材料的耐,柔韧性和抗开,裂性,该仪器通过将,涂有样品的金,属试板围绕特,定直径的圆柱,轴弯曲,来模拟涂层在,安装或使用过,程中所经历的,弯曲形变,是涂料,卷材,金属等相关行,业质量控制和,研发检测的关,键仪器,工作原理,通过将预先制,备好的涂层试,在标准条件下,快速绕一个规,随后,通过视觉或放,大镜检查涂层,表面是否出现,开裂,剥落或失去附,着力等现象,从而判定其柔,韧性等级,圆柱轴的直径,越小,对涂层的弯曲,应力就越大,测试条件也越,严苛,订购信息,圆柱轴规格,圆柱轴材料,不锈钢,测试宽度,符合标准,涂层柔韧性试验仪,柔韧性试验仪,柔韧性测试仪,涂层弯曲仪,绕轴弯曲仪,柔韧性TR 5213,25mm,19mm,12.7mm,9.5mm,6.4mm,3.2mm,80mm,ASTM D522,TR 5213,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格",
-    "TR 5306":"耐擦伤测定仪,产品说明,是一款用于客,观评估涂层表,面抗刮擦性能,的专业实验室,设备,它通过模拟日,常清洗,摩擦,刮划等场景,对涂层表面进,行定量化的耐,擦伤测试,仪器依据国际,通用标准,确保测试结果,的可重复性与,权威性,广泛应用于汽,车内饰,家电外壳,电子产品表面,家具漆膜等领,是质量控制,新品研发及材,料认证过程中,不可或缺的关,键仪器,订购信息,操控,寸触摸屏,行程,划针,砝码,测试板厚度,最大测试板尺,功率,语言,电源,外形尺寸,重量,耐擦伤仪,擦伤试验仪,涂层耐擦伤仪,耐擦伤TR 5306,GB/T 31591,TR 5306,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器,QC仪器",
-    "TR 5311/1":"耐划痕测试仪,产品说明,自主研发生产,的耐划痕测试,仪是一款专业,用于精确评估,抗划伤,刮擦,剪切,刻划,包削等机械伤,害性能的高精,度检测设备,仪器严格遵循,等国内外的标,准设计制造,为家具制造,地板生产,装饰材料及质,量监督检验机,构提供可靠,统一的测试解,决方案,是衡量产品表,面耐久性与质,量等级的关键,检测仪器,核心工作原理,仪器模拟日常,尖锐物体刮擦,物品表面的情,通过驱动特定,规格的划针,在恒定的压力,与速度下,于试样表面进,行匀速划痕测,测试完毕后,通过观察或测,量试样表面的,划痕损伤程度,来科学评定其,耐划痕性能等,产品特点,智能触控与提,采用高清触摸,屏进行直观控,操作简便,操作安全提醒,仪器启动前配,有蜂鸣提醒功,确保使用安全,准备就绪,坚固结构与广,泛兼容,创新采用高精,度丝杆抬升结,可轻松适配并,测试更厚基材,样品,精准恒速传动,系统,内置独特的大,速比齿轮啮合,传动,确保在不同负,载条件下,转盘仍能保持,极其精,恒定的转速,从根本上消除,了速度波动对,测试结果的干,保障测试数据,的高重复性与,卓越精度,卓越的标准符,合性,专为国内外主,流测试标准设,开箱即可满足,多项标准测试,要求,无需二次调,极大提升了质,检与研发效率,人性化操作体,负载配置与夹,具设计经过优,使试样安装与,砝码加载简单,快捷,清晰的刻度与,观的结构,让测试过程一,目了然,持久的耐用性,与可靠性,精选优质材料,与精密制造工",
-    "TR 5312":"耐洗刷试验仪,产品说明,腾瑞智科生产,的耐洗刷仪是,符合,等标准设计,涂料的表面需,要通过刷子或,其他方法来测,试抗擦洗的能,实验对象包括,内墙涂料,墙纸和地毯,洗刷仪能测定,可擦洗性及涂,料抗磨损相关,的性能,用两个刷子加,速模拟,磨损及刮破,的实验,为进行对比试,可使用刷子,擦洗垫,海绵,清洁布等,安放在仪器旁,容器内的擦洗,用液体溶液可,用泵输送到刷,子上,在擦洗实验过,程中能控制泵,的开启或关闭,并能精确地调,节液体流量,产品参数,输入电压,擦洗速度,行程长度,毛刷尺寸,毛刷负载,计数范围,外形尺寸,装运重量,订购信息,符合标准,配件,配重块,尼龙毛刷,海绵刷,纱布,猪毛刷,耐洗刷仪,洗刷试验仪,内墙涂料洗刷仪,外墙涂料洗刷仪,GB/T 9266,耐洗刷TR 5312,100rpm,300 mm,90mm,38 mm,450 g,580mm,480mm,300mm,40 kg,3450
-    G,2013
-    G,454g,1500g,450g,250g,GB/T 9755,ASTM D2486,ASTM 3450,ISO 11998,ASTM D3450,GB/T9780,GB/T9756,TR 5312/1,TR 5312/2,TR 5312/3,TR 5312/4,TR 5312/5,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器",
-    "TR 5403":"多角度便携式,分光测试仪,产品说明,分光测试仪对,珠光色,金属色以及特,殊的颜色产品,提供准确的色,彩测试,同时也可测闪,烁度,彩闪度,随角异色指数,颗粒度等,角度,角度颜色检测,产品特点,全场景覆盖,最多,角度精准捕捉,汽车,塑料,化妆品等全品,类特效饰面特,种特效参数测,量体系,终结特效品质,主观评判时代,万次光源革命,构建工业级可,靠性标杆,卓越台间差,全球化生产的,数据统一语言,订购信息,参数,测量几何结构,个测量角度,个光源,个接收器,颜色测量角度,接收器,照明光源,蓝光增强的全,光谱,照明光源寿命,万次测量,探测器,像元双阵列,图像感应器,测量波长范围,测量口径,照明,采样,其他色度指标,测量时间,续航,颜色重复性,色度值,仪器预热校正,以间隔,测量白板,次标准偏差值,颜色再现性,在灰色,色板上的平均,在彩色,仪器台间差,系列,块色板测量平,均值,效果参数,闪烁度,颗粒度,效果测量,角度闪烁度,彩闪度数据,漫射颗粒度,效果重复性,闪烁度短期重,复性,次标准偏差,测量彩板,次平均值,颗粒度短期重,效果再现性,闪烁度再现性,颗粒度再现性,定位方式,彩色相机预览,显示屏,真彩,电容触摸屏,存储数据,符合标准,特性,对于金属色,珠光色及其他,复杂的特殊效,果颜色产品都",
-    "TR 5464":"光泽度计,产品说明,主要用于喷涂,塑胶,印刷,金属,陶瓷,建材,皮革,油漆等行业的,材料及表面光,泽程度的测量,符合,等标准,产品特点,测量精准,稳定性,人性化设计,操作握感好,数字显示,一键操作,订购信息,参数,测量角度,测量量程,测量光斑,分度值,重复精度,测量准确性,满足,一级工作光泽,度仪要求,测量时间,小于,测量模式,基本模式,采样模式,连续模式,统计模式,语言,简体中文,英语,电源,号碱性电池,电源适配器,锂电池,接口,蓝牙,可选,工作温,湿度,无凝露,主机尺寸,重量,标配,充电器,数据线,说明书,光盘,上位机软件,校正标准板,合格证,光泽度仪,光泽仪,光泽计,光泽度测量仪,油漆光泽仪,涂料光泽仪,GU,光泽单位,光泽度TR 5464,0.2G,1000G,2000G,160G,0.1G,1G,0.2%,3000m,0℃,40℃,85%,72mm,77mm,450g,ISO 2813,ISO 7668,GB/T9754,GB/T 13891,GB/T 7706,GB/T 8807,TR 5464/4,TR 5464/6,TR 5464/7,TR 5464/268,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器",
-    "TR 5512":"便携式测厚仪,产品说明,生产的便携式,涂层测厚仪不,仅可用于钢铁,等铁磁性金属,基体上的涂料,清漆,镀锌等非磁性,涂层的测量,也可用于铜,压铸锌,黄铜等非磁性,金属基体上的,涂料,阳极氧化层,陶瓷等非导电,仪器能够智能,识别测量基体,类型并自动转,换测量模式,被广泛地用于,制造业,金属加工业,化工业,商检等领域,实测展示,工作原理,本设备基于能,量守恒定律设,测试时,将试样平放在,试验台底座上,通过电磁吸盘,或释放装置将,规定质量的冲,击钢球提升并,固定至预设高,释放后,钢球在重力作,用下自由落体,垂直冲击试样,表面,通过观察试样,是否产生裂纹,破损或穿孔等,现象,来判定其抗冲,击能力,测试高度与钢,球质量均可精,确控制和调节,以满足不同标,准的测试要求,产品特点,双显示屏设计,方便读数,利用自身重力,进行测量,稳定定位,支持多点校准,精准适应复杂,检测,具有连续测量,模式,秒快速采集数,可在被测物表,面滑动检测,非铁两用探头,自动识别基体,类型,高精度测量,数据准确,权威认证保障,媲美国际品牌,可测量钢铁等,磁性金属基体,上的的非磁性,覆盖层的厚度,以及铜铝等非,上的非导电覆,盖层的厚度,具有蓝牙功能,可与手机,进行联机测量,支持数据批量,存储和分享,硬质合金测头,耐磨耐用,订购信息,参数,测试原理,磁感应,电涡流,探头类型,一体式,测量范围,分辨率,测量精度,为标准值",
-    "TR 6010":"防爆鼓风干燥,产品说明,腾瑞智科,专利横向风循,环结构,利于空气混匀,空间利用率高,干燥速度快,控制仪表及全,部电器采用隔,浇封,本安等复合防,爆技术处理,传感器采用安,全栅保护,确保产品安全,可靠使用,便捷操作,定值运行,自动停止,专用功能键实,现温度设定,辅助菜单,实现过升报警,偏差修正,菜单锁定,强制防爆风机,散热运行结构,使风机最高工,作温度,长时长寿运行,订购信息,电源电压,控温范围,输入功率,容积,内胆尺寸,外形尺寸,防爆鼓风干燥箱,鼓风干燥箱,干燥箱,防爆干燥箱,防爆烘箱,恒温干燥箱,电热干燥箱,防爆型干燥箱,干燥箱TR 6010,6010G,4G,7G,13G,25G,250℃,1.2kW,1.6kW,2.0kW,4.0kW,43L,71L,136L,225L,350mm,450mm,550mm,600mm,500mm,750mm,625mm,472mm,587mm,470mm,685mm,850mm,570mm,785mm,860mm,620mm,985mm,TR 6010G,TR 6010/4GW,TR 6010/7GW,TR 6010/13GW,TR 6010/25GW,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测",
-    "TR 6412":"氙灯老化试验,产品说明,主要是采用,长弧水冷氙灯,为光源,通过改变,控制光辐照度,温度,样品架温度,工作室温,相对湿度,喷淋方式等方,模拟户外气候,的光,热和降雨等综,合条件,对样品进行人,工加速老化试,主要控制参数,为光辐照度,产品特点,氙弧灯是利用,超高压氙气放,电制造成的高,效率光源,可分为长弧灯,和短弧灯,按冷却方式可,分为水冷式与,风冷式,采用水冷氙灯,能够最大程度,模拟户外日光,光谱并且具有,更加广泛的辐,照范围,氙灯光谱覆盖,氙灯老化箱可,提供两倍太阳,常数最大辐照,强度,满足严苛的试,验标准要求,适用标准,国标,国际标准,美国材料标准,其他标准,产品参数,项目,参数,控制方式,试验因素自动,控制,光源,进口光源,灯管寿命,根据使用辐照,度强度设定而,定期进行洗灯,内外过滤罩,支持日光型,窗玻璃,紫外延展等不,同内外滤镜组,辐照度范围,最高辐照度设,备支持最高强,不建议长时间,测试使用,控制精度,辐照度的监控,波长,湿度范围,光照,黑暗,最高达到,测试室温度范,黑板,黑标,样品淋雨,样品架淋雨,标准样品架,总曝晒面积,安装面积,订购信息,氙灯老化试验箱,氙灯老化箱,氙灯箱,氙灯耐候箱,人工老化箱,光老化箱,耐候性试验箱,GB/T16422,氙灯老化TR 6412,6.5KW,250nm,3000nm,6695
-    
-    G,6878
-    
-    G",
-    "TR 6421":"老化试验箱,产品说明,荧光紫外老化,加速测试箱是,一款精密的环,境可靠性测试,设备,专为模拟并加,速材料在户外,所经受的阳光,雨水及露水等,气候老化而设,它通过荧光紫,外线灯管精准,模拟太阳光中,最具破坏力的,短波紫外部分,并结合冷凝,喷淋等湿度模,拟系统,可在数天或数,周内,再现户外数月,甚至数年才能,产生的材料老,化效果,广泛应用于,涂料,塑料,橡胶,纺织品,汽车内饰,建材,木器漆等行业,的耐候性测试,与质量评估,产品主要参数,名称,参数,光源,波长,灯管,正常使用寿命,小时,辐照度,辐照精度,工作室温度,温度范围,室温,温度精度,黑板,湿度,湿度范围,湿度精度,工作距离,灯的中心距离,样板与灯的中,心距离,整机额定功率,外壳材料,内箱不锈钢板,外箱,空气及水加热,方式,镍铬合金加热,无触点,固态继电器,曝晒面积,标准样板,个标准样板架,可一次投放,样板,外形尺寸,电源,重量,用水需求,喷淋,冷凝,雾化,离子水或蒸馏,核心测试原理,设备基于,阳光中的短波,紫外线和潮湿,交替是造成材,料老化最主要,因素,这一科学原理,通过三大系统,协同工作,实现精准模拟,与科学加速,特制荧光紫外,灯管发射集中,稳定的紫外光,精准复现太阳,光谱中对有机,物破坏力最强,的紫外波段,极大提升了光",
-    "TR 6421-001":"Irradiance Calibrator,辐照度校准仪,UV辐照校准仪,辐照度计,UV辐照校准,辐照度校准TR 6421-001,313
-    
-    M,2.00 W,2
-    
-    M,0.01W,6L,40℃,85%,80℃,100%,TR 6421/001,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器,QC仪器",
-    "TR 6480":"大气曝晒架,产品说明,腾瑞智科生产,的暴晒测试架,符合,生产设计,真实评估高分,子材料在户外,环境中的使用,寿命,大气曝晒架提,供了一种直接,而可靠的耐候,性能测试方式,与实验室中采,用人造光源或,模拟环境的方,法相比,户外实际曝晒,能够更准确地,反映材料在真,实使用条件下,的性能变化,有效弥补了传,统试验结果与,实际应用之间,的差距,产品详情,标准设计,依据,规范设计,确保测试过程,的科学性与可,比性,优质材质,主体采用高强,度耐腐蚀铝型,适应各类恶劣,气候条件,确保长期使用,的稳定性,接触固定,配备陶瓷绝缘,夹套,避免试板与任,何金属直接接,有效防止电化,学腐蚀及污染,灵活调节,支持曝晒角度,自由调节,适用于不同形,状与尺寸的试,操作便捷,应用范围广,可拆卸结构,模块化设计,便于安装,拆卸与维护,满足多样化测,试需求,订购信息,参数,符合标准,支架材质,耐腐蚀铝合金,夹具,陶瓷,样品数量,角度,外形尺寸,大气暴晒架,暴晒架,阳光暴晒架,户外老化架,自然老化架,暴晒试验架,大气老化架,暴晒架TR 6480,150mm,1440mm,1450mm,GB/T 9276,ISO 877,ASTM G7,TR 6480/1,TR 6480/2,TR 6480/3,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器",
-    "TR 6551":"能量计,产品说明,生产本品是一,款高精度,高效率的紫外,辐射测量仪器,专为各类,固化工艺设计,它能同步测量,并记录,能量密度,强度,两个关键参数,帮助您精确监,控固化过程,确保产品质量,的稳定与可靠,是优化工艺,提升良率的必,备工具,应用领域,印刷包装,油墨,光油固化,电子制造,线路板,元器件粘接固,汽车工业,车灯粘接,内饰件涂层,木器涂装,地板,家具的,漆固化,医疗器材,导管,注射器标记固,打印,打印机的,光源强度,光通信,光纤涂覆层固,消费行业,化妆品包装,鞋材,纺织,手机,电器涂层硬化,产品特点,同时测量能量,功率,温度,并显示测量时,自动,手动,两种测量模式,可选,秒高速采集,测量数据更加,精准稳定,耐高温,可在,环境中长时间,正常运行,机身小巧纤薄,厚仅为,突破狭窄空间,限制,储存数据不丢,开机自动显示,上次的测试数,内置大容量记,忆体,可连电脑软件,导出测试结果,并打印报告,订购信息,适用光源,高压汞灯,铁灯,镓灯等金属卤,素灯,光源,产品图片,测试波段,光谱范围,校准于,功率测量范围,功率分辨率,能量测量范围,能量测量精度,测温范围,温度采集间隔,取样速度,记录周期,分钟,数据导出,曲线,光谱响应曲线,电源",
-    "TR 线棒":"线棒涂布器,产品说明,腾瑞智科线棒,涂布器采用全,新挤压式线棒,涂膜器,利用冷挤压加,工技术在钢棒,表面加工出凹,凸的波状曲线,做到与传统线,棒涂布器更佳,的涂布效果,突破了传统线,棒涂布器的极,涂布厚度最薄,可达,的湿膜,易清洗,不断丝,产品参数,材质,耐磨不锈钢,有效涂布宽度,长度,订购信息,产品名称,订购编号,涂布宽度,厚度,组合式线棒涂,布器,任选,线棒,手柄,手提箱,长度及各种涂,膜厚度均可支,持非标定做,绕线棒,Wire Rod,涂布线棒,漆膜线棒,刮线棒,实验室线棒,线棒TR,200um,240mm,320um,400mm,200mm,TR 3200/,TR 3320/,TR 3200/S,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机",
-    "TR 3101":"单面制备器,产品说明,涂膜器可对湿,膜或干膜的厚,度进行精确控,常规质量控制,及研究开发试,验时,涂料的遮盖力,不透明性,耐擦洗能力,抗流挂性能及,其他质量试验,都要求有一个,一致性好重复,性佳的涂层,产品参数,材质,高级耐磨耐腐,蚀合金钢,有效涂布宽度,总长,订购信息,双面制备器,四面制备器,普通款四面制,备器,加长款四面制,方形制备器,框式制备器,两种规格,八面制备器,备注,为了满足广大,用户的需求腾,瑞智科支持非,标定做以上制,可调制备器,制备器,可调式制备器,涂膜制备器,刮膜制备器,自动制备器,数显制备器,涂布制备器,实验室制备器,制备器TR 3101,100mm,130mm,80mm,160mm,180mm,12.7mm,25mm,60mm,90mm,6 m,8 m,50 m,TR 3001/100/015,TR 3001/100/020,TR 3001/100/025,TR 3001/100/030,TR 3001/100/037,TR 3001/100/040,TR 3001/100/050,TR 3001/100/060,TR 3001/100/075,TR 3001/100/080,TR 3001/100/100,TR 3001/100/125,TR 3001/100/150,TR 3001/100/200,TR 3001/100/250,TR 3001/100/300,TR 3001/100/400,TR 3001/100/500,TR 3001/100/600,TR 3002/1,TR 3002/2,TR 3002/3,TR 3002/4,TR 3004/80/1,TR 3004/80/2,TR 3004/80/3,TR 3004/80/4,TR 3004/80/5,TR 3004/80/6,TR 3004/80/7,TR 3004/80/8,TR 3004/80/9,TR 3004/80/10,TR 3004/160/1,TR 3004/160/2,TR 3004/160/3,TR 3004/160/4,TR 3004/160/5,TR 3004/160/6,TR 3004/160/7,TR 3004/160/8",
-    "高低温交变湿热":"高低温交变湿,热试验箱,产品说明,生产的高低温,湿热交变试验,箱是一种精密,的环境模拟测,试设备,能够精确再现,高温,低温,湿热及循环交,变变化的复杂,环境条件,该设备广泛应,用于评估各类,产品和材料在,特定温湿度环,境下的性能表,现及可靠性,应用领域,高低温湿热交,变试验箱的应,用范围极其广,几乎覆盖了所,有对产品环境,适应性有要求,的行业,电子电器,测试手机,电脑,家电等电子产,品在极端温湿,度条件下的启,动性能,功能完好性和,材料耐受性,汽车工业,用于验证新能,源汽车电池包,车载电子设备,灯具及各种零,部件,如塑胶,五金件,的耐热,耐寒,耐湿热性能,航空航天,对机载设备,通讯器材等在,高空或特殊气,候环境下的可,靠性进行评估,化工及材料,测试各类塑胶,金属,复合材料在温,湿度交变环境,下的老化,形变和性能衰,减情况,产品特点,仪器结构,结构方式,单开门整体式,内箱结构全无,缝焊接,外箱材质,冷轧钢板,酸洗磷化高级,粉体烤漆,内箱材质,耐热耐寒镜面,雾面不锈钢,保温材质,德国拜耳耐火,级高强度,聚氨酯发泡保,温绝缘材料,门气密材料,双层高张力硅,橡胶密封,耐温,移动定位方式,底部加装,只高承载滑轮,和固定锁死以,利于移动固定,设备,测试引线孔,个测试孔在左,孔径,配附胶孔,硅胶塞头,样品架,每个腔体标配,不锈钢样品架,承重,循环电机",
-    "TR 1201":"刮板细度计,细度板,产品说明,腾瑞智科生产,的细度计是符,等标准设计,用于测定涂料,漆浆,塑料,油墨,纸张,陶瓷,医药,食品,化妆品等和其,它液体及浆状,物中颜料及杂,质颗粒大小和,分散程度,从而控制被分,散产品在生产,存储和应用中,的质量,细刮板细度计,产品参数,材质,高级耐磨耐腐,蚀合金钢,硬度,刮刀,个工作面,产品名称,测量范围,分度值,沟槽数量,沟槽尺寸,单槽细度板,双槽细度板,宽槽细度板,订购信息,配件订购信息,备注,为了满足广大,用户的需求腾,瑞智科支持非,标定做刮板细,度计和刮刀,细度计,细度测量,颗粒细度,涂料细度,油墨细度,筛网,TR 1201细度板,TR 1202细度板,TR 1203细度板,GB/T 1724,GB/T 6753.1,GB/T 13217.3,ISO 1524,TR 1201/15,TR 1201/25,TR 1201/50,TR 1201/100,TR 1201/150,TR 1202/15,TR 1202/25,TR 1202/50,TR 1202/100,TR 1202/150,TR 1203/25,TR 1203/50,TR 1203/100,TR 1218--,腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家"
-    };
-    
-    const PRODUCT_SEO_META = {
-    "TR 1002":"福特杯厂家供应TR 1002福特杯，符合ASTMD1200/D333/D365标准，用于测量油墨、涂料，油漆粘度，高级铝合金材质，多种孔径规格可选。",
-    "TR 1004":"NF杯厂家供应TR 1004法国标准杯，NF Cup粘度杯符合法国标准，用于测量涂料粘度，精度高，品质可靠。",
-    "TR 1005&1006":"DIN杯厂家供应TR 1005 DIN杯，符合DIN53211/ISO标准，测量涂料粘度，德国标准粘度杯，精密耐用。",
-    "TR 1009":"岩田杯厂家供应TR 1009 Iwata岩田杯，日本岩田杯标准粘度杯，用于测量油墨、涂料粘度，JIS标准，品质保证。",
-    "TR 1010":"涂-4杯厂家供应TR 1010涂-4杯，符合GB/T1723标准，测量涂料粘度，含配套秒表，操作简便，精度高。",
-    "TR 1013":"粘度杯支架厂家供应TR 1013粘度杯支架，三脚/方型支架可选，适用于蔡恩杯、福特杯等多种粘度杯，铝合金材质。",
-    "TR 1101-1&4":"表盘式旋转粘度计供应TR 1101-1&4布式粘度计，Brookfield表盘粘度计，指针显示，测量油漆油墨涂料粘度，实验室专用。",
-    "TR 1101-5&8":"数显旋转粘度计供应TR 1101-5&8数显粘度计，触摸屏操作，测量油漆油墨涂料粘度，精度高，NDJ/SNB/DV粘度计。",
-    "TR 1104":"智能流变仪厂家供应TR 1104旋转流变仪，智能流变测量，触屏操作，用于油漆油墨涂料流变性能测试，精度高。",
-    "TR 1123-1":"斯托默粘度计厂家供应TR 1123-1斯托默粘度计，Stormer粘度计，KU值测量，油墨涂料粘度检测，符合GB/T标准。",
-    "TR 2001":"高速分散机厂家供应TR 2001高速分散机，涂料分散机，油墨分散机，实验室分散机，变频调速，防爆可选。",
-    "TR 2002":"防爆型高速分散机厂家供应TR 2002防爆分散机，防爆设计，溶剂型涂料分散，实验室研磨，品质可靠。",
-    "TR 2030":"悬臂式电动搅拌器厂家供应TR 2030悬臂搅拌器，实验室搅拌机，涂料油墨搅拌，变频调速，悬臂设计。",
-    "TR 2200":"防爆型篮式砂磨机厂家供应TR 2200篮式砂磨机，实验室砂磨机，油墨研磨，防爆设计，研磨效率高。",
-    "TR 2311":"智能振荡箱厂家供应TR 2311智能振荡箱，摇床，恒温振荡器，实验室振荡培养，智能控温，用途广泛。",
-    "TR 3002-F1":"胶粘剂涂布器厂家供应TR 3002-F1涂布器，薄膜涂布，刮涂器，涂布均匀，适用于各种胶粘剂。",
-    "TR 3101":"可调制备器厂家供应TR 3101可调式制备器，涂膜制备器，刮膜制备器，间隙可调，精度10μm，实验室涂布。",
-    "TR 3502-P1-1":"无油真空泵厂家供应TR 3502-P1-1无油真空泵，实验室抽滤泵，耐腐蚀真空泵，抽滤真空干燥用。",
-    "TR 3600":"直线干燥时间记录仪厂家供应TR 3600直线干燥时间测定仪，记录涂层干燥全过程，精度高，操作简便。",
-    "TR 3910A":"AI油墨打样机厂家供应TR 3910A AI油墨打样机，智能配色，AI打样，油墨颜色校对，印刷行业专用。",
-    "TR 5001":"划格器单刃厂家供应TR 5001单刃划格器，附着力测试仪，GB/T9286标准，百格刀，涂层附着力检测。",
-    "TR 5003":"划格器八刃厂家供应TR 5003八刃划格器，多刃划格器，附着力测试仪，GB/T9286，大面积检测效率高。",
-    "TR 5030":"阴极剥离试验机箱厂家供应TR 5030阴极剥离试验机箱，管道涂层剥离测试，阴极保护下涂层性能测试。",
-    "TR 5202/F":"圆管冲击仪厂家供应TR 5202圆管冲击仪，管道冲击仪，管道涂层抗冲击测试，符合AS/NZS4158/ASTMG14标准。",
-    "TR 5206":"落球冲击仪厂家供应TR 5206落球冲击试验仪，涂层冲击测试，油漆涂料冲击强度检测，符合GB/T标准。",
-    "TR 5213":"涂层柔韧性试验仪厂家供应TR 5213柔韧性测试仪，弯曲试验，圆锥弯曲，涂层柔韧性检测，符合GB/T 1731。",
-    "TR 5306":"耐擦伤测定仪厂家供应TR 5306耐擦伤测试仪，涂层硬度检测，擦伤试验，符合GB/T 6739标准。",
-    "TR 5311/1":"耐划痕测试仪厂家供应TR 5311耐划痕测试仪，涂层划痕硬度，铅笔硬度法，符合ISO 1518/GB/T 6739标准。",
-    "TR 5312":"耐洗刷试验仪厂家供应TR 5312耐洗刷测试仪，内墙涂料洗刷检测，符合GB/T 9266标准，评定涂层耐洗刷性。",
-    "TR 5403":"多角度便携式分光测色仪厂家供应TR 5403多角度测色仪，金属闪光涂料颜色测量，便携设计，汽车漆专用。",
-    "TR 5464":"光泽度计厂家供应TR 5464光泽度仪，光泽度测量，20/60/85°多角度，油漆涂料光泽检测，GU单位。",
-    "TR 5512":"便携式测厚仪厂家供应TR 5512涂层测厚仪，磁性/涡流两用，干膜厚度测量，0-1500μm，钢铁/非铁基适用。",
-    "TR 6010":"防爆鼓风干燥箱厂家供应TR 6010防爆干燥箱，鼓风循环，恒温控制，用于易燃样品干燥，安全可靠。",
-    "TR 6412":"氙灯老化试验箱厂家供应TR 6412氙灯老化箱，氙弧灯老化，模拟日光，涂层耐候测试，符合GB/T16422标准。",
-    "TR 6413":"氙灯风冷老化试验箱厂家供应TR 6413风冷氙灯箱，Q-SUN氙灯老化，节能高效，涂层耐候测试。",
-    "TR 6421":"UV紫外老化试验箱厂家供应TR 6421 UV老化箱，紫外光老化测试，UVA340/UVB313灯管，涂层耐UV测试，符合GB/T16585。",
-    "TR 6421-001":"Irradiance Calibrator辐照度校准仪，UV老化箱辐照度校准，精度高，用于QUV/UV老化试验箱校准。",
-    "TR 6480":"大气暴晒架厂家供应TR 6480暴晒架，自然老化架，户外涂层老化测试，真实日光，评估涂层耐久性。",
-    "TR 6551":"UV能量计厂家供应TR 6551 UV能量仪，紫外辐照计，UV能量测量，UV光强计，QUV/UV设备校准。",
-    "TR 线棒":"线棒涂布器厂家供应TR线棒，绕线棒，Wire Rod Applicator，实验室涂布，多种线径规格。",
-    "TR 1201":"细度板厂家供应TR 1201/1202/1203刮板细度板，细度计，测量涂料油墨颗粒细度，0-100μm多种规格，品质保证。",
-    "高低温交变湿热":"高低温交变湿热试验箱厂家供应，恒温恒湿箱，湿热老化，高低温循环，涂层温湿度测试。"
-    };
-    
-    function getProductSeoKeywords(model) {
-      if (PRODUCT_SEO_KEYWORDS[model]) return PRODUCT_SEO_KEYWORDS[model];
-      return '腾瑞仪器,TRUIT,广州腾瑞,gztruit,科学仪器,检测仪器,涂料检测仪器,油漆检测仪器,油墨检测仪器,涂层检测仪器,实验室设备,实验室仪器,质检仪器,实验仪器,涂料检测,油漆检测,油墨检测,涂层检测,GB/T检测仪器,ISO检测仪器,ASTM检测仪器,符合GB/T标准,符合ISO标准,符合ASTM标准,源头工厂,生产厂家,专利技术,非标定制,快速交货,涂料检测仪器厂家,涂料检测仪器品牌,涂料检测仪器价格,涂料检测仪器采购,检测仪器供应商,实验室设备采购,油漆采购,涂料采购,涂料检测仪器哪家好,涂料检测仪器哪里有卖,涂料检测仪器使用方法,涂料检测仪器校准,涂料检测仪器操作,试验仪器,测试仪器,检测仪,试验机,测试机,品控仪器,质量控制仪器,QC仪器';
-    }
-    
-    function getProductSeoDescription(model) {
-      return PRODUCT_SEO_META[model] || '腾瑞仪器专业生产涂料检测仪器，厂家直销，品质保证，提供非标定制。';
-    }
-    
-
-
-    // 从URL获取model参数
-    const urlParams = new URLSearchParams(window.location.search);
-    const model = urlParams.get('model') || '';
-    const lang = urlParams.get('lang') || 'zh';
-
-    // 查找产品
-    const product = products.find(p => p.model === model);
-
-    const contentDiv = document.getElementById('productContent');
-
-    if (!product) {
-      contentDiv.innerHTML = `
-        <div class="not-found" style="padding:4rem 1.5rem;text-align:center;">
-          <h2 style="margin-bottom:1rem;">未找到该产品</h2>
-          <p style="color:#666;margin-bottom:1.5rem;">产品型号: <strong>${model}</strong></p>
-          <a href="products.html" style="color:#0070C0;text-decoration:underline;">← 返回产品中心</a>
-        </div>
-      `;
-      document.title = '产品未找到 - 腾瑞仪器';
-    } else {
-      const name = product.name[lang] || product.name.zh;
-      const catName = product.categoryName[lang] || product.categoryName.zh;
-      const specs = product.specs[lang] || product.specs.zh;
-      const features = product.features[lang] || product.features.zh;
-      const currentDoc = product.docFiles ? (product.docFiles[lang] || product.docFiles.en) : null;
-      const currentPdf = product.pdfFiles ? (product.pdfFiles[lang] || product.pdfFiles.en) : null;
-      const docLabel = lang === 'zh' ? 'Word文档' : 'Word';
-      const pdfLabel = lang === 'zh' ? 'PDF文件' : 'PDF';
-      const downloadLabel = lang === 'zh' ? '下载' : 'Download';
-      const noDocLabel = lang === 'zh' ? '暂无文档' : 'No doc';
-      const specsLabel = lang === 'zh' ? '📋 产品规格' : '📋 Specifications';
-      const featuresLabel = lang === 'zh' ? '✨ 产品特点' : '✨ Features';
-      const downloadLabel2 = lang === 'zh' ? '📥 产品文档下载' : '📥 Product Documents';
-      const contactLabel = lang === 'zh' ? '📞 联系我们' : '📞 Contact Us';
-      const backLabel = lang === 'zh' ? '← 返回产品中心' : '← Back to Products';
-
-      document.title = `${name} ${product.model} - 腾瑞仪器 TRUIT`;
-      document.getElementById('metaDesc').content = `${name} ${product.model}，${product.categoryName.zh}，${product.specs.zh.substring(0, 60)}...`;
-      document.getElementById('ogTitle').content = `${name} ${product.model} - 腾瑞仪器`;
-      document.getElementById('ogDesc').content = `${product.specs.zh.substring(0, 100)}`;
-      document.getElementById('ogUrl').content = `https://truir-eng.github.io/gztruit/product.html?model=${encodeURIComponent(product.model)}`;
-
-      // Per-product Schema.org JSON-LD
-      const existingSchema = document.getElementById('productSchema');
-      if (existingSchema) existingSchema.remove();
-      const schemaScript = document.createElement('script');
-      schemaScript.id = 'productSchema';
-      schemaScript.type = 'application/ld+json';
-      const featureList = (product.features[lang] || product.features.zh).join('; ');
-      schemaScript.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": name,
-        "description": specs,
-        "image": product.image ? `https://truir-eng.github.io/gztruit/${product.image}` : `https://truir-eng.github.io/gztruit/logo.png`,
-        "sku": product.model,
-        "mpn": product.model,
-        "brand": { "@type": "Brand", "name": "TRUIT", "alternateName": "腾瑞仪器" },
-        "manufacturer": { "@type": "Organization", "name": "腾瑞仪器（广州）有限公司", "url": "https://www.gztruit.com" },
-        "category": catName,
-        "additionalProperty": [
-          { "@type": "PropertyValue", "name": "产品型号", "value": product.model },
-          { "@type": "PropertyValue", "name": "产品分类", "value": catName },
-          { "@type": "PropertyValue", "name": "符合标准", "value": "GB/T, ISO, ASTM" }
-        ],
-        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "26" },
-        "offers": { "@type": "Offer", "priceCurrency": "CNY", "availability": "https://schema.org/InStock", "seller": { "@type": "Organization", "name": "腾瑞仪器（广州）有限公司" } }
-      });
-      document.head.appendChild(schemaScript);
-
-      contentDiv.innerHTML = `
-        <div class="product-hero">
-          <h1>${name}</h1>
-          <div class="model-badge">${product.model}</div>
-          <div class="category-tag">${catName}</div>
-        </div>
-        <div class="product-detail">
-          <a href="products.html" class="back-link">${backLabel}</a>
-          <div class="detail-card">
-            <h2>${specsLabel}</h2>
-            <p>${specs}</p>
-          </div>
-          <div class="detail-card">
-            <h2>${featuresLabel}</h2>
-            <ul>
-              ${(features || []).map(f => `<li>${f}</li>`).join('')}
-            </ul>
-          </div>
-          <div class="detail-card">
-            <h2>${downloadLabel2}</h2>
-            <div class="download-section">
-              ${currentDoc ? `<a href="products/${currentDoc}" class="download-btn doc" download>📄 ${downloadLabel} ${docLabel}</a>` : `<span class="no-doc">${noDocLabel}</span>`}
-              ${currentPdf ? `<a href="products/${currentPdf}" class="download-btn pdf" download>📄 ${downloadLabel} ${pdfLabel}</a>` : ''}
-            </div>
-          </div>
-          <div class="detail-card">
-            <h2>${contactLabel}</h2>
-            <div class="contact-grid">
-              <div class="contact-item"><span class="icon">📞</span><div><div class="label">${lang==='zh'?'电话':'Phone'}</div><div class="value">020-31706520</div></div></div>
-              <div class="contact-item"><span class="icon">📧</span><div><div class="label">${lang==='zh'?'邮箱':'Email'}</div><div class="value">sales@gztruit.com</div></div></div>
-              <div class="contact-item"><span class="icon">🌐</span><div><div class="label">${lang==='zh'?'网站':'Website'}</div><div class="value">www.gztruit.com</div></div></div>
-            </div>
-          </div>
-        </div>
-      `;
-    
-    // Dynamic per-product SEO injection
-    (function(){
-      var model = new URLSearchParams(window.location.search).get('model') || '';
-      if (!model) return;
-      var kwEl = document.getElementById('seo-kw');
-      var descEl = document.getElementById('seo-desc');
-      if (kwEl && typeof getProductSeoKeywords === 'function') {
-        var kws = getProductSeoKeywords(model);
-        if (kws) kwEl.setAttribute('content', kws);
+    // ===== Full Product Database =====
+    const allProducts = [
+      {
+        model: "TR 1168/1",
+        name: { zh: "电子秒表", en: "Digital Stopwatch", es: "Cronómetro Digital", ar: "ساعة الإيقاف الرقمية", ru: "Электронный секундомер" },
+        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment", es: "Equipo General de Laboratorio", ar: "معدات المختبر العامة", ru: "Общее лабораторное оборудование" },
+        description: { zh: "TR 1168/1 电子秒表是一款高精度电子计时仪器，采用先进电子计时技术，广泛应用于粘度测量计时、实验室及工业现场时间测量。具备大屏幕LCD显示，读数清晰直观。符合相关国家标准要求。", en: "The TR 1168/1 Digital Stopwatch is a high-precision electronic timing instrument using advanced electronic timing technology, widely used in viscosity measurement timing, laboratory and industrial time measurement. Features large-screen LCD display with clear and intuitive reading.", es: "El TR 1168/1 Cronómetro Digital es un instrumento de cronometraje electrónico de alta precisión que utiliza tecnología avanzada de cronometraje electrónico, ampliamente utilizado en el cronometraje de medición de viscosidad, laboratorio y medición de tiempo en campo industrial. Cuenta con pantalla LCD grande, lectura clara e intuitiva. Cumple con los requisitos de las normas nacionales relevantes.", ar: "ساعة الإيقاف الرقمية TR 1168/1 هي جهاز قياس زمني إلكتروني عالي الدقة يستخدم تقنية قياس زمني إلكترونية متقدمة، تُستخدم على نطاق واسع في قياس اللزوجة والمختبرات وقياس الوقت في الموقع الصناعي. مجهزة بشاشة LCD كبيرة، قراءة واضحة وبديهية. تتوافق مع متطلبات المعايير الوطنية ذات الصلة.", ru: "TR 1168/1 Электронный секундомер — это высокоточный электронный прибор для измерения времени, использующий передовую технологию электронного хронометража, широко применяемый для измерения вязкости, в лабораторных и промышленных условиях. Оснащён большим ЖК-дисплеем, показания чёткие и наглядные. Соответствует требованиям соответствующих национальных стандартов." },
+        specs: {
+          zh: [
+            ["显示方式", "LCD大屏幕数字显示"],
+            ["计时精度", "1/100秒"],
+            ["最大计时", "59分59秒99"],
+            ["电源", "纽扣电池"],
+            ["防水等级", "生活防水"],
+            ["表壳材质", "ABS工程塑料"],
+            ["尺寸", "约Ø55×15mm"],
+            ["使用温度", "-10℃~+45℃"],
+            ["执行标准", "QB/T 2108-1995"]
+          ],
+          en: [
+            ["Display", "LCD large-screen digital"],
+            ["Accuracy", "1/100 second"],
+            ["Max Time", "59 min 59.99 s"],
+            ["Power", "Button cell battery"],
+            ["Water Resistant", "Daily water resistant"],
+            ["Case Material", "ABS engineering plastic"],
+            ["Dimensions", "Approx. Ø55×15mm"],
+            ["Operating Temp", "-10℃~+45℃"],
+            ["Standard", "QB/T 2108-1995"]
+          ],
+          es: [
+            ["Método de visualización", "Pantalla digital LCD grande"],
+            ["Precisión de cronometraje", "1/100 segundos"],
+            ["Tiempo máximo", "59 minutos 59 segundos 99"],
+            ["Alimentación", "Batería de botón"],
+            ["Grado impermeable", "Resistente al agua cotidiano"],
+            ["Material de la caja", "Plástico ABS de ingeniería"],
+            ["Dimensiones", "Aprox. Ø55×15mm"],
+            ["Temperatura de uso", "-10℃~+45℃"],
+            ["Estándar aplicado", "QB/T 2108-1995"]
+          ],
+          ar: [
+            ["طريقة العرض", "شاشة رقمية LCD كبيرة"],
+            ["دقة القياس", "1/100 ثانية"],
+            ["الحد الأقصى للوقت", "59 دقيقة 59 ثانية 99"],
+            ["مصدر الطاقة", "بطارية زر"],
+            ["درجة مقاومة الماء", "مقاوم للماء للاستخدام اليومي"],
+            ["مادة الهيكل", "بلاستيك ABS هندسي"],
+            ["الأبعاد", "تقريباً Ø55×15 مم"],
+            ["درجة حرارة التشغيل", "-10 درجة مئوية ~ +45 درجة مئوية"],
+            ["المعيار المنفذ", "QB/T 2108-1995"]
+          ],
+          ru: [
+            ["Способ отображения", "Большой цифровой ЖК-дисплей"],
+            ["Точность измерения", "1/100 секунды"],
+            ["Макс. время", "59 минут 59 секунд 99"],
+            ["Питание", "Батарейка-таблетка"],
+            ["Класс водозащиты", "Бытовой водонепроницаемый"],
+            ["Материал корпуса", "Инженерный пластик ABS"],
+            ["Размеры", "Прибл. Ø55×15 мм"],
+            ["Температура эксплуатации", "-10℃~+45℃"],
+            ["Стандарт", "QB/T 2108-1995"]
+          ]
+        },
+        features: {
+          zh: [
+            "电子计时技术，精度高、读数直观",
+            "大屏幕LCD显示，数字清晰醒目",
+            "1/100秒高精度计时，满足精密测量需求",
+            "多功能模式：正常计时、倒计时、分段计时",
+            "ABS工程塑料外壳，坚固耐用",
+            "生活防水设计，适应多种使用环境",
+            "广泛应用于油漆涂料粘度测量计时、工矿企业、科学研究、医疗卫生及文体系统",
+            "纽扣电池供电，续航持久，更换方便"
+          ],
+          en: [
+            "Electronic timing technology, high precision and intuitive reading",
+            "Large-screen LCD display, clear and eye-catching numbers",
+            "1/100s high precision timing for precise measurement needs",
+            "Multi-function mode: normal timing, countdown, split timing",
+            "ABS engineering plastic shell, sturdy and durable",
+            "Daily water resistant design for various environments",
+            "Widely used in paint coating viscosity measurement timing, industry, research, healthcare and sports",
+            "Button cell battery powered, long battery life, easy replacement"
+          ],
+          es: [
+            "Tecnología de cronometraje electrónico, alta precisión y lectura intuitiva",
+            "Pantalla LCD grande, números claros y llamativos",
+            "Cronometraje de alta precisión 1/100s, satisface necesidades de medición precisa",
+            "Modo multifunción: cronometraje normal, cuenta atrás, cronometraje fraccionado",
+            "Carcasa de plástico ABS de ingeniería, robusta y duradera",
+            "Diseño resistente al agua cotidiano, se adapta a múltiples entornos de uso",
+            "Ampliamente utilizado en el cronometraje de medición de viscosidad de pintura y recubrimiento, empresas industriales y mineras, investigación científica, atención médica y sistemas deportivos",
+            "Alimentado por batería de botón, larga duración, fácil reemplazo"
+          ],
+          ar: [
+            "تقنية قياس زمني إلكترونية، دقة عالية وقراءة بديهية",
+            "شاشة LCD كبيرة، أرقام واضحة ومميزة",
+            "قياس زمني عالي الدقة 1/100 ثانية، يلبي احتياجات القياس الدقيق",
+            "وضع متعدد الوظائف: قياس زمني عادي، عد تنازلي، قياس زمني جزئي",
+            "هيكل بلاستيك ABS هندسي، متين ومقاوم",
+            "تصميم مقاوم للماء للاستخدام اليومي، يتكيف مع بيئات الاستخدام المختلفة",
+            "تُستخدم على نطاق واسع في قياس لزوجة الدهانات والطلاءات، المؤسسات الصناعية والتعدينية، البحث العلمي، الرعاية الصحية والأنظمة الرياضية",
+            "تعمل ببطاريات زر، عمر طويل وسهولة الاستبدال"
+          ],
+          ru: [
+            "Электронная технология измерения времени, высокая точность и наглядное считывание",
+            "Большой ЖК-дисплей, чёткие и заметные цифры",
+            "Высокоточное измерение 1/100 секунды, удовлетворяет потребности точных измерений",
+            "Многофункциональный режим: обычный хронограф, обратный отсчёт, промежуточное время",
+            "Корпус из инженерного пластика ABS, прочный и износостойкий",
+            "Водонепроницаемый бытовой дизайн, адаптируется к различным условиям использования",
+            "Широко применяется для измерения вязкости красок и покрытий, на промышленных предприятиях, в научных исследованиях, здравоохранении и спортивных системах",
+            "Питание от батарейки-таблетки, долгий срок службы, удобная замена"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 1168/1", name: "电子秒表" }
+          ],
+          en: [
+            { code: "TR 1168/1", name: "Digital Stopwatch" }
+          ],
+          es: [
+            { code: "TR 1168/1", name: "Cronómetro Digital" }
+          ],
+          ar: [
+            { code: "TR 1168/1", name: "ساعة الإيقاف الرقمية" }
+          ],
+          ru: [
+            { code: "TR 1168/1", name: "Электронный секундомер" }
+          ]
+        },
+        docFiles: { en: "TR 1168_1_电子秒表_介绍.docx", zh: "TR 1168_1_电子秒表_介绍.docx" }, pdfFiles: { en: "TR 1168_1_电子秒表_介绍.pdf", zh: "TR 1168_1_电子秒表_介绍.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 1168/2",
+        name: { zh: "机械秒表", en: "Mechanical Stopwatch", es: "Cronómetro Mecánico", ar: "ساعة الإيقاف الميكانيكية", ru: "Механический секундомер" },
+        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment", es: "Equipo General de Laboratorio", ar: "معدات المختبر العامة", ru: "Общее лабораторное оборудование" },
+        description: { zh: "TR 1168/2 机械秒表是测量时间间隔的精密仪器，广泛应用于粘度测量计时。采用不锈钢表壳，机芯装有13颗宝石，精度高、寿命长。符合QB/T 153-2006标准。", en: "The TR 1168/2 Mechanical Stopwatch is a precision instrument for measuring time intervals, widely used in viscosity measurement timing. Features stainless steel case with 13-jewel movement, high precision and long service life. Conforms to QB/T 153-2006.", es: "El TR 1168/2 Cronómetro Mecánico es un instrumento de precisión para medir intervalos de tiempo, ampliamente utilizado en el cronometraje de medición de viscosidad. Con carcasa de acero inoxidable y mecanismo con 13 rubíes, alta precisión y larga vida útil. Cumple con la norma QB/T 153-2006.", ar: "ساعة الإيقاف الميكانيكية TR 1168/2 هي أداة دقيقة لقياس الفترات الزمنية، تُستخدم على نطاق واسع في قياس لزوجة اللزوجة. تتميز بعلبة من الفولاذ المقاوم للصدأ وآلية مزودة بـ 13 جوهرة، عالية الدقة وعمر طويل. تتوافق مع معيار QB/T 153-2006.", ru: "TR 1168/2 Механический секундомер — это прецизионный прибор для измерения временных интервалов, широко применяемый для измерения вязкости. Корпус из нержавеющей стали, механизм с 13 рубинами, высокая точность и долгий срок службы. Соответствует стандарту QB/T 153-2006." },
+        specs: {
+          zh: [
+            ["最小刻度值", "1/10s"],
+            ["分针", "15秒/圈"],
+            ["秒针", "30秒/圈"],
+            ["延续走时", "6h"],
+            ["钻数", "13钻"],
+            ["表壳材质", "不锈钢"],
+            ["尺寸", "Ø55×77.4×14mm"],
+            ["使用温度", "-10℃~+45℃"],
+            ["使用湿度", "≤60%RH"],
+            ["执行标准", "QB/T 153-2006"]
+          ],
+          en: [
+            ["Min Scale", "1/10s"],
+            ["Minute Hand", "15s/circle"],
+            ["Second Hand", "30s/circle"],
+            ["Running Time", "6h"],
+            ["Jewels", "13"],
+            ["Case Material", "Stainless steel"],
+            ["Dimensions", "Ø55×77.4×14mm"],
+            ["Operating Temp", "-10℃~+45℃"],
+            ["Operating Humidity", "≤60%RH"],
+            ["Standard", "QB/T 153-2006"]
+          ],
+          es: [
+            ["Escala mínima", "1/10s"],
+            ["Aguja minutero", "15 segundos/círculo"],
+            ["Aguja segundero", "30 segundos/círculo"],
+            ["Autonomía", "6h"],
+            ["Rubíes", "13 rubíes"],
+            ["Material de la caja", "Acero inoxidable"],
+            ["Dimensiones", "Ø55×77.4×14mm"],
+            ["Temperatura de uso", "-10℃~+45℃"],
+            ["Humedad de uso", "≤60%HR"],
+            ["Estándar aplicado", "QB/T 153-2006"]
+          ],
+          ar: [
+            ["أصغر تدريج", "1/10 ثانية"],
+            ["عقرب الدقائق", "15 ثانية/دورة"],
+            ["عقرب الثواني", "30 ثانية/دورة"],
+            ["زمن التشغيل المستمر", "6 ساعات"],
+            ["عدد الجواهر", "13 جوهرة"],
+            ["مادة العلبة", "فولاذ مقاوم للصدأ"],
+            ["الأبعاد", "Ø55×77.4×14 مم"],
+            ["درجة حرارة التشغيل", "-10 درجة مئوية ~ +45 درجة مئوية"],
+            ["رطوبة التشغيل", "≤60% رطوبة نسبية"],
+            ["المعيار المنفذ", "QB/T 153-2006"]
+          ],
+          ru: [
+            ["Наименьшее деление", "1/10 с"],
+            ["Минутная стрелка", "15 секунд/оборот"],
+            ["Секундная стрелка", "30 секунд/оборот"],
+            ["Непрерывный ход", "6 ч"],
+            ["Количество рубинов", "13"],
+            ["Материал корпуса", "Нержавеющая сталь"],
+            ["Размеры", "Ø55×77.4×14 мм"],
+            ["Температура эксплуатации", "-10℃~+45℃"],
+            ["Влажность при эксплуатации", "≤60%RH"],
+            ["Стандарт", "QB/T 153-2006"]
+          ]
+        },
+        features: {
+          zh: [
+            "机芯采用不锈钢发条，单金属光摆轮",
+            "镍基合金游丝及锚式纵机构",
+            "机芯装有13颗宝石，精度高耐用",
+            "不锈钢表壳，坚固耐用",
+            "广泛应用于工矿企业、科学研究、国防军事、医疗卫生和文体系统",
+            "全国广大中小学校广泛采用",
+            "油漆涂料粘度测量计时首选"
+          ],
+          en: [
+            "Movement with stainless steel mainspring, single metal balance wheel",
+            "Nickel-based alloy hairspring and lever escapement",
+            "13-jewel movement for high precision and durability",
+            "Stainless steel case, sturdy and durable",
+            "Widely used in industry, research, military, healthcare and sports",
+            "Widely adopted by primary and secondary schools nationwide",
+            "First choice for paint coating viscosity measurement timing"
+          ],
+          es: [
+            "Mecanismo con resorte de acero inoxidable y rueda de balance de metal único",
+            "Espiral de aleación de base de níquel y órgano de anclaje",
+            "Mecanismo con 13 rubíes, alta precisión y durabilidad",
+            "Carcasa de acero inoxidable, robusta y duradera",
+            "Ampliamente utilizado en empresas industriales y mineras, investigación científica, defensa militar, atención médica y sistemas deportivos",
+            "Ampliamente adoptado por escuelas primarias y secundarias de todo el país",
+            "Primera elección para el cronometraje de medición de viscosidad de pintura y recubrimiento"
+          ],
+          ar: [
+            "آلية ذات زنبرك من الفولاذ المقاوم للصدأ وعجلة توازن معدنية واحدة",
+            "شريط شعر من سبيكة أساس النيكل وآلية مرساة عمودية",
+            "آلية مزودة بـ 13 جوهرة، عالية الدقة ومقاومة للتلف",
+            "علبة من الفولاذ المقاوم للصدأ، متينة ومقاومة",
+            "تُستخدم على نطاق واسع في المؤسسات الصناعية والتعدينية، البحث العلمي، الدفاع العسكري، الرعاية الصحية والأنظمة الرياضية والثقافية",
+            "اعتمدت على نطاق واسع من قبل المدارس الابتدائية والثانوية في جميع أنحاء البلاد",
+            "الخيار الأول لقياس لزوجة الدهانات والطلاءات"
+          ],
+          ru: [
+            "Механизм с пружиной из нержавеющей стали и однометаллическим балансом",
+            "Никелевое основание сплава спирали и анкерный механизм",
+            "Механизм с 13 рубинами, высокая точность и износостойкость",
+            "Корпус из нержавеющей стали, прочный и долговечный",
+            "Широко применяется на промышленных предприятиях, в научных исследованиях, военном деле, здравоохранении и спортивных системах",
+            "Широко используется в школах по всей стране",
+            "Первый выбор для измерения вязкости красок и покрытий"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 1168/2", name: "机械秒表" }
+          ],
+          en: [
+            { code: "TR 1168/2", name: "Mechanical Stopwatch" }
+          ],
+          es: [
+            { code: "TR 1168/2", name: "Cronómetro Mecánico" }
+          ],
+          ar: [
+            { code: "TR 1168/2", name: "ساعة الإيقاف الميكانيكية" }
+          ],
+          ru: [
+            { code: "TR 1168/2", name: "Механический секундомер" }
+          ]
+        },
+        docFiles: { en: "TR1168_2_机械秒表_介绍.docx", zh: "TR1168_2_机械秒表_介绍.docx" }, pdfFiles: { en: "", zh: "" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 5202/F1",
+        name: { zh: "圆管冲击仪", en: "Pipe Impact Tester", es: "Ensayador de Impacto para Tuberías", ar: "جهاز اختبار الصدمة للأنابيب", ru: "Ударный тестер для труб" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5202/F 是TRUIT专为管道及厚工件设计的冲击仪，符合 AS/NZS4158:2003+A1-2005 标准及 ASTMG14-04(2024) 标准。用于管道涂层抗冲击性能试验，评定涂层在冲击条件下的完整性和抗裂性。通过弹性压紧适配多种外径管道，螺纹限位可调冲击深度。", en: "The TR 5202/F is an impact tester designed by TRUIT specifically for pipes and thick workpieces, conforming to AS/NZS4158:2003+A1-2005 and ASTM G14-04(2024) standards. Used for pipe coating impact resistance testing, evaluating coating integrity and crack resistance under impact conditions.", es: "El TR 5202/F es un ensayador de impacto diseñado por TRUIT específicamente para tuberías y piezas gruesas, conforme a las normas AS/NZS4158:2003+A1-2005 y ASTM G14-04(2024). Se utiliza para pruebas de resistencia al impacto de recubrimientos de tuberías, evaluando la integridad y resistencia a grietas del recubrimiento bajo condiciones de impacto. Se adapta a tuberías de varios diámetros exteriores mediante presión elástica, la profundidad de impacto se ajusta mediante limitación roscada.", ar: "TR 5202/F هو جهاز اختبار صدمة مصمم بواسطة TRUIT خصيصًا للأنابيب والقطع السميكة، يتوافق مع معايير AS/NZS4158:2003+A1-2005 و ASTM G14-04(2024). يُستخدم لاختبار مقاومة الصدمة لطلاءات الأنابيب، وتقييم سلامة الطلاء ومقاومته للتشقق تحت ظروف الصدمة. يتكيف مع أنابيب بأقطار خارجية مختلفة من خلال الضغط المرن، وعمق الصدمة القابل للتعديل من خلال تحديد لولبي.", ru: "TR 5202/F — ударный тестер, разработанный TRUIT специально для труб и толстых изделий, соответствует стандартам AS/NZS4158:2003+A1-2005 и ASTM G14-04(2024). Применяется для испытания ударной прочности покрытий труб, оценки целостности и трещиностойкости покрытия при ударных нагрузках. Адаптируется к различным наружным диаметрам труб через упругое прижимание, глубина удара регулируется резьбовым упором." },
+        specs: {
+          zh: [
+            ["落锤重量", "13.3N（3磅）"],
+            ["冲头直径", "15.9mm"],
+            ["管高", "1.52m"],
+            ["模座直径", "16.3mm"],
+            ["适用管径", "Ø110-125mm（其它规格可定做）"],
+            ["冲击深度", "0-5mm 可调"],
+            ["符合标准", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          en: [
+            ["Fall Hammer Weight", "13.3N (3 lbs)"],
+            ["Punch Diameter", "15.9mm"],
+            ["Pipe Height", "1.52m"],
+            ["Die Diameter", "16.3mm"],
+            ["Applicable Pipe Diameter", "Ø110-125mm (other sizes available)"],
+            ["Impact Depth", "0-5mm adjustable"],
+            ["Standards", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          es: [
+            ["Peso del martillo", "13.3N (3 libras)"],
+            ["Diámetro del punzón", "15.9mm"],
+            ["Altura del tubo", "1.52m"],
+            ["Diámetro del dado", "16.3mm"],
+            ["Diámetro de tubería aplicable", "Ø110-125mm (otros tamaños disponibles)"],
+            ["Profundidad de impacto", "0-5mm ajustable"],
+            ["Normas aplicadas", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          ar: [
+            ["وزن المطرقة الساقطة", "13.3 نيوتن (3 أرطال)"],
+            ["قطر الخارق", "15.9 مم"],
+            ["ارتفاع الأنبوب", "1.52 م"],
+            ["قطر القالب", "16.3 مم"],
+            ["قطر الأنبوب القابل للتطبيق", "Ø110-125 مم (أحجام أخرى متاحة)"],
+            ["عمق الصدمة", "0-5 مم قابل للتعديل"],
+            ["المعايير المتوافقة", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          ru: [
+            ["Вес падающего молотка", "13,3 Н (3 фунта)"],
+            ["Диаметр пуансона", "15,9 мм"],
+            ["Высота трубы", "1,52 м"],
+            ["Диаметр матрицы", "16,3 мм"],
+            ["Применяемый диаметр трубы", "Ø110-125 мм (другие размеры доступны)"],
+            ["Глубина удара", "0-5 мм регулируемая"],
+            ["Соответствующие стандарты", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ]
+        },
+        features: {
+          zh: [
+            "通过弹性压紧适配多种外径管道",
+            "通过螺纹限位可调合适冲击深度",
+            "用于管道涂层抗冲击性能试验",
+            "评定涂层在冲击条件下的完整性和抗裂性",
+            "其它规格管径可定做"
+          ],
+          en: [
+            "Elastic clamping adapts to various pipe outer diameters",
+            "Thread limit adjusts impact depth",
+            "For pipe coating impact resistance testing",
+            "Evaluates coating integrity and crack resistance under impact",
+            "Other pipe diameters available for customization"
+          ],
+          es: [
+            "Se adapta a varios diámetros exteriores de tuberías mediante presión elástica",
+            "La profundidad de impacto se ajusta mediante limitación roscada",
+            "Para pruebas de resistencia al impacto de recubrimientos de tuberías",
+            "Evalúa la integridad y resistencia a grietas del recubrimiento bajo impacto",
+            "Otros diámetros de tubería disponibles para personalización"
+          ],
+          ar: [
+            "يتكيف مع أنابيب بأقطار خارجية مختلفة من خلال الضغط المرن",
+            "عمق الصدمة القابل للتعديل من خلال تحديد لولبي",
+            "لاختبار مقاومة الصدمة لطلاءات الأنابيب",
+            "تقييم سلامة الطلاء ومقاومته للتشقق تحت الصدمة",
+            "أقطار أنابيب أخرى متاحة للتصميم"
+          ],
+          ru: [
+            "Упругое прижимание адаптируется к различным наружным диаметрам труб",
+            "Резьбовой упор регулирует глубину удара",
+            "Для испытания ударной прочности покрытий труб",
+            "Оценка целостности и трещиностойкости покрытия при ударе",
+            "Другие диаметры труб доступны для изготовления"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 5202/F1", name: "圆管冲击仪（管径Ø110-125mm）" },
+            { code: "TR 5202/F2", name: "厚工件冲击仪（厚度≤30mm）" }
+          ],
+          en: [
+            { code: "TR 5202/F1", name: "Pipe Impact Tester (Ø110-125mm)" },
+            { code: "TR 5202/F2", name: "Thick Workpiece Impact Tester (≤30mm)" }
+          ],
+          es: [
+            { code: "TR 5202/F1", name: "Ensayador de Impacto para Tuberías (Ø110-125mm)" },
+            { code: "TR 5202/F2", name: "Ensayador de Impacto para Piezas Gruesas (≤30mm)" }
+          ],
+          ar: [
+            { code: "TR 5202/F1", name: "جهاز اختبار الصدمة للأنابيب (Ø110-125 مم)" },
+            { code: "TR 5202/F2", name: "جهاز اختبار الصدمة للقطع السميكة (≤30 مم)" }
+          ],
+          ru: [
+            { code: "TR 5202/F1", name: "Ударный тестер для труб (Ø110-125 мм)" },
+            { code: "TR 5202/F2", name: "Ударный тестер для толстых изделий (≤30 мм)" }
+          ]
+        },
+        docFiles: { en: "TR 5202_F1 冲击仪产品资料.docx", zh: "TR 5202_F1 冲击仪产品资料.docx" }, pdfFiles: { en: "TR 5202_F1 冲击仪产品资料.pdf", zh: "TR 5202_F1 冲击仪产品资料.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 5202/F2",
+        name: { zh: "厚工件冲击仪", en: "Thick Workpiece Impact Tester", es: "Ensayador de Impacto para Piezas Gruesas", ar: "جهاز اختبار الصدمة للقطع السميكة", ru: "Ударный тестер для толстых изделий" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5202/F2 厚工件冲击仪是 TR 5202 系列的一员，专为厚工件涂层抗冲击性能测试设计，符合 AS/NZS4158:2003+A1-2005 和 ASTMG14-04(2024) 标准。适用厚度最厚30mm，不同厚度可定做。", en: "The TR 5202/F2 Thick Workpiece Impact Tester is part of the TR 5202 series, designed for thick workpiece coating impact resistance testing, conforming to AS/NZS4158:2003+A1-2005 and ASTM G14-04(2024) standards. Maximum thickness 30mm, other thicknesses available for customization.", es: "El TR 5202/F2 Ensayador de Impacto para Piezas Gruesas es parte de la serie TR 5202, diseñado para pruebas de resistencia al impacto de recubrimientos de piezas gruesas, conforme a las normas AS/NZS4158:2003+A1-2005 y ASTM G14-04(2024). Grosor máximo aplicable 30mm, otros grosores disponibles para personalización.", ar: "TR 5202/F2 هو جهاز اختبار صدمة للقطع السميكة من سلسلة TR 5202، مصمم لاختبار مقاومة صدمة طلاء القطع السميكة، يتوافق مع معايير AS/NZS4158:2003+A1-2005 و ASTM G14-04(2024). أقصى سمك قابل للتطبيق 30 مم، سمكات أخرى متاحة للتصميم.", ru: "TR 5202/F2 Ударный тестер для толстых изделий является частью серии TR 5202, разработан для испытания ударной прочности покрытий толстых изделий, соответствует стандартам AS/NZS4158:2003+A1-2005 и ASTM G14-04(2024). Максимальная толщина 30 мм, другие толщины доступны для изготовления." },
+        specs: {
+          zh: [
+            ["落锤重量", "13.3N（3磅）"],
+            ["冲头直径", "15.9mm"],
+            ["管高", "1.52m"],
+            ["模座直径", "16.3mm"],
+            ["工件厚度", "最厚30mm（其它厚度可定做）"],
+            ["冲击深度", "0-5mm 可调"],
+            ["符合标准", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          en: [
+            ["Fall Hammer Weight", "13.3N (3 lbs)"],
+            ["Punch Diameter", "15.9mm"],
+            ["Pipe Height", "1.52m"],
+            ["Die Diameter", "16.3mm"],
+            ["Workpiece Thickness", "Max 30mm (other thicknesses available)"],
+            ["Impact Depth", "0-5mm adjustable"],
+            ["Standards", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          es: [
+            ["Peso del martillo", "13.3N (3 libras)"],
+            ["Diámetro del punzón", "15.9mm"],
+            ["Altura del tubo", "1.52m"],
+            ["Diámetro del dado", "16.3mm"],
+            ["Grosor de la pieza", "Máx. 30mm (otros grosores disponibles)"],
+            ["Profundidad de impacto", "0-5mm ajustable"],
+            ["Normas aplicadas", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          ar: [
+            ["وزن المطرقة الساقطة", "13.3 نيوتن (3 أرطال)"],
+            ["قطر الخارق", "15.9 مم"],
+            ["ارتفاع الأنبوب", "1.52 م"],
+            ["قطر القالب", "16.3 مم"],
+            ["سمك القطعة", "30 مم كحد أقصى (سمكات أخرى متاحة)"],
+            ["عمق الصدمة", "0-5 مم قابل للتعديل"],
+            ["المعايير المتوافقة", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ],
+          ru: [
+            ["Вес падающего молотка", "13,3 Н (3 фунта)"],
+            ["Диаметр пуансона", "15,9 мм"],
+            ["Высота трубы", "1,52 м"],
+            ["Диаметр матрицы", "16,3 мм"],
+            ["Толщина изделия", "Макс. 30 мм (другие толщины доступны)"],
+            ["Глубина удара", "0-5 мм регулируемая"],
+            ["Соответствующие стандарты", "AS/NZS4158:2003+A1-2005, ASTM G14-04(2024)"]
+          ]
+        },
+        features: {
+          zh: [
+            "通过弹性压紧适配多种厚度工件",
+            "通过螺纹限位可调合适冲击深度",
+            "用于厚工件涂层抗冲击性能试验",
+            "其它不同厚度工件可定做"
+          ],
+          en: [
+            "Elastic clamping for various thickness workpieces",
+            "Thread limit adjusts impact depth",
+            "For thick workpiece coating impact resistance testing",
+            "Other workpiece thicknesses available for customization"
+          ],
+          es: [
+            "Se adapta a piezas de varios grosores mediante presión elástica",
+            "La profundidad de impacto se ajusta mediante limitación roscada",
+            "Para pruebas de resistencia al impacto de recubrimientos de piezas gruesas",
+            "Otros grosores de piezas disponibles para personalización"
+          ],
+          ar: [
+            "يتكيف مع قطع بسمكات مختلفة من خلال الضغط المرن",
+            "عمق الصدمة القابل للتعديل من خلال تحديد لولبي",
+            "لاختبار مقاومة صدمة طلاء القطع السميكة",
+            "سمكات قطع أخرى متاحة للتصميم"
+          ],
+          ru: [
+            "Упругое прижимание адаптируется к изделиям различной толщины",
+            "Резьбовой упор регулирует глубину удара",
+            "Для испытания ударной прочности покрытий толстых изделий",
+            "Другие толщины изделий доступны для изготовления"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 5202/F2", name: "厚工件冲击仪（厚度≤30mm）" }
+          ],
+          en: [
+            { code: "TR 5202/F2", name: "Thick Workpiece Impact Tester (≤30mm)" }
+          ],
+          es: [
+            { code: "TR 5202/F2", name: "Ensayador de Impacto para Piezas Gruesas (≤30mm)" }
+          ],
+          ar: [
+            { code: "TR 5202/F2", name: "جهاز اختبار الصدمة للقطع السميكة (≤30 مم)" }
+          ],
+          ru: [
+            { code: "TR 5202/F2", name: "Ударный тестер для толстых изделий (≤30 мм)" }
+          ]
+        },
+        docFiles: { en: "TR 5202_F1 冲击仪产品资料.docx", zh: "TR 5202_F1 冲击仪产品资料.docx" }, pdfFiles: { en: "TR 5202_F1 冲击仪产品资料.pdf", zh: "TR 5202_F1 冲击仪产品资料.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 1101-5&8",
+        name: { zh: "数显旋转粘度计", en: "Digital Rotational Viscometer", es: "Viscosímetro Rotativo Digital", ar: "مقياس اللزوجة الدوراني الرقمي", ru: "Цифровой ротационный вискозиметр" },
+        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing", es: "Pruebas de Materias Primas", ar: "اختبار خصائص المواد الخام", ru: "Испытание сырьевых материалов" },
+        description: { zh: "TR 1101-5&8 数显旋转粘度计是一款用于测量流体粘度的精密仪器，配备5号和8号两种转子，适用于不同粘度范围的流体测量。数字显示，读数直观，操作简便，精度高。", en: "The TR 1101-5&8 Digital Rotational Viscometer is a precision instrument for measuring fluid viscosity, equipped with No.5 and No.8 rotors for different viscosity ranges. Digital display, intuitive reading, easy operation, high precision.", es: "El TR 1101-5&8 Viscosímetro Rotativo Digital es un instrumento de precisión para medir la viscosidad de fluidos, equipado con dos rotores No.5 y No.8, aplicable a rangos de viscosidad diferentes. Visualización digital, lectura intuitiva, operación sencilla, alta precisión.", ar: "TR 1101-5&8 مقياس اللزوجة الدوراني الرقمي هو جهاز دقيق لقياس لزوجة السوائل، مجهز باثنين من الروتورات رقم 5 ورقم 8، قابل للتطبيق على نطاقات لزوجة مختلفة. العرض الرقمي، قراءة بديهية، تشغيل بسيط، دقة عالية.", ru: "TR 1101-5&8 Цифровой ротационный вискозиметр — это прецизионный прибор для измерения вязкости жидкостей, оснащённый двумя роторами №5 и №8, пригодными для измерения жидкостей с различными диапазонами вязкости. Цифровой дисплей, наглядное считывание, простое управление, высокая точность." },
+        specs: {
+          zh: [
+            ["显示方式", "数显屏幕"],
+            ["适用转子", "5号/8号转子"],
+            ["测量范围", "根据转子不同覆盖广泛粘度范围"],
+            ["精度", "高精度"],
+            ["操作方式", "数字按键操作"]
+          ],
+          en: [
+            ["Display", "Digital screen"],
+            ["Rotors", "No.5 / No.8 rotors"],
+            ["Measurement Range", "Wide viscosity range coverage by different rotors"],
+            ["Accuracy", "High precision"],
+            ["Operation", "Digital key operation"]
+          ],
+          es: [
+            ["Método de visualización", "Pantalla digital"],
+            ["Rotores aplicables", "Rotor No.5 / No.8"],
+            ["Rango de medición", "Amplio rango de viscosidad cubierto por diferentes rotores"],
+            ["Precisión", "Alta precisión"],
+            ["Método de operación", "Operación con teclas digitales"]
+          ],
+          ar: [
+            ["طريقة العرض", "شاشة رقمية"],
+            ["الروتورات القابلة للتطبيق", "روتور رقم 5 / رقم 8"],
+            ["نطاق القياس", "تغطية نطاق لزوجة واسع من خلال روترات مختلفة"],
+            ["الدقة", "دقة عالية"],
+            ["طريقة التشغيل", "تشغيل بأزرار رقمية"]
+          ],
+          ru: [
+            ["Способ отображения", "Цифровой экран"],
+            ["Применяемые роторы", "Ротор №5 / №8"],
+            ["Диапазон измерения", "Широкий диапазон вязкости в зависимости от ротора"],
+            ["Точность", "Высокая точность"],
+            ["Способ управления", "Цифровые кнопки"]
+          ]
+        },
+        features: {
+          zh: [
+            "数显屏幕，直接读数",
+            "多种转子可选，测量范围广",
+            "操作简便，精度高",
+            "稳定性好，重复性佳"
+          ],
+          en: [
+            "Digital display for direct reading",
+            "Multiple rotors available, wide measurement range",
+            "Easy operation, high precision",
+            "Good stability and repeatability"
+          ],
+          es: [
+            "Pantalla digital para lectura directa",
+            "Múltiples rotores opcionales, amplio rango de medición",
+            "Operación sencilla, alta precisión",
+            "Buena estabilidad y repetibilidad"
+          ],
+          ar: [
+            "شاشة رقمية للقراءة المباشرة",
+            "روترات متعددة اختيارية، نطاق قياس واسع",
+            "تشغيل بسيط، دقة عالية",
+            "استقرار جيد وقابلية تكرار"
+          ],
+          ru: [
+            "Цифровой экран, прямое считывание",
+            "Несколько роторов на выбор, широкий диапазон измерения",
+            "Простое управление, высокая точность",
+            "Хорошая стабильность и повторяемость"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 1101-5", name: "数显旋转粘度计（5号转子）" },
+            { code: "TR 1101-8", name: "数显旋转粘度计（8号转子）" }
+          ],
+          en: [
+            { code: "TR 1101-5", name: "Digital Rotational Viscometer (No.5 rotor)" },
+            { code: "TR 1101-8", name: "Digital Rotational Viscometer (No.8 rotor)" }
+          ],
+          es: [
+            { code: "TR 1101-5", name: "Viscosímetro Rotativo Digital (Rotor No.5)" },
+            { code: "TR 1101-8", name: "Viscosímetro Rotativo Digital (Rotor No.8)" }
+          ],
+          ar: [
+            { code: "TR 1101-5", name: "مقياس اللزوجة الدوراني الرقمي (روتور رقم 5)" },
+            { code: "TR 1101-8", name: "مقياس اللزوجة الدوراني الرقمي (روتور رقم 8)" }
+          ],
+          ru: [
+            { code: "TR 1101-5", name: "Цифровой ротационный вискозиметр (ротор №5)" },
+            { code: "TR 1101-8", name: "Цифровой ротационный вискозиметр (ротор №8)" }
+          ]
+        },
+        docFiles: { en: "TR 1101-5&8数显旋转粘度计产品介绍.doc", zh: "TR 1101-5&8数显旋转粘度计产品介绍.doc" }, pdfFiles: { en: "", zh: "" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 1123-1",
+        name: { zh: "斯托默粘度计", en: "Stormer Viscometer", es: "Viscosímetro Stormer", ar: "مقياس لزوجة ستورمر", ru: "Вискозиметр Стормера" },
+        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing", es: "Pruebas de Materias Primas", ar: "اختبار خصائص المواد الخام", ru: "Испытание сырьевых материалов" },
+        description: { zh: "TR 1123-1 斯托默粘度计是用于测量涂料、油墨等流体粘度的专用仪器，通过测量摆动叶片在流体中停止所需的时间来计算粘度值，符合GB/T标准要求，操作简便，重复性好，广泛应用于涂料行业。", en: "The TR 1123-1 Stormer Viscometer is a specialized instrument for measuring viscosity of coatings, inks and other fluids by measuring the time required for a oscillating blade to stop in the fluid, conforming to GB/T standards. Easy operation, good repeatability, widely used in coating industry.", es: "El TR 1123-1 Viscosímetro Stormer es un instrumento especializado para medir la viscosidad de recubrimientos, tintas y otros fluidos, midiendo el tiempo requerido para que una cuchilla oscilante se detenga en el fluido para calcular el valor de viscosidad, conforme a los requisitos de la norma GB/T, operación sencilla y buena repetibilidad, ampliamente utilizado en la industria de recubrimientos.", ar: "TR 1123-1 مقياس لزوجة ستورمر هو جهاز متخصص لقياس لزوجة الطلاءات والحبر والسوائل الأخرى، من خلال قياس الوقت المطلوب لشفرة متذبذبة للتوقف في السائل لحساب قيمة اللزوجة، يتوافق مع متطلبات معيار GB/T، تشغيل بسيط وقابلية تكرار جيدة، يُستخدم على نطاق واسع في صناعة الطلاء.", ru: "TR 1123-1 Вискозиметр Стормера — это специализированный прибор для измерения вязкости покрытий, чернил и других жидкостей путём измерения времени, необходимого колеблющейся лопасти для остановки в жидкости, для расчёта значения вязкости, соответствует требованиям стандарта GB/T, простое управление, хорошая повторяемость, широко применяется в лакокрасочной промышленности." },
+        specs: {
+          zh: [
+            ["测量原理", "斯托默（Stormer）摆动式"],
+            ["适用范围", "涂料、油墨等流体"],
+            ["符合标准", "GB/T 标准"],
+            ["操作", "简便"],
+            ["重复性", "良好"]
+          ],
+          en: [
+            ["Measurement Principle", "Stormer oscillation type"],
+            ["Application", "Coatings, inks and other fluids"],
+            ["Standards", "GB/T standards"],
+            ["Operation", "Easy"],
+            ["Repeatability", "Good"]
+          ],
+          es: [
+            ["Principio de medición", "Tipo oscilante Stormer"],
+            ["Ámbito de aplicación", "Recubrimientos, tintas y otros fluidos"],
+            ["Norma aplicable", "Norma GB/T"],
+            ["Operación", "Sencilla"],
+            ["Repetibilidad", "Buena"]
+          ],
+          ar: [
+            ["مبدأ القياس", "نوع تذبذبي ستورمر"],
+            ["نطاق التطبيق", "الطلاءات والحبر والسوائل الأخرى"],
+            ["المعيار المتوافق", "معيار GB/T"],
+            ["التشغيل", "بسيط"],
+            ["قابلية التكرار", "جيدة"]
+          ],
+          ru: [
+            ["Принцип измерения", "Осцилляционный тип Стормера"],
+            ["Область применения", "Покрытия, чернила и другие жидкости"],
+            ["Соответствующий стандарт", "Стандарт GB/T"],
+            ["Управление", "Простое"],
+            ["Повторяемость", "Хорошая"]
+          ]
+        },
+        features: {
+          zh: [
+            "符合GB/T国家标准",
+            "操作简便，重复性好",
+            "广泛应用于涂料行业",
+            "测量精度高"
+          ],
+          en: [
+            "Conforms to GB/T national standards",
+            "Easy operation, good repeatability",
+            "Widely used in coating industry",
+            "High measurement accuracy"
+          ],
+          es: [
+            "Conforme a la norma nacional GB/T",
+            "Operación sencilla, buena repetibilidad",
+            "Ampliamente utilizado en la industria de recubrimientos",
+            "Alta precisión de medición"
+          ],
+          ar: [
+            "يتوافق مع معيار GB/T الوطني",
+            "تشغيل بسيط وقابلية تكرار جيدة",
+            "يُستخدم على نطاق واسع في صناعة الطلاء",
+            "دقة قياس عالية"
+          ],
+          ru: [
+            "Соответствует национальному стандарту GB/T",
+            "Простое управление, хорошая повторяемость",
+            "Широко применяется в лакокрасочной промышленности",
+            "Высокая точность измерения"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 1123-1", name: "斯托默粘度计" }
+          ],
+          en: [
+            { code: "TR 1123-1", name: "Stormer Viscometer" }
+          ],
+          es: [
+            { code: "TR 1123-1", name: "Viscosímetro Stormer" }
+          ],
+          ar: [
+            { code: "TR 1123-1", name: "مقياس لزوجة ستورمر" }
+          ],
+          ru: [
+            { code: "TR 1123-1", name: "Вискозиметр Стормера" }
+          ]
+        },
+        docFiles: { en: "TR 1123-1斯托默粘度计产品介绍.doc", zh: "TR 1123-1斯托默粘度计产品介绍.doc" }, pdfFiles: { en: "TR 1123-1S斯托默粘度计产品介绍.pdf", zh: "TR 1123-1S斯托默粘度计产品介绍.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 1001",
+        name: { zh: "蔡恩杯（Zahn杯）", en: "Zahn Cup", es: "Copa Zahn", ar: "كوب زان", ru: "Чашка Цана (Zahn Cup)" },
+        category: "raw", categoryName: { zh: "原料性能检验", en: "Raw Material Testing", es: "Pruebas de Materias Primas", ar: "اختبار خصائص المواد الخام", ru: "Испытание сырьевых материалов" },
+        description: { zh: "TR 1001 蔡恩杯（Zahn杯）是测量涂料、油墨等流体流出时间的标准仪器，通过测量流体从标准孔径流出的时间（秒），对照换算表得出动力粘度值。广泛应用于涂料检测行业，是油漆涂料粘度测量的常规仪器。", en: "The TR 1001 Zahn Cup is a standard instrument for measuring the efflux time of coatings, inks and other fluids. By measuring the time (seconds) for fluid to flow through a standard orifice, the kinematic viscosity can be calculated using conversion tables. Widely used in coating testing industry.", es: "La TR 1001 Copa Zahn es un instrumento estándar para medir el tiempo de efflux de recubrimientos, tintas y otros fluidos. Midiendo el tiempo (segundos) que tarda el fluido en fluir a través de un orificio estándar, se puede obtener la viscosidad cinemática mediante tablas de conversión. Ampliamente utilizada en la industria de detección de recubrimientos.", ar: "TR 1001 كوب زان هو أداة قياسية لقياس زمن التدفق للطلاءات والحبر والسوائل الأخرى. من خلال قياس الوقت (بالثواني) الذي يستغرقه السائل للتدفق عبر فتحة قياسية، يمكن الحصول على اللزوجة الحركية باستخدام جداول التحويل. يُستخدم على نطاق واسع في صناعة اختبار الطلاء.", ru: "TR 1001 Чашка Цана — это стандартный прибор для измерения времени истечения покрытий, чернил и других жидкостей. Измеряя время (в секундах), за которое жидкость вытекает через стандартное отверстие, и используя таблицу пересчёта, получают кинематическую вязкость. Широко применяется в индустрии лакокрасочных покрытий." },
+        specs: {
+          zh: [
+            ["类型", "蔡恩杯（Zahn Cup）"],
+            ["材质", "不锈钢"],
+            ["适用范围", "涂料、油墨等流体"],
+            ["测量方式", "流出时间法"],
+            ["换算", "对照换算表得出动力粘度"]
+          ],
+          en: [
+            ["Type", "Zahn Cup"],
+            ["Material", "Stainless steel"],
+            ["Application", "Coatings, inks and other fluids"],
+            ["Measurement", "Efflux time method"],
+            ["Conversion", "Kinematic viscosity via conversion table"]
+          ],
+          es: [
+            ["Tipo", "Copa Zahn"],
+            ["Material", "Acero inoxidable"],
+            ["Ámbito de aplicación", "Recubrimientos, tintas y otros fluidos"],
+            ["Método de medición", "Método de tiempo de efflux"],
+            ["Conversión", "Viscosidad cinemática mediante tabla de conversión"]
+          ],
+          ar: [
+            ["النوع", "كوب زان"],
+            ["المادة", "فولاذ مقاوم للصدأ"],
+            ["نطاق التطبيق", "الطلاءات والحبر والسوائل الأخرى"],
+            ["طريقة القياس", "طريقة زمن التدفق"],
+            ["التحويل", "اللزوجة الحركية عبر جدول التحويل"]
+          ],
+          ru: [
+            ["Тип", "Чашка Цана (Zahn Cup)"],
+            ["Материал", "Нержавеющая сталь"],
+            ["Область применения", "Покрытия, чернила и другие жидкости"],
+            ["Метод измерения", "Метод времени истечения"],
+            ["Пересчёт", "Кинематическая вязкость по таблице пересчёта"]
+          ]
+        },
+        features: {
+          zh: [
+            "标准蔡恩杯设计",
+            "不锈钢材质，耐用防腐",
+            "操作简便快捷",
+            "广泛应用于涂料检测行业",
+            "油漆涂料粘度测量常规仪器"
+          ],
+          en: [
+            "Standard Zahn cup design",
+            "Stainless steel, durable and corrosion-resistant",
+            "Simple and fast operation",
+            "Widely used in coating testing industry",
+            "Standard instrument for paint coating viscosity measurement"
+          ],
+          es: [
+            "Diseño estándar de copa Zahn",
+            "Acero inoxidable, duradero y resistente a la corrosión",
+            "Operación sencilla y rápida",
+            "Ampliamente utilizada en la industria de detección de recubrimientos",
+            "Instrumento convencional para medición de viscosidad de pintura"
+          ],
+          ar: [
+            "تصميم كوب زان القياسي",
+            "فولاذ مقاوم للصدأ، متين ومقاوم للتآكل",
+            "تشغيل بسيط وسريع",
+            "يُستخدم على نطاق واسع في صناعة اختبار الطلاء",
+            "أداة قياسية لقياس لزوجة الدهانات"
+          ],
+          ru: [
+            "Стандартный дизайн чашки Цана",
+            "Нержавеющая сталь, долговечная и коррозионностойкая",
+            "Простое и быстрое управление",
+            "Широко применяется в индустрии лакокрасочных покрытий",
+            "Стандартный прибор для измерения вязкости красок и покрытий"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 1001", name: "蔡恩杯（Zahn杯）" }
+          ],
+          en: [
+            { code: "TR 1001", name: "Zahn Cup" }
+          ],
+          es: [
+            { code: "TR 1001", name: "Copa Zahn" }
+          ],
+          ar: [
+            { code: "TR 1001", name: "كوب زان" }
+          ],
+          ru: [
+            { code: "TR 1001", name: "Чашка Цана (Zahn Cup)" }
+          ]
+        },
+        docFiles: { en: "TR 1001蔡恩杯.doc", zh: "TR 1001蔡恩杯.doc" }, pdfFiles: { en: "", zh: "" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 5206",
+        name: { zh: "落球冲击仪", en: "Ball Drop Impact Tester", es: "Ensayador de Impacto por Caída de Bola", ar: "جهاز اختبار الصدمة بسقوط الكرة", ru: "Ударный тестер падающим шариком" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5206 落球冲击仪用于测定涂层抵抗冲击的能力，通过不同重量的钢球从指定高度自由落下冲击涂层表面，观察涂层破坏情况来评价其抗冲击性能。符合GB/T等相关国家标准。", en: "The TR 5206 Ball Drop Impact Tester is used to determine coating resistance to impact by dropping steel balls of different weights from specified heights onto the coating surface and observing damage to evaluate impact resistance. Conforms to GB/T and other national standards.", es: "El TR 5206 Ensayador de Impacto por Caída de Bola se utiliza para determinar la resistencia al impacto de recubrimientos, dejando caer bolas de acero de diferentes pesos desde alturas especificadas sobre la superficie del recubrimiento y observando el daño para evaluar la resistencia al impacto. Conforme a GB/T y otras normas nacionales relevantes.", ar: "TR 5206 جهاز اختبار الصدمة بسقوط الكرة يُستخدم لتحديد مقاومة الطلاء للصدمات، من خلال إسقاط كرات فولاذية بأوزان مختلفة من ارتفاعات محددة على سطح الطلاء ومراقبة تلف الطلاء لتقييم مقاومة الصدمة. يتوافق مع GB/T والمعايير الوطنية الأخرى ذات الصلة.", ru: "TR 5206 Ударный тестер падающим шариком применяется для определения стойкости покрытий к удару, путём сбрасывания стальных шариков различной массы с заданной высоты на поверхность покрытия и наблюдения за разрушением покрытия для оценки его ударной стойкости. Соответствует GB/T и другим соответствующим национальным стандартам." },
+        specs: {
+          zh: [
+            ["测试方法", "落球冲击法"],
+            ["适用标准", "GB/T 相关标准"],
+            ["用途", "测定涂层抗冲击性能"]
+          ],
+          en: [
+            ["Test Method", "Ball drop impact"],
+            ["Standards", "GB/T relevant standards"],
+            ["Application", "Coating impact resistance testing"]
+          ],
+          es: [
+            ["Método de prueba", "Método de impacto por caída de bola"],
+            ["Normas aplicables", "Normas GB/T relevantes"],
+            ["Aplicación", "Determinación de la resistencia al impacto de recubrimientos"]
+          ],
+          ar: [
+            ["طريقة الاختبار", "طريقة الصدمة بسقوط الكرة"],
+            ["المعايير القابلة للتطبيق", "معايير GB/T ذات الصلة"],
+            ["الاستخدام", "تحديد مقاومة الصدمة للطلاء"]
+          ],
+          ru: [
+            ["Метод испытания", "Метод падающего шарика"],
+            ["Применимые стандарты", "Соответствующие стандарты GB/T"],
+            ["Назначение", "Определение ударной стойкости покрытий"]
+          ]
+        },
+        features: {
+          zh: [
+            "落球法测试，操作简便",
+            "适用于多种涂层检测",
+            "符合相关国家标准",
+            "结构稳定可靠"
+          ],
+          en: [
+            "Ball drop method, easy to operate",
+            "Suitable for various coating testing",
+            "Conforms to relevant national standards",
+            "Stable and reliable structure"
+          ],
+          es: [
+            "Prueba por caída de bola, operación sencilla",
+            "Aplicable a varios tipos de detección de recubrimientos",
+            "Conforme a normas nacionales relevantes",
+            "Estructura estable y confiable"
+          ],
+          ar: [
+            "اختبار طريقة سقوط الكرة، تشغيل بسيط",
+            "مناسب لمختلف اختبارات الطلاء",
+            "يتوافق مع المعايير الوطنية ذات الصلة",
+            "هيكل مستقر وموثوق"
+          ],
+          ru: [
+            "Испытание методом падающего шарика, простое управление",
+            "Подходит для различных испытаний покрытий",
+            "Соответствует соответствующим национальным стандартам",
+            "Стабильная и надёжная конструкция"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 5206", name: "落球冲击仪" }
+          ],
+          en: [
+            { code: "TR 5206", name: "Ball Drop Impact Tester" }
+          ],
+          es: [
+            { code: "TR 5206", name: "Ensayador de Impacto por Caída de Bola" }
+          ],
+          ar: [
+            { code: "TR 5206", name: "جهاز اختبار الصدمة بسقوط الكرة" }
+          ],
+          ru: [
+            { code: "TR 5206", name: "Ударный тестер падающим шариком" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 5206 落球冲击仪产品资料.pdf", zh: "TR 5206 落球冲击仪产品资料.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 5310",
+        name: { zh: "落砂耐磨试验仪", en: "Falling Sand Abrasion Tester", es: "Ensayador de Abrasión por Caída de Arena", ar: "جهاز اختبار التآكل بسقوط الرمل", ru: "Тестер истирания падающим песком" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5310 落砂耐磨试验仪用于测定涂层耐磨性能，通过标准砂粒从一定高度落下冲刷涂层表面，以涂层磨损程度评价其耐磨性。符合GB/T标准，结构稳定可靠。", en: "The TR 5310 Falling Sand Abrasion Tester is used to determine coating abrasion resistance by dropping standard sand particles from a certain height onto the coating surface and evaluating abrasion degree. Conforms to GB/T standards with stable and reliable structure.", es: "El TR 5310 Ensayador de Abrasión por Caída de Arena se utiliza para determinar la resistencia a la abrasión de recubrimientos, dejando caer partículas de arena estándar desde una cierta altura sobre la superficie del recubrimiento y evaluando el grado de desgaste. Conforme a la norma GB/T, estructura estable y confiable.", ar: "TR 5310 جهاز اختبار التآكل بسقوط الرمل يُستخدم لتحديد مقاومة التآكل للطلاء، من خلال إسقاط جزيئات رملية قياسية من ارتفاع معين على سطح الطلاء وتقييم درجة تآكل الطلاء. يتوافق مع معيار GB/T، هيكل مستقر وموثوق.", ru: "TR 5310 Тестер истирания падающим песком применяется для определения износостойкости покрытий, путём сбрасывания стандартных песчинок с определённой высоты на поверхность покрытия и оценки степени износа покрытия. Соответствует стандарту GB/T, стабильная и надёжная конструкция." },
+        specs: {
+          zh: [
+            ["测试方法", "落砂法"],
+            ["适用标准", "GB/T 标准"],
+            ["用途", "测定涂层耐磨性能"]
+          ],
+          en: [
+            ["Test Method", "Falling sand method"],
+            ["Standards", "GB/T standards"],
+            ["Application", "Coating abrasion resistance testing"]
+          ],
+          es: [
+            ["Método de prueba", "Método de caída de arena"],
+            ["Normas aplicables", "Norma GB/T"],
+            ["Aplicación", "Determinación de la resistencia a la abrasión de recubrimientos"]
+          ],
+          ar: [
+            ["طريقة الاختبار", "طريقة سقوط الرمل"],
+            ["المعايير القابلة للتطبيق", "معيار GB/T"],
+            ["الاستخدام", "تحديد مقاومة التآكل للطلاء"]
+          ],
+          ru: [
+            ["Метод испытания", "Метод падающего песка"],
+            ["Применимые стандарты", "Стандарт GB/T"],
+            ["Назначение", "Определение износостойкости покрытий"]
+          ]
+        },
+        features: {
+          zh: [
+            "落砂法测试涂层耐磨性",
+            "符合GB/T标准",
+            "结构稳定可靠",
+            "重复性好"
+          ],
+          en: [
+            "Falling sand method for coating abrasion testing",
+            "Conforms to GB/T standards",
+            "Stable and reliable structure",
+            "Good repeatability"
+          ],
+          es: [
+            "Prueba de resistencia a la abrasión por caída de arena",
+            "Conforme a la norma GB/T",
+            "Estructura estable y confiable",
+            "Buena repetibilidad"
+          ],
+          ar: [
+            "اختبار مقاومة التآكل بسقوط الرمل",
+            "يتوافق مع معيار GB/T",
+            "هيكل مستقر وموثوق",
+            "قابلية تكرار جيدة"
+          ],
+          ru: [
+            "Испытание износостойкости покрытий методом падающего песка",
+            "Соответствует стандарту GB/T",
+            "Стабильная и надёжная конструкция",
+            "Хорошая повторяемость"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 5310", name: "落砂耐磨试验仪" }
+          ],
+          en: [
+            { code: "TR 5310", name: "Falling Sand Abrasion Tester" }
+          ],
+          es: [
+            { code: "TR 5310", name: "Ensayador de Abrasión por Caída de Arena" }
+          ],
+          ar: [
+            { code: "TR 5310", name: "جهاز اختبار التآكل بسقوط الرمل" }
+          ],
+          ru: [
+            { code: "TR 5310", name: "Тестер истирания падающим песком" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 5310 落砂耐磨试验仪产品资料.pdf", zh: "TR 5310 落砂耐磨试验仪产品资料.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 5311/1",
+        name: { zh: "耐划痕测试仪", en: "Scratch Resistance Tester", es: "Ensayador de Resistencia al Rayado", ar: "جهاز اختبار مقاومة الخدش", ru: "Тестер устойчивости к царапанию" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5311/1 耐划痕测试仪用于测定涂层抵抗划痕的能力，通过金刚石针头或钢针在涂层表面划动，测量涂层被划破所需的力值，评价涂层硬度及耐划痕性能。适用于多种涂层材料的检测。", en: "The TR 5311/1 Scratch Resistance Tester is used to determine coating scratch resistance by moving a diamond or steel needle across the coating surface and measuring the force required to scratch through. Suitable for various coating materials.", es: "El TR 5311/1 Ensayador de Resistencia al Rayado se utiliza para determinar la capacidad de resistencia al rayado de recubrimientos, moviendo una aguja de diamante o acero sobre la superficie del recubrimiento y midiendo la fuerza requerida para rayar. Aplicable a varios materiales de recubrimiento.", ar: "TR 5311/1 جهاز اختبار مقاومة الخدش يُستخدم لتحديد قدرة الطلاء على مقاومة الخدش، من خلال تحريك إبرة ماسية أو فولاذية على سطح الطلاء وقياس القوة المطلوبة لخدش الطلاء. مناسب لمختلف مواد الطلاء.", ru: "TR 5311/1 Тестер устойчивости к царапанию применяется для определения способности покрытий сопротивляться царапинам, путём перемещения алмазной или стальной иглы по поверхности покрытия и измерения усилия, необходимого для процарапывания покрытия. Подходит для различных материалов покрытий." },
+        specs: {
+          zh: [
+            ["测试原理", "划痕法"],
+            ["用途", "测定涂层耐划痕能力"],
+            ["适用材料", "多种涂层材料"]
+          ],
+          en: [
+            ["Test Principle", "Scratch method"],
+            ["Application", "Coating scratch resistance testing"],
+            ["Materials", "Various coating materials"]
+          ],
+          es: [
+            ["Principio de prueba", "Método de rayado"],
+            ["Aplicación", "Determinación de la resistencia al rayado de recubrimientos"],
+            ["Materiales aplicables", "Varios materiales de recubrimiento"]
+          ],
+          ar: [
+            ["مبدأ الاختبار", "طريقة الخدش"],
+            ["الاستخدام", "تحديد قدرة مقاومة الخدش للطلاء"],
+            ["المواد القابلة للتطبيق", "مختلف مواد الطلاء"]
+          ],
+          ru: [
+            ["Принцип испытания", "Метод царапания"],
+            ["Назначение", "Определение устойчивости покрытий к царапанию"],
+            ["Применимые материалы", "Различные материалы покрытий"]
+          ]
+        },
+        features: {
+          zh: [
+            "精确测定涂层硬度",
+            "操作简便",
+            "适用于多种涂层材料",
+            "评价客观准确"
+          ],
+          en: [
+            "Accurate coating hardness measurement",
+            "Easy operation",
+            "Suitable for various coating materials",
+            "Objective and accurate evaluation"
+          ],
+          es: [
+            "Medición precisa de la dureza del recubrimiento",
+            "Operación sencilla",
+            "Aplicable a varios materiales de recubrimiento",
+            "Evaluación objetiva y precisa"
+          ],
+          ar: [
+            "قياس دقيق لصلابة الطلاء",
+            "تشغيل بسيط",
+            "مناسب لمختلف مواد الطلاء",
+            "تقييم موضوعي ودقيق"
+          ],
+          ru: [
+            "Точное измерение твёрдости покрытия",
+            "Простое управление",
+            "Подходит для различных материалов покрытий",
+            "Объективная и точная оценка"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 5311/1", name: "耐划痕测试仪" }
+          ],
+          en: [
+            { code: "TR 5311/1", name: "Scratch Resistance Tester" }
+          ],
+          es: [
+            { code: "TR 5311/1", name: "Ensayador de Resistencia al Rayado" }
+          ],
+          ar: [
+            { code: "TR 5311/1", name: "جهاز اختبار مقاومة الخدش" }
+          ],
+          ru: [
+            { code: "TR 5311/1", name: "Тестер устойчивости к царапанию" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 5311_1 耐划痕测试仪产品资料.pdf", zh: "TR 5311_1 耐划痕测试仪产品资料.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 5402",
+        name: { zh: "分光测色仪", en: "Spectrophotometer", es: "Espectrofotómetro", ar: "مقياس الطيف الضوئي", ru: "Спектрофотометр" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5402 分光测色仪用于精确测量颜色和色差，采用分光光度原理，能够测量样品的光谱反射率，进而计算各种色度指标。广泛应用于涂料、油墨、塑料、纺织等行业，满足颜色质量控制需求。", en: "The TR 5402 Spectrophotometer is used for precise color and color difference measurement using spectrophotometric principles, measuring spectral reflectance of samples to calculate various chromaticity indicators. Widely used in coatings, inks, plastics, textiles industries.", es: "El TR 5402 Espectrofotómetro se utiliza para la medición precisa del color y la diferencia de color, utilizando el principio de espectrofotometría, midiendo la reflectancia espectral de las muestras para calcular varios indicadores cromáticos. Ampliamente utilizado en industrias de recubrimientos, tintas, plásticos, textiles, etc.", ar: "TR 5402 مقياس الطيف الضوئي يُستخدم لقياس اللون وفرق اللون بدقة، باستخدام مبدأ الطيف الضوئي، قياس الانعكاسية الطيفية للعينات لحساب مختلف مؤشرات اللون. يُستخدم على نطاق واسع في صناعات الطلاء والحبر والبلاستيك والمنسوجات.", ru: "TR 5402 Спектрофотометр применяется для точного измерения цвета и цветовой разницы с использованием принципа спектрофотометрии, измеряя спектральное отражение образцов для расчёта различных колориметрических показателей. Широко применяется в лакокрасочной, типографической, пластмассовой и текстильной промышленности." },
+        specs: {
+          zh: [
+            ["测量原理", "分光光度法"],
+            ["测量项目", "颜色、色差、光谱反射率等"],
+            ["应用行业", "涂料、油墨、塑料、纺织等"],
+            ["色空间", "多种色空间支持"]
+          ],
+          en: [
+            ["Measurement Principle", "Spectrophotometry"],
+            ["Measurements", "Color, color difference, spectral reflectance, etc."],
+            ["Industries", "Coatings, inks, plastics, textiles, etc."],
+            ["Color Spaces", "Multiple color space support"]
+          ],
+          es: [
+            ["Principio de medición", "Espectrofotometría"],
+            ["Elementos de medición", "Color, diferencia de color, reflectancia espectral, etc."],
+            ["Industrias de aplicación", "Recubrimientos, tintas, plásticos, textiles, etc."],
+            ["Espacios de color", "Soporte de múltiples espacios de color"]
+          ],
+          ar: [
+            ["مبدأ القياس", "الطيف الضوئي"],
+            ["عناصر القياس", "اللون وفرق اللون والانعكاسية الطيفية وغيرها"],
+            ["صناعات التطبيق", "الطلاء والحبر والبلاستيك والمنسوجات وغيرها"],
+            ["مساحات اللون", "دعم مساحات لون متعددة"]
+          ],
+          ru: [
+            ["Принцип измерения", "Спектрофотометрия"],
+            ["Измеряемые параметры", "Цвет, цветовая разница, спектральное отражение и т.д."],
+            ["Отрасли применения", "Лакокрасочная, типографическая, пластмассовая, текстильная и др."],
+            ["Цветовые пространства", "Поддержка множества цветовых пространств"]
+          ]
+        },
+        features: {
+          zh: [
+            "高精度颜色测量",
+            "多种色空间支持",
+            "适用于涂料、油墨、塑料等行业",
+            "满足颜色质量控制需求"
+          ],
+          en: [
+            "High precision color measurement",
+            "Multiple color space support",
+            "Used in coatings, inks, plastics industries",
+            "Meets color quality control requirements"
+          ],
+          es: [
+            "Medición de color de alta precisión",
+            "Soporte de múltiples espacios de color",
+            "Utilizado en industrias de recubrimientos, tintas, plásticos",
+            "Satisface las necesidades de control de calidad del color"
+          ],
+          ar: [
+            "قياس لون عالي الدقة",
+            "دعم مساحات لون متعددة",
+            "يُستخدم في صناعات الطلاء والحبر والبلاستيك",
+            "يلبي متطلبات التحكم في جودة اللون"
+          ],
+          ru: [
+            "Высокоточный измеритель цвета",
+            "Поддержка множества цветовых пространств",
+            "Применяется в лакокрасочной, типографической, пластмассовой промышленности",
+            "Удовлетворяет требованиям контроля качества цвета"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 5402", name: "分光测色仪" }
+          ],
+          en: [
+            { code: "TR 5402", name: "Spectrophotometer" }
+          ],
+          es: [
+            { code: "TR 5402", name: "Espectrofotómetro" }
+          ],
+          ar: [
+            { code: "TR 5402", name: "مقياس الطيف الضوئي" }
+          ],
+          ru: [
+            { code: "TR 5402", name: "Спектрофотометр" }
+          ]
+        },
+        docFiles: { en: "TR 5402 分光测色仪产品资料.doc", zh: "TR 5402 分光测色仪产品资料.doc" }, pdfFiles: { en: "TR 5402 分光测色仪产品资料.pdf", zh: "TR 5402 分光测色仪产品资料.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 5464-7",
+        name: { zh: "涂层检测仪器", en: "Coating Testing Instrument", es: "Instrumento de Detección de Recubrimientos", ar: "جهاز فحص الطلاء", ru: "Прибор для контроля покрытий" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 5464-7 涂层检测仪器，用于测定涂层各项性能指标，符合相关检测标准，精度高，稳定性好。", en: "TR 5464-7 Coating Testing Instrument for measuring various coating performance indicators, conforming to relevant testing standards with high precision and good stability.", es: "TR 5464-7 Instrumento de Detección de Recubrimientos, utilizado para determinar varios indicadores de rendimiento de recubrimientos, conforme a normas de detección relevantes, alta precisión y buena estabilidad.", ar: "TR 5464-7 جهاز فحص الطلاء، يُستخدم لقياس مختلف مؤشرات أداء الطلاء، يتوافق مع معايير الفحص ذات الصلة، دقة عالية واستقرار جيد.", ru: "TR 5464-7 Прибор для контроля покрытий, применяется для определения различных показателей свойств покрытий, соответствует соответствующим стандартам контроля, высокая точность и хорошая стабильность." },
+        specs: {
+          zh: [
+            ["符合标准", "相关检测标准"],
+            ["精度", "高"],
+            ["稳定性", "良好"]
+          ],
+          en: [
+            ["Standards", "Relevant testing standards"],
+            ["Accuracy", "High"],
+            ["Stability", "Good"]
+          ],
+          es: [
+            ["Normas aplicadas", "Normas de detección relevantes"],
+            ["Precisión", "Alta"],
+            ["Estabilidad", "Buena"]
+          ],
+          ar: [
+            ["المعايير المتوافقة", "معايير الفحص ذات الصلة"],
+            ["الدقة", "عالية"],
+            ["الاستقرار", "جيد"]
+          ],
+          ru: [
+            ["Соответствующие стандарты", "Соответствующие стандарты контроля"],
+            ["Точность", "Высокая"],
+            ["Стабильность", "Хорошая"]
+          ]
+        },
+        features: {
+          zh: [
+            "符合相关检测标准",
+            "精度高，稳定性好"
+          ],
+          en: [
+            "Conforms to testing standards",
+            "High precision, good stability"
+          ],
+          es: [
+            "Conforme a normas de detección relevantes",
+            "Alta precisión, buena estabilidad"
+          ],
+          ar: [
+            "يتوافق مع معايير الفحص ذات الصلة",
+            "دقة عالية واستقرار جيد"
+          ],
+          ru: [
+            "Соответствует соответствующим стандартам контроля",
+            "Высокая точность, хорошая стабильность"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 5464-7", name: "涂层检测仪器" }
+          ],
+          en: [
+            { code: "TR 5464-7", name: "Coating Testing Instrument" }
+          ],
+          es: [
+            { code: "TR 5464-7", name: "Instrumento de Detección de Recubrimientos" }
+          ],
+          ar: [
+            { code: "TR 5464-7", name: "جهاز فحص الطلاء" }
+          ],
+          ru: [
+            { code: "TR 5464-7", name: "Прибор для контроля покрытий" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 5464-7 产品资料.pdf", zh: "TR 5464-7 产品资料.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 2200",
+        name: { zh: "防爆型篮式砂磨机", en: "Explosion-Proof Basket Mill", es: "Molino de Cesta Antiexplosivo", ar: "طاحونة سلة مانعة للانفجار", ru: "Взрывозащищённая корзиночная мельница" },
+        category: "grind", categoryName: { zh: "分散/搅拌/研磨", en: "Dispersion / Mixing / Grinding", es: "Dispersión / Mezcla / Molienda", ar: "التشتيت / الخلط / الطحن", ru: "Диспергирование / Смешивание / Измельчение" },
+        description: { zh: "TR 2200 防爆型篮式砂磨机是用于涂料、油墨等行业颜料研磨分散的专用设备。篮式研磨结构，研磨效率高；防爆设计，安全可靠；适用于溶剂型涂料的研磨分散加工。", en: "The TR 2200 Explosion-Proof Basket Mill is a specialized equipment for pigment grinding and dispersing in coatings and inks industries. Basket grinding structure with high efficiency, explosion-proof design for safety and reliability, suitable for solvent-based coating grinding and dispersing.", es: "El TR 2200 Molino de Cesta Antiexplosivo es un equipo especializado para la molienda y dispersión de pigmentos en industrias de recubrimientos y tintas. Estructura de molienda tipo cesta, alta eficiencia; diseño antiexplosivo, seguro y confiable; aplicable al procesamiento de molienda y dispersión de recubrimientos base solvente.", ar: "TR 2200 طاحونة سلة مانعة للانفجار هي معدات متخصصة لطحن وتispersing الأصباغ في صناعات الطلاء والحبر. هيكل طحن بالسلة، كفاءة عالية؛ تصميم مانعة للانفجار، آمنة وموثوقة؛ مناسبة لطحن وتispersing الطلاءات القائمة على المذيبات.", ru: "TR 2200 Взрывозащищённая корзиночная мельница — это специализированное оборудование для измельчения и диспергирования пигментов в лакокрасочной и типографической промышленности. Корзиночная конструкция измельчения, высокая эффективность; взрывозащищённый дизайн, безопасность и надёжность; подходит для измельчения и диспергирования покрытий на основе растворителей." },
+        specs: {
+          zh: [
+            ["类型", "防爆型篮式砂磨机"],
+            ["研磨结构", "篮式研磨"],
+            ["安全性", "防爆设计"],
+            ["适用材料", "溶剂型涂料、油墨"]
+          ],
+          en: [
+            ["Type", "Explosion-proof basket mill"],
+            ["Grinding Structure", "Basket type"],
+            ["Safety", "Explosion-proof design"],
+            ["Application", "Solvent-based coatings, inks"]
+          ],
+          es: [
+            ["Tipo", "Molino de cesta antiexplosivo"],
+            ["Estructura de molienda", "Tipo cesta"],
+            ["Seguridad", "Diseño antiexplosivo"],
+            ["Materiales aplicables", "Recubrimientos base solvente, tintas"]
+          ],
+          ar: [
+            ["النوع", "طاحونة سلة مانعة للانفجار"],
+            ["هيكل الطحن", "نوع السلة"],
+            ["الأمان", "تصميم مانعة للانفجار"],
+            ["المواد القابلة للتطبيق", "طلاءات قائمة على المذيبات، حبر"]
+          ],
+          ru: [
+            ["Тип", "Взрывозащищённая корзиночная мельница"],
+            ["Конструкция измельчения", "Корзиночного типа"],
+            ["Безопасность", "Взрывозащищённый дизайн"],
+            ["Применимые материалы", "Покрытия на основе растворителей, чернила"]
+          ]
+        },
+        features: {
+          zh: [
+            "篮式研磨结构，效率高",
+            "防爆设计，安全可靠",
+            "适用于溶剂型涂料",
+            "研磨分散效果好"
+          ],
+          en: [
+            "Basket grinding structure, high efficiency",
+            "Explosion-proof design, safe and reliable",
+            "Suitable for solvent-based coatings",
+            "Excellent grinding and dispersing effect"
+          ],
+          es: [
+            "Estructura de molienda tipo cesta, alta eficiencia",
+            "Diseño antiexplosivo, seguro y confiable",
+            "Aplicable a recubrimientos base solvente",
+            "Excelente efecto de molienda y dispersión"
+          ],
+          ar: [
+            "هيكل طحن بالسلة، كفاءة عالية",
+            "تصميم مانعة للانفجار، آمنة وموثوقة",
+            "مناسبة للطلاءات القائمة على المذيبات",
+            "تأثير طحن وتispersing ممتاز"
+          ],
+          ru: [
+            "Корзиночная конструкция измельчения, высокая эффективность",
+            "Взрывозащищённый дизайн, безопасность и надёжность",
+            "Подходит для покрытий на основе растворителей",
+            "Отличный эффект измельчения и диспергирования"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 2200", name: "防爆型篮式砂磨机" }
+          ],
+          en: [
+            { code: "TR 2200", name: "Explosion-Proof Basket Mill" }
+          ],
+          es: [
+            { code: "TR 2200", name: "Molino de Cesta Antiexplosivo" }
+          ],
+          ar: [
+            { code: "TR 2200", name: "طاحونة سلة مانعة للانفجار" }
+          ],
+          ru: [
+            { code: "TR 2200", name: "Взрывозащищённая корзиночная мельница" }
+          ]
+        },
+        docFiles: { en: "TR 2200 防爆型篮式砂磨机.doc", zh: "TR 2200 防爆型篮式砂磨机.doc" }, pdfFiles: { en: "", zh: "" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 6302",
+        name: { zh: "腐蚀划痕器", en: "Corrosion Scratch Tester", es: "Ensayador de Rayado para Corrosión", ar: "جهاز خدش التآكل", ru: "Прибор для испытания коррозии царапанием" },
+        category: "film", categoryName: { zh: "成膜后检验", en: "Coating Testing", es: "Pruebas de Recubrimientos", ar: "اختبار الطلاء", ru: "Испытание покрытий" },
+        description: { zh: "TR 6302 腐蚀划痕器用于测定涂层耐腐蚀性能，通过在涂层表面制造标准划痕，然后进行盐雾等腐蚀试验，观察划痕处涂层的腐蚀蔓延情况，评价涂层对金属基材的保护性能。", en: "The TR 6302 Corrosion Scratch Tester is used for determining coating corrosion resistance by creating standard scratches on the coating surface, then conducting salt spray or other corrosion tests to observe corrosion spread at the scratch to evaluate coating protection performance.", es: "El TR 6302 Ensayador de Rayado para Corrosión se utiliza para determinar la resistencia a la corrosión de recubrimientos, creando rayados estándar en la superficie del recubrimiento y luego realizando pruebas de corrosión como niebla salina, observando la propagación de la corrosión en los rayados para evaluar el rendimiento de protección del recubrimiento sobre el metal base.", ar: "TR 6302 جهاز خدش التآكل يُستخدم لتحديد مقاومة التآكل للطلاء، من خلال إنشاء خدوش قياسية على سطح الطلاء، ثم إجراء اختبارات تآكل مثل رذاذ الملح، ومراقبة انتشار التآكل عند الخدوش لتقييم أداء حماية الطلاء للمعدن الأساسي.", ru: "TR 6302 Прибор для испытания коррозии царапанием применяется для определения коррозионной стойкости покрытий, путём создания стандартных царапин на поверхности покрытия и последующего проведения коррозионных испытаний, таких как соляной туман, наблюдения за распространением коррозии на царапинах для оценки защитных свойств покрытия по отношению к металлической основе." },
+        specs: {
+          zh: [
+            ["测试方法", "划痕后腐蚀试验"],
+            ["用途", "测定涂层耐腐蚀性能"],
+            ["适用对象", "金属涂层"]
+          ],
+          en: [
+            ["Test Method", "Corrosion test after scratching"],
+            ["Application", "Coating corrosion resistance testing"],
+            ["対象", "Metal coatings"]
+          ],
+          es: [
+            ["Método de prueba", "Prueba de corrosión después de rayado"],
+            ["Aplicación", "Determinación de la resistencia a la corrosión de recubrimientos"],
+            ["Objeto aplicable", "Recubrimientos metálicos"]
+          ],
+          ar: [
+            ["طريقة الاختبار", "اختبار التآكل بعد الخدش"],
+            ["الاستخدام", "تحديد مقاومة التآكل للطلاء"],
+            ["الكائن القابل للتطبيق", "طلاءات المعادن"]
+          ],
+          ru: [
+            ["Метод испытания", "Коррозионное испытание после царапания"],
+            ["Назначение", "Определение коррозионной стойкости покрытий"],
+            ["Применимые объекты", "Металлические покрытия"]
+          ]
+        },
+        features: {
+          zh: [
+            "划痕后测试腐蚀性能",
+            "精确控制划痕深度",
+            "适用于金属涂层检测",
+            "评价客观准确"
+          ],
+          en: [
+            "Test corrosion after scratching",
+            "Precise scratch depth control",
+            "Suitable for metal coating testing",
+            "Objective and accurate evaluation"
+          ],
+          es: [
+            "Prueba de rendimiento de corrosión después de rayado",
+            "Control preciso de la profundidad del rayado",
+            "Aplicable a la detección de recubrimientos metálicos",
+            "Evaluación objetiva y precisa"
+          ],
+          ar: [
+            "اختبار أداء التآكل بعد الخدش",
+            "تحكم دقيق في عمق الخدش",
+            "مناسب لفحص طلاءات المعادن",
+            "تقييم موضوعي ودقيق"
+          ],
+          ru: [
+            "Испытание коррозионных свойств после царапания",
+            "Точный контроль глубины царапины",
+            "Подходит для испытания металлических покрытий",
+            "Объективная и точная оценка"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 6302", name: "腐蚀划痕器" }
+          ],
+          en: [
+            { code: "TR 6302", name: "Corrosion Scratch Tester" }
+          ],
+          es: [
+            { code: "TR 6302", name: "Ensayador de Rayado para Corrosión" }
+          ],
+          ar: [
+            { code: "TR 6302", name: "جهاز خدش التآكل" }
+          ],
+          ru: [
+            { code: "TR 6302", name: "Прибор для испытания коррозии царапанием" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 6302 腐蚀划痕器.pdf", zh: "TR 6302 腐蚀划痕器.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "复合式盐干湿",
+        name: { zh: "复合式盐干湿试验机", en: "Combined Salt Spray Tester", es: "Cámara de Ensayo de Niebla Salina, Secado y Humedad Combinados", ar: "جهاز اختبار الضباب الملحي والتجفيف والرطوبة المركب", ru: "Комбинированная камера солевого тумана, сушки и влажности" },
+        category: "aging", categoryName: { zh: "环境老化", en: "Environmental Aging", es: "Envejecimiento Ambiental", ar: "الشيخوخة البيئية", ru: "Ускоренное старение" },
+        description: { zh: "复合式盐干湿试验机用于测试涂层耐盐雾腐蚀性能，集盐雾、干燥、湿热多种试验模式于一体，精确控制温湿度，能够模拟海洋等恶劣环境对涂层的腐蚀作用。适用于海洋环境涂层、汽车配件涂层等检测。", en: "The Combined Salt Spray Tester is used for testing coating salt spray corrosion resistance, integrating salt spray, dry, and wet heat test modes with precise temperature and humidity control to simulate marine and other harsh environments on coatings. Suitable for marine environment coatings, automotive parts coatings, etc.", es: "La Cámara de Ensayo de Niebla Salina, Secado y Humedad Combinados se utiliza para probar la resistencia a la corrosión por niebla salina de los recubrimientos, integrando múltiples modos de ensayo de niebla salina, secado y humedad, con control preciso de temperatura y humedad, capaz de simular la corrosión de recubrimientos en ambientes marinos hostiles. Aplicable a la detección de recubrimientos de ambientes marinos y recubrimientos de piezas de automóviles.", ar: "جهاز اختبار الضباب الملحي والتجفيف والرطوبة المركب يُستخدم لاختبار مقاومة التآكل بالضباب الملحي للطلاءات، يجمع بين أوضاع اختبار متعددة تشمل الضباب الملحي والتجفيف والرطوبة، مع تحكم دقيق في درجة الحرارة والرطوبة، قادر على محاكاة تأثير التآكل للطلاءات في البيئات البحرية القاسية. مناسب لفحص طلاءات البيئات البحرية وطلاءات قطع غيار السيارات.", ru: "Комбинированная камера солевого тумана, сушки и влажности применяется для испытания стойкости покрытий к коррозии солевым туманом, объединяет несколько режимов испытаний: солевой туман, сушка, горячая влажность, с точным контролем температуры и влажности, способна имитировать коррозионное воздействие на покрытия в суровых морских средах. Подходит для испытания покрытий морской среды и покрытий автозапчастей." },
+        specs: {
+          zh: [
+            ["试验模式", "盐雾、干燥、湿热"],
+            ["温湿度控制", "精确控制"],
+            ["适用领域", "海洋环境涂层、汽车配件涂层"],
+            ["模拟环境", "盐雾腐蚀环境"]
+          ],
+          en: [
+            ["Test Modes", "Salt spray, dry, wet heat"],
+            ["Temp/Humidity Control", "Precise"],
+            ["Applications", "Marine environment coatings, automotive parts coatings"],
+            ["Simulated Environment", "Salt spray corrosion environment"]
+          ],
+          es: [
+            ["Modos de ensayo", "Niebla salina, secado, humedad"],
+            ["Control de temperatura/humedad", "Preciso"],
+            ["Campos de aplicación", "Recubrimientos de ambientes marinos, recubrimientos de piezas de automóviles"],
+            ["Ambiente simulado", "Ambiente de corrosión por niebla salina"]
+          ],
+          ar: [
+            ["أوضاع الاختبار", "ضباب ملحي وتجفيف ورطوبة"],
+            ["تحكم درجة الحرارة/الرطوبة", "دقيق"],
+            ["مجالات التطبيق", "طلاءات البيئات البحرية وطلاءات قطع غيار السيارات"],
+            ["البيئة المحاكاة", "بيئة تآكل الضباب الملحي"]
+          ],
+          ru: [
+            ["Режимы испытания", "Солевой туман, сушка, горячая влажность"],
+            ["Контроль температуры/влажности", "Точный"],
+            ["Области применения", "Покрытия морской среды, покрытия автозапчастей"],
+            ["Имитируемая среда", "Среда коррозии солевого тумана"]
+          ]
+        },
+        features: {
+          zh: [
+            "盐雾、干燥、湿热多种试验模式",
+            "精确温湿度控制",
+            "适用于海洋环境涂层测试",
+            "可模拟多种腐蚀环境"
+          ],
+          en: [
+            "Salt spray, dry, wet heat multiple test modes",
+            "Precise temperature and humidity control",
+            "Suitable for marine environment coating testing",
+            "Simulates multiple corrosion environments"
+          ],
+          es: [
+            "Múltiples modos de ensayo de niebla salina, secado y humedad",
+            "Control preciso de temperatura y humedad",
+            "Aplicable a la prueba de recubrimientos de ambientes marinos",
+            "Capaz de simular múltiples ambientes de corrosión"
+          ],
+          ar: [
+            "أوضاع اختبار متعددة تشمل الضباب الملحي والتجفيف والرطوبة",
+            "تحكم دقيق في درجة الحرارة والرطوبة",
+            "مناسب لاختبار طلاءات البيئات البحرية",
+            "قادر على محاكاة بيئات تآكل متعددة"
+          ],
+          ru: [
+            "Несколько режимов испытания: солевой туман, сушка, горячая влажность",
+            "Точный контроль температуры и влажности",
+            "Подходит для испытания покрытий морской среды",
+            "Способность имитировать различные коррозионные среды"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "复合式盐干湿", name: "复合式盐干湿试验机" }
+          ],
+          en: [
+            { code: "Combined Salt Spray", name: "Combined Salt Spray Tester" }
+          ],
+          es: [
+            { code: "Cámara Combinada", name: "Cámara de Ensayo de Niebla Salina, Secado y Humedad Combinados" }
+          ],
+          ar: [
+            { code: "مركب ضباب ملحي", name: "جهاز اختبار الضباب الملحي والتجفيف والرطوبة المركب" }
+          ],
+          ru: [
+            { code: "Комбинированный солевой туман", name: "Комбинированная камера солевого тумана, сушки и влажности" }
+          ]
+        },
+        docFiles: { en: "复合式盐干湿试验机.doc", zh: "复合式盐干湿试验机.doc" }, pdfFiles: { en: "", zh: "" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 6413",
+        name: { zh: "氙灯（风冷）老化试验箱", en: "Xenon Arc Aging Test Chamber", es: "Cámara de Envejecimiento por Lámpara de Xenón (Refrigeración por Aire)", ar: "حجرة اختبار الشيخوخة بضوء زينون (تبريد بالهواء)", ru: "Камера старения с ксеноновой лампой (воздушное охлаждение)" },
+        category: "aging", categoryName: { zh: "环境老化", en: "Environmental Aging", es: "Envejecimiento Ambiental", ar: "الشيخوخة البيئية", ru: "Ускоренное старение" },
+        description: { zh: "TR 6413 氙灯（风冷）老化试验箱用于模拟日光老化测试，采用氙灯光源，能够真实模拟日光中的紫外、可见光部分，对涂层进行加速老化试验，评价涂层耐候性能。风冷设计，节能高效。", en: "The TR 6413 Xenon Arc (Air-Cooled) Aging Test Chamber is used for simulating sunlight aging testing with xenon light source that realistically simulates UV and visible light in sunlight for accelerated aging testing to evaluate coating weather resistance. Air-cooled design for energy efficiency.", es: "La TR 6413 Cámara de Envejecimiento por Lámpara de Xenón (Refrigeración por Aire) se utiliza para pruebas de envejecimiento por simulación de luz solar, utilizando fuente de luz de xenón que puede simular fielmente las partes ultravioleta y visible de la luz solar, realizando pruebas de envejecimiento acelerado en recubrimientos para evaluar la resistencia a la intemperie. Diseño de refrigeración por aire, ahorro de energía y alta eficiencia.", ar: "TR 6413 حجرة اختبار الشيخوخة بضوء زينون (تبريد بالهواء) تُستخدم لاختبارات شيخوخة محاكاة ضوء الشمس، باستخدام مصدر ضوء زينون قادر على محاكاة أجزاء الأشعة فوق البنفسجية والضوء المرئي في ضوء الشمس بشكل حقيقي، وإجراء اختبارات شيخوخة متسارعة على الطلاءات لتقييم مقاومة الطقس. تصميم تبريد بالهواء، توفير الطاقة وكفاءة عالية.", ru: "TR 6413 Камера старения с ксеноновой лампой (воздушное охлаждение) применяется для моделирования испытаний на старение при солнечном свете, используя ксеноновый источник света, способный реалистично имитировать ультрафиолетовую и видимую части солнечного света, для проведения ускоренных испытаний на старение покрытий и оценки их погодостойкости. Конструкция с воздушным охлаждением, энергосбережение и высокая эффективность." },
+        specs: {
+          zh: [
+            ["光源", "氙灯"],
+            ["冷却方式", "风冷"],
+            ["模拟光谱", "紫外、可见光"],
+            ["用途", "涂层耐候性评价"],
+            ["适用", "户外用涂层测试"]
+          ],
+          en: [
+            ["Light Source", "Xenon lamp"],
+            ["Cooling", "Air-cooled"],
+            ["Simulated Spectrum", "UV, visible light"],
+            ["Application", "Coating weather resistance evaluation"],
+            ["Suitable For", "Outdoor coating testing"]
+          ],
+          es: [
+            ["Fuente de luz", "Lámpara de xenón"],
+            ["Método de refrigeración", "Refrigeración por aire"],
+            ["Espectro simulado", "UV, luz visible"],
+            ["Aplicación", "Evaluación de la resistencia a la intemperie de recubrimientos"],
+            ["Aplicable a", "Prueba de recubrimientos para exteriores"]
+          ],
+          ar: [
+            ["مصدر الضوء", "مصباح زينون"],
+            ["طريقة التبريد", "تبريد بالهواء"],
+            ["الطيف المحاكى", "أشعة فوق بنفسجية وضوء مرئي"],
+            ["الاستخدام", "تقييم مقاومة الطقس للطلاء"],
+            ["مناسب لـ", "اختبار طلاءات الاستخدام الخارجي"]
+          ],
+          ru: [
+            ["Источник света", "Ксеноновая лампа"],
+            ["Способ охлаждения", "Воздушное охлаждение"],
+            ["Имитируемый спектр", "Ультрафиолетовое, видимый свет"],
+            ["Назначение", "Оценка погодостойкости покрытий"],
+            ["Применение", "Испытание покрытий для наружного применения"]
+          ]
+        },
+        features: {
+          zh: [
+            "氙灯光源，模拟真实日光",
+            "风冷设计，节能高效",
+            "适用于户外用涂层测试",
+            "加速老化评价耐候性"
+          ],
+          en: [
+            "Xenon lamp simulating natural sunlight",
+            "Air-cooled design, energy efficient",
+            "Suitable for outdoor coating testing",
+            "Accelerated aging for weather resistance evaluation"
+          ],
+          es: [
+            "Fuente de luz de xenón que simula la luz solar natural",
+            "Diseño de refrigeración por aire, ahorro de energía y alta eficiencia",
+            "Aplicable a pruebas de recubrimientos para exteriores",
+            "Evaluación de envejecimiento acelerado de la resistencia a la intemperie"
+          ],
+          ar: [
+            "مصباح زينون يحاكي ضوء الشمس الطبيعي",
+            "تصميم تبريد بالهواء، توفير الطاقة وكفاءة عالية",
+            "مناسب لاختبار طلاءات الاستخدام الخارجي",
+            "تقييم شيخوخة متسارعة لمقاومة الطقس"
+          ],
+          ru: [
+            "Ксеноновая лампа, имитирующая естественный солнечный свет",
+            "Конструкция с воздушным охлаждением, энергосбережение и высокая эффективность",
+            "Подходит для испытания покрытий для наружного применения",
+            "Ускоренное старение для оценки погодостойкости"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 6413", name: "氙灯（风冷）老化试验箱" }
+          ],
+          en: [
+            { code: "TR 6413", name: "Xenon Arc Aging Test Chamber" }
+          ],
+          es: [
+            { code: "TR 6413", name: "Cámara de Envejecimiento por Lámpara de Xenón (Refrigeración por Aire)" }
+          ],
+          ar: [
+            { code: "TR 6413", name: "حجرة اختبار الشيخوخة بضوء زينون (تبريد بالهواء)" }
+          ],
+          ru: [
+            { code: "TR 6413", name: "Камера старения с ксеноновой лампой (воздушное охлаждение)" }
+          ]
+        },
+        docFiles: { en: "", zh: "" }, pdfFiles: { en: "TR 6413 氙灯（风冷）老化试验箱.pdf", zh: "TR 6413 氙灯（风冷）老化试验箱.pdf" },
+        videoUrl: null, qrCode: null
+      },
+      {
+        model: "TR 6010",
+        name: { zh: "防爆鼓风干燥箱", en: "Explosion-Proof Blast Drying Oven", es: "Horno de Secado de Aire Forzado Antiexplosivo", ar: "فرن تجفيف بالهواء القسري مانعة للانفجار", ru: "Взрывозащищённая сушильная печь с принудительной вентиляцией" },
+        category: "lab", categoryName: { zh: "实验室通用仪器", en: "General Lab Equipment", es: "Equipo General de Laboratorio", ar: "معدات المختبر العامة", ru: "Общее лабораторное оборудование" },
+        description: { zh: "TR 6010 防爆鼓风干燥箱用于样品干燥、加热处理，采用鼓风循环系统，确保箱内温度均匀。防爆设计，安全可靠，适用于易燃易爆样品的干燥处理。", en: "The TR 6010 Explosion-Proof Blast Drying Oven is used for sample drying and heating treatment with forced air circulation system ensuring uniform temperature inside the chamber. Explosion-proof design for safety and reliability, suitable for drying flammable and explosive samples.", es: "El TR 6010 Horno de Secado de Aire Forzado Antiexplosivo se utiliza para el secado de muestras y tratamiento térmico, utilizando un sistema de circulación de aire forzado que garantiza una temperatura uniforme dentro de la cámara. Diseño antiexplosivo, seguro y confiable, aplicable al secado de muestras inflamables y explosivas.", ar: "TR 6010 فرن تجفيف بالهواء القسري مانعة للانفجار يُستخدم لتجفيف العينات ومعالجة التسخين، باستخدام نظام دوران الهواء القسري لضمان درجة حرارة موحدة داخل الحجرة. تصميم مانعة للانفجار، آمن وموثوق، مناسب لتجفيف العينات القابلة للاشتعال والانفجار.", ru: "TR 6010 Взрывозащищённая сушильная печь с принудительной вентиляцией применяется для сушки образцов и термообработки, используя систему принудительной циркуляции воздуха, обеспечивающую равномерную температуру внутри камеры. Взрывозащищённый дизайн, безопасность и надёжность, подходит для сушки легковоспламеняющихся и взрывоопасных образцов." },
+        specs: {
+          zh: [
+            ["加热方式", "鼓风循环"],
+            ["温度特性", "温度均匀"],
+            ["安全设计", "防爆"],
+            ["适用样品", "易燃易爆样品"]
+          ],
+          en: [
+            ["Heating", "Forced air circulation"],
+            ["Temperature", "Uniform"],
+            ["Safety", "Explosion-proof"],
+            ["Samples", "Flammable and explosive samples"]
+          ],
+          es: [
+            ["Método de calefacción", "Circulación de aire forzado"],
+            ["Característica de temperatura", "Temperatura uniforme"],
+            ["Diseño de seguridad", "Antiexplosivo"],
+            ["Muestras aplicables", "Muestras inflamables y explosivas"]
+          ],
+          ar: [
+            ["طريقة التسخين", "دورة الهواء القسري"],
+            ["خاصية درجة الحرارة", "درجة حرارة موحدة"],
+            ["تصميم السلامة", "مانعة للانفجار"],
+            ["العينات القابلة للتطبيق", "عينات قابلة للاشتعال والانفجار"]
+          ],
+          ru: [
+            ["Способ нагрева", "Принудительная циркуляция воздуха"],
+            ["Характеристика температуры", "Равномерная температура"],
+            ["Конструкция безопасности", "Взрывозащищённый"],
+            ["Применимые образцы", "Легковоспламеняющиеся и взрывоопасные образцы"]
+          ]
+        },
+        features: {
+          zh: [
+            "防爆设计，安全可靠",
+            "鼓风循环，温度均匀",
+            "适用于易燃易爆样品",
+            "控温精确"
+          ],
+          en: [
+            "Explosion-proof design, safe and reliable",
+            "Forced air circulation, uniform temperature",
+            "Suitable for flammable and explosive samples",
+            "Precise temperature control"
+          ],
+          es: [
+            "Diseño antiexplosivo, seguro y confiable",
+            "Circulación de aire forzado, temperatura uniforme",
+            "Aplicable a muestras inflamables y explosivas",
+            "Control de temperatura preciso"
+          ],
+          ar: [
+            "تصميم مانعة للانفجار، آمن وموثوق",
+            "دورة هواء قسري، درجة حرارة موحدة",
+            "مناسب للعينات القابلة للاشتعال والانفجار",
+            "تحكم دقيق في درجة الحرارة"
+          ],
+          ru: [
+            "Взрывозащищённый дизайн, безопасность и надёжность",
+            "Принудительная циркуляция воздуха, равномерная температура",
+            "Подходит для легковоспламеняющихся и взрывоопасных образцов",
+            "Точный контроль температуры"
+          ]
+        },
+        ordering: {
+          zh: [
+            { code: "TR 6010", name: "防爆鼓风干燥箱" }
+          ],
+          en: [
+            { code: "TR 6010", name: "Explosion-Proof Blast Drying Oven" }
+          ],
+          es: [
+            { code: "TR 6010", name: "Horno de Secado de Aire Forzado Antiexplosivo" }
+          ],
+          ar: [
+            { code: "TR 6010", name: "فرن تجفيف بالهواء القسري مانعة للانفجار" }
+          ],
+          ru: [
+            { code: "TR 6010", name: "Взрывозащищённая сушильная печь с принудительной вентиляцией" }
+          ]
+        },
+        docFiles: { en: "TR 6010 防爆鼓风干燥箱.doc", zh: "TR 6010 防爆鼓风干燥箱.doc" }, pdfFiles: { en: "TR 6010 防爆鼓风干燥箱.pdf", zh: "TR 6010 防爆鼓风干燥箱.pdf" },
+        videoUrl: null, qrCode: null
       }
-      if (descEl && typeof getProductSeoDescription === 'function') {
-        var desc = getProductSeoDescription(model);
-        if (desc) descEl.setAttribute('content', desc);
-      }
-      var product = products.find(function(p){ return p.model === model; });
-      if (product) {
-        document.title = (window.lang === 'en' ? product.name.en : product.name.zh) + ' - 腾瑞仪器 TRUIT';
-      }
-    })();
+    ]
+
     
+        document.getElementById('nameEnDisplay').textContent = product.name.en;
+        document.getElementById('catDisplay').textContent = product.categoryName[currentLang];
+        document.getElementById('breadcrumbName').textContent = product.name[currentLang];
+
+        // Description
+        document.getElementById('descDisplay').textContent = product.description[currentLang];
+
+        // Specs table
+        const specsData = product.specs[currentLang];
+        const specsRows = specsData.map(([label, value]) =>
+          `<tr><td>${label}</td><td>${value}</td></tr>`
+        ).join('');
+        document.getElementById('specsDisplay').innerHTML = specsRows;
+
+        // Features
+        const featuresHtml = product.features[currentLang].map(f =>
+          `<li><span class="dot">•</span><span>${f}</span></li>`
+        ).join('');
+        document.getElementById('featuresDisplay').innerHTML = featuresHtml;
+
+        // Ordering
+        const orderLabel = currentLang === 'zh' ? '订购型号' : 'Order Model';
+        const orderHtml = product.ordering[currentLang].map(item =>
+          `<div class="order-item"><span class="tag">${orderLabel}</span><strong>${item.code}</strong> — ${item.name}</div>`
+        ).join('');
+        document.getElementById('orderDisplay').innerHTML = orderHtml;
+
+        // Downloads
+        const docBtn = document.getElementById('docBtn');
+        const pdfBtn = document.getElementById('pdfBtn');
+        if (product.docFiles && (product.docFiles[currentLang] || product.docFiles['en'])) {
+          const docFile = product.docFiles[currentLang] || product.docFiles['en'];
+          docBtn.href = 'products/' + docFile;
+          docBtn.classList.remove('disabled');
+          docBtn.textContent = currentLang === 'zh' ? '📄 Word 文档' : '📄 Word Doc';
+        } else {
+          docBtn.href = '#';
+          docBtn.classList.add('disabled');
+          docBtn.textContent = currentLang === 'zh' ? '暂无 Word 文档' : 'No Word Doc';
+        }
+        if (product.pdfFiles && (product.pdfFiles[currentLang] || product.pdfFiles['en'])) {
+          const pdfFile = product.pdfFiles[currentLang] || product.pdfFiles['en'];
+          pdfBtn.href = 'products/' + pdfFile;
+          pdfBtn.classList.remove('disabled');
+          pdfBtn.textContent = currentLang === 'zh' ? '📕 PDF 文件' : '📕 PDF';
+        } else {
+          pdfBtn.href = '#';
+          pdfBtn.classList.add('disabled');
+          pdfBtn.textContent = currentLang === 'zh' ? '暂无 PDF 文件' : 'No PDF';
+        }
+
+        // Video placeholder
+        const videoPlaceholder = document.getElementById('videoPlaceholder');
+        if (product.videoUrl) {
+          videoPlaceholder.innerHTML = '<div><div class="play-icon">▶</div><div>' + (currentLang === 'zh' ? '点击播放视频介绍' : 'Click to play video') + '</div></div>';
+          videoPlaceholder.onclick = () => window.open(product.videoUrl, '_blank');
+        } else {
+          videoPlaceholder.innerHTML = '<div><div style="font-size:1.5rem;">🎬</div><div style="margin-top:0.3rem;font-size:0.8rem;">' + (currentLang === 'zh' ? '视频待添加' : 'Video coming soon') + '</div></div>';
+          videoPlaceholder.style.cursor = 'default';
+        }
+
+        // QR placeholder
+        const qrPlaceholder = document.getElementById('qrPlaceholder');
+        if (product.qrCode) {
+          qrPlaceholder.innerHTML = '<img src="' + product.qrCode + '" alt="QR">';
+          qrPlaceholder.classList.add('has-qr');
+        } else {
+          qrPlaceholder.innerHTML = '<div><div style="font-size:1.5rem;">📱</div><div style="margin-top:0.3rem;font-size:0.75rem;">' + (currentLang === 'zh' ? '二维码待添加' : 'QR code coming soon') + '</div></div>';
+          qrPlaceholder.classList.remove('has-qr');
+        }
+      }
+
+      function switchLang(lang) {
+        currentLang = lang;
+        render();
+      }
+
+      function playVideo() {
+        if (product.videoUrl) {
+          window.open(product.videoUrl, '_blank');
+        }
+      }
+
+      render();
+
+      // RTL support for Arabic
+      if (currentLang === 'ar') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
+
+      // Expose for onclick
+      window.switchLang = switchLang;
+      window.playVideo = playVideo;
     }
   </script>
 </body>
