@@ -98,39 +98,40 @@
       document.getElementById('product-name').textContent = '未找到对应产品：' + modelParam;
     } else {
       // Set page title and SEO
-      document.title = product.name.zh + ' - 腾瑞仪器 TRUIT';
+      const productName = typeof product.name === 'string' ? product.name : (product.name.zh || '');
+      document.title = productName + ' - 腾瑞仪器 TRUIT';
       const kwEl = document.getElementById('seo-keywords');
       const descEl = document.getElementById('seo-description');
-      if (kwEl) kwEl.setAttribute('content', product.name.zh + ' ' + product.name.en + ' ' + (product.categoryName.zh || ''));
-      if (descEl) descEl.setAttribute('content', (product.specs.zh || '').slice(0, 150));
+      if (kwEl) kwEl.setAttribute('content', productName + ' ' + (product.cat_name || ''));
+      if (descEl) descEl.setAttribute('content', (product.specs || '').toString().slice(0, 150));
 
       // Render product info
       document.getElementById('model-badge').textContent = product.model;
-      document.getElementById('product-name').textContent = product.name.zh;
-      document.getElementById('breadcrumb-product').textContent = product.name.zh;
-      document.getElementById('product-category').textContent = product.categoryName.zh || '';
+      document.getElementById('product-name').textContent = productName;
+      document.getElementById('breadcrumb-product').textContent = productName;
+      document.getElementById('product-category').textContent = product.cat_name || '';
 
       // Render specs
       const specsEl = document.getElementById('specs-content');
-      if (product.specs && product.specs.zh) {
-        specsEl.innerHTML = '<p>' + product.specs.zh.replace(/\n/g, '<br>') + '</p>';
+      if (product.specs) {
+        const specsText = typeof product.specs === 'string' ? product.specs : JSON.stringify(product.specs);
+        specsEl.innerHTML = '<p>' + specsText.replace(/\n/g, '<br>') + '</p>';
       } else {
         specsEl.innerHTML = '<p>暂无规格信息</p>';
       }
 
       // Render features
       const featuresEl = document.getElementById('features-content');
-      if (product.features && product.features.zh && product.features.zh.length > 0) {
-        featuresEl.innerHTML = '<ul>' + product.features.zh.map(f => '<li>' + f + '</li>').join('') + '</ul>';
+      if (product.features && product.features.length > 0) {
+        featuresEl.innerHTML = '<ul>' + product.features.map(f => '<li>' + f + '</li>').join('') + '</ul>';
       } else {
         featuresEl.innerHTML = '<p>暂无特点信息</p>';
       }
 
       // Render docs
       const docsEl = document.getElementById('docs-content');
-      if (product.docFiles && (product.docFiles.zh || product.docFiles.en)) {
-        const docName = product.docFiles.zh || product.docFiles.en;
-        docsEl.innerHTML = '<p>📄 <a href="documents.html?model=' + encodeURIComponent(product.model) + '">' + docName + '</a></p>';
+      if (product.docs && product.docs.length > 0) {
+        docsEl.innerHTML = '<p>📄 <a href="documents.html?model=' + encodeURIComponent(product.model) + '">' + product.docs[0].split('/').pop() + '</a></p>';
       } else {
         docsEl.innerHTML = '<p>暂无文档下载</p>';
       }
