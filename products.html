@@ -2098,7 +2098,16 @@
     }
 
     // Init
-    document.addEventListener('DOMContentLoaded', renderProducts);
+    document.addEventListener('DOMContentLoaded', () => {
+      // Read category from URL params (e.g. products.html?cat=grind)
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get('cat');
+      if (catParam) {
+        currentCategory = catParam;
+        document.getElementById('categoryFilter').value = catParam;
+      }
+      renderProducts();
+    });
   </script>
 </body>
 </html>
