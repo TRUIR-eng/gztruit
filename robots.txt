@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://TRUIR-eng.github.io/gztruit/sitemap.xml
+Sitemap: https://truir-eng.github.io/gztruit/sitemap.xml

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${name} ${model} - 腾瑞仪器 TRUIT</title>
+  <meta name="description" content="${name} ${model}，腾瑞仪器专业生产，品质可靠。">
+  <link rel="canonical" href="https://truir-eng.github.io/gztruit/product.html?model=${encodeURIComponent(model)}">
+  <style>
+    :root { --blue: #005A9C; --blue-light: #0070C0; --blue-dark: #003d6b; --green: #00A650; --bg: #F5F7FA; --white: #FFFFFF; --text: #1A1A1A; --text-gray: #666666; --border: #E8ECF0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .top-bar { background: var(--blue-dark); color: rgba(255,255,255,0.8); font-size: 0.8rem; padding: 0.4rem 0; text-align: center; }
+    header { background: var(--white); box-shadow: 0 1px 4px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0.7rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; }
+    .header-logo { height: 70px; }
+    .header-brand h1 { font-size: 1.4rem; color: var(--blue); font-weight: 800; }
+    .header-brand h1 span { color: var(--green); }
+    nav { display: flex; gap: 0.3rem; margin-left: auto; }
+    nav a { padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; color: var(--text); transition: all 0.2s; }
+    nav a:hover, nav a.active { background: var(--blue); color: white; }
+    .product-hero { background: linear-gradient(135deg, #1a2a3a, #2a3a4a); color: white; padding: 3rem 1.5rem; text-align: center; }
+    .product-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .product-hero .model { font-family: 'Courier New', monospace; font-size: 1.1rem; opacity: 0.8; margin-bottom: 1rem; }
+    .product-hero .category-tag { display: inline-block; background: rgba(255,255,255,0.15); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; }
+    .product-detail { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+    .detail-card { background: white; border-radius: 14px; padding: 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.07); margin-bottom: 1.5rem; }
+    .detail-card h2 { font-size: 1.2rem; color: var(--blue); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green-light); }
+    .detail-card p { color: var(--text-gray); line-height: 1.8; }
+    .download-section { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .download-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 1rem; font-weight: 600; transition: all 0.2s; }
+    .download-btn.doc { background: var(--blue-light); color: white; }
+    .download-btn.doc:hover { background: var(--blue); }
+    .download-btn.pdf { background: #E65100; color: white; }
+    .download-btn.pdf:hover { background: #bf360c; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--blue-light); margin-bottom: 1.5rem; }
+    .back-link:hover { text-decoration: underline; }
+    footer { background: var(--blue-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 1.5rem; font-size: 0.8rem; margin-top: 3rem; }
+    @media (max-width: 768px) { .header-inner { flex-wrap: wrap; } nav { margin-left: 0; } .products-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="top-bar">📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com</div>
+  <header>
+    <div class="header-inner">
+      <a href="index.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
+      <div class="header-brand"><h1>腾瑞<span>仪器</span></h1></div>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="products.html" class="active">产品中心</a>
+        <a href="index.html#contact">联系我们</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="product-hero">
+    <h1>${name}</h1>
+    <div class="model">${model}</div>
+    <div class="category-tag">${catName}</div>
+  </div>
+
+  <div class="product-detail">
+    <a href="products.html" class="back-link">← 返回产品中心</a>
+    
+    <div class="detail-card">
+      <h2>📋 产品规格</h2>
+      <p>${product.specs.zh}</p>
+    </div>
+
+    <div class="detail-card">
+      <h2>✨ 产品特点</h2>
+      <ul style="padding-left: 1.5rem; color: var(--text-gray);">
+        ${(product.features.zh || []).map(f => `<li style="margin-bottom: 0.5rem;">${f}</li>`).join('')}
+      </ul>
+    </div>
+
+    <div class="detail-card">
+      <h2>📥 产品文档下载</h2>
+      <div class="download-section">
+        ${currentDoc ? `<a href="products/${currentDoc}" class="download-btn doc" download>📄 下载 Word 文档</a>` : '<span style="color: var(--text-gray);">暂无 Word 文档</span>'}
+        ${currentPdf ? `<a href="products/${currentPdf}" class="download-btn pdf" download>📄 下载 PDF 文件</a>` : ''}
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <h2>📞 联系我们</h2>
+      <p style="margin-bottom: 0.5rem;">如有疑问或需要报价，请随时联系我们：</p>
+      <p>📞 电话：020-31706520</p>
+      <p>📧 邮箱：sales@gztruit.com</p>
+      <p>🌐 网站：www.gztruit.com</p>
+    </div>
+  </div>
+
+  <footer>
+    <strong>腾瑞仪器 TRUIT</strong> | 涂料检测仪器专业制造商 | 📞 020-31706520
+    <p style="margin-top:0.5rem;">© 2024 腾瑞仪器（广州）有限公司</p>
+  </footer>
+</body>
+</html>
