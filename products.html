@@ -95,19 +95,19 @@
       const filtered = products.filter(p => {
         const matchCat = currentCategory === 'all' || p.category === currentCategory;
         const q = searchQuery;
-        const matchSearch = !q || 
-          fuzzyMatch(p.name.zh, q) || 
-          fuzzyMatch(p.name.en, q) || 
-          fuzzyMatch(p.model, q) || 
-          fuzzyMatch(p.specs.zh, q) || 
-          fuzzyMatch(p.categoryName.zh, q);
+        const name = typeof p.name === 'string' ? p.name : (p.name.zh || '');
+        const catName = p.cat_name || '';
+        const matchSearch = !q ||
+          fuzzyMatch(name, q) ||
+          fuzzyMatch(p.model, q) ||
+          fuzzyMatch(catName, q);
         return matchCat && matchSearch;
       });
 
       const grid = document.getElementById('productsGrid');
       const noResults = document.getElementById('noResults');
-      document.getElementById('resultsCount').textContent = currentLang === 'zh' 
-        ? `共 ${filtered.length} 个产品` 
+      document.getElementById('resultsCount').textContent = currentLang === 'zh'
+        ? `共 ${filtered.length} 个产品`
         : `${filtered.length} products`;
 
       if (filtered.length === 0) {
@@ -120,12 +120,12 @@
       noResults.style.display = 'none';
 
       grid.innerHTML = filtered.map(p => {
-        const name = p.name[currentLang] || p.name.zh;
-        const catName = p.categoryName[currentLang] || p.categoryName.zh;
+        const name = typeof p.name === 'string' ? p.name : (p.name.zh || '');
+        const catName = p.cat_name || '';
         const docLabel = currentLang === 'zh' ? 'Word文档' : 'Word';
-        const docFile = p.docFiles ? (p.docFiles[currentLang] || p.docFiles.en) : null;
+        const docFile = p.docs && p.docs.length > 0 ? p.docs[0].split('/').pop() : null;
         const imgSrc = p.image || 'products/placeholder.png';
-        const detailUrl = `product.html?model=${encodeURIComponent(p.model)}&lang=${currentLang}`;
+        const detailUrl = `product.html?model=${encodeURIComponent(p.model)}`;
 
         return `<div class="product-card" onclick="window.location='${detailUrl}'">
           <div class="product-image">${p.image ? `<img src="${imgSrc}" alt="${name}" loading="lazy">` : '<div class="no-image">📷</div>'}</div>
