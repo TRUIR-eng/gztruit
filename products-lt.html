@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dangų Testavimo Prietaisai | Viskozimetras | Druskos Rūko Kamera | TRUIT Instruments</title>
+  <meta name="description" content="TRUIT Instruments - Profesionalus dangų testavimo įrenginių gamintojas, įskaitant viskozimetrus, druskos rūko kameras, blizgio matuoklius, storio matuoklius. 172 produktai. ISO/ASTM/GB standartai. Pasaulinis pristatymas.">
+  <meta name="keywords" content="dangų testavimo prietaisai, dažų testavimo įranga, viskozimetras, druskos rūko kamera, blizgio matuoklis, storio matuoklis, kietumo matuoklis, laboratorinė įranga, pramoninis testavimas, kokybės kontrolė, dažų testavimas, rašalo testavimas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://truir-eng.github.io/gztruit/products-lt.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="alternate" hreflang="en" href="https://truir-eng.github.io/gztruit/products-en.html">
+  <link rel="alternate" hreflang="lt" href="https://truir-eng.github.io/gztruit/products-lt.html">
+  <link rel="alternate" hreflang="x-default" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-bar">📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com &nbsp;|&nbsp; 20+ metų gamybos patirtis</div>
+  <header>
+    <div class="header-inner">
+      <a href="index-lt.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
+      <div class="header-brand"><h1>TRUIT <span>Instruments</span></h1></div>
+      <nav>
+        <a href="index-lt.html">Pradžia</a>
+        <a href="products-lt.html" class="active">Produktai</a>
+        <a href="index-lt.html#contact">Susisiekti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Produktai</h1>
+      <p>20+ metų gamybos patirtis · Kokybė garantuota · Viso gyvenimo priežiūra</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Ieškoti produktų..." oninput="handleSearch(this.value)">
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-row">
+        <div class="filter-cell">
+          <label>Kategorijos: </label>
+          <select id="categoryFilter" onchange="handleCategoryChange(this.value)">
+            <option value="all">Visos</option>
+            <option value="grind">Dispersija/Maišymas/Šlifavimas</option>
+            <option value="raw">Žaliavų Tyrimas</option>
+            <option value="film">Plėvelės Tyrimas (Po Formavimo)</option>
+            <option value="aging">Aplinkos Senėjimas</option>
+            <option value="lab">Laboratorinė Įranga</option>
+            <option value="consumable">Standartinės Sąnaudos</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-info" id="resultsCount"></div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">🔍</div>
+      <h3>Produktai nerasti</h3>
+      <p>Bandykite kitus raktinius žodžius arba naršykite visas kategorijas</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 TRUIT Instruments (Guangzhou) Co., Ltd.</p>
+  </footer>
+
+  <script>
+    const products = [
+  { "model": "TR 1001", "name": "Zahn Puodelis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "Zahn Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1002", "name": "Ford Puodelis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "Ford Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1004", "name": "NF Puodelis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "NF Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1005&1006", "name": "DIN Puodelis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "DIN Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1008", "name": "ISO Ištekėjimo Puodelis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "ISO Efflux Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1010", "name": "T-4 Puodelis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "T-4 Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1101-1&4", "name": "Ciferblatinis Sukamasis Viskozimetras", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "Dial Rotational Viscosimeter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1101-5&8", "name": "Skaitmeninis Sukamasis Viskozimetras", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "Digital Rotational Viscosimeter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1123-1", "name": "Stormerio Viskozimetras", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "Stormer Viscosimeter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1201", "name": "Smulkumo Matuoklis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "Fineness Gauge", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 2001", "name": "Aukšto Greičio Dispersorius", "category": "grind", "cat_name": "Dispersija ir Šlifavimas", "docs": [], "name_en": "High Speed Disperser", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2030", "name": "Viršutinis Maišytuvas", "category": "grind", "cat_name": "Dispersija ir Šlifavimas", "docs": [], "name_en": "Overhead Stirrer", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2200", "name": "Krepšelio Malūnas", "category": "grind", "cat_name": "Dispersija ir Šlifavimas", "docs": [], "name_en": "Basket Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2250", "name": "Horizontalių Smėlio Malūnas", "category": "grind", "cat_name": "Dispersija ir Šlifavimas", "docs": [], "name_en": "Horizontal Sand Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2280", "name": "Trijo Tūtos Malūnas", "category": "grind", "cat_name": "Dispersija ir Šlifavimas", "docs": [], "name_en": "Three Roll Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 5001", "name": "Pjūvio Sukibimo Testuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Cross-Cut Adhesion Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5011", "name": "Pieštuko Kietumo Matuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Pencil Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5020", "name": "Tempimo Sukibimo Testuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Pull-Off Adhesion Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5121", "name": "Švytuoklinis Kietumo Matuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Pendulum Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5130", "name": "Įspaudimo Kietumo Matuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Indentation Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5150", "name": "Shore Kietumo Matuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Shore Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5210", "name": "DuPont Smūgio Testuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "DuPont Impact Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5307", "name": "Tabero Abrasiometras", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Taber Abraser", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5462", "name": "Intelektualusis Blizgio Matuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Intelligent Glossmeter", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5464", "name": "Blizgio Matuoklis", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Glossmeter", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5510-1", "name": " Dangos Storio Matuoklis (Integruotas)", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Coating Thickness Gauge Integral", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5510-2", "name": " Dangos Storio Matuoklis (Atskiiras)", "category": "film", "cat_name": "Plėvelės Tyrimas", "docs": [], "name_en": "Coating Thickness Gauge Separate", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 6004", "name": "Elektroninė Analitinė Svarstyklių Sistema", "category": "lab", "cat_name": "Laboratorinė Įranga", "docs": [], "name_en": "Electronic Analytical Balance", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6005", "name": "Elektroninės Svarstyklės", "category": "lab", "cat_name": "Laboratorinė Įranga", "docs": [], "name_en": "Electronic Balance", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6010", "name": "Priverstinės Oru Šildomos Džiovinimo Krosnys", "category": "lab", "cat_name": "Laboratorinė Įranga", "docs": [], "name_en": "Forced Air Drying Oven", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6040", "name": "Krosnies Orkė", "category": "lab", "cat_name": "Laboratorinė Įranga", "docs": [], "name_en": "Muffle Furnace", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6150", "name": "Vandens Vonelė", "category": "lab", "cat_name": "Laboratorinė Įranga", "docs": [], "name_en": "Water Bath", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6301", "name": "Druskos Rūko Testavimo Kamera", "category": "aging", "cat_name": "Aplinkos Senėjimo Testavimas", "docs": [], "name_en": "Salt Spray Test Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6360", "name": "Terminio Smūgio Kamera", "category": "aging", "cat_name": "Aplinkos Senėjimo Testavimas", "docs": [], "name_en": "Thermal Shock Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6412", "name": "Ksenono Lanko Šviesos Senėjimo Bandymo Įrenginys", "category": "aging", "cat_name": "Aplinkos Senėjimo Testavimas", "docs": [], "name_en": "Xenon Arc Weatherometer", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6421", "name": "UV Senėjimo Testavimo Kamera", "category": "aging", "cat_name": "Aplinkos Senėjimo Testavimas", "docs": [], "name_en": "UV Aging Test Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6424", "name": "Pastovios Temperatūros ir Drėgmės Kamera", "category": "aging", "cat_name": "Aplinkos Senėjimo Testavimas", "docs": [], "name_en": "Constant Temperature Humidity Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6500", "name": "Paviršiaus Įtempio Matuoklis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "Surface Tension Meter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 6510", "name": "Kontaktinio Kampo Matuoklis", "category": "raw", "cat_name": "Žaliavų Tyrimas", "docs": [], "name_en": "Contact Angle Meter", "cat_name_en": "Raw Material Testing" }
+];
+
+    function handleSearch(query) {
+      const q = query.toLowerCase();
+      const filtered = products.filter(p =>
+        p.model.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        p.name_en.toLowerCase().includes(q)
+      );
+      renderProducts(filtered);
+    }
+
+    function handleCategoryChange(cat) {
+      const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+      renderProducts(filtered);
+    }
+
+    function renderProducts(list) {
+      const grid = document.getElementById('productsGrid');
+      const count = document.getElementById('resultsCount');
+      const noResults = document.getElementById('noResults');
+      count.innerHTML = `<strong>${list.length}</strong> produktai rasti`;
+      noResults.style.display = list.length === 0 ? 'block' : 'none';
+      grid.innerHTML = list.map(p => `
+        <div class="product-card" onclick="location.href='product.html?model=${encodeURIComponent(p.model)}'">
+          <div class="product-model">${p.model}</div>
+          <div class="product-name">${p.name}</div>
+          <div class="product-cat">${p.cat_name}</div>
+          <div class="product-cat-en">${p.cat_name_en}</div>
+        </div>
+      `).join('');
+    }
+
+    renderProducts(products);
+  </script>
+</body>
+</html>
