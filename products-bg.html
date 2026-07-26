@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Уреди за Изпитване на Покрития | Вискозиметър | Камера със Солена Мъгла | TRUIT Instruments</title>
+  <meta name="description" content="TRUIT Instruments - Професионален производител на уреди за изпитване на покрития, включително вискозиметри, камери със солена мъгла, гланцомери, дебеломери. 172 продукта. Стандарти ISO/ASTM/GB. Глобална доставка.">
+  <meta name="keywords" content="уреди за изпитване на покрития, оборудване за изпитване на бои, вискозиметър, камера със солена мъгла, гланцомер, дебеломер, твердомер, лабораторни уреди, промишлено изпитване, контрол на качеството, изпитване на бои, изпитване на мастила">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://truir-eng.github.io/gztruit/products-bg.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="alternate" hreflang="en" href="https://truir-eng.github.io/gztruit/products-en.html">
+  <link rel="alternate" hreflang="bg" href="https://truir-eng.github.io/gztruit/products-bg.html">
+  <link rel="alternate" hreflang="x-default" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-bar">📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com &nbsp;|&nbsp; 20+ години опит в производството на уреди</div>
+  <header>
+    <div class="header-inner">
+      <a href="index-bg.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
+      <div class="header-brand"><h1>TRUIT <span>Instruments</span></h1></div>
+      <nav>
+        <a href="index-bg.html">Начало</a>
+        <a href="products-bg.html" class="active">Продукти</a>
+        <a href="index-bg.html#contact">Свържете се с нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Продукти</h1>
+      <p>20+ години опит в производството на уреди · Гарантирано качество · Доживотна поддръжка</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Търсене на продукти..." oninput="handleSearch(this.value)">
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-row">
+        <div class="filter-cell">
+          <label>Категория: </label>
+          <select id="categoryFilter" onchange="handleCategoryChange(this.value)">
+            <option value="all">Всички</option>
+            <option value="grind">Диспергиране/Смесване/Смилане</option>
+            <option value="raw">Изпитване на Суровини</option>
+            <option value="film">Изпитване на Филм (След Образуване)</option>
+            <option value="aging">Околна Среда Стареене</option>
+            <option value="lab">Лабораторни Уреди</option>
+            <option value="consumable">Стандартни Консумативи</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-info" id="resultsCount"></div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">🔍</div>
+      <h3>Няма намерени продукти</h3>
+      <p>Моля, опитайте различни ключови думи или прегледайте всички категории</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 TRUIT Instruments (Guangzhou) Co., Ltd.</p>
+  </footer>
+
+  <script>
+    const products = [
+  { "model": "TR 1001", "name": "Чаша на Зан", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Zahn Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1002", "name": "Чаша на Форд", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Ford Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1004", "name": "NF Чаша", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "NF Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1005&1006", "name": "DIN Чаша", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "DIN Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1008", "name": "ISO Чаша за Ефлукс", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "ISO Efflux Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1009", "name": "Чаша на Ивата", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Iwata Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1010", "name": "T-4 Чаша", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "T-4 Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1101-1&4", "name": "Ротационен Вискозиметър с Циферблат", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Dial Rotational Viscometer", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1101-5&8", "name": "Дигитален Ротационен Вискозиметър", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Digital Rotational Viscometer", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1123-1", "name": "Вискозиметър на Щормер", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Stormer Viscosimeter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1201", "name": "Греда за Финес", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Fineness Gauge", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1220&1222", "name": "Чаша за Плътност", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Gravity Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1300", "name": "Колориметър за Течности", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Liquid Colorimeter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 2001", "name": "Високоскоростен Диспергатор", "category": "grind", "cat_name": "Диспергиране и Смилане", "docs": [], "name_en": "High Speed Disperser", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2030", "name": "Бъркачка с Остриета", "category": "grind", "cat_name": "Диспергиране и Смилане", "docs": [], "name_en": "Overhead Stirrer", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2200", "name": "Коши Мелница", "category": "grind", "cat_name": "Диспергиране и Смилане", "docs": [], "name_en": "Basket Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2250", "name": "Хоризонтална Пясъчна Мелница", "category": "grind", "cat_name": "Диспергиране и Смилане", "docs": [], "name_en": "Horizontal Sand Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2280", "name": "Триролна Мелница", "category": "grind", "cat_name": "Диспергиране и Смилане", "docs": [], "name_en": "Three Roll Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 5001", "name": "Апарат за Адхезия с Напречно Срязване", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Cross-Cut Adhesion Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5011", "name": "Моливен Твердомер", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Pencil Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5020", "name": "Апарат за Адхезия с Дърпане", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Pull-Off Adhesion Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5121", "name": "Махалообразен Твердомер", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Pendulum Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5130", "name":":Твердомер с Вдлъбнатина", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Indentation Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5150", "name": "Твердомер на Шор", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Shore Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5210", "name": "Импактен Тестер на ДюПонт", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "DuPont Impact Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5307", "name": "Табер Абразиметър", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Taber Abraser", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5462", "name": "Интелигентен Гланцомер", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Intelligent Glossmeter", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5464", "name": "Гланцомер", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Glossmeter", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5510-1", "name": "Дебеломер за Покрития (Интегриран)", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Coating Thickness Gauge Integral", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5510-2", "name": "Дебеломер за Покрития (Отделен)", "category": "film", "cat_name": "Изпитване на Филм", "docs": [], "name_en": "Coating Thickness Gauge Separate", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 6004", "name": "Електронна Аналитична Везна", "category": "lab", "cat_name": "Лабораторно Оборудване", "docs": [], "name_en": "Electronic Analytical Balance", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6005", "name": "Електронна Везна", "category": "lab", "cat_name": "Лабораторно Оборудване", "docs": [], "name_en": "Electronic Balance", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6010", "name": "Горещовъздушна Сушилня", "category": "lab", "cat_name": "Лабораторно Оборудване", "docs": [], "name_en": "Forced Air Drying Oven", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6040", "name": "Муфелна Пещ", "category": "lab", "cat_name": "Лабораторно Оборудване", "docs": [], "name_en": "Muffle Furnace", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6135", "name": "Термометър за Температура и Влажност", "category": "lab", "cat_name": "Лабораторно Оборудване", "docs": [], "name_en": "Temperature Humidity Meter", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6150", "name": "Водна Баня", "category": "lab", "cat_name": "Лабораторно Оборудване", "docs": [], "name_en": "Water Bath", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6301", "name": "Камера за Изпитване със Солена Мъгла", "category": "aging", "cat_name": "Тестване на Околната Среда Стареене", "docs": [], "name_en": "Salt Spray Test Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6360", "name": "Камера за Термичен Шок", "category": "aging", "cat_name": "Тестване на Околната Среда Стареене", "docs": [], "name_en": "Thermal Shock Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6412", "name": "Ксенонов Аркарен Уеадерометър", "category": "aging", "cat_name": "Тестване на Околната Среда Стареене", "docs": [], "name_en": "Xenon Arc Weatherometer", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6421", "name": "UV Камера за Стареене", "category": "aging", "cat_name": "Тестване на Околната Среда Стареене", "docs": [], "name_en": "UV Aging Test Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6424", "name": "Камера с Постоянна Температура и Влажност", "category": "aging", "cat_name": "Тестване на Околната Среда Стареене", "docs": [], "name_en": "Constant Temperature Humidity Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6500", "name": "Уред за Повърхностно Напрежение", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Surface Tension Meter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 6510", "name": "Уред за Контактен Ъгъл", "category": "raw", "cat_name": "Изпитване на Суровини", "docs": [], "name_en": "Contact Angle Meter", "cat_name_en": "Raw Material Testing" }
+];
+
+    function handleSearch(query) {
+      const q = query.toLowerCase();
+      const filtered = products.filter(p =>
+        p.model.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        p.name_en.toLowerCase().includes(q)
+      );
+      renderProducts(filtered);
+    }
+
+    function handleCategoryChange(cat) {
+      const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+      renderProducts(filtered);
+    }
+
+    function renderProducts(list) {
+      const grid = document.getElementById('productsGrid');
+      const count = document.getElementById('resultsCount');
+      const noResults = document.getElementById('noResults');
+      count.innerHTML = `<strong>${list.length}</strong> намерени продукта`;
+      noResults.style.display = list.length === 0 ? 'block' : 'none';
+      grid.innerHTML = list.map(p => `
+        <div class="product-card" onclick="location.href='product.html?model=${encodeURIComponent(p.model)}'">
+          <div class="product-model">${p.model}</div>
+          <div class="product-name">${p.name}</div>
+          <div class="product-cat">${p.cat_name}</div>
+          <div class="product-cat-en">${p.cat_name_en}</div>
+        </div>
+      `).join('');
+    }
+
+    renderProducts(products);
+  </script>
+</body>
+</html>
