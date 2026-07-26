@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | TRUIT Instruments - Coating Testing Equipment</title>
+  <meta name="description" content="TRUIT Instruments is een professionele fabrikant van coatingtestapparatuur uit China. Wij leveren viscosimeters, glansmeters, hardheidstesters, laagdiktemeters, zoutnevelkamers. 172+ producten, ISO ASTM gecertificeerd. Wereldwijde verzending.">
+  <meta name="keywords" content="coatingstestinstrumenten, viscosimeter, glansmeter, hardheidstester, laagdikte meter, zoutnevelkamer, laboratorium apparatuur, ISO ASTM, Chinese fabrikant, verf test apparatuur, Zahn cup, coating dikte meter">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://truir-eng.github.io/gztruit/products-en.html">
+  <meta property="og:title" content="Coating Testing Instruments | Viscosity Cup | Salt Spray Chamber | TRUIT">
+  <meta property="og:description" content="TRUIT Instruments - 172 coating testing products. ISO/ASTM/GB standards. Global export. Viscosity, gloss, thickness, hardness testers.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://truir-eng.github.io/gztruit/logo.png">
+  <meta property="og:url" content="https://truir-eng.github.io/gztruit/products-en.html">
+  <meta property="og:site_name" content="TRUIT Instruments">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coating Testing Instruments | TRUIT Instruments">
+  <meta name="twitter:description" content="Professional manufacturer of coating testing instruments. 172 products. ISO/ASTM/GB standards. Global shipping.">
+  <meta name="twitter:image" content="https://truir-eng.github.io/gztruit/logo.png">
+  <link rel="alternate" hreflang="zh-CN" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="alternate" hreflang="en" href="https://truir-eng.github.io/gztruit/products-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <div class="top-bar">📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com &nbsp;|&nbsp; 专注仪器制造二十年</div>
+  <header>
+    <div class="header-inner">
+      <a href="index.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
+      <div class="header-brand"><h1>腾瑞<span>仪器</span></h1></div>
+      <nav>
+        <a href="index-nl.html">Home</a>
+        <a href="products-nl.html">Producten</a>
+        <a href="index.html#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Products</h1>
+      <p>专注仪器制造二十年 · 品质保障 · 终身维护</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products..." oninput="handleSearch(this.value)">
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-row">
+        <div class="filter-cell">
+          <label>Category: </label>
+          <select id="categoryFilter" onchange="handleCategoryChange(this.value)">
+            <option value="all">All</option>
+            <option value="grind">分散/搅拌/研磨</option>
+            <option value="raw">原料性能检验</option>
+            <option value="film">成膜后检验</option>
+            <option value="aging">环境老化</option>
+            <option value="lab">实验室通用仪器</option>
+            <option value="consumable">标准耗材</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-info" id="resultsCount"></div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">🔍</div>
+      <h3>No products found</h3>
+      <p>请尝试不同的关键词或浏览所有分类</p>
+    </div>
+  </main>
+
+  <footer><p>© 2024-2026 TRUIT Instruments (Guangzhou) Co., Ltd. Alle rechten voorbehouden.</p></footer>
+
+  <script>
+    const products = [
+  {
+    "model": "TR 1001",
+    "name": "Zahn Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1001蔡恩杯.doc"
+    ],
+    "name_en": "Zahn Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Zahn Cup, Efflux Cup, Viscosity Cup, Zahn Viscometer, Coating Viscosity, Paint Viscosity, Laboratory Viscosity Cup"
+  },
+  {
+    "model": "TR 1002",
+    "name": "Ford Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1002福特杯.doc"
+    ],
+    "name_en": "Ford Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Ford Cup, ASTM D1200, Paint Viscosity Cup, Coating Viscosity, Ink Viscosity, Efflux Time, Automotive Paint"
+  },
+  {
+    "model": "TR 1004",
+    "name": "NF Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1004法国标准杯（NF杯）.doc"
+    ],
+    "name_en": "NF Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "NF Cup, French Standard Cup, NF Viscosity Cup, ASTM D1200, Paint Viscosity"
+  },
+  {
+    "model": "TR 1005&1006",
+    "name": "DIN Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1005&1006DIN杯.doc"
+    ],
+    "name_en": "DIN Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "DIN Cup, DIN Viscosity Cup, ISO Efflux Cup, German Standard, DIN 53211, Paint Testing"
+  },
+  {
+    "model": "TR 1008",
+    "name": "ISO Efflux Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1008ISO粘度杯.doc"
+    ],
+    "name_en": "ISO Efflux Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "ISO Efflux Cup, ISO Viscosity Cup, ISO 2431, Flow Cup, Kinematic Viscosity"
+  },
+  {
+    "model": "TR 1009",
+    "name": "Iwata Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1009岩田杯产品介绍.doc"
+    ],
+    "name_en": "Iwata Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Iwata Cup, Japanese Standard, Iwata Viscosity Cup, JIS Z8802, Paint Viscosity"
+  },
+  {
+    "model": "TR 1010",
+    "name": "T-4 Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1010涂-4杯（T-4杯）+秒表.doc"
+    ],
+    "name_en": "T-4 Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "T-4 Cup, 涂-4 Cup, GB/T 1723, Paint Viscosity Cup, China Standard, Efflux Viscosity"
+  },
+  {
+    "model": "TR 1013",
+    "name": "Viscosity Cup Stand",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1013粘度杯支架产品介绍.doc"
+    ],
+    "name_en": "Viscosity Cup Stand",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Viscosity Cup Stand, Cup Holder, Zahn Cup Stand, Ford Cup Stand, Laboratory Accessory"
+  },
+  {
+    "model": "TR 1101-1&4",
+    "name": "Dial Rotational Viscometer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1101-1&4表盘式旋转粘度计产品介绍.doc"
+    ],
+    "name_en": "Dial Rotational Viscometer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Dial Rotational Viscometer, Brookfield Type, Rotational Viscometer, Viscosity Meter, Laboratory Viscosity"
+  },
+  {
+    "model": "TR 1101-5&8",
+    "name": "Digital Rotational Viscometer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1101-5&8数显旋转粘度计产品介绍.doc"
+    ],
+    "name_en": "Digital Rotational Viscometer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Digital Rotational Viscometer, LCD Viscometer, Rotational Viscosity, Touch Screen Viscosity, NDJ Viscometer"
+  },
+  {
+    "model": "TR 1123-1",
+    "name": "Stormer Viscosimeter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1123-1斯托默粘度计产品介绍.doc"
+    ],
+    "name_en": "Stormer Viscosimeter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Stormer Viscosimeter, KU Viscometer, Stormer Viscosity, Kremer Viscosity, Paint KU Value"
+  },
+  {
+    "model": "TR 1123-2",
+    "name": "Digital Stormer Viscosimeter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1123-2智能斯托默粘度计.doc"
+    ],
+    "name_en": "Digital Stormer Viscosimeter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Digital Stormer Viscosimeter, KU Meter, Stormer Viscosity, Paint Testing, Digital KU Meter"
+  },
+  {
+    "model": "TR 1130",
+    "name": "Cone & Plate Viscometer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1130 锥板粘度计产品介绍.doc"
+    ],
+    "name_en": "Cone & Plate Viscometer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Cone & Plate Viscometer, Cone Plate Viscosity, Low Viscosity Measurement, Rotational Viscometer, Thin Sample"
+  },
+  {
+    "model": "TR 1155",
+    "name": "Falling Ball Viscometer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1155 落球粘度计.doc"
+    ],
+    "name_en": "Falling Ball Viscometer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Falling Ball Viscometer, Hoeppler Viscometer, Ball Drop Viscosity, Transparent Liquid"
+  },
+  {
+    "model": "TR 1158",
+    "name": "Plate Viscometer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1158 平板粘度计产品介绍.doc"
+    ],
+    "name_en": "Plate Viscometer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Plate Viscometer, Parallel Plate, Viscosity Measurement, Thixotropic Testing"
+  },
+  {
+    "model": "TR 1160",
+    "name": "Digital Ink Tack Tester",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1160数显电子油墨黏性仪.doc"
+    ],
+    "name_en": "Digital Ink Tack Tester",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Digital Ink Tack Tester, Ink Tack, Printability Tester, Ink Viscosity, Digital Tack Meter"
+  },
+  {
+    "model": "TR 1201",
+    "name": "Fineness Gauge",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1201 1202 1203细度板产品介绍.doc"
+    ],
+    "name_en": "Fineness Gauge",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Fineness Gauge, Fineness of Grind, Scrape Fineness, Particle Size, Coating Fineness"
+  },
+  {
+    "model": "TR 1202",
+    "name": "Fineness Gauge",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1201 1202 1203细度板产品介绍.doc"
+    ],
+    "name_en": "Fineness Gauge",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Fineness Gauge, Fineness of Grind, Scrape Fineness, Particle Size"
+  },
+  {
+    "model": "TR 1203",
+    "name": "Fineness Gauge",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1201 1202 1203细度板产品介绍.doc"
+    ],
+    "name_en": "Fineness Gauge",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Fineness Gauge, Fineness of Grind, Scrape Fineness, Particle Size"
+  },
+  {
+    "model": "TR 1220&1222",
+    "name": "Gravity Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1220&1222比重杯产品介绍.doc"
+    ],
+    "name_en": "Gravity Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Gravity Cup, Density Cup, Specific Gravity Cup, ASTM D1475, Paint Density"
+  },
+  {
+    "model": "TR 1226",
+    "name": "Liquid Density Meter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1226液体密度计.doc"
+    ],
+    "name_en": "Liquid Density Meter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Liquid Density Meter, Hydrometer, Density Measurement, Specific Gravity"
+  },
+  {
+    "model": "TR 1300",
+    "name": "Liquid Colorimeter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1300液体比色计.doc"
+    ],
+    "name_en": "Liquid Colorimeter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Liquid Colorimeter, Colour Measurement, Liquid Colour, Paint Colour Testing"
+  },
+  {
+    "model": "TR 1303",
+    "name": "Platinum-Cobalt Colorimeter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1303铂钴比色计.doc"
+    ],
+    "name_en": "Platinum-Cobalt Colorimeter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Platinum-Cobalt Colorimeter, Pt-Co Scale, APHA Color, Water White, Colour Measurement"
+  },
+  {
+    "model": "TR 1305",
+    "name": "Iron-Cobalt Colorimeter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1305铁钴比色计产品介绍.doc"
+    ],
+    "name_en": "Iron-Cobalt Colorimeter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Iron-Cobalt Colorimeter, Gardner Color, Colour Standard, Resin Colour"
+  },
+  {
+    "model": "TR 1306",
+    "name": "Transparency Meter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1306透明度测定仪.doc"
+    ],
+    "name_en": "Transparency Meter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Transparency Meter, Transparence Tester, Clear Coating, Film Transparency"
+  },
+  {
+    "model": "TR 1308",
+    "name": "Lovibond Colorimeter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1308罗维朋比色计.doc"
+    ],
+    "name_en": "Lovibond Colorimeter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Lovibond Colorimeter, Lovibond Colour, Tintometer, Colour Measurement, Oil Colour"
+  },
+  {
+    "model": "TR 1330",
+    "name": "Abbe Refractometer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1330 阿贝折射仪.doc"
+    ],
+    "name_en": "Abbe Refractometer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Abbe Refractometer, Refractive Index, Brix Meter, Optical Measurement"
+  },
+  {
+    "model": "TR 1350",
+    "name": "Spectrophotometer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1350分光光度计产品介绍.doc"
+    ],
+    "name_en": "Spectrophotometer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Spectrophotometer, UV-Vis Spectrophotometer, Colorimeter, Absorption Measurement"
+  },
+  {
+    "model": "TR 1353",
+    "name": "UV-Vis Spectrophotometer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1353紫外可见分光光度计产品介绍.doc"
+    ],
+    "name_en": "UV-Vis Spectrophotometer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "UV-Vis Spectrophotometer, UV Visible Spectrophotometer, Spectral Analysis, Absorption"
+  },
+  {
+    "model": "TR 1361",
+    "name": "Whiteness Meter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1361白度仪&粉末成型器产品介绍.doc"
+    ],
+    "name_en": "Whiteness Meter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Whiteness Meter, Whiteness Tester, Powder Former, Whiteness Measurement, Reflectance"
+  },
+  {
+    "model": "TR 1370",
+    "name": "Turbidity Meter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1370浊度仪产品介绍.doc"
+    ],
+    "name_en": "Turbidity Meter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Turbidity Meter, Turbidity Tester, Nephelometer, Water Quality, Clarity"
+  },
+  {
+    "model": "TR 1380",
+    "name": "Automatic Karl Fischer Titrator",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1380自动水分滴定仪.doc"
+    ],
+    "name_en": "Automatic Karl Fischer Titrator",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Automatic Karl Fischer Titrator, Karl Fischer, Moisture Titrator, Water Content"
+  },
+  {
+    "model": "TR 1385",
+    "name": "Micro Moisture Titrator",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1385微量水分测定仪.doc"
+    ],
+    "name_en": "Micro Moisture Titrator",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Micro Moisture Titrator, Coulometric KF, Water Determination, Trace Moisture"
+  },
+  {
+    "model": "TR 1392",
+    "name": "Halogen Moisture Analyzer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1392卤素水分仪.doc"
+    ],
+    "name_en": "Halogen Moisture Analyzer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Halogen Moisture Analyzer, Halogen Drying, Moisture Content, Loss on Drying"
+  },
+  {
+    "model": "TR 1395",
+    "name": "Automatic Flash Point Tester",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1395 自动闪点测定仪.doc"
+    ],
+    "name_en": "Automatic Flash Point Tester",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Automatic Flash Point Tester, Flash Point, Fire Point, Safety Testing, ASTM D56"
+  },
+  {
+    "model": "TR 1603",
+    "name": "Putty Consistency Tester",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1603腻子稠度仪.doc"
+    ],
+    "name_en": "Putty Consistency Tester",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Putty Consistency Tester, Consistency, Spackling, Putty Testing"
+  },
+  {
+    "model": "TR 1860",
+    "name": "Laser Particle Size Analyzer",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 1860激光粒度分布仪.doc"
+    ],
+    "name_en": "Laser Particle Size Analyzer",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Laser Particle Size Analyzer, Particle Size Distribution, Granularity, Malvern, Laser Diffraction"
+  },
+  {
+    "model": "TR 2001",
+    "name": "High Speed Disperser",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2001 高速分散机.doc"
+    ],
+    "name_en": "High Speed Disperser",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "High Speed Disperser, Disperser, High Speed Mixer, Lab Disperser, Paint Disperser"
+  },
+  {
+    "model": "TR 2003",
+    "name": "Ink Mixer",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2003 油墨搅拌机.doc"
+    ],
+    "name_en": "Ink Mixer",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Ink Mixer, Ink Stirrer, Printing Ink Mixer, Laboratory Mixer"
+  },
+  {
+    "model": "TR 2030",
+    "name": "Overhead Stirrer",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2030悬臂式电动搅拌器.doc"
+    ],
+    "name_en": "Overhead Stirrer",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Overhead Stirrer, Mechanical Stirrer, Lab Stirrer, Motor Stirrer, High Viscosity Stirring"
+  },
+  {
+    "model": "TR 2037",
+    "name": "Pneumatic Stirrer",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2037气动搅拌机.doc"
+    ],
+    "name_en": "Pneumatic Stirrer",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Pneumatic Stirrer, Air Stirrer, Explosion-Proof Stirrer, Industrial Mixer"
+  },
+  {
+    "model": "TR 2200",
+    "name": "Basket Mill",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2200 篮式砂磨机.doc"
+    ],
+    "name_en": "Basket Mill",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Basket Mill, Laboratory Basket Mill, Wet Grinding, Dispersing Mill, Sand Mill"
+  },
+  {
+    "model": "TR 2250",
+    "name": "Horizontal Sand Mill",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2250 卧式砂磨机.doc"
+    ],
+    "name_en": "Horizontal Sand Mill",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Horizontal Sand Mill, Sand Mill, Grinding Mill, Wet Milling, Pigment Grinding"
+  },
+  {
+    "model": "TR 2280",
+    "name": "Three Roll Mill",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2280三辊机.doc"
+    ],
+    "name_en": "Three Roll Mill",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Three Roll Mill, Triple Roller Mill, Ink Mill, Grinding Machine, Printing Ink"
+  },
+  {
+    "model": "TR 2310",
+    "name": "Automatic Rotating Mixer",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2310 自动旋转混匀机.doc"
+    ],
+    "name_en": "Automatic Rotating Mixer",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Automatic Rotating Mixer, Rotating Mixer, Mixer, Lab Equipment"
+  },
+  {
+    "model": "TR 2311",
+    "name": "Automatic Oscillating Mixer",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/TR 2311 自动振荡混匀机.doc"
+    ],
+    "name_en": "Automatic Oscillating Mixer",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Automatic Oscillating Mixer, Shaker, Oscillating Mixer, Lab Shaker, Vortex Mixer"
+  },
+  {
+    "model": "TR 3060",
+    "name": "Sagging Tester",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3060流挂仪产品介绍.doc"
+    ],
+    "name_en": "Sagging Tester",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Sagging Tester, Flow Meter, Anti-Sagging, Vertical Flow, Paint Testing"
+  },
+  {
+    "model": "TR 3080",
+    "name": "Leveling Tester",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3080流平仪产品介绍.doc"
+    ],
+    "name_en": "Leveling Tester",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Leveling Tester, Levelling, Brushability, Film Uniformity, Paint Testing"
+  },
+  {
+    "model": "TR 3301",
+    "name": "Permeability Cup",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 3301 渗透杯.doc"
+    ],
+    "name_en": "Permeability Cup",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Permeability Cup, Oil Permeability, Barrier Testing, Filtration Cup"
+  },
+  {
+    "model": "TR 3330",
+    "name": "Electrostatic Spray Gun",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3330静电喷枪.doc"
+    ],
+    "name_en": "Electrostatic Spray Gun",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Electrostatic Spray Gun, ESD Gun, Electrostatic Coating, Spray Gun, Powder Coating"
+  },
+  {
+    "model": "TR 3380",
+    "name": "Wire Rod Handle",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3380线棒手柄.doc"
+    ],
+    "name_en": "Wire Rod Handle",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Wire Rod Handle, Wire Rod Holder, Drawdown Bar, Film Applicator Handle"
+  },
+  {
+    "model": "TR 3501",
+    "name": "Film Applicator Table",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3501~3502涂布台.doc"
+    ],
+    "name_en": "Film Applicator Table",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Film Applicator Table, Drawdown Table, Coating Table, Applicator Table"
+  },
+  {
+    "model": "TR 3502",
+    "name": "Film Applicator Table",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3501~3502涂布台.doc"
+    ],
+    "name_en": "Film Applicator Table",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Film Applicator Table, Drawdown Table, Coating Table, Vacuum Table"
+  },
+  {
+    "model": "TR 3508",
+    "name": "Automatic Film Applicator",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3508自动涂膜机.doc"
+    ],
+    "name_en": "Automatic Film Applicator",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Automatic Film Applicator, Auto Coater, Motorized Applicator, Film Coating"
+  },
+  {
+    "model": "TR 3562",
+    "name": "Water Curtain Spray Booth",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3562 水帘式喷板柜.doc"
+    ],
+    "name_en": "Water Curtain Spray Booth",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Water Curtain Spray Booth, Spray Booth, Spray Cabinet, Panel Spraying, Coating Equipment"
+  },
+  {
+    "model": "TR 3599-2",
+    "name": "Ring Scrape Adhesion Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 3599-2划圈法测试仪.doc"
+    ],
+    "name_en": "Ring Scrape Adhesion Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Ring Scrape Adhesion Tester, Scrape Adhesion, Ring Method, Film Adhesion"
+  },
+  {
+    "model": "TR 3605",
+    "name": "Drying Time Recorder",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3605 漆膜干燥时间测定器.doc"
+    ],
+    "name_en": "Drying Time Recorder",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Drying Time Recorder, Surface Dry, Through Dry, Drying Time, Paint Testing"
+  },
+  {
+    "model": "TR 3610",
+    "name": "Non-Stick Time Tester",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3610 不粘胎时间测定仪.doc"
+    ],
+    "name_en": "Non-Stick Time Tester",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Non-Stick Time Tester, Tack-Free Time, Surface Dry Time, Paint Drying"
+  },
+  {
+    "model": "TR 3620",
+    "name": "Film Tack Tester",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3620 漆膜回粘性测定器.doc"
+    ],
+    "name_en": "Film Tack Tester",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Film Tack Tester, Tack Tester, Adhesion Testing, Print Tack"
+  },
+  {
+    "model": "TR 3630",
+    "name": "Film No-Mark Tester",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3630 漆膜无印痕试验仪.doc"
+    ],
+    "name_en": "Film No-Mark Tester",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Film No-Mark Tester, Blocking Resistance, Print Mark, Film Surface"
+  },
+  {
+    "model": "TR 3680",
+    "name": "Minimum Film Formation Temperature",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3680 最低成膜温度测试仪.doc"
+    ],
+    "name_en": "Minimum Film Formation Temperature",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Minimum Film Formation Temperature, MFFT, Film Formation, Coalescence, Low Temperature"
+  },
+  {
+    "model": "TR 3700",
+    "name": "Black-White Grid Board",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 3700 黑白格测定板.doc"
+    ],
+    "name_en": "Black-White Grid Board",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Black-White Grid Board, Contrast Board, Whiteness, Colour Measurement"
+  },
+  {
+    "model": "TR 3803",
+    "name": "Putty Spreader",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3803 腻子涂刮器.doc"
+    ],
+    "name_en": "Putty Spreader",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Putty Spreader, Putty Applicator, Spackle Knife, Wall Putty"
+  },
+  {
+    "model": "TR 3900",
+    "name": "Elastic Coating Sample Frame",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3900 弹性建筑涂料制样框.doc"
+    ],
+    "name_en": "Elastic Coating Sample Frame",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Elastic Coating Sample Frame, Elastic Frame, Film Frame, Sample Mould"
+  },
+  {
+    "model": "TR 3902",
+    "name": "Manual Color Drawdown Machine",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3902 手动展色轮.doc"
+    ],
+    "name_en": "Manual Color Drawdown Machine",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Manual Color Drawdown Machine, Drawdown, Color Proofing, Manual Proofer, Ink Proofing"
+  },
+  {
+    "model": "TR 3903",
+    "name": "Ink Color Proofing System",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3903 油墨展色仪.doc"
+    ],
+    "name_en": "Ink Color Proofing System",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Ink Color Proofing System, Color Proofer, Ink Proofer, Print Proofer"
+  },
+  {
+    "model": "TR 3911",
+    "name": "Ink Gravure Proofer",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3911 油墨凹板打样机.doc"
+    ],
+    "name_en": "Ink Gravure Proofer",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Ink Gravure Proofer, Gravure Proofer, Proofing Press, Intaglio Printing"
+  },
+  {
+    "model": "TR 3955",
+    "name": "Grinding Redispersibility Tester",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 3955 平磨仪.doc"
+    ],
+    "name_en": "Grinding Redispersibility Tester",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Grinding Redispersibility Tester, Redispersibility, Grinding Quality, Sedimentation"
+  },
+  {
+    "model": "TR 5001",
+    "name": "Cross-Cut Adhesion Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5001 划格器.doc"
+    ],
+    "name_en": "Cross-Cut Adhesion Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Cross-Cut Adhesion Tester, Adhesion Tester, Pull-Off, GB/T 9286, Coating Adhesion, Single Edge"
+  },
+  {
+    "model": "TR 5006",
+    "name": "Cross-Cut Board",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5006 划格板.doc"
+    ],
+    "name_en": "Cross-Cut Board",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Cross-Cut Board, Adhesion Test Board, Reference Board, Calibration"
+  },
+  {
+    "model": "TR 5011",
+    "name": "Pencil Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5011铅笔硬度计.doc"
+    ],
+    "name_en": "Pencil Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Pencil Hardness Tester, Pencil Hardness, Scratch Hardness, GB/T 6739, Coating Hardness"
+  },
+  {
+    "model": "TR 5020",
+    "name": "Pull-Off Adhesion Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5020拉拔法测试仪.doc"
+    ],
+    "name_en": "Pull-Off Adhesion Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Pull-Off Adhesion Tester, Adhesion, Pull-Off Strength, Dolly Test, Coating Adhesion"
+  },
+  {
+    "model": "TR 5021",
+    "name": "Automatic Pull-Off Adhesion Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5021自动拉拔法测试仪.doc"
+    ],
+    "name_en": "Automatic Pull-Off Adhesion Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Automatic Pull-Off Adhesion Tester, Auto Adhesion, Digital Pull-Off, Coating Strength"
+  },
+  {
+    "model": "TR 5023",
+    "name": "Intelligent Bond Strength Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5023 智能粘结强度拉拔仪.doc"
+    ],
+    "name_en": "Intelligent Bond Strength Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Intelligent Bond Strength Tester, Bond Strength, Adhesion Tester, Digital Pull-Off"
+  },
+  {
+    "model": "TR 5105-1",
+    "name": "Bench-Top Pencil Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5105-1 台式铅笔硬度计.doc"
+    ],
+    "name_en": "Bench-Top Pencil Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Bench-Top Pencil Hardness Tester, Lab Pencil Hardness, Pencil Hardness, Coating Hardness"
+  },
+  {
+    "model": "TR 5105-A",
+    "name": "Electric Pencil Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5105-A 台式电动铅笔硬度计.doc"
+    ],
+    "name_en": "Electric Pencil Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Electric Pencil Hardness Tester, Motorized Pencil Hardness, Auto Scratching, Lab Hardness"
+  },
+  {
+    "model": "TR 5120",
+    "name": "Pendulum Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5120~5122摆杆硬度计.doc"
+    ],
+    "name_en": "Pendulum Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Pendulum Hardness Tester, Sward Rocker, Buchholz, Pendulum Hardness, Coating Hardness"
+  },
+  {
+    "model": "TR 5121",
+    "name": "Pendulum Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5120~5122摆杆硬度计.doc"
+    ],
+    "name_en": "Pendulum Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Pendulum Hardness Tester, Pendulum Hardness, ISO 1522, Coating Elasticity"
+  },
+  {
+    "model": "TR 5122",
+    "name": "Pendulum Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5120~5122摆杆硬度计.doc"
+    ],
+    "name_en": "Pendulum Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Pendulum Hardness Tester, Persoz, König, Coating Hardness"
+  },
+  {
+    "model": "TR 5130",
+    "name": "Indentation Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5130 压痕硬度计.doc"
+    ],
+    "name_en": "Indentation Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Indentation Hardness Tester, Indentation, Pohl, Buchholz, Hardness"
+  },
+  {
+    "model": "TR 5140",
+    "name": "Webster Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5140韦氏硬度计产品介绍.doc"
+    ],
+    "name_en": "Webster Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Webster Hardness Tester, Webster Hardness, Aluminium Hardness, HB Scale, Alloy Hardness"
+  },
+  {
+    "model": "TR 5141",
+    "name": "Digital Webster Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5141数显韦氏硬度计.doc"
+    ],
+    "name_en": "Digital Webster Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Digital Webster Hardness Tester, Digital Hardness, Webster Hardness, Aluminium"
+  },
+  {
+    "model": "TR 5150",
+    "name": "Shore Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5150邵氏硬度计产品介绍.doc"
+    ],
+    "name_en": "Shore Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Shore Hardness Tester, Shore A, Rubber Hardness, Durometer, Elastomer Hardness"
+  },
+  {
+    "model": "TR 5151",
+    "name": "Digital Shore Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5151数显邵氏硬度计产品介绍.doc"
+    ],
+    "name_en": "Digital Shore Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Digital Shore Hardness Tester, Digital Shore, Durometer, Rubber Hardness"
+  },
+  {
+    "model": "TR 5155",
+    "name": "Shore Hardness Stand",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5155邵氏硬度计支架.doc"
+    ],
+    "name_en": "Shore Hardness Stand",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Shore Hardness Stand, Hardness Stand, Durometer Stand, Accessory"
+  },
+  {
+    "model": "TR 5160-1",
+    "name": "Barcol Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5160-1巴氏硬度计.doc"
+    ],
+    "name_en": "Barcol Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Barcol Hardness Tester, Barcol Hardness, Composite Hardness, Hardness"
+  },
+  {
+    "model": "TR 5160-2",
+    "name": "Digital Barcol Hardness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5160-2数显巴氏硬度计.doc"
+    ],
+    "name_en": "Digital Barcol Hardness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Digital Barcol Hardness Tester, Barcol Hardness, Digital Hardness, Composite"
+  },
+  {
+    "model": "TR 5170",
+    "name": "Spring Hardness Pen",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5170弹簧硬度笔.doc"
+    ],
+    "name_en": "Spring Hardness Pen",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Spring Hardness Pen, Scratch Hardness, Pencil Hardness, Pen-Type Hardness"
+  },
+  {
+    "model": "TR 5210",
+    "name": "DuPont Impact Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5210杜邦冲击仪.doc"
+    ],
+    "name_en": "DuPont Impact Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "DuPont Impact Tester, Impact Tester, Falling Weight, Coating Impact"
+  },
+  {
+    "model": "TR 5211",
+    "name": "Cylindrical Bend Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5211 漆膜圆柱弯曲测试仪.doc"
+    ],
+    "name_en": "Cylindrical Bend Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Cylindrical Bend Tester, Cupping Tester, Erichsen, Deep Drawing, Flexibility"
+  },
+  {
+    "model": "TR 5212",
+    "name": "Cylindrical Mandrel Bend Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5212 圆柱弯曲仪.doc"
+    ],
+    "name_en": "Cylindrical Mandrel Bend Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Cylindrical Mandrel Bend Tester, Mandrel Bend, Flexibility, Pipe Bend"
+  },
+  {
+    "model": "TR 5214",
+    "name": "Cone Bend Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5214圆锥弯曲仪.doc"
+    ],
+    "name_en": "Cone Bend Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Cone Bend Tester, Conical Mandrel, Bend Flexibility, Coating Ductility"
+  },
+  {
+    "model": "TR 5220",
+    "name": "T-Bend Flexibility Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5220 T型弯折试验机.doc"
+    ],
+    "name_en": "T-Bend Flexibility Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "T-Bend Flexibility Tester, T-Bend, Flexibility, Sheet Metal, Coating"
+  },
+  {
+    "model": "TR 5230",
+    "name": "Film Flexibility Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5230 漆膜柔韧性测定仪.doc"
+    ],
+    "name_en": "Film Flexibility Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Film Flexibility Tester, Round Mandrel, Bend Tester, Film Ductility"
+  },
+  {
+    "model": "TR 5240",
+    "name": "Putty Flexibility Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5240 腻子柔韧性测定仪.doc"
+    ],
+    "name_en": "Putty Flexibility Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Putty Flexibility Tester, Putty Bend, Elasticity, Wall Coating"
+  },
+  {
+    "model": "TR 5250",
+    "name": "Scrub Resistance Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5250 打磨性测定仪.doc"
+    ],
+    "name_en": "Scrub Resistance Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Scrub Resistance Tester, Scrubbability, Washability, GB/T 9266, Coating Durability"
+  },
+  {
+    "model": "TR 5260",
+    "name": "Dynamic Anti-Cracking Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5260 动态抗裂性试验机.doc"
+    ],
+    "name_en": "Dynamic Anti-Cracking Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Dynamic Anti-Cracking Tester, Crack Resistance, Cracking, Film Elasticity"
+  },
+  {
+    "model": "TR 5261",
+    "name": "Early-Stage Drying Anti-Cracking Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5261初期干燥抗裂性试验机.doc"
+    ],
+    "name_en": "Early-Stage Drying Anti-Cracking Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Early-Stage Drying Anti-Cracking Tester, Anti-Cracking, Early Dry, Film Cracking"
+  },
+  {
+    "model": "TR 5262",
+    "name": "Anti-Crack Fatigue Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5262抗裂缝疲劳试验仪.doc"
+    ],
+    "name_en": "Anti-Crack Fatigue Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Anti-Crack Fatigue Tester, Fatigue Resistance, Crack Propagation, Cyclic Loading"
+  },
+  {
+    "model": "TR 5300",
+    "name": "Blocking Resistance Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5300 涂层耐码垛试验仪.doc"
+    ],
+    "name_en": "Blocking Resistance Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Blocking Resistance Tester, Blocking, Stack Resistance, Film Blocking"
+  },
+  {
+    "model": "TR 5301-A",
+    "name": "Alcohol Rubber Abrasion Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5301-A 酒精橡皮耐磨仪.doc"
+    ],
+    "name_en": "Alcohol Rubber Abrasion Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Alcohol Rubber Abrasion Tester, Erichsen Abrasion, Film Abrasion, Wet Rub"
+  },
+  {
+    "model": "TR 5302",
+    "name": "Solvent Resistance Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5302 耐溶剂测试仪.doc"
+    ],
+    "name_en": "Solvent Resistance Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Solvent Resistance Tester, Solvent Rub, Chemical Resistance, MEK Rub, Coating Resistance"
+  },
+  {
+    "model": "TR 5303",
+    "name": "Ink Rub Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5303 油墨脱色试验机.doc"
+    ],
+    "name_en": "Ink Rub Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Ink Rub Tester, Rub Tester, Print Rub, Colour Rub, Ink Durability"
+  },
+  {
+    "model": "TR 5304",
+    "name": "Leather Rubbing Color Fastness Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5304 皮革摩擦色牢度试验机.doc"
+    ],
+    "name_en": "Leather Rubbing Color Fastness Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Leather Rubbing Color Fastness Tester, Rubbing Fastness, Colour Transfer, Leather Testing"
+  },
+  {
+    "model": "TR 5307",
+    "name": "Taber Abraser",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5307 漆膜磨耗仪.doc"
+    ],
+    "name_en": "Taber Abraser",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Taber Abraser, Taber Abrasion, Wear Resistance, Rotary Abrasion, Coating Wear"
+  },
+  {
+    "model": "TR 5309",
+    "name": "RCA Abrasion Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5309 RCA纸带耐磨测试机.doc"
+    ],
+    "name_en": "RCA Abrasion Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "RCA Abrasion Tester, RCA Tape Abrasion, Paper Tape, Coating Wear"
+  },
+  {
+    "model": "TR 5310",
+    "name": "Falling Sand Abrasion Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5310  落砂耐磨试验机.doc"
+    ],
+    "name_en": "Falling Sand Abrasion Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Falling Sand Abrasion Tester, Sand Abrasion, GB/T 1768, Coating Abrasion, Wear Resistance"
+  },
+  {
+    "model": "TR 5312",
+    "name": "Scrub Resistance Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5312耐洗刷试验仪.doc"
+    ],
+    "name_en": "Scrub Resistance Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Scrub Resistance Tester, Washability Tester, GB/T 9266, Interior Wall Coating, Exterior Coating"
+  },
+  {
+    "model": "TR 5314",
+    "name": "Dirt Pick-Up Resistance Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5314  耐沾污试验机.doc"
+    ],
+    "name_en": "Dirt Pick-Up Resistance Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Dirt Pick-Up Resistance Tester, Dirt Resistance, Self-Cleaning, Anti-Graffiti, Surface Contamination"
+  },
+  {
+    "model": "TR 5334",
+    "name": "Wooden Dark Box",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5334  木制暗箱.doc"
+    ],
+    "name_en": "Wooden Dark Box",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Wooden Dark Box, Dark Box, Colour Assessment, Visual Inspection"
+  },
+  {
+    "model": "TR 5402 70D",
+    "name": "Portable Spectrophotometer",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5402 70D便携式分光测色仪.doc"
+    ],
+    "name_en": "Portable Spectrophotometer",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Portable Spectrophotometer, Colorimeter, d/8° Geometry, Portable Color, Handheld Color"
+  },
+  {
+    "model": "TR 5402 82N",
+    "name": "Bench-Top Spectrophotometer",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5402 82N台式分光测色仪.doc"
+    ],
+    "name_en": "Bench-Top Spectrophotometer",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Bench-Top Spectrophotometer, Colorimeter, d/8° Sphere, Lab Color Measurement"
+  },
+  {
+    "model": "TR 5402",
+    "name": "Spectrophotometer",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5402分光测色仪.doc"
+    ],
+    "name_en": "Spectrophotometer",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Spectrophotometer, Colorimeter, Lab Color Measurement, Reflectance"
+  },
+  {
+    "model": "TR 5420",
+    "name": "DOI Meter",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5420 鲜映性测定仪.doc"
+    ],
+    "name_en": "DOI Meter",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "DOI Meter, Distinctness of Image, Gloss, Orange Peel, Surface Smoothness"
+  },
+  {
+    "model": "TR 5430-6",
+    "name": "Color Viewing Cabinet",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5430-6 标准光源对色箱.doc"
+    ],
+    "name_en": "Color Viewing Cabinet",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Color Viewing Cabinet, Light Box, D65 Illuminant, Colour Matching, Standard Light"
+  },
+  {
+    "model": "TR 5451",
+    "name": "Reflectance Meter",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5451  反射率测定仪.doc"
+    ],
+    "name_en": "Reflectance Meter",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Reflectance Meter, Reflectance, Haze, Transparency, Film Reflectance"
+  },
+  {
+    "model": "TR 5452",
+    "name": "Portable Reflectance Meter",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5452便携式反射率测试仪.doc"
+    ],
+    "name_en": "Portable Reflectance Meter",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Portable Reflectance Meter, Handheld Reflectance, White Standard, Film Brightness"
+  },
+  {
+    "model": "TR 5455",
+    "name": "Intelligent Reflectance Meter",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5455智能反射率测试仪.doc"
+    ],
+    "name_en": "Intelligent Reflectance Meter",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Intelligent Reflectance Meter, Digital Reflectance, Haze Meter, Transparency Meter"
+  },
+  {
+    "model": "TR 5462",
+    "name": "Intelligent Glossmeter",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5462 智能光泽度计.doc"
+    ],
+    "name_en": "Intelligent Glossmeter",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Intelligent Glossmeter, Gloss Meter, Gloss Measurement, GU, Tri-Angle Gloss"
+  },
+  {
+    "model": "TR 5464",
+    "name": "Glossmeter",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5464光泽度计.doc"
+    ],
+    "name_en": "Glossmeter",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Glossmeter, Gloss Meter, 20° 60° 85°, Paint Gloss, Coating Gloss"
+  },
+  {
+    "model": "TR 5508",
+    "name": "Wet Film Wheel",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5508 湿膜轮.doc"
+    ],
+    "name_en": "Wet Film Wheel",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Wet Film Wheel, Wet Film Thickness Comb, Comb Gauge, Wet Film Measurement"
+  },
+  {
+    "model": "TR 5510-1",
+    "name": "Coating Thickness Gauge Integral",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5510-1测厚仪（整体式）.doc"
+    ],
+    "name_en": "Coating Thickness Gauge Integral",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Coating Thickness Gauge Integral, Magnetic Thickness, Integral Gauge, Dry Film Thickness"
+  },
+  {
+    "model": "TR 5510-2",
+    "name": "Coating Thickness Gauge Separate",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5510-2测厚仪（分体式）.doc"
+    ],
+    "name_en": "Coating Thickness Gauge Separate",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Coating Thickness Gauge Separate, Separate Probe, Eddy Current, Magnetic Thickness"
+  },
+  {
+    "model": "TR 5511",
+    "name": "Coating Thickness Gauge",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5511 测厚仪.doc"
+    ],
+    "name_en": "Coating Thickness Gauge",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Coating Thickness Gauge, Dry Film Thickness Gauge, DFT, Magnetic, Eddy Current"
+  },
+  {
+    "model": "TR 5520",
+    "name": "Destructive Thickness Gauge",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5520 破坏性测厚仪.doc"
+    ],
+    "name_en": "Destructive Thickness Gauge",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Destructive Thickness Gauge, Film Thickness, Cross-Section, Microscope Thickness"
+  },
+  {
+    "model": "TR 5801",
+    "name": "Chalking Rate Tester",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5801 漆膜粉化率测定仪.doc"
+    ],
+    "name_en": "Chalking Rate Tester",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Chalking Rate Tester, Chalking, Weathering, Film Degradation"
+  },
+  {
+    "model": "TR 5802",
+    "name": "Anti-Static Resistance Kit",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 5802防静电工程电阻测量套件.doc"
+    ],
+    "name_en": "Anti-Static Resistance Kit",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Anti-Static Resistance Kit, Surface Resistance, ESD Testing, Resistivity"
+  },
+  {
+    "model": "TR 5901",
+    "name": "建筑涂料不透水漏斗",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 5901 建筑涂料不透水漏斗.doc"
+    ],
+    "name_en": "建筑涂料不透水漏斗",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": ""
+  },
+  {
+    "model": "TR 6004",
+    "name": "Electronic Analytical Balance",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6004 电子分析天平.doc"
+    ],
+    "name_en": "Electronic Analytical Balance",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Electronic Analytical Balance, Analytical Balance, Lab Balance, Precision Balance, 0.1mg"
+  },
+  {
+    "model": "TR 6005",
+    "name": "Electronic Balance",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6005 电子天平.doc"
+    ],
+    "name_en": "Electronic Balance",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Electronic Balance, Lab Balance, Precision Balance, Top-Loading Balance, 1mg"
+  },
+  {
+    "model": "TR 6010",
+    "name": "Forced Air Drying Oven",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6010鼓风干燥箱.doc"
+    ],
+    "name_en": "Forced Air Drying Oven",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Forced Air Drying Oven, Drying Oven, Hot Air Oven, Lab Oven, BOD Oven"
+  },
+  {
+    "model": "TR 6040",
+    "name": "Muffle Furnace",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6040 箱式电阻炉.doc"
+    ],
+    "name_en": "Muffle Furnace",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Muffle Furnace, High Temperature Furnace, Muffle, Ash Content, Ignition Loss"
+  },
+  {
+    "model": "TR 6050",
+    "name": "Laboratory Heating Plate",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6050 实验室加热板.doc"
+    ],
+    "name_en": "Laboratory Heating Plate",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Laboratory Heating Plate, Hot Plate, Ceramic Plate, Heating Mantle"
+  },
+  {
+    "model": "TR 6100",
+    "name": "Temperature Tracking Logger",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6100 炉温跟踪仪.doc"
+    ],
+    "name_en": "Temperature Tracking Logger",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Temperature Tracking Logger, Temperature Logger, Thermocouple Logger, K Data Logger, Powder Coating"
+  },
+  {
+    "model": "TR 6130",
+    "name": "Infrared Thermometer",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6130红外测温仪.doc"
+    ],
+    "name_en": "Infrared Thermometer",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Infrared Thermometer, IR Thermometer, Non-Contact Thermometer, Pyrometer"
+  },
+  {
+    "model": "TR 6134",
+    "name": "Magnetic Thermometer",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6134 磁铁温度计.doc"
+    ],
+    "name_en": "Magnetic Thermometer",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Magnetic Thermometer, Magnetic Temperature, Oven Thermometer, High Temperature"
+  },
+  {
+    "model": "TR 6135",
+    "name": "Temperature Humidity Meter",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6135 温湿度计.doc"
+    ],
+    "name_en": "Temperature Humidity Meter",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Temperature Humidity Meter, Hygrometer, Psychrometer, Wet Dry Bulb"
+  },
+  {
+    "model": "TR 6150",
+    "name": "Water Bath",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6150水浴锅.doc"
+    ],
+    "name_en": "Water Bath",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Water Bath, Constant Temperature Water Bath, Lab Water Bath, Circulating Bath"
+  },
+  {
+    "model": "TR 6151",
+    "name": "Incubator",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6151 电热恒温培养箱.doc"
+    ],
+    "name_en": "Incubator",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Incubator, Culture Incubator, BOD Incubator, Lab Incubator"
+  },
+  {
+    "model": "TR 6152",
+    "name": "Heating Mantle",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6152 电热套.doc"
+    ],
+    "name_en": "Heating Mantle",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Heating Mantle, Fabric Mantle, Lab Heating, Round Bottom Flask"
+  },
+  {
+    "model": "TR 6153",
+    "name": "Low Temperature Water Bath",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6153 低温恒温水槽.doc"
+    ],
+    "name_en": "Low Temperature Water Bath",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Low Temperature Water Bath, Cryostatic Bath, Chiller, Low Temperature Circulation"
+  },
+  {
+    "model": "TR 6183",
+    "name": "Stainless Steel Lift Table",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6183 不锈钢升降台.doc"
+    ],
+    "name_en": "Stainless Steel Lift Table",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Stainless Steel Lift Table, Lift Table, Jack Table, Lab Table, Height Adjustable"
+  },
+  {
+    "model": "TR 6301",
+    "name": "Salt Spray Test Chamber",
+    "category": "aging",
+    "cat_name": "Environmental Aging Testing",
+    "docs": [
+      "documents/TR 6301盐雾箱.doc"
+    ],
+    "name_en": "Salt Spray Test Chamber",
+    "cat_name_en": "Environmental Aging Testing",
+    "keywords_en": "Salt Spray Test Chamber, Salt Mist, Corrosion Testing, NSS, ASTM B117, CASS"
+  },
+  {
+    "model": "TR 6360",
+    "name": "Thermal Shock Chamber",
+    "category": "aging",
+    "cat_name": "Environmental Aging Testing",
+    "docs": [
+      "documents/TR 6360 冷热冲击试验箱.doc"
+    ],
+    "name_en": "Thermal Shock Chamber",
+    "cat_name_en": "Environmental Aging Testing",
+    "keywords_en": "Thermal Shock Chamber, Thermal Shock, Cold Heat Impact, Jump Temperature"
+  },
+  {
+    "model": "TR 6412",
+    "name": "Xenon Arc Weatherometer",
+    "category": "aging",
+    "cat_name": "Environmental Aging Testing",
+    "docs": [
+      "documents/TR 6412氙灯老化试验箱.doc"
+    ],
+    "name_en": "Xenon Arc Weatherometer",
+    "cat_name_en": "Environmental Aging Testing",
+    "keywords_en": "Xenon Arc Weatherometer, Xenon Weathering, 氙灯老化, Q-SUN, ASTM G155, UV Aging"
+  },
+  {
+    "model": "TR 6420",
+    "name": "Bench-Top UV Chamber",
+    "category": "aging",
+    "cat_name": "Environmental Aging Testing",
+    "docs": [
+      "documents/TR 6420桌上型UV紫外老化试验箱.doc"
+    ],
+    "name_en": "Bench-Top UV Chamber",
+    "cat_name_en": "Environmental Aging Testing",
+    "keywords_en": "Bench-Top UV Chamber, UV Aging, QUV, Fluorescent UV, Compact UV"
+  },
+  {
+    "model": "TR 6421",
+    "name": "UV Aging Test Chamber",
+    "category": "aging",
+    "cat_name": "Environmental Aging Testing",
+    "docs": [
+      "documents/TR 6421 UV紫外老化试验箱.doc"
+    ],
+    "name_en": "UV Aging Test Chamber",
+    "cat_name_en": "Environmental Aging Testing",
+    "keywords_en": "UV Aging Test Chamber, UV Weathering, UVA340, UVB313, QUV, ASTM G154"
+  },
+  {
+    "model": "TR 6422",
+    "name": "Battery Explosion-Proof Test Chamber",
+    "category": "aging",
+    "cat_name": "Environmental Aging Testing",
+    "docs": [
+      "documents/TR 6422 电池防爆试验箱.doc"
+    ],
+    "name_en": "Battery Explosion-Proof Test Chamber",
+    "cat_name_en": "Environmental Aging Testing",
+    "keywords_en": "Battery Explosion-Proof Test Chamber, Explosion-Proof, Battery Testing, Safety Chamber"
+  },
+  {
+    "model": "TR 6424",
+    "name": "Constant Temperature Humidity Chamber",
+    "category": "aging",
+    "cat_name": "Environmental Aging Testing",
+    "docs": [
+      "documents/TR 6424 恒温恒湿试验箱.doc"
+    ],
+    "name_en": "Constant Temperature Humidity Chamber",
+    "cat_name_en": "Environmental Aging Testing",
+    "keywords_en": "Constant Temperature Humidity Chamber, Climate Chamber, THC, Stability Testing, Environmental"
+  },
+  {
+    "model": "TR 6480",
+    "name": "Atmospheric Exposure Rack",
+    "category": "aging",
+    "cat_name": "Environmental Aging Testing",
+    "docs": [
+      "documents/TR 6480 大气暴晒架.doc"
+    ],
+    "name_en": "Atmospheric Exposure Rack",
+    "cat_name_en": "Environmental Aging Testing",
+    "keywords_en": "Atmospheric Exposure Rack, Outdoor Exposure, Natural Weathering, Florida Testing, UV Exposure"
+  },
+  {
+    "model": "TR 6500",
+    "name": "Surface Tension Meter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 6500 表界面张力仪.doc"
+    ],
+    "name_en": "Surface Tension Meter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Surface Tension Meter, Interfacial Tension, Tensiometer, Du Noüy Ring, Surface Active"
+  },
+  {
+    "model": "TR 6510",
+    "name": "Contact Angle Meter",
+    "category": "raw",
+    "cat_name": "Raw Material Testing",
+    "docs": [
+      "documents/TR 6510 接触角测定仪.doc"
+    ],
+    "name_en": "Contact Angle Meter",
+    "cat_name_en": "Raw Material Testing",
+    "keywords_en": "Contact Angle Meter, Contact Angle, Wettability, Surface Energy, Drop Shape"
+  },
+  {
+    "model": "TR 6521",
+    "name": "Surface Roughness Meter",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/TR 6521表面粗糙度仪.doc"
+    ],
+    "name_en": "Surface Roughness Meter",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Surface Roughness Meter, Roughness, Ra, Profilometer, Surface Texture"
+  },
+  {
+    "model": "TR 6540",
+    "name": "UV Curing Machine",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6540 UV固化机.doc"
+    ],
+    "name_en": "UV Curing Machine",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "UV Curing Machine, UV Lamp, Polymerization, Adhesive Curing"
+  },
+  {
+    "model": "TR 6550",
+    "name": "UV Energy Meter",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6550 UV能量计.doc"
+    ],
+    "name_en": "UV Energy Meter",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "UV Energy Meter, UV Dosimeter, Integrating UV Meter, Radiometer"
+  },
+  {
+    "model": "TR 6580",
+    "name": "Powder Spray Booth",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 6580 喷粉柜.doc"
+    ],
+    "name_en": "Powder Spray Booth",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Powder Spray Booth, Powder Coating, Spray Booth, Recovery System"
+  },
+  {
+    "model": "TR 6800",
+    "name": "Bench-Top pH Meter",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6800台式酸度计产品介绍.doc"
+    ],
+    "name_en": "Bench-Top pH Meter",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Bench-Top pH Meter, pH Meter, Laboratory pH, Acidimeter"
+  },
+  {
+    "model": "TR 6801",
+    "name": "Portable pH Meter",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6801便携式酸度计产品介绍.doc"
+    ],
+    "name_en": "Portable pH Meter",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Portable pH Meter, Handheld pH, Field pH, Water Testing"
+  },
+  {
+    "model": "TR 6802",
+    "name": "Pen-Type pH Meter",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6802笔式酸度计.doc"
+    ],
+    "name_en": "Pen-Type pH Meter",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Pen-Type pH Meter, Pen pH Meter, Pocket pH, Water Quality"
+  },
+  {
+    "model": "TR 6806",
+    "name": "Bench-Top Conductivity Meter",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6806台式电导率仪产品介绍.doc"
+    ],
+    "name_en": "Bench-Top Conductivity Meter",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Bench-Top Conductivity Meter, Conductivity Meter, EC Meter, Lab Analysis"
+  },
+  {
+    "model": "TR 6807",
+    "name": "Portable Conductivity Meter",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/TR 6807便携式电导率仪.doc"
+    ],
+    "name_en": "Portable Conductivity Meter",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Portable Conductivity Meter, Handheld Conductivity, Field EC, Water Testing"
+  },
+  {
+    "model": "TR 线棒产品介绍",
+    "name": "Wire Rods",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/TR 线棒产品介绍.doc"
+    ],
+    "name_en": "Wire Rods",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Wire Rods, Laboratory Wire Rods, Film Applicator Wire Rods, Baker Wire Rods"
+  },
+  {
+    "model": "数显磁力搅拌器",
+    "name": "Digital Magnetic Stirrer",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/数显磁力搅拌器.doc"
+    ],
+    "name_en": "Digital Magnetic Stirrer",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Digital Magnetic Stirrer, Magnetic Stirrer, Hot Plate Magnetic Stirrer"
+  },
+  {
+    "model": "涂料快速分散试验机（快手）",
+    "name": "Quick Disperser",
+    "category": "grind",
+    "cat_name": "Dispersion & Grinding",
+    "docs": [
+      "documents/涂料快速分散试验机（快手）.doc"
+    ],
+    "name_en": "Quick Disperser",
+    "cat_name_en": "Dispersion & Grinding",
+    "keywords_en": "Quick Disperser, Speed Disperser, High Speed Lab Disperser, Paint Disperser"
+  },
+  {
+    "model": "RDS线棒",
+    "name": "RDS Wire Rod",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/RDS线棒.doc"
+    ],
+    "name_en": "RDS Wire Rod",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "RDS Wire Rod, Wire Rod Coater, Laboratory Coater, Film Applicator"
+  },
+  {
+    "model": "制备器产品介绍",
+    "name": "Film Applicators",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/制备器产品介绍.doc"
+    ],
+    "name_en": "Film Applicators",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Film Applicators, Drawdown Bars, Laboratory Applicators, Coating Rods"
+  },
+  {
+    "model": "可调式涂膜器",
+    "name": "Adjustable Film Applicator",
+    "category": "raw",
+    "cat_name": "Sample Preparation",
+    "docs": [
+      "documents/可调式涂膜器.doc"
+    ],
+    "name_en": "Adjustable Film Applicator",
+    "cat_name_en": "Sample Preparation",
+    "keywords_en": "Adjustable Film Applicator, Variable Film Applicator, Micrometer Applicator"
+  },
+  {
+    "model": "MPO测厚仪",
+    "name": "MPO Thickness Gauge",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/MPO测厚仪.doc"
+    ],
+    "name_en": "MPO Thickness Gauge",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "MPO Thickness Gauge, Coating Thickness, Dual Function, Magnetic Eddy Current"
+  },
+  {
+    "model": "尼克斯测厚仪",
+    "name": "Niklas Thickness Gauge",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/尼克斯测厚仪.doc"
+    ],
+    "name_en": "Niklas Thickness Gauge",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Niklas Thickness Gauge, Coating Thickness, Niklas"
+  },
+  {
+    "model": "湿膜片",
+    "name": "Wet Film Thickness Gauge",
+    "category": "film",
+    "cat_name": "Film Testing (After Formation)",
+    "docs": [
+      "documents/湿膜片.doc"
+    ],
+    "name_en": "Wet Film Thickness Gauge",
+    "cat_name_en": "Film Testing (After Formation)",
+    "keywords_en": "Wet Film Thickness Gauge, Wet Film Comb, Film Thickness Gauge"
+  },
+  {
+    "model": "真空干燥箱",
+    "name": "Vacuum Drying Oven",
+    "category": "lab",
+    "cat_name": "Laboratory Equipment",
+    "docs": [
+      "documents/真空干燥箱.doc"
+    ],
+    "name_en": "Vacuum Drying Oven",
+    "cat_name_en": "Laboratory Equipment",
+    "keywords_en": "Vacuum Drying Oven, Vacuum Oven, Drying Chamber, Low Pressure Drying"
+  },
+  {
+    "model": "耗材资料(2)",
+    "name": "Consumables",
+    "category": "consumable",
+    "cat_name": "Consumables",
+    "docs": [
+      "documents/耗材资料(2).docx"
+    ],
+    "name_en": "Consumables",
+    "cat_name_en": "Consumables",
+    "keywords_en": "Consumables, Standard Weights, Lab Consumables, Testing Accessories"
+  }
+];
+
+    let currentLang = 'zh';
+    let currentCategory = 'all';
+    let searchQuery = '';
+
+    function handleSearch(query) {
+      searchQuery = query.trim();
+      renderProducts();
+    }
+
+    function handleCategoryChange(cat) {
+      currentCategory = cat;
+      renderProducts();
+    }
+
+    function switchProductsLang(lang) {
+      currentLang = lang;
+      renderProducts();
+    }
+
+    function fuzzyMatch(text, query) {
+      if (!text || !query) return false;
+      text = text.toLowerCase();
+      query = query.toLowerCase();
+      return text.includes(query);
+    }
+
+    function renderProducts() {
+      const filtered = products.filter(p => {
+        const matchCat = currentCategory === 'all' || p.category === currentCategory;
+        const q = searchQuery;
+        const name = p.name_en || p.name || "";
+        const catName = p.cat_name_en || p.cat_name || "";
+        const matchSearch = !q ||
+          fuzzyMatch(name, q) ||
+          fuzzyMatch(p.model, q) ||
+          fuzzyMatch(catName, q);
+        return matchCat && matchSearch;
+      });
+
+      const grid = document.getElementById('productsGrid');
+      const noResults = document.getElementById('noResults');
+      document.getElementById('resultsCount').textContent = currentLang === 'zh'
+        ? `共 ${filtered.length} 个产品`
+        : `${filtered.length} products`;
+
+      if (filtered.length === 0) {
+        grid.style.display = 'none';
+        noResults.style.display = 'block';
+        return;
+      }
+
+      grid.style.display = 'grid';
+      noResults.style.display = 'none';
+
+      grid.innerHTML = filtered.map(p => {
+        const name = p.name_en || p.name || "";
+        const catName = p.cat_name_en || p.cat_name || "";
+        const docLabel = currentLang === 'zh' ? 'Word Document' : 'Word';
+        const docFile = p.docs && p.docs.length > 0 ? p.docs[0].split('/').pop() : null;
+        const imgSrc = p.image || 'products/placeholder.png';
+        const detailUrl = `product.html?model=${encodeURIComponent(p.model)}`;
+
+        return `<div class="product-card" onclick="window.location='${detailUrl}'">
+          <div class="product-image">${p.image ? `<img src="${imgSrc}" alt="${name}" loading="lazy">` : '<div class="no-image">📷</div>'}</div>
+          <div class="product-info">
+            <div class="product-model">${p.model}</div>
+            <div class="product-name">${name}</div>
+            <div class="product-category">${catName}</div>
+            ${docFile ? `<div class="product-doc">📄 ${docLabel}</div>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+      // Read category from URL params (e.g. products.html?cat=grind)
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get('cat');
+      if (catParam) {
+        currentCategory = catParam;
+        document.getElementById('categoryFilter').value = catParam;
+      }
+      renderProducts();
+    });
+  </script>
+</body>
+</html>
