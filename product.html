@@ -145,11 +145,24 @@
         "manufacturer": {
           "@type": "Organization",
           "name": "腾瑞仪器（广州）有限公司",
-          "url": "https://www.gztruit.com"
+          "url": "https://www.gztruit.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "广州市",
+            "addressRegion": "广东省",
+            "addressCountry": "CN"
+          }
         },
         "model": product.model,
+        "sku": product.model,
+        "mpn": product.model,
+        "countryOfOrigin": "CN",
         "category": product.cat_name || '',
         "url": window.location.href,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": window.location.href
+        },
         "offers": {
           "@type": "Offer",
           "priceCurrency": priceCurrency,
