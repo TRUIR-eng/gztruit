@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrumenti za Ispitivanje Premaza | Posuda za Viskozitet | Komora sa Slanom Maglom | TRUIT Instruments</title>
+  <meta name="description" content="TRUIT Instruments - Profesionalni proizvođač instrumenata za ispitivanje premaza, uključujući posude za viskozitet, komore sa slanom maglom, sjajnometre, debljinomjere. 172 proizvoda. Standardi ISO/ASTM/GB. Globalna dostava.">
+  <meta name="keywords" content="instrumenti za ispitivanje premaza,oprema za ispitivanje boja,posuda za viskozitet,komora sa slanom maglom,sajnomjer,mjerač debljine,mjerač tvrdoće,laboratorijski instrumenti,industrijsko ispitivanje,kontrola kvalitete,ispitivanje boja,ispitivanje tinti,inspekcija premaza">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://truir-eng.github.io/gztruit/products-hr.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="alternate" hreflang="en" href="https://truir-eng.github.io/gztruit/products-en.html">
+  <link rel="alternate" hreflang="hr" href="https://truir-eng.github.io/gztruit/products-hr.html">
+  <link rel="alternate" hreflang="x-default" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-bar">📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com &nbsp;|&nbsp; 20+ godina proizvođačkog iskustva</div>
+  <header>
+    <div class="header-inner">
+      <a href="index-hr.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
+      <div class="header-brand"><h1>TRUIT <span>Instruments</span></h1></div>
+      <nav>
+        <a href="index-hr.html">Početna</a>
+        <a href="products-hr.html" class="active">Proizvodi</a>
+        <a href="index-hr.html#contact">Kontaktirajte nas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Proizvodi</h1>
+      <p>20+ godina proizvođačkog iskustva · Jamstvo kvalitete · Doživotno održavanje</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Pretražite proizvode..." oninput="handleSearch(this.value)">
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-row">
+        <div class="filter-cell">
+          <label>Kategorjia: </label>
+          <select id="categoryFilter" onchange="handleCategoryChange(this.value)">
+            <option value="all">Svi</option>
+            <option value="grind">Disperzija/Miješanje/Mljevenje</option>
+            <option value="raw">Ispitivanje Sirovina</option>
+            <option value="film">Ispitivanje Filma (Nakon Formiranja)</option>
+            <option value="aging">Starenje Okoline</option>
+            <option value="lab">Laboratorijski Instrumenti</option>
+            <option value="consumable">Standardni Potrošni Materijal</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-info" id="resultsCount"></div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">🔍</div>
+      <h3>Nema pronađenih proizvoda</h3>
+      <p>Pokušajte druge ključne riječi ili pregledajte sve kategorije</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 TRUIT Instruments (Guangzhou) Co., Ltd.</p>
+  </footer>
+
+  <script>
+    const products = [
+  { "model": "TR 1001", "name": "Zahn Posuda", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "Zahn Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1002", "name": "Ford Posuda", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "Ford Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1004", "name": "NF Posuda", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "NF Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1005&1006", "name": "DIN Posuda", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "DIN Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1008", "name": "ISO Efluks Posuda", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "ISO Efflux Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1010", "name": "T-4 Posuda", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "T-4 Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1101-1&4", "name": "Dial Rotacijski Viskozimetar", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "Dial Rotational Viscometer", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1101-5&8", "name": "Digitalni Rotacijski Viskozimetar", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "Digital Rotational Viscometer", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1123-1", "name": "Stormer Viskozimetar", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "Stormer Viscosimeter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1201", "name": "Finomjerni Uređaj", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "Fineness Gauge", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 2001", "name": "Disperzor Visoke Brzine", "category": "grind", "cat_name": "Disperzija i Mljevenje", "docs": [], "name_en": "High Speed Disperser", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2030", "name": "Miješalica s Ostrivicama", "category": "grind", "cat_name": "Disperzija i Mljevenje", "docs": [], "name_en": "Overhead Stirrer", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2200", "name": "Košarica Mlin", "category": "grind", "cat_name": "Disperzija i Mljevenje", "docs": [], "name_en": "Basket Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2250", "name": "Vodoravni Mlin s Pijeskom", "category": "grind", "cat_name": "Disperzija i Mljevenje", "docs": [], "name_en": "Horizontal Sand Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2280", "name": "Troskovni Mlin", "category": "grind", "cat_name": "Disperzija i Mljevenje", "docs": [], "name_en": "Three Roll Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 5001", "name": "Tester Adhezije Metodom Rezanja", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Cross-Cut Adhesion Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5011", "name": "Tvrdomjer s Olovkom", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Pencil Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5020", "name": "Tester Adhezije Vadenjem", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Pull-Off Adhesion Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5121", "name": "Tvrdomjer s Kyvadom", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Pendulum Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5130", "name": "Tvrdomjer s Utičnjom", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Indentation Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5150", "name": "Shore Tvrdomjer", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Shore Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5210", "name": "DuPont Tester Udarca", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "DuPont Impact Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5307", "name": "Taber Abrazijski Tester", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Taber Abraser", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5462", "name": "Inteligentni Sajnometar", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Intelligent Glossmeter", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5464", "name": "Sajnometar", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Glossmeter", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5510-1", "name": "Debljinomjer za Premaze (Integrirani)", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Coating Thickness Gauge Integral", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5510-2", "name": "Debljinomjer za Premaze (Odvojeni)", "category": "film", "cat_name": "Ispitivanje Filma", "docs": [], "name_en": "Coating Thickness Gauge Separate", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 6004", "name": "Elektronička Analitička Vaga", "category": "lab", "cat_name": "Laboratorijska Oprema", "docs": [], "name_en": "Electronic Analytical Balance", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6005", "name": "Elektronička Vaga", "category": "lab", "cat_name": "Laboratorijska Oprema", "docs": [], "name_en": "Electronic Balance", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6010", "name": "Sušilica s Prisilnom Cirkulacijom", "category": "lab", "cat_name": "Laboratorijska Oprema", "docs": [], "name_en": "Forced Air Drying Oven", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6040", "name": "Mufolna Peć", "category": "lab", "cat_name": "Laboratorijska Oprema", "docs": [], "name_en": "Muffle Furnace", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6150", "name": "Vodena Kupelj", "category": "lab", "cat_name": "Laboratorijska Oprema", "docs": [], "name_en": "Water Bath", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6301", "name": "Komora za Ispitivanje Slane Magle", "category": "aging", "cat_name": "Testiranje Starenja Okoline", "docs": [], "name_en": "Salt Spray Test Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6360", "name": "Komora za Toplinski Šok", "category": "aging", "cat_name": "Testiranje Starenja Okoline", "docs": [], "name_en": "Thermal Shock Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6412", "name": "Ksenonski Vremenski Omjer", "category": "aging", "cat_name": "Testiranje Starenja Okoline", "docs": [], "name_en": "Xenon Arc Weatherometer", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6421", "name": "UV Komora za Starenje", "category": "aging", "cat_name": "Testiranje Starenja Okoline", "docs": [], "name_en": "UV Aging Test Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6424", "name": "Komora s Konstantnom Temperaturom i Vlagošću", "category": "aging", "cat_name": "Testiranje Starenja Okoline", "docs": [], "name_en": "Constant Temperature Humidity Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6500", "name": "Mjerilo Površinske Napetosti", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "Surface Tension Meter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 6510", "name": "Mjerilo Kontaktnog Kuta", "category": "raw", "cat_name": "Ispitivanje Sirovina", "docs": [], "name_en": "Contact Angle Meter", "cat_name_en": "Raw Material Testing" }
+];
+
+    function handleSearch(query) {
+      const q = query.toLowerCase();
+      const filtered = products.filter(p =>
+        p.model.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        p.name_en.toLowerCase().includes(q)
+      );
+      renderProducts(filtered);
+    }
+
+    function handleCategoryChange(cat) {
+      const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+      renderProducts(filtered);
+    }
+
+    function renderProducts(list) {
+      const grid = document.getElementById('productsGrid');
+      const count = document.getElementById('resultsCount');
+      const noResults = document.getElementById('noResults');
+      count.innerHTML = `<strong>${list.length}</strong> pronađenih proizvoda`;
+      noResults.style.display = list.length === 0 ? 'block' : 'none';
+      grid.innerHTML = list.map(p => `
+        <div class="product-card" onclick="location.href='product.html?model=${encodeURIComponent(p.model)}'">
+          <div class="product-model">${p.model}</div>
+          <div class="product-name">${p.name}</div>
+          <div class="product-cat">${p.cat_name}</div>
+          <div class="product-cat-en">${p.cat_name_en}</div>
+        </div>
+      `).join('');
+    }
+
+    renderProducts(products);
+  </script>
+</body>
+</html>
