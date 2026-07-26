@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katte Testimise Instrumendid | Viskosiimeeter | Sooludušikamber | TRUIT Instruments</title>
+  <meta name="description" content="TRUIT Instruments - Professionaalne katte testimise seadmete tootja, sh viskosiimeetrid, sooludušikambrid, läikemõõtjad, paksusmõõtjad. 172 toodet. ISO/ASTM/GB standardid. Globaalne saatmine.">
+  <meta name="keywords" content="katte testimise instrumendid,värvi testimise seadmed,viskosiimeeter,sooludušikamber,läikemõõtja,paksusmõõtja,kõvadusmõõtja,laboriseadmed, tööstuslik katsetamine,kvaliteedikontroll,värvi katsetamine,tindi katsetamine">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://truir-eng.github.io/gztruit/products-et.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="alternate" hreflang="en" href="https://truir-eng.github.io/gztruit/products-en.html">
+  <link rel="alternate" hreflang="et" href="https://truir-eng.github.io/gztruit/products-et.html">
+  <link rel="alternate" hreflang="x-default" href="https://truir-eng.github.io/gztruit/products.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-bar">📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com &nbsp;|&nbsp; 20+ aastat tootmiskogemust</div>
+  <header>
+    <div class="header-inner">
+      <a href="index-et.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
+      <div class="header-brand"><h1>TRUIT <span>Instruments</span></h1></div>
+      <nav>
+        <a href="index-et.html">Avaleht</a>
+        <a href="products-et.html" class="active">Tooted</a>
+        <a href="index-et.html#contact">Võtke ühendust</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Tooted</h1>
+      <p>20+ aastat tootmiskogemust · Kvaliteet garanteeritud · Eluaegne hooldus</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Otsi tooteid..." oninput="handleSearch(this.value)">
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-row">
+        <div class="filter-cell">
+          <label>Kategooria: </label>
+          <select id="categoryFilter" onchange="handleCategoryChange(this.value)">
+            <option value="all">Kõik</option>
+            <option value="grind">Dispersioon/Segamine/Veski</option>
+            <option value="raw">Toormaterjali Katsetamine</option>
+            <option value="film">Kile Katsetamine (Pärast Moodustumist)</option>
+            <option value="aging">Keskkonna Vanandamine</option>
+            <option value="lab">Laboriseadmed</option>
+            <option value="consumable">Standardtarvikud</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-info" id="resultsCount"></div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">🔍</div>
+      <h3>Tooteid ei leitud</h3>
+      <p>Proovige teisi märksõnu või sirvige kõiki kategooriaid</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 TRUIT Instruments (Guangzhou) Co., Ltd.</p>
+  </footer>
+
+  <script>
+    const products = [
+  { "model": "TR 1001", "name": "Zahni Karikas", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "Zahn Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1002", "name": "Fordi Karikas", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "Ford Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1004", "name": "NF Karikas", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "NF Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1005&1006", "name": "DIN Karikas", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "DIN Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1008", "name": "ISO Väljavoolu Karikas", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "ISO Efflux Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1010", "name": "T-4 Karikas", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "T-4 Cup", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1101-1&4", "name": "Ketta Pöördviskosiimeeter", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "Dial Rotational Viscometer", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1101-5&8", "name": "Digitaalne Pöördviskosiimeeter", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "Digital Rotational Viscometer", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1123-1", "name": "Stormeri Viskosiimeeter", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "Stormer Viscosimeter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 1201", "name": "Pihuse Suurusmõõtja", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "Fineness Gauge", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 2001", "name": "Kõrge Kiirusega Disperser", "category": "grind", "cat_name": "Dispersioon ja Veski", "docs": [], "name_en": "High Speed Disperser", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2030", "name": "Ülalolev Segisti", "category": "grind", "cat_name": "Dispersioon ja Veski", "docs": [], "name_en": "Overhead Stirrer", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2200", "name": "Korvi Veski", "category": "grind", "cat_name": "Dispersioon ja Veski", "docs": [], "name_en": "Basket Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2250", "name": "Horisontaalne Liivaveski", "category": "grind", "cat_name": "Dispersioon ja Veski", "docs": [], "name_en": "Horizontal Sand Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 2280", "name": "Kolmrullveski", "category": "grind", "cat_name": "Dispersioon ja Veski", "docs": [], "name_en": "Three Roll Mill", "cat_name_en": "Dispersion & Grinding" },
+  { "model": "TR 5001", "name": "Ristlõike Nakatusetester", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Cross-Cut Adhesion Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5011", "name": "Pliiatsi Kõvadusmõõtja", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Pencil Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5020", "name": "Tõmbamise Nakatusetester", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Pull-Off Adhesion Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5121", "name": "Pendli Kõvadusmõõtja", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Pendulum Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5130", "name": "Sisselõike Kõvadusmõõtja", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Indentation Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5150", "name": "Shore Kõvadusmõõtja", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Shore Hardness Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5210", "name": "DuPont Löögitester", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "DuPont Impact Tester", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5307", "name": "Taberi Abrasiomeeter", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Taber Abraser", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5462", "name": "Intelligetne Läikemõõtja", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Intelligent Glossmeter", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5464", "name": "Läikemõõtja", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Glossmeter", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5510-1", "name": "Katte Paksusmõõtja (Integreeritud)", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Coating Thickness Gauge Integral", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 5510-2", "name": "Katte Paksusmõõtja (Eraldi)", "category": "film", "cat_name": "Kile Katsetamine", "docs": [], "name_en": "Coating Thickness Gauge Separate", "cat_name_en": "Film Testing (After Formation)" },
+  { "model": "TR 6004", "name": "Elektrooniline Analüütiline Kaal", "category": "lab", "cat_name": "Laboriseadmed", "docs": [], "name_en": "Electronic Analytical Balance", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6005", "name": "Elektrooniline Kaal", "category": "lab", "cat_name": "Laboriseadmed", "docs": [], "name_en": "Electronic Balance", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6010", "name": "Sundõhkkujaga Kuivatusahi", "category": "lab", "cat_name": "Laboriseadmed", "docs": [], "name_en": "Forced Air Drying Oven", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6040", "name": "Ahjuuun", "category": "lab", "cat_name": "Laboriseadmed", "docs": [], "name_en": "Muffle Furnace", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6150", "name": "Veevann", "category": "lab", "cat_name": "Laboriseadmed", "docs": [], "name_en": "Water Bath", "cat_name_en": "Laboratory Equipment" },
+  { "model": "TR 6301", "name": "Sooludušikamber", "category": "aging", "cat_name": "Keskkonna Vanandamise Katsetamine", "docs": [], "name_en": "Salt Spray Test Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6360", "name": "Temperatuuršoki Kamber", "category": "aging", "cat_name": "Keskkonna Vanandamise Katsetamine", "docs": [], "name_en": "Thermal Shock Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6412", "name": "Ksenoonkaarlane Ilmameeter", "category": "aging", "cat_name": "Keskkonna Vanandamise Katsetamine", "docs": [], "name_en": "Xenon Arc Weatherometer", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6421", "name": "UV Vanandamiskamber", "category": "aging", "cat_name": "Keskkonna Vanandamise Katsetamine", "docs": [], "name_en": "UV Aging Test Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6424", "name": "Konstantse Temperatuuri ja Niiskusega Kamber", "category": "aging", "cat_name": "Keskkonna Vanandamise Katsetamine", "docs": [], "name_en": "Constant Temperature Humidity Chamber", "cat_name_en": "Environmental Aging Testing" },
+  { "model": "TR 6500", "name": "Pindpinevuse Mõõtja", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "Surface Tension Meter", "cat_name_en": "Raw Material Testing" },
+  { "model": "TR 6510", "name": "Kontaktnurga Mõõtja", "category": "raw", "cat_name": "Toormaterjali Katsetamine", "docs": [], "name_en": "Contact Angle Meter", "cat_name_en": "Raw Material Testing" }
+];
+
+    function handleSearch(query) {
+      const q = query.toLowerCase();
+      const filtered = products.filter(p =>
+        p.model.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        p.name_en.toLowerCase().includes(q)
+      );
+      renderProducts(filtered);
+    }
+
+    function handleCategoryChange(cat) {
+      const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+      renderProducts(filtered);
+    }
+
+    function renderProducts(list) {
+      const grid = document.getElementById('productsGrid');
+      const count = document.getElementById('resultsCount');
+      const noResults = document.getElementById('noResults');
+      count.innerHTML = `<strong>${list.length}</strong> toodet leitud`;
+      noResults.style.display = list.length === 0 ? 'block' : 'none';
+      grid.innerHTML = list.map(p => `
+        <div class="product-card" onclick="location.href='product.html?model=${encodeURIComponent(p.model)}'">
+          <div class="product-model">${p.model}</div>
+          <div class="product-name">${p.name}</div>
+          <div class="product-cat">${p.cat_name}</div>
+          <div class="product-cat-en">${p.cat_name_en}</div>
+        </div>
+      `).join('');
+    }
+
+    renderProducts(products);
+  </script>
+</body>
+</html>
