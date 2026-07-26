@@ -2,337 +2,1051 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://truir-eng.github.io/gztruit/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/products.html</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/documents.html</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=MPO%E6%B5%8B%E5%8E%9A%E4%BB%AA</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=RDS%E7%BA%BF%E6%A3%92</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201001</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201002</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201004</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201005&amp;1006</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201005%261006</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201008</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201009</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201010</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201013</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201101-1&amp;4</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201101-1%264</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201101-1CH</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201101-5&amp;8</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201104</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201101-5%268</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201123-1</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201168/1</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201123-2</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201168/2</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201130</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201155</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201158</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201160</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201201</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201202</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201203</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201220%261222</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201226</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201300</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201303</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201305</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201306</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201308</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201330</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201350</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201353</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201361</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201370</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201380</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201385</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201392</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201395</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201603</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%201860</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202001</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202002</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202003</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202030</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202037</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202200</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202250</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202280</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202310</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%202311</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203002-F1</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203060</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203101</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203080</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203502-P1-1</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203301</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203600</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203330</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203606</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203380</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203910A</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203501</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203502</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203508</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203562</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203599-2</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203605</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203610</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203620</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203630</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203680</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203700</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203803</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203900</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203902</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203903</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203911</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%203955</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205001</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205003</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205006</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205030</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205011</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205202/F1</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205202/F</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205020</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205206</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205213</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205021</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205306</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205023</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205105-1</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205105-A</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205120</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205121</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205122</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205130</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205140</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205141</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205150</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205151</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205155</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205160-1</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205160-2</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205170</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205210</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205211</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205212</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205214</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205220</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205230</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205240</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205250</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205260</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205261</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205262</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205300</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205301-A</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205302</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205303</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205304</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205307</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205309</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205310</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205311/1</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205312</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205314</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205334</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205402</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205403</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205402%2070D</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205402%2082N</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205420</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205430-6</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205451</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205452</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205455</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205462</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205464</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205464-7</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205508</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205512</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205510-1</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205510-2</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205511</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205520</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205801</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205802</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%205901</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206004</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206005</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206010</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206302</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206040</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206050</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206100</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206130</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206134</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206135</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206150</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206151</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206152</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206153</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206183</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206301</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206360</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206412</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206413</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206420</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206421</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206421-001</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206422</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206424</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206480</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206551</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206500</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%20%E7%BA%BF%E6%A3%92</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206510</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E5%A4%8D%E5%90%88%E5%BC%8F%E7%9B%90%E5%B9%B2%E6%B9%BF</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206521</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E9%AB%98%E4%BD%8E%E6%B8%A9%E4%BA%A4%E5%8F%98%E6%B9%BF%E7%83%AD</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206540</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206550</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206580</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206800</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206801</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206802</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206806</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%206807</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=TR%20%E7%BA%BF%E6%A3%92%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E5%88%B6%E5%A4%87%E5%99%A8%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E5%8F%AF%E8%B0%83%E5%BC%8F%E6%B6%82%E8%86%9C%E5%99%A8</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E5%B0%BC%E5%85%8B%E6%96%AF%E6%B5%8B%E5%8E%9A%E4%BB%AA</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E6%95%B0%E6%98%BE%E7%A3%81%E5%8A%9B%E6%90%85%E6%8B%8C%E5%99%A8</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E6%B6%82%E6%96%99%E5%BF%AB%E9%80%9F%E5%88%86%E6%95%A3%E8%AF%95%E9%AA%8C%E6%9C%BA%EF%BC%88%E5%BF%AB%E6%89%8B%EF%BC%89</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E6%B9%BF%E8%86%9C%E7%89%87</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E7%9C%9F%E7%A9%BA%E5%B9%B2%E7%87%A5%E7%AE%B1</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://truir-eng.github.io/gztruit/product.html?model=%E8%80%97%E6%9D%90%E8%B5%84%E6%96%99(2)</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
