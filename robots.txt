@@ -1,47 +1,8 @@
+# TRUIT Instruments robots.txt
+# Generated: 2026-07-27
+
 User-agent: *
 Allow: /
 
-# Sitemap - 主站
+# 主站 sitemap
 Sitemap: https://truir-eng.github.io/gztruit/sitemap.xml
-
-# Sitemap - 日语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-ja.xml
-
-# Sitemap - 韩语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-ko.xml
-
-# Sitemap - 西班牙语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-es.xml
-
-# Sitemap - 法语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-fr.xml
-
-# Sitemap - 德语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-de.xml
-
-# Sitemap - 葡萄牙语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-pt.xml
-
-# Sitemap - 俄语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-ru.xml
-
-# Sitemap - 阿拉伯语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-ar.xml
-
-# Sitemap - 越南语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-vi.xml
-
-# Sitemap - 泰语
-#Sitemap: https://truir-eng.github.io/gztruit/sitemap-th.xml
-
-# 10种语言版页面索引（已注释，待页面实际创建后取消注释）:
-# 日语: index-ja.html, products-ja.html, documents-ja.html
-# 韩语: index-ko.html, products-ko.html, documents-ko.html
-# 西班牙语: index-es.html, products-es.html, documents-es.html
-# 法语: index-fr.html, products-fr.html, documents-fr.html
-# 德语: index-de.html, products-de.html, documents-de.html
-# 葡萄牙语: index-pt.html, products-pt.html, documents-pt.html
-# 俄语: index-ru.html, products-ru.html, documents-ru.html
-# 阿拉伯语: index-ar.html, products-ar.html, documents-ar.html
-# 越南语: index-vi.html, products-vi.html, documents-vi.html
-# 泰语: index-th.html, products-th.html, documents-th.html
