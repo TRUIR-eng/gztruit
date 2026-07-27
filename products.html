@@ -35,7 +35,7 @@
     "image": "https://truir-eng.github.io/gztruit/logo.png",
     "publisher": {
       "@type": "Organization",
-      "name": "腾瑞仪器（广州）有限公司（广州）有限公司",
+      "name": "腾瑞仪器（广州）有限公司",
       "url": "https://www.gztruit.com"
     },
     "mainEntity": {
@@ -850,25 +850,28 @@ window.__PRODUCT_DESCRIPTIONS__ = {
       <input type="text" id="searchInput" placeholder="搜索产品..." oninput="handleSearch(this.value)">
     </div>
 
-    <div class="filter-bar">
-      <div class="filter-row">
-        <div class="filter-cell">
-          <label>分类：</label>
-          <select id="categoryFilter" onchange="handleCategoryChange(this.value)">
-            <option value="all">全部</option>
-            <option value="grind">分散/搅拌/研磨</option>
-            <option value="raw">原料性能检验</option>
-            <option value="film">成膜后检验</option>
-            <option value="aging">环境老化</option>
-            <option value="lab">实验室通用仪器</option>
-            <option value="consumable">标准耗材</option>
-          </select>
+    <div class="category-nav" id="categoryNav">
+      <div class="nav-scroll">
+        <button class="nav-btn prev" onclick="scrollNav(-1)">&#8249;</button>
+        <div class="nav-track" id="navTrack">
+          <button class="cat-btn active" data-cat="all" onclick="selectCat('all')">全部<span class="nav-count">172</span></button>
+          <button class="cat-btn" data-cat="raw" onclick="selectCat('raw')">原料性能<span class="nav-count">41</span></button>
+          <button class="cat-btn" data-cat="grind" onclick="selectCat('grind')">分散/搅拌<span class="nav-count">11</span></button>
+          <button class="cat-btn" data-cat="film" onclick="selectCat('film')">成膜检测<span class="nav-count">65</span></button>
+          <button class="cat-btn" data-cat="aging" onclick="selectCat('aging')">环境老化<span class="nav-count">8</span></button>
+          <button class="cat-btn" data-cat="lab" onclick="selectCat('lab')">实验室<span class="nav-count">22</span></button>
+          <button class="cat-btn" data-cat="consumable" onclick="selectCat('consumable')">标准耗材<span class="nav-count">1</span></button>
         </div>
+        <button class="nav-btn next" onclick="scrollNav(1)">&#8250;</button>
       </div>
     </div>
 
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="搜索产品型号或名称..." oninput="handleSearch(this.value)">
+    </div>
+
     <div class="results-info" id="resultsCount"></div>
-    <div class="products-grid" id="productsGrid"></div>
+    <div id="productContainer"></div>
     <div class="no-results" id="noResults">
       <div class="no-results-icon">🔍</div>
       <h3>未找到相关产品</h3>
@@ -877,131 +880,959 @@ window.__PRODUCT_DESCRIPTIONS__ = {
   </main>
 
   <footer>
-    <p>© 2024 腾瑞仪器（广州）有限公司（广州）有限公司 TRUIT Instruments (Guangzhou) Co.,Ltd</p>
+    <p>© 2024 腾瑞仪器（广州）有限公司 TRUIT Instruments (Guangzhou) Co.,Ltd</p>
   </footer>
 
   <script>
-    const products = [{"model": "TR 1001", "name": "蔡恩杯", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1001蔡恩杯.doc"]}, {"model": "TR 1002", "name": "福特杯", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1002福特杯.doc"]}, {"model": "TR 1004", "name": "法国标准杯（NF杯）", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1004法国标准杯（NF杯）.doc"]}, {"model": "TR 1005&1006", "name": "DIN杯", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1005&1006DIN杯.doc"]}, {"model": "TR 1008", "name": "ISO粘度杯", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1008ISO粘度杯.doc"]}, {"model": "TR 1009", "name": "岩田杯", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1009岩田杯产品介绍.doc"]}, {"model": "TR 1010", "name": "涂-4杯（T-4杯）+秒表", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1010涂-4杯（T-4杯）+秒表.doc"]}, {"model": "TR 1013", "name": "粘度杯支架", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1013粘度杯支架产品介绍.doc"]}, {"model": "TR 1101-1&4", "name": "表盘式旋转粘度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1101-1&4表盘式旋转粘度计产品介绍.doc"]}, {"model": "TR 1101-5&8", "name": "数显旋转粘度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1101-5&8数显旋转粘度计产品介绍.doc"]}, {"model": "TR 1123-1", "name": "斯托默粘度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1123-1斯托默粘度计产品介绍.doc"]}, {"model": "TR 1123-2", "name": "智能斯托默粘度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1123-2智能斯托默粘度计.doc"]}, {"model": "TR 1130", "name": "锥板粘度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1130 锥板粘度计产品介绍.doc"]}, {"model": "TR 1155", "name": "落球粘度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1155 落球粘度计.doc"]}, {"model": "TR 1158", "name": "平板粘度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1158 平板粘度计产品介绍.doc"]}, {"model": "TR 1160", "name": "数显电子油墨黏性仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1160数显电子油墨黏性仪.doc"]}, {"model": "TR 1201", "name": "细度板", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1201 1202 1203细度板产品介绍.doc"]}, {"model": "TR 1202", "name": "细度板", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1201 1202 1203细度板产品介绍.doc"]}, {"model": "TR 1203", "name": "细度板", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1201 1202 1203细度板产品介绍.doc"]}, {"model": "TR 1220&1222", "name": "比重杯", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1220&1222比重杯产品介绍.doc"]}, {"model": "TR 1226", "name": "液体密度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1226液体密度计.doc"]}, {"model": "TR 1300", "name": "液体比色计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1300液体比色计.doc"]}, {"model": "TR 1303", "name": "铂钴比色计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1303铂钴比色计.doc"]}, {"model": "TR 1305", "name": "铁钴比色计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1305铁钴比色计产品介绍.doc"]}, {"model": "TR 1306", "name": "透明度测定仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1306透明度测定仪.doc"]}, {"model": "TR 1308", "name": "罗维朋比色计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1308罗维朋比色计.doc"]}, {"model": "TR 1330", "name": "阿贝折射仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1330 阿贝折射仪.doc"]}, {"model": "TR 1350", "name": "分光光度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1350分光光度计产品介绍.doc"]}, {"model": "TR 1353", "name": "紫外可见分光光度计", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1353紫外可见分光光度计产品介绍.doc"]}, {"model": "TR 1361", "name": "白度仪&粉末成型器", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1361白度仪&粉末成型器产品介绍.doc"]}, {"model": "TR 1370", "name": "浊度仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1370浊度仪产品介绍.doc"]}, {"model": "TR 1380", "name": "自动水分滴定仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1380自动水分滴定仪.doc"]}, {"model": "TR 1385", "name": "微量水分测定仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1385微量水分测定仪.doc"]}, {"model": "TR 1392", "name": "卤素水分仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1392卤素水分仪.doc"]}, {"model": "TR 1395", "name": "自动闪点测定仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1395 自动闪点测定仪.doc"]}, {"model": "TR 1603", "name": "腻子稠度仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1603腻子稠度仪.doc"]}, {"model": "TR 1860", "name": "激光粒度分布仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 1860激光粒度分布仪.doc"]}, {"model": "TR 2001", "name": "高速分散机", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2001 高速分散机.doc"]}, {"model": "TR 2003", "name": "油墨搅拌机", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2003 油墨搅拌机.doc"]}, {"model": "TR 2030", "name": "悬臂式电动搅拌器", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2030悬臂式电动搅拌器.doc"]}, {"model": "TR 2037", "name": "气动搅拌机", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2037气动搅拌机.doc"]}, {"model": "TR 2200", "name": "篮式砂磨机", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2200 篮式砂磨机.doc"]}, {"model": "TR 2250", "name": "卧式砂磨机", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2250 卧式砂磨机.doc"]}, {"model": "TR 2280", "name": "三辊机", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2280三辊机.doc"]}, {"model": "TR 2310", "name": "自动旋转混匀机", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2310 自动旋转混匀机.doc"]}, {"model": "TR 2311", "name": "自动振荡混匀机", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/TR 2311 自动振荡混匀机.doc"]}, {"model": "TR 3060", "name": "流挂仪", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3060流挂仪产品介绍.doc"]}, {"model": "TR 3080", "name": "流平仪", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3080流平仪产品介绍.doc"]}, {"model": "TR 3301", "name": "渗透杯", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 3301 渗透杯.doc"]}, {"model": "TR 3330", "name": "静电喷枪", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3330静电喷枪.doc"]}, {"model": "TR 3380", "name": "线棒手柄", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3380线棒手柄.doc"]}, {"model": "TR 3501", "name": "涂布台", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3501~3502涂布台.doc"]}, {"model": "TR 3502", "name": "涂布台", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3501~3502涂布台.doc"]}, {"model": "TR 3508", "name": "自动涂膜机", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3508自动涂膜机.doc"]}, {"model": "TR 3562", "name": "水帘式喷板柜", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3562 水帘式喷板柜.doc"]}, {"model": "TR 3599-2", "name": "划圈法测试仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 3599-2划圈法测试仪.doc"]}, {"model": "TR 3605", "name": "漆膜干燥时间测定器", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3605 漆膜干燥时间测定器.doc"]}, {"model": "TR 3610", "name": "不粘胎时间测定仪", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3610 不粘胎时间测定仪.doc"]}, {"model": "TR 3620", "name": "漆膜回粘性测定器", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3620 漆膜回粘性测定器.doc"]}, {"model": "TR 3630", "name": "漆膜无印痕试验仪", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3630 漆膜无印痕试验仪.doc"]}, {"model": "TR 3680", "name": "最低成膜温度测试仪", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3680 最低成膜温度测试仪.doc"]}, {"model": "TR 3700", "name": "黑白格测定板", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 3700 黑白格测定板.doc"]}, {"model": "TR 3803", "name": "腻子涂刮器", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3803 腻子涂刮器.doc"]}, {"model": "TR 3900", "name": "弹性建筑涂料制样框", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3900 弹性建筑涂料制样框.doc"]}, {"model": "TR 3902", "name": "手动展色轮", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3902 手动展色轮.doc"]}, {"model": "TR 3903", "name": "油墨展色仪", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3903 油墨展色仪.doc"]}, {"model": "TR 3911", "name": "油墨凹板打样机", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3911 油墨凹板打样机.doc"]}, {"model": "TR 3955", "name": "平磨仪", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 3955 平磨仪.doc"]}, {"model": "TR 5001", "name": "划格器", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5001 划格器.doc"]}, {"model": "TR 5006", "name": "划格板", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5006 划格板.doc"]}, {"model": "TR 5011", "name": "铅笔硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5011铅笔硬度计.doc"]}, {"model": "TR 5020", "name": "拉拔法测试仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5020拉拔法测试仪.doc"]}, {"model": "TR 5021", "name": "自动拉拔法测试仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5021自动拉拔法测试仪.doc"]}, {"model": "TR 5023", "name": "智能粘结强度拉拔仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5023 智能粘结强度拉拔仪.doc"]}, {"model": "TR 5105-1", "name": "台式铅笔硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5105-1 台式铅笔硬度计.doc"]}, {"model": "TR 5105-A", "name": "台式电动铅笔硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5105-A 台式电动铅笔硬度计.doc"]}, {"model": "TR 5120", "name": "摆杆硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5120~5122摆杆硬度计.doc"]}, {"model": "TR 5121", "name": "摆杆硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5120~5122摆杆硬度计.doc"]}, {"model": "TR 5122", "name": "摆杆硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5120~5122摆杆硬度计.doc"]}, {"model": "TR 5130", "name": "压痕硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5130 压痕硬度计.doc"]}, {"model": "TR 5140", "name": "韦氏硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5140韦氏硬度计产品介绍.doc"]}, {"model": "TR 5141", "name": "数显韦氏硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5141数显韦氏硬度计.doc"]}, {"model": "TR 5150", "name": "邵氏硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5150邵氏硬度计产品介绍.doc"]}, {"model": "TR 5151", "name": "数显邵氏硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5151数显邵氏硬度计产品介绍.doc"]}, {"model": "TR 5155", "name": "邵氏硬度计支架", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5155邵氏硬度计支架.doc"]}, {"model": "TR 5160-1", "name": "巴氏硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5160-1巴氏硬度计.doc"]}, {"model": "TR 5160-2", "name": "数显巴氏硬度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5160-2数显巴氏硬度计.doc"]}, {"model": "TR 5170", "name": "弹簧硬度笔", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5170弹簧硬度笔.doc"]}, {"model": "TR 5210", "name": "杜邦冲击仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5210杜邦冲击仪.doc"]}, {"model": "TR 5211", "name": "漆膜圆柱弯曲测试仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5211 漆膜圆柱弯曲测试仪.doc"]}, {"model": "TR 5212", "name": "圆柱弯曲仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5212 圆柱弯曲仪.doc"]}, {"model": "TR 5214", "name": "圆锥弯曲仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5214圆锥弯曲仪.doc"]}, {"model": "TR 5220", "name": "T型弯折试验机", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5220 T型弯折试验机.doc"]}, {"model": "TR 5230", "name": "漆膜柔韧性测定仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5230 漆膜柔韧性测定仪.doc"]}, {"model": "TR 5240", "name": "腻子柔韧性测定仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5240 腻子柔韧性测定仪.doc"]}, {"model": "TR 5250", "name": "打磨性测定仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5250 打磨性测定仪.doc"]}, {"model": "TR 5260", "name": "动态抗裂性试验机", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5260 动态抗裂性试验机.doc"]}, {"model": "TR 5261", "name": "初期干燥抗裂性试验机", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5261初期干燥抗裂性试验机.doc"]}, {"model": "TR 5262", "name": "抗裂缝疲劳试验仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5262抗裂缝疲劳试验仪.doc"]}, {"model": "TR 5300", "name": "涂层耐码垛试验仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5300 涂层耐码垛试验仪.doc"]}, {"model": "TR 5301-A", "name": "酒精橡皮耐磨仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5301-A 酒精橡皮耐磨仪.doc"]}, {"model": "TR 5302", "name": "耐溶剂测试仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5302 耐溶剂测试仪.doc"]}, {"model": "TR 5303", "name": "油墨脱色试验机", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5303 油墨脱色试验机.doc"]}, {"model": "TR 5304", "name": "皮革摩擦色牢度试验机", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5304 皮革摩擦色牢度试验机.doc"]}, {"model": "TR 5307", "name": "漆膜磨耗仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5307 漆膜磨耗仪.doc"]}, {"model": "TR 5309", "name": "RCA纸带耐磨测试机", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5309 RCA纸带耐磨测试机.doc"]}, {"model": "TR 5310", "name": "落砂耐磨试验机", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5310  落砂耐磨试验机.doc"]}, {"model": "TR 5312", "name": "耐洗刷试验仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5312耐洗刷试验仪.doc"]}, {"model": "TR 5314", "name": "耐沾污试验机", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5314  耐沾污试验机.doc"]}, {"model": "TR 5334", "name": "木制暗箱", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5334  木制暗箱.doc"]}, {"model": "TR 5402 70D", "name": "便携式分光测色仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5402 70D便携式分光测色仪.doc"]}, {"model": "TR 5402 82N", "name": "台式分光测色仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5402 82N台式分光测色仪.doc"]}, {"model": "TR 5402", "name": "分光测色仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5402分光测色仪.doc"]}, {"model": "TR 5420", "name": "鲜映性测定仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5420 鲜映性测定仪.doc"]}, {"model": "TR 5430-6", "name": "标准光源对色箱", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5430-6 标准光源对色箱.doc"]}, {"model": "TR 5451", "name": "反射率测定仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5451  反射率测定仪.doc"]}, {"model": "TR 5452", "name": "便携式反射率测试仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5452便携式反射率测试仪.doc"]}, {"model": "TR 5455", "name": "智能反射率测试仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5455智能反射率测试仪.doc"]}, {"model": "TR 5462", "name": "智能光泽度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5462 智能光泽度计.doc"]}, {"model": "TR 5464", "name": "光泽度计", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5464光泽度计.doc"]}, {"model": "TR 5508", "name": "湿膜轮", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5508 湿膜轮.doc"]}, {"model": "TR 5510-1", "name": "测厚仪（整体式）", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5510-1测厚仪（整体式）.doc"]}, {"model": "TR 5510-2", "name": "测厚仪（分体式）", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5510-2测厚仪（分体式）.doc"]}, {"model": "TR 5511", "name": "测厚仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5511 测厚仪.doc"]}, {"model": "TR 5520", "name": "破坏性测厚仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5520 破坏性测厚仪.doc"]}, {"model": "TR 5801", "name": "漆膜粉化率测定仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5801 漆膜粉化率测定仪.doc"]}, {"model": "TR 5802", "name": "防静电工程电阻测量套件", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 5802防静电工程电阻测量套件.doc"]}, {"model": "TR 5901", "name": "建筑涂料不透水漏斗", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 5901 建筑涂料不透水漏斗.doc"]}, {"model": "TR 6004", "name": "电子分析天平", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6004 电子分析天平.doc"]}, {"model": "TR 6005", "name": "电子天平", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6005 电子天平.doc"]}, {"model": "TR 6010", "name": "鼓风干燥箱", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6010鼓风干燥箱.doc"]}, {"model": "TR 6040", "name": "箱式电阻炉", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6040 箱式电阻炉.doc"]}, {"model": "TR 6050", "name": "实验室加热板", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6050 实验室加热板.doc"]}, {"model": "TR 6100", "name": "炉温跟踪仪", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6100 炉温跟踪仪.doc"]}, {"model": "TR 6130", "name": "红外测温仪", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6130红外测温仪.doc"]}, {"model": "TR 6134", "name": "磁铁温度计", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6134 磁铁温度计.doc"]}, {"model": "TR 6135", "name": "温湿度计", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6135 温湿度计.doc"]}, {"model": "TR 6150", "name": "水浴锅", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6150水浴锅.doc"]}, {"model": "TR 6151", "name": "电热恒温培养箱", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6151 电热恒温培养箱.doc"]}, {"model": "TR 6152", "name": "电热套", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6152 电热套.doc"]}, {"model": "TR 6153", "name": "低温恒温水槽", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6153 低温恒温水槽.doc"]}, {"model": "TR 6183", "name": "不锈钢升降台", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6183 不锈钢升降台.doc"]}, {"model": "TR 6301", "name": "盐雾箱", "category": "aging", "cat_name": "环境老化", "docs": ["documents/TR 6301盐雾箱.doc"]}, {"model": "TR 6360", "name": "冷热冲击试验箱", "category": "aging", "cat_name": "环境老化", "docs": ["documents/TR 6360 冷热冲击试验箱.doc"]}, {"model": "TR 6412", "name": "氙灯老化试验箱", "category": "aging", "cat_name": "环境老化", "docs": ["documents/TR 6412氙灯老化试验箱.doc"]}, {"model": "TR 6420", "name": "桌上型UV紫外老化试验箱", "category": "aging", "cat_name": "环境老化", "docs": ["documents/TR 6420桌上型UV紫外老化试验箱.doc"]}, {"model": "TR 6421", "name": "UV紫外老化试验箱", "category": "aging", "cat_name": "环境老化", "docs": ["documents/TR 6421 UV紫外老化试验箱.doc"]}, {"model": "TR 6422", "name": "电池防爆试验箱", "category": "aging", "cat_name": "环境老化", "docs": ["documents/TR 6422 电池防爆试验箱.doc"]}, {"model": "TR 6424", "name": "恒温恒湿试验箱", "category": "aging", "cat_name": "环境老化", "docs": ["documents/TR 6424 恒温恒湿试验箱.doc"]}, {"model": "TR 6480", "name": "大气暴晒架", "category": "aging", "cat_name": "环境老化", "docs": ["documents/TR 6480 大气暴晒架.doc"]}, {"model": "TR 6500", "name": "表界面张力仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 6500 表界面张力仪.doc"]}, {"model": "TR 6510", "name": "接触角测定仪", "category": "raw", "cat_name": "原料性能检验", "docs": ["documents/TR 6510 接触角测定仪.doc"]}, {"model": "TR 6521", "name": "表面粗糙度仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/TR 6521表面粗糙度仪.doc"]}, {"model": "TR 6540", "name": "UV固化机", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6540 UV固化机.doc"]}, {"model": "TR 6550", "name": "UV能量计", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6550 UV能量计.doc"]}, {"model": "TR 6580", "name": "喷粉柜", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 6580 喷粉柜.doc"]}, {"model": "TR 6800", "name": "台式酸度计", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6800台式酸度计产品介绍.doc"]}, {"model": "TR 6801", "name": "便携式酸度计", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6801便携式酸度计产品介绍.doc"]}, {"model": "TR 6802", "name": "笔式酸度计", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6802笔式酸度计.doc"]}, {"model": "TR 6806", "name": "台式电导率仪", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6806台式电导率仪产品介绍.doc"]}, {"model": "TR 6807", "name": "便携式电导率仪", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/TR 6807便携式电导率仪.doc"]}, {"model": "TR 线棒产品介绍", "name": "TR 线棒", "category": "raw", "cat_name": "制备试样", "docs": ["documents/TR 线棒产品介绍.doc"]}, {"model": "数显磁力搅拌器", "name": "数显磁力搅拌器", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/数显磁力搅拌器.doc"]}, {"model": "涂料快速分散试验机（快手）", "name": "涂料快速分散试验机（快手）", "category": "grind", "cat_name": "分散/搅拌/研磨", "docs": ["documents/涂料快速分散试验机（快手）.doc"]}, {"model": "RDS线棒", "name": "RDS线棒", "category": "raw", "cat_name": "制备试样", "docs": ["documents/RDS线棒.doc"]}, {"model": "制备器产品介绍", "name": "制备器", "category": "raw", "cat_name": "制备试样", "docs": ["documents/制备器产品介绍.doc"]}, {"model": "可调式涂膜器", "name": "可调式涂膜器", "category": "raw", "cat_name": "制备试样", "docs": ["documents/可调式涂膜器.doc"]}, {"model": "MPO测厚仪", "name": "MPO测厚仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/MPO测厚仪.doc"]}, {"model": "尼克斯测厚仪", "name": "尼克斯测厚仪", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/尼克斯测厚仪.doc"]}, {"model": "湿膜片", "name": "湿膜片", "category": "film", "cat_name": "成膜后检测", "docs": ["documents/湿膜片.doc"]}, {"model": "真空干燥箱", "name": "真空干燥箱", "category": "lab", "cat_name": "实验室通用仪器", "docs": ["documents/真空干燥箱.doc"]}, {"model": "耗材资料(2)", "name": "耗材资料(2)", "category": "consumable", "cat_name": "耗材", "docs": ["documents/耗材资料(2).docx"]}];
+    // 3-level category data
+    const CATEGORY_DATA = {
+      "raw": {
+        "粘度测量": ["TR 1001","TR 1002","TR 1004","TR 1005&1006","TR 1008","TR 1009","TR 1010","TR 1013"],
+        "旋转粘度计": ["TR 1101-1&4","TR 1101-5&8","TR 1104","TR 1123-1","TR 1123-2","TR 1130","TR 1155","TR 1158"],
+        "细度与密度": ["TR 1201","TR 1202","TR 1203","TR 1220&1222","TR 1226"],
+        "颜色测量": ["TR 1300","TR 1303","TR 1305","TR 1306","TR 1308","TR 1330","TR 1350","TR 1353","TR 1361","TR 1370"],
+        "水分与闪点": ["TR 1380","TR 1385","TR 1392","TR 1395"],
+        "其他检验": ["TR 1160","TR 1603","TR 1860","TR 3301","TR 5901","TR 6500","TR 6510"],
+        "标准耗材": ["耗材资料(2)"]
+      },
+      "grind": {
+        "分散机": ["TR 2001","TR 2003"],
+        "搅拌器": ["TR 2030","TR 2037","数显磁力搅拌器"],
+        "研磨机": ["TR 2200","TR 2250","TR 2280"],
+        "混匀设备": ["TR 2310","TR 2311","涂料快速分散试验机（快手）"]
+      },
+      "film": {
+        "附着力测试": ["TR 3599-2","TR 5001","TR 5006","TR 5020","TR 5021","TR 5023"],
+        "硬度测试": ["TR 5011","TR 5105-1","TR 5105-A","TR 5120","TR 5121","TR 5122","TR 5130","TR 5140","TR 5141","TR 5150","TR 5151","TR 5155","TR 5160-1","TR 5160-2","TR 5170"],
+        "柔韧性测试": ["TR 5210","TR 5211","TR 5212","TR 5213","TR 5214","TR 5220","TR 5230","TR 5240"],
+        "耐磨耐刮测试": ["TR 5250","TR 5260","TR 5261","TR 5262","TR 5300","TR 5301-A","TR 5302","TR 5303","TR 5304","TR 5306","TR 5307","TR 5309","TR 5310","TR 5311","TR 5312","TR 5314"],
+        "颜色与光泽": ["TR 3700","TR 5334","TR 5402","TR 5402 70D","TR 5402 82N","TR 5420","TR 5430-6","TR 5451","TR 5452","TR 5455","TR 5462","TR 5464"],
+        "厚度测量": ["TR 5510-1","TR 5510-2","TR 5511","TR 5520","MPO测厚仪","尼克斯测厚仪","湿膜片"],
+        "其他检测": ["TR 5801","TR 5802","TR 6521"]
+      },
+      "lab": {
+        "称重设备": ["TR 6004","TR 6005"],
+        "加热与干燥": ["TR 6010","TR 6040","TR 6050","TR 6151","TR 6152"],
+        "温湿度测量": ["TR 6100","TR 6130","TR 6134","TR 6135","TR 6150","TR 6153","TR 6183"],
+        "UV固化设备": ["TR 6540","TR 6550"],
+        "pH与电导": ["TR 6800","TR 6801","TR 6802","TR 6806","TR 6807"],
+        "真空与干燥": ["真空干燥箱"]
+      },
+      "aging": {
+        "盐雾试验": ["TR 6301"],
+        "老化试验箱": ["TR 6360","TR 6412","TR 6420","TR 6421","TR 6422","TR 6424"],
+        "户外暴晒": ["TR 6480"]
+      },
+      "consumable": {
+        "标准耗材": ["耗材资料(2)"]
+      }
+    };
 
-    let currentLang = 'zh';
-    let currentCategory = 'all';
+    // Product detail data
+    const PRODUCTS = [{"model":"TR 1001","name":"蔡恩杯","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1001蔡恩杯.pdf"]},{"model":"TR 1002","name":"福特杯","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1002福特杯.pdf"]},{"model":"TR 1004","name":"法国标准杯（NF杯）","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1004法国标准杯（NF杯）.pdf"]},{"model":"TR 1005&1006","name":"DIN杯","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1005&1006DIN杯.pdf"]},{"model":"TR 1008","name":"ISO粘度杯","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1008ISO粘度杯.pdf"]},{"model":"TR 1009","name":"岩田杯","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1009岩田杯产品介绍.pdf"]},{"model":"TR 1010","name":"涂-4杯（T-4杯）+秒表","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1010涂-4杯（T-4杯）+秒表.pdf"]},{"model":"TR 1013","name":"粘度杯支架","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1013粘度杯支架产品介绍.pdf"]},{"model":"TR 1101-1&4","name":"表盘式旋转粘度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1101-1&4表盘式旋转粘度计产品介绍.pdf"]},{"model":"TR 1101-5&8","name":"数显旋转粘度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1101-5&8数显旋转粘度计产品介绍.pdf"]},{"model":"TR 1123-1","name":"斯托默粘度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1123-1斯托默粘度计产品介绍.pdf"]},{"model":"TR 1123-2","name":"智能斯托默粘度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1123-2智能斯托默粘度计.pdf"]},{"model":"TR 1130","name":"锥板粘度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1130 锥板粘度计产品介绍.pdf"]},{"model":"TR 1155","name":"落球粘度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1155 落球粘度计.pdf"]},{"model":"TR 1158","name":"平板粘度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1158 平板粘度计产品介绍.pdf"]},{"model":"TR 1160","name":"数显电子油墨黏性仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1160数显电子油墨黏性仪.pdf"]},{"model":"TR 1201","name":"细度板","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1201 1202 1203细度板产品介绍.pdf"]},{"model":"TR 1202","name":"细度板","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1201 1202 1203细度板产品介绍.pdf"]},{"model":"TR 1203","name":"细度板","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1201 1202 1203细度板产品介绍.pdf"]},{"model":"TR 1220&1222","name":"比重杯","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1220&1222比重杯产品介绍.pdf"]},{"model":"TR 1226","name":"液体密度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1226液体密度计.pdf"]},{"model":"TR 1300","name":"液体比色计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1300液体比色计.pdf"]},{"model":"TR 1303","name":"铂钴比色计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1303铂钴比色计.pdf"]},{"model":"TR 1305","name":"铁钴比色计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1305铁钴比色计产品介绍.pdf"]},{"model":"TR 1306","name":"透明度测定仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1306透明度测定仪.pdf"]},{"model":"TR 1308","name":"罗维朋比色计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1308罗维朋比色计.pdf"]},{"model":"TR 1330","name":"阿贝折射仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1330 阿贝折射仪.pdf"]},{"model":"TR 1350","name":"分光光度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1350分光光度计产品介绍.pdf"]},{"model":"TR 1353","name":"紫外可见分光光度计","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1353紫外可见分光光度计产品介绍.pdf"]},{"model":"TR 1361","name":"白度仪&粉末成型器","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1361白度仪&粉末成型器产品介绍.pdf"]},{"model":"TR 1370","name":"浊度仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1370浊度仪产品介绍.pdf"]},{"model":"TR 1380","name":"自动水分滴定仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1380自动水分滴定仪.pdf"]},{"model":"TR 1385","name":"微量水分测定仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1385微量水分测定仪.pdf"]},{"model":"TR 1392","name":"卤素水分仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1392卤素水分仪.pdf"]},{"model":"TR 1395","name":"自动闪点测定仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1395 自动闪点测定仪.pdf"]},{"model":"TR 1603","name":"腻子稠度仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1603腻子稠度仪.pdf"]},{"model":"TR 1860","name":"激光粒度分布仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 1860激光粒度分布仪.pdf"]},{"model":"TR 2001","name":"高速分散机","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2001 高速分散机.pdf"]},{"model":"TR 2003","name":"油墨搅拌机","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2003 油墨搅拌机.pdf"]},{"model":"TR 2030","name":"悬臂式电动搅拌器","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2030悬臂式电动搅拌器.pdf"]},{"model":"TR 2037","name":"气动搅拌机","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2037气动搅拌机.pdf"]},{"model":"TR 2200","name":"篮式砂磨机","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2200 篮式砂磨机.pdf"]},{"model":"TR 2250","name":"卧式砂磨机","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2250 卧式砂磨机.pdf"]},{"model":"TR 2280","name":"三辊机","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2280三辊机.pdf"]},{"model":"TR 2310","name":"自动旋转混匀机","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2310 自动旋转混匀机.pdf"]},{"model":"TR 2311","name":"自动振荡混匀机","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/TR 2311 自动振荡混匀机.pdf"]},{"model":"TR 3060","name":"流挂仪","category":"raw","cat_name":"制备试样","docs":["documents/TR 3060流挂仪产品介绍.pdf"]},{"model":"TR 3080","name":"流平仪","category":"raw","cat_name":"制备试样","docs":["documents/TR 3080流平仪产品介绍.pdf"]},{"model":"TR 3301","name":"渗透杯","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 3301 渗透杯.pdf"]},{"model":"TR 3330","name":"静电喷枪","category":"raw","cat_name":"制备试样","docs":["documents/TR 3330静电喷枪.pdf"]},{"model":"TR 3380","name":"线棒手柄","category":"raw","cat_name":"制备试样","docs":["documents/TR 3380线棒手柄.pdf"]},{"model":"TR 3501","name":"涂布台","category":"raw","cat_name":"制备试样","docs":["documents/TR 3501~3502涂布台.pdf"]},{"model":"TR 3502","name":"涂布台","category":"raw","cat_name":"制备试样","docs":["documents/TR 3501~3502涂布台.pdf"]},{"model":"TR 3508","name":"自动涂膜机","category":"raw","cat_name":"制备试样","docs":["documents/TR 3508自动涂膜机.pdf"]},{"model":"TR 3562","name":"水帘式喷板柜","category":"raw","cat_name":"制备试样","docs":["documents/TR 3562 水帘式喷板柜.pdf"]},{"model":"TR 3599-2","name":"划圈法测试仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 3599-2划圈法测试仪.pdf"]},{"model":"TR 3605","name":"漆膜干燥时间测定器","category":"raw","cat_name":"制备试样","docs":["documents/TR 3605 漆膜干燥时间测定器.pdf"]},{"model":"TR 3610","name":"不粘胎时间测定仪","category":"raw","cat_name":"制备试样","docs":["documents/TR 3610 不粘胎时间测定仪.pdf"]},{"model":"TR 3620","name":"漆膜回粘性测定器","category":"raw","cat_name":"制备试样","docs":["documents/TR 3620 漆膜回粘性测定器.pdf"]},{"model":"TR 3630","name":"漆膜无印痕试验仪","category":"raw","cat_name":"制备试样","docs":["documents/TR 3630 漆膜无印痕试验仪.pdf"]},{"model":"TR 3680","name":"最低成膜温度测试仪","category":"raw","cat_name":"制备试样","docs":["documents/TR 3680 最低成膜温度测试仪.pdf"]},{"model":"TR 3700","name":"黑白格测定板","category":"film","cat_name":"成膜后检测","docs":["documents/TR 3700 黑白格测定板.pdf"]},{"model":"TR 3803","name":"腻子涂刮器","category":"raw","cat_name":"制备试样","docs":["documents/TR 3803 腻子涂刮器.pdf"]},{"model":"TR 3900","name":"弹性建筑涂料制样框","category":"raw","cat_name":"制备试样","docs":["documents/TR 3900 弹性建筑涂料制样框.pdf"]},{"model":"TR 3902","name":"手动展色轮","category":"raw","cat_name":"制备试样","docs":["documents/TR 3902 手动展色轮.pdf"]},{"model":"TR 3903","name":"油墨展色仪","category":"raw","cat_name":"制备试样","docs":["documents/TR 3903 油墨展色仪.pdf"]},{"model":"TR 3911","name":"油墨凹板打样机","category":"raw","cat_name":"制备试样","docs":["documents/TR 3911 油墨凹板打样机.pdf"]},{"model":"TR 3955","name":"平磨仪","category":"raw","cat_name":"制备试样","docs":["documents/TR 3955 平磨仪.pdf"]},{"model":"TR 5001","name":"划格器","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5001 划格器.pdf"]},{"model":"TR 5006","name":"划格板","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5006 划格板.pdf"]},{"model":"TR 5011","name":"铅笔硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5011铅笔硬度计.pdf"]},{"model":"TR 5020","name":"拉拔法测试仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5020拉拔法测试仪.pdf"]},{"model":"TR 5021","name":"自动拉拔法测试仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5021自动拉拔法测试仪.pdf"]},{"model":"TR 5023","name":"智能粘结强度拉拔仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5023 智能粘结强度拉拔仪.pdf"]},{"model":"TR 5105-1","name":"台式铅笔硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5105-1 台式铅笔硬度计.pdf"]},{"model":"TR 5105-A","name":"台式电动铅笔硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5105-A 台式电动铅笔硬度计.pdf"]},{"model":"TR 5120","name":"摆杆硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5120~5122摆杆硬度计.pdf"]},{"model":"TR 5121","name":"摆杆硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5120~5122摆杆硬度计.pdf"]},{"model":"TR 5122","name":"摆杆硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5120~5122摆杆硬度计.pdf"]},{"model":"TR 5130","name":"压痕硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5130 压痕硬度计.pdf"]},{"model":"TR 5140","name":"韦氏硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5140韦氏硬度计产品介绍.pdf"]},{"model":"TR 5141","name":"数显韦氏硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5141数显韦氏硬度计.pdf"]},{"model":"TR 5150","name":"邵氏硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5150邵氏硬度计产品介绍.pdf"]},{"model":"TR 5151","name":"数显邵氏硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5151数显邵氏硬度计产品介绍.pdf"]},{"model":"TR 5155","name":"邵氏硬度计支架","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5155邵氏硬度计支架.pdf"]},{"model":"TR 5160-1","name":"巴氏硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5160-1巴氏硬度计.pdf"]},{"model":"TR 5160-2","name":"数显巴氏硬度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5160-2数显巴氏硬度计.pdf"]},{"model":"TR 5170","name":"弹簧硬度笔","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5170弹簧硬度笔.pdf"]},{"model":"TR 5210","name":"杜邦冲击仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5210杜邦冲击仪.pdf"]},{"model":"TR 5211","name":"漆膜圆柱弯曲测试仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5211 漆膜圆柱弯曲测试仪.pdf"]},{"model":"TR 5212","name":"圆柱弯曲仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5212 圆柱弯曲仪.pdf"]},{"model":"TR 5214","name":"圆锥弯曲仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5214圆锥弯曲仪.pdf"]},{"model":"TR 5220","name":"T型弯折试验机","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5220 T型弯折试验机.pdf"]},{"model":"TR 5230","name":"漆膜柔韧性测定仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5230 漆膜柔韧性测定仪.pdf"]},{"model":"TR 5240","name":"腻子柔韧性测定仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5240 腻子柔韧性测定仪.pdf"]},{"model":"TR 5250","name":"打磨性测定仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5250 打磨性测定仪.pdf"]},{"model":"TR 5260","name":"动态抗裂性试验机","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5260 动态抗裂性试验机.pdf"]},{"model":"TR 5261","name":"初期干燥抗裂性试验机","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5261初期干燥抗裂性试验机.pdf"]},{"model":"TR 5262","name":"抗裂缝疲劳试验仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5262抗裂缝疲劳试验仪.pdf"]},{"model":"TR 5300","name":"涂层耐码垛试验仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5300 涂层耐码垛试验仪.pdf"]},{"model":"TR 5301-A","name":"酒精橡皮耐磨仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5301-A 酒精橡皮耐磨仪.pdf"]},{"model":"TR 5302","name":"耐溶剂测试仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5302 耐溶剂测试仪.pdf"]},{"model":"TR 5303","name":"油墨脱色试验机","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5303 油墨脱色试验机.pdf"]},{"model":"TR 5304","name":"皮革摩擦色牢度试验机","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5304 皮革摩擦色牢度试验机.pdf"]},{"model":"TR 5307","name":"漆膜磨耗仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5307 漆膜磨耗仪.pdf"]},{"model":"TR 5309","name":"RCA纸带耐磨测试机","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5309 RCA纸带耐磨测试机.pdf"]},{"model":"TR 5310","name":"落砂耐磨试验机","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5310  落砂耐磨试验机.pdf"]},{"model":"TR 5312","name":"耐洗刷试验仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5312耐洗刷试验仪.pdf"]},{"model":"TR 5314","name":"耐沾污试验机","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5314  耐沾污试验机.pdf"]},{"model":"TR 5334","name":"木制暗箱","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5334  木制暗箱.pdf"]},{"model":"TR 5402 70D","name":"便携式分光测色仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5402 70D便携式分光测色仪.pdf"]},{"model":"TR 5402 82N","name":"台式分光测色仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5402 82N台式分光测色仪.pdf"]},{"model":"TR 5402","name":"分光测色仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5402分光测色仪.pdf"]},{"model":"TR 5420","name":"鲜映性测定仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5420 鲜映性测定仪.pdf"]},{"model":"TR 5430-6","name":"标准光源对色箱","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5430-6 标准光源对色箱.pdf"]},{"model":"TR 5451","name":"反射率测定仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5451  反射率测定仪.pdf"]},{"model":"TR 5452","name":"便携式反射率测试仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5452便携式反射率测试仪.pdf"]},{"model":"TR 5455","name":"智能反射率测试仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5455智能反射率测试仪.pdf"]},{"model":"TR 5462","name":"智能光泽度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5462 智能光泽度计.pdf"]},{"model":"TR 5464","name":"光泽度计","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5464光泽度计.pdf"]},{"model":"TR 5508","name":"湿膜轮","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5508 湿膜轮.pdf"]},{"model":"TR 5510-1","name":"测厚仪（整体式）","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5510-1测厚仪（整体式）.pdf"]},{"model":"TR 5510-2","name":"测厚仪（分体式）","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5510-2测厚仪（分体式）.pdf"]},{"model":"TR 5511","name":"测厚仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5511 测厚仪.pdf"]},{"model":"TR 5520","name":"破坏性测厚仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5520 破坏性测厚仪.pdf"]},{"model":"TR 5801","name":"漆膜粉化率测定仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5801 漆膜粉化率测定仪.pdf"]},{"model":"TR 5802","name":"防静电工程电阻测量套件","category":"film","cat_name":"成膜后检测","docs":["documents/TR 5802防静电工程电阻测量套件.pdf"]},{"model":"TR 5901","name":"建筑涂料不透水漏斗","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 5901 建筑涂料不透水漏斗.pdf"]},{"model":"TR 6004","name":"电子分析天平","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6004 电子分析天平.pdf"]},{"model":"TR 6005","name":"电子天平","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6005 电子天平.pdf"]},{"model":"TR 6010","name":"鼓风干燥箱","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6010鼓风干燥箱.pdf"]},{"model":"TR 6040","name":"箱式电阻炉","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6040 箱式电阻炉.pdf"]},{"model":"TR 6050","name":"实验室加热板","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6050 实验室加热板.pdf"]},{"model":"TR 6100","name":"炉温跟踪仪","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6100 炉温跟踪仪.pdf"]},{"model":"TR 6130","name":"红外测温仪","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6130红外测温仪.pdf"]},{"model":"TR 6134","name":"磁铁温度计","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6134 磁铁温度计.pdf"]},{"model":"TR 6135","name":"温湿度计","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6135 温湿度计.pdf"]},{"model":"TR 6150","name":"水浴锅","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6150水浴锅.pdf"]},{"model":"TR 6151","name":"电热恒温培养箱","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6151 电热恒温培养箱.pdf"]},{"model":"TR 6152","name":"电热套","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6152 电热套.pdf"]},{"model":"TR 6153","name":"低温恒温水槽","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6153 低温恒温水槽.pdf"]},{"model":"TR 6183","name":"不锈钢升降台","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6183 不锈钢升降台.pdf"]},{"model":"TR 6301","name":"盐雾箱","category":"aging","cat_name":"环境老化","docs":["documents/TR 6301盐雾箱.pdf"]},{"model":"TR 6360","name":"冷热冲击试验箱","category":"aging","cat_name":"环境老化","docs":["documents/TR 6360 冷热冲击试验箱.pdf"]},{"model":"TR 6412","name":"氙灯老化试验箱","category":"aging","cat_name":"环境老化","docs":["documents/TR 6412氙灯老化试验箱.pdf"]},{"model":"TR 6420","name":"桌上型UV紫外老化试验箱","category":"aging","cat_name":"环境老化","docs":["documents/TR 6420桌上型UV紫外老化试验箱.pdf"]},{"model":"TR 6421","name":"UV紫外老化试验箱","category":"aging","cat_name":"环境老化","docs":["documents/TR 6421 UV紫外老化试验箱.pdf"]},{"model":"TR 6422","name":"电池防爆试验箱","category":"aging","cat_name":"环境老化","docs":["documents/TR 6422 电池防爆试验箱.pdf"]},{"model":"TR 6424","name":"恒温恒湿试验箱","category":"aging","cat_name":"环境老化","docs":["documents/TR 6424 恒温恒湿试验箱.pdf"]},{"model":"TR 6480","name":"大气暴晒架","category":"aging","cat_name":"环境老化","docs":["documents/TR 6480 大气暴晒架.pdf"]},{"model":"TR 6500","name":"表界面张力仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 6500 表界面张力仪.pdf"]},{"model":"TR 6510","name":"接触角测定仪","category":"raw","cat_name":"原料性能检验","docs":["documents/TR 6510 接触角测定仪.pdf"]},{"model":"TR 6521","name":"表面粗糙度仪","category":"film","cat_name":"成膜后检测","docs":["documents/TR 6521表面粗糙度仪.pdf"]},{"model":"TR 6540","name":"UV固化机","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6540 UV固化机.pdf"]},{"model":"TR 6550","name":"UV能量计","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6550 UV能量计.pdf"]},{"model":"TR 6580","name":"喷粉柜","category":"raw","cat_name":"制备试样","docs":["documents/TR 6580 喷粉柜.pdf"]},{"model":"TR 6800","name":"台式酸度计","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6800台式酸度计产品介绍.pdf"]},{"model":"TR 6801","name":"便携式酸度计","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6801便携式酸度计产品介绍.pdf"]},{"model":"TR 6802","name":"笔式酸度计","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6802笔式酸度计.pdf"]},{"model":"TR 6806","name":"台式电导率仪","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6806台式电导率仪产品介绍.pdf"]},{"model":"TR 6807","name":"便携式电导率仪","category":"lab","cat_name":"实验室通用仪器","docs":["documents/TR 6807便携式电导率仪.pdf"]},{"model":"TR 线棒产品介绍","name":"TR 线棒","category":"raw","cat_name":"制备试样","docs":["documents/TR 线棒产品介绍.pdf"]},{"model":"数显磁力搅拌器","name":"数显磁力搅拌器","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/数显磁力搅拌器.pdf"]},{"model":"涂料快速分散试验机（快手）","name":"涂料快速分散试验机（快手）","category":"grind","cat_name":"分散/搅拌/研磨","docs":["documents/涂料快速分散试验机（快手）.pdf"]},{"model":"RDS线棒","name":"RDS线棒","category":"raw","cat_name":"制备试样","docs":["documents/RDS线棒.pdf"]},{"model":"制备器产品介绍","name":"制备器","category":"raw","cat_name":"制备试样","docs":["documents/制备器产品介绍.pdf"]},{"model":"可调式涂膜器","name":"可调式涂膜器","category":"raw","cat_name":"制备试样","docs":["documents/可调式涂膜器.pdf"]},{"model":"MPO测厚仪","name":"MPO测厚仪","category":"film","cat_name":"成膜后检测","docs":["documents/MPO测厚仪.pdf"]},{"model":"尼克斯测厚仪","name":"尼克斯测厚仪","category":"film","cat_name":"成膜后检测","docs":["documents/尼克斯测厚仪.pdf"]},{"model":"湿膜片","name":"湿膜片","category":"film","cat_name":"成膜后检测","docs":["documents/湿膜片.pdf"]},{"model":"真空干燥箱","name":"真空干燥箱","category":"lab","cat_name":"实验室通用仪器","docs":["documents/真空干燥箱.pdf"]},{"model":"耗材资料(2)","name":"耗材资料(2)","category":"consumable","cat_name":"耗材","docs":["documents/耗材资料(2).pdf"]}];
+
+    // SEO descriptions
+    window.__PRODUCT_DESCRIPTIONS__ = {
+  "TR 1001": {
+    "en": "Zahn Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "蔡恩杯 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1002": {
+    "en": "Ford Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "福特杯 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1004": {
+    "en": "NF Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "法国标准杯（NF杯） - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1005&1006": {
+    "en": "DIN Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "DIN杯 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1008": {
+    "en": "ISO Viscosity Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "ISO粘度杯 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1009": {
+    "en": "Iwata Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "岩田杯 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1010": {
+    "en": "T-4 Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "涂-4杯（T-4杯） - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1013": {
+    "en": "Viscosity Cup Stand by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "粘度杯支架 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1101-1&4": {
+    "en": "Dial Rotational Viscometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "表盘式旋转粘度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1101-5&8": {
+    "en": "Digital Rotational Viscometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "数显旋转粘度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1104": {
+    "en": "Rheometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "智能流变仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1123-1": {
+    "en": "Stormer Viscometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "斯托默粘度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1123-2": {
+    "en": "Digital Stormer Viscometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "智能斯托默粘度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1130": {
+    "en": "Cone Plate Viscometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "锥板粘度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1155": {
+    "en": "Falling Ball Viscometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "落球粘度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1158": {
+    "en": "Plate Viscometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "平板粘度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1160": {
+    "en": "Digital Ink Tack Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "数显电子油墨黏性仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1168-1": {
+    "en": "Digital Stopwatch by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "电子秒表 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1168-2": {
+    "en": "Mechanical Stopwatch by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "机械秒表 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1201": {
+    "en": "Fineness Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "细度板 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1202": {
+    "en": "Fineness Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "细度板 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1203": {
+    "en": "Fineness Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "细度板 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1220&1222": {
+    "en": "Density Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "比重杯 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1226": {
+    "en": "Liquid Densimeter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "液体密度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1300": {
+    "en": "Liquid Colorimeter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "液体比色计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1303": {
+    "en": "Platinum Cobalt Colorimeter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "铂钴比色计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1305": {
+    "en": "Iron Cobalt Colorimeter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "铁钴比色计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1306": {
+    "en": "Transparency Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "透明度测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1308": {
+    "en": "Lovibond Colorimeter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "罗维朋比色计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1330": {
+    "en": "Abbe Refractometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "阿贝折射仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1350": {
+    "en": "Spectrophotometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "分光光度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1353": {
+    "en": "UV-Vis Spectrophotometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "紫外可见分光光度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1361": {
+    "en": "Whiteness Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "白度仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1370": {
+    "en": "Turbidity Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "浊度仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1380": {
+    "en": "Automatic Karl Fischer Titrator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "自动水分滴定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1385": {
+    "en": "Moisture Analyzer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "微量水分测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1392": {
+    "en": "Halogen Moisture Analyzer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "卤素水分仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1395": {
+    "en": "Flash Point Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "自动闪点测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1603": {
+    "en": "Putty Consistency Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "腻子稠度仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 1860": {
+    "en": "Laser Particle Size Analyzer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "激光粒度分布仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2001": {
+    "en": "High Speed Disperser by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "高速分散机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2002": {
+    "en": "Explosion Proof Disperser by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "防爆型高速分散机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2003": {
+    "en": "Ink Mixer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "油墨搅拌机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2030": {
+    "en": "Overhead Stirrer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "悬臂式电动搅拌器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2037": {
+    "en": "Pneumatic Stirrer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "气动搅拌机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2200": {
+    "en": "Basket Mill by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "篮式砂磨机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2250": {
+    "en": "Horizontal Bead Mill by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "卧式砂磨机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2280": {
+    "en": "Three Roll Mill by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "三辊机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2310": {
+    "en": "Automatic Vortex Mixer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "自动旋转混匀机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 2311": {
+    "en": "Oscillating Mixer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "自动振荡混匀机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3002-F1": {
+    "en": "Adhesive Applicator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "胶粘剂涂布器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3060": {
+    "en": "Sagging Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "流挂仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3080": {
+    "en": "Leveling Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "流平仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3101": {
+    "en": "Film Applicator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "制备器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3301": {
+    "en": "Penetration Cup by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "渗透杯 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3330": {
+    "en": "Electrostatic Spray Gun by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "静电喷枪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3380": {
+    "en": "Wire Rod Handle by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "线棒手柄 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3501": {
+    "en": "Film Applicator Table by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "涂布台 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3502": {
+    "en": "Film Applicator Table by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "涂布台 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3502-P1-1": {
+    "en": "Oil-Free Vacuum Pump by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "无油真空泵 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3508": {
+    "en": "Automatic Film Applicator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "自动涂膜机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3562": {
+    "en": "Water Curtain Spray Booth by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "水帘式喷板柜 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3599-2": {
+    "en": "Circle Cutting Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "划圈法测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3600": {
+    "en": "Linear Drying Time Recorder by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "直线干燥时间记录仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3605": {
+    "en": "Drying Time Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "漆膜干燥时间测定器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3606": {
+    "en": "Full Drying Time Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "完全干燥时间测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3610": {
+    "en": "Non-Stick Time Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "不粘胎时间测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3620": {
+    "en": "Back Tack Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "漆膜回粘性测定器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3630": {
+    "en": "Print-Free Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "漆膜无印痕试验仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3680": {
+    "en": "MFFT Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "最低成膜温度测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3700": {
+    "en": "Black White Contrast Board by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "黑白格测定板 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3803": {
+    "en": "Putty Applicator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "腻子涂刮器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3900": {
+    "en": "Elastic Coating Frame by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "弹性建筑涂料制样框 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3902": {
+    "en": "Manual Color Matcher by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "手动展色轮 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3903": {
+    "en": "Ink Proofer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "油墨展色仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3910A": {
+    "en": "AI Ink Proofing Machine by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "AI油墨打样机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3911": {
+    "en": "Gravure Proofer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "油墨凹板打样机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 3955": {
+    "en": "Flat Grinder by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "平磨仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5001": {
+    "en": "Cross Cut Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "划格器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5003": {
+    "en": "Multi-Blade Cross Cut Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "划格器（八刃） - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5006": {
+    "en": "Cross Cut Board by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "划格板 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5011": {
+    "en": "Pencil Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "铅笔硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5020": {
+    "en": "Pull-Off Adhesion Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "拉拔法测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5021": {
+    "en": "Automatic Pull-Off Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "自动拉拔法测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5023": {
+    "en": "Digital Adhesion Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "智能粘结强度拉拔仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5030": {
+    "en": "Cathodic Disbonding Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "阴极剥离试验机箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5105-1": {
+    "en": "Bench Pencil Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "台式铅笔硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5105-A": {
+    "en": "Electric Bench Pencil Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "台式电动铅笔硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5120": {
+    "en": "Pendulum Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "摆杆硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5121": {
+    "en": "Pendulum Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "摆杆硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5122": {
+    "en": "Pendulum Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "摆杆硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5130": {
+    "en": "Indentation Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "压痕硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5140": {
+    "en": "Webster Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "韦氏硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5141": {
+    "en": "Digital Webster Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "数显韦氏硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5150": {
+    "en": "Shore Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "邵氏硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5151": {
+    "en": "Digital Shore Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "数显邵氏硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5155": {
+    "en": "Shore Hardness Stand by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "邵氏硬度计支架 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5160-1": {
+    "en": "Barcol Hardness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "巴氏硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5160-2": {
+    "en": "Digital Barcol Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "数显巴氏硬度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5170": {
+    "en": "Spring Hardness Pencil by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "弹簧硬度笔 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5202-F": {
+    "en": "Pipe Impact Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "圆管冲击仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5206": {
+    "en": "Falling Ball Impact Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "落球冲击仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5210": {
+    "en": "DuPont Impact Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "杜邦冲击仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5211": {
+    "en": "Cylindrical Bend Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "漆膜圆柱弯曲测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5212": {
+    "en": "Cylindrical Mandrel Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "圆柱弯曲仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5213": {
+    "en": "Flexibility Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "涂层柔韧性试验仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5214": {
+    "en": "Cone Mandrel Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "圆锥弯曲仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5220": {
+    "en": "T-Bend Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "T型弯折试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5230": {
+    "en": "Film Flexibility Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "漆膜柔韧性测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5240": {
+    "en": "Putty Flexibility Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "腻子柔韧性测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5250": {
+    "en": "Sanding Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "打磨性测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5260": {
+    "en": "Dynamic Crack Resistance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "动态抗裂性试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5261": {
+    "en": "Early Crack Resistance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "初期干燥抗裂性试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5262": {
+    "en": "Fatigue Crack Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "抗裂缝疲劳试验仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5300": {
+    "en": "Stacking Resistance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "涂层耐码垛试验仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5301-A": {
+    "en": "Alcohol Rub Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "酒精橡皮耐磨仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5302": {
+    "en": "Solvent Resistance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "耐溶剂测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5303": {
+    "en": "Ink Rub Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "油墨脱色试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5304": {
+    "en": "Leather Rub Fastness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "皮革摩擦色牢度试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5306": {
+    "en": "Scratch Resistance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "耐擦伤测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5307": {
+    "en": "Film Abrasion Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "漆膜磨耗仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5309": {
+    "en": "RCA Taber Abrasion Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "RCA纸带耐磨测试机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5310": {
+    "en": "Falling Sand Abrasion Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "落砂耐磨试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5311": {
+    "en": "Scratch Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "耐划痕测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5312": {
+    "en": "Scrub Resistance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "耐洗刷试验仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5314": {
+    "en": "Stain Resistance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "耐沾污试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5334": {
+    "en": "Wood Viewing Cabinet by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "木制暗箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5402 70D": {
+    "en": "Portable Spectrophotometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "便携式分光测色仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5402 82N": {
+    "en": "Bench Spectrophotometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "台式分光测色仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5402": {
+    "en": "Spectrophotometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "分光测色仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5403": {
+    "en": "Multi-Angle Spectrophotometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "多角度便携式分光测色仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5420": {
+    "en": "DOI Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "鲜映性测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5430-6": {
+    "en": "Color Matching Light Box by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "标准光源对色箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5451": {
+    "en": "Reflectance Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "反射率测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5452": {
+    "en": "Portable Reflectance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "便携式反射率测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5455": {
+    "en": "Digital Reflectance Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "智能反射率测试仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5462": {
+    "en": "Digital Gloss Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "智能光泽度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5464": {
+    "en": "Gloss Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "光泽度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5508": {
+    "en": "Wet Film Comb by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "湿膜轮 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5510-1": {
+    "en": "Coating Thickness Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "测厚仪（整体式） - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5510-2": {
+    "en": "Separate Type Thickness Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "测厚仪（分体式） - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5511": {
+    "en": "Coating Thickness Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "测厚仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5512": {
+    "en": "Portable Coating Thickness Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "便携式测厚仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5520": {
+    "en": "Destructive Thickness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "破坏性测厚仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5801": {
+    "en": "Chalking Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "漆膜粉化率测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5802": {
+    "en": "Anti-Static Resistance Kit by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "防静电工程电阻测量套件 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 5901": {
+    "en": "Waterproof Funnel by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "建筑涂料不透水漏斗 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6004": {
+    "en": "Analytical Balance by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "电子分析天平 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6005": {
+    "en": "Electronic Balance by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "电子天平 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6010": {
+    "en": "Forced Convection Oven by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "鼓风干燥箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6040": {
+    "en": "Muffle Furnace by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "箱式电阻炉 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6050": {
+    "en": "Laboratory Hot Plate by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "实验室加热板 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6100": {
+    "en": "Oven Temperature Tracker by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "炉温跟踪仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6130": {
+    "en": "Infrared Thermometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "红外测温仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6134": {
+    "en": "Magnetic Thermometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "磁铁温度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6135": {
+    "en": "Hygro-Thermometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "温湿度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6150": {
+    "en": "Water Bath by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "水浴锅 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6151": {
+    "en": "Incubator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "电热恒温培养箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6152": {
+    "en": "Heating Mantle by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "电热套 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6153": {
+    "en": "Low Temp Circulator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "低温恒温水槽 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6183": {
+    "en": "Stainless Steel Lift Table by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "不锈钢升降台 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6301": {
+    "en": "Salt Spray Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "盐雾箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6360": {
+    "en": "Thermal Shock Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "冷热冲击试验箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6412": {
+    "en": "Xenon Arc Aging Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "氙灯老化试验箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6420": {
+    "en": "UV Test Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "桌上型UV紫外老化试验箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6421": {
+    "en": "UV Aging Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "UV紫外老化试验箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6421-001": {
+    "en": "UV Irradiance Calibrator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "UV能量计校准仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6422": {
+    "en": "Battery Explosion Test Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "电池防爆试验箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6424": {
+    "en": "Temperature Humidity Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "恒温恒湿试验箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6480": {
+    "en": "Outdoor Exposure Rack by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "大气暴晒架 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6500": {
+    "en": "Tensiometer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "表界面张力仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6510": {
+    "en": "Contact Angle Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "接触角测定仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6521": {
+    "en": "Surface Roughness Tester by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "表面粗糙度仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6540": {
+    "en": "UV Curing Machine by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "UV固化机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6550": {
+    "en": "UV Energy Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "UV能量计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6580": {
+    "en": "Powder Spray Booth by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "喷粉柜 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6800": {
+    "en": "Bench pH Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "台式酸度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6801": {
+    "en": "Portable pH Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "便携式酸度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6802": {
+    "en": "Pen pH Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "笔式酸度计 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6806": {
+    "en": "Bench Conductivity Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "台式电导率仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 6807": {
+    "en": "Portable Conductivity Meter by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "便携式电导率仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "TR 线棒": {
+    "en": "Wire Rod by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "线棒 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "RDS线棒": {
+    "en": "RDS Wire Rod by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "RDS线棒 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "制备器": {
+    "en": "Applicator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "制备器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "可调式涂膜器": {
+    "en": "Adjustable Film Applicator by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "可调式涂膜器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "MPO测厚仪": {
+    "en": "MPO Coating Thickness Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "MPO测厚仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "尼克斯测厚仪": {
+    "en": "Nixkon Thickness Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "尼克斯测厚仪 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "湿膜片": {
+    "en": "Wet Film Gauge by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "湿膜片 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "数显磁力搅拌器": {
+    "en": "Digital Magnetic Stirrer by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "数显磁力搅拌器 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "涂料快速分散试验机": {
+    "en": "Quick Disperser by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "涂料快速分散试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "高低温交变湿热试验箱": {
+    "en": "Thermal Cycling Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "高低温交变湿热试验箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "复合式盐干湿试验机": {
+    "en": "CASS Test Chamber by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "复合式盐干湿试验机 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  },
+  "真空干燥箱": {
+    "en": "Vacuum Drying Oven by TRUIT Instruments - Professional manufacturer of coating testing equipment. ISO standard. Global export.",
+    "zh": "真空干燥箱 - 腾瑞仪器（广州）有限公司专业生产，品质可靠。符合国际标准，畅销国内外。"
+  }
+};
+
+    let currentCat = 'all';
+    let currentSubCat = null;
     let searchQuery = '';
 
-    function handleSearch(query) {
-      searchQuery = query.trim();
+    function selectCat(cat) {
+      currentCat = cat;
+      currentSubCat = null;
+      document.querySelectorAll('.cat-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelector('[data-cat="' + cat + '"]').classList.add('active');
       renderProducts();
     }
 
-    function handleCategoryChange(cat) {
-      currentCategory = cat;
+    function selectSubCat(sub) {
+      currentSubCat = currentSubCat === sub ? null : sub;
       renderProducts();
     }
 
-    function switchProductsLang(lang) {
-      currentLang = lang;
+    function handleSearch(q) {
+      searchQuery = q.trim().toLowerCase();
       renderProducts();
     }
 
-    function fuzzyMatch(text, query) {
-      if (!text || !query) return false;
-      text = text.toLowerCase();
-      query = query.toLowerCase();
-      return text.includes(query);
+    function scrollNav(dir) {
+      document.getElementById('navTrack').scrollBy({ left: dir * 200, behavior: 'smooth' });
+    }
+
+    function getFilteredProducts() {
+      return PRODUCTS.filter(function(p) {
+        if (currentCat !== 'all' && p.category !== currentCat) return false;
+        if (searchQuery) {
+          var s = searchQuery;
+          if (!p.model.toLowerCase().includes(s) && !p.name.toLowerCase().includes(s)) return false;
+        }
+        return true;
+      });
+    }
+
+    function getSubCatProducts(subCatKey, productList) {
+      var models = CATEGORY_DATA[currentCat] && CATEGORY_DATA[currentCat][subCatKey];
+      if (!models) return [];
+      var modelSet = {};
+      models.forEach(function(m) { modelSet[m] = true; });
+      return productList.filter(function(p) { return modelSet[p.model]; });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
 
     function renderProducts() {
-      const filtered = products.filter(p => {
-        const matchCat = currentCategory === 'all' || p.category === currentCategory;
-        const q = searchQuery;
-        const name = typeof p.name === 'string' ? p.name : (p.name.zh || '');
-        const catName = p.cat_name || '';
-        const matchSearch = !q ||
-          fuzzyMatch(name, q) ||
-          fuzzyMatch(p.model, q) ||
-          fuzzyMatch(catName, q);
-        return matchCat && matchSearch;
-      });
-
-      const grid = document.getElementById('productsGrid');
-      const noResults = document.getElementById('noResults');
-      document.getElementById('resultsCount').textContent = currentLang === 'zh'
-        ? `共 ${filtered.length} 个产品`
-        : `${filtered.length} products`;
+      var container = document.getElementById('productContainer');
+      var filtered = getFilteredProducts();
+      var count = document.getElementById('resultsCount');
+      var noResults = document.getElementById('noResults');
 
       if (filtered.length === 0) {
-        grid.style.display = 'none';
-        noResults.style.display = 'block';
+        container.innerHTML = '';
+        count.textContent = '';
+        noResults.style.display = 'flex';
         return;
       }
-
-      grid.style.display = 'grid';
       noResults.style.display = 'none';
 
-      grid.innerHTML = filtered.map(p => {
-        const name = typeof p.name === 'string' ? p.name : (p.name.zh || '');
-        const catName = p.cat_name || '';
-        const docLabel = currentLang === 'zh' ? 'Word文档' : 'Word';
-        const docFile = p.docs && p.docs.length > 0 ? p.docs[0].split('/').pop() : null;
-        const imgSrc = p.image || 'products/placeholder.png';
-        const detailUrl = `product.html?model=${encodeURIComponent(p.model)}`;
+      var html = '';
 
-        return `<div class="product-card" onclick="window.location='${detailUrl}'">
-          <div class="product-image">${p.image ? `<img src="${imgSrc}" alt="${name}" loading="lazy">` : '<div class="no-image">📷</div>'}</div>
-          <div class="product-info">
-            <div class="product-model">${p.model}</div>
-            <div class="product-name">${name}</div>
-            <div class="product-category">${catName}</div>
-            ${docFile ? `<div class="product-doc">📄 ${docLabel}</div>` : ''}
-          </div>
-        </div>`;
-      }).join('');
+      if (currentCat === 'all') {
+        var byCat = {};
+        filtered.forEach(function(p) {
+          if (!byCat[p.cat_name]) byCat[p.cat_name] = [];
+          byCat[p.cat_name].push(p);
+        });
+        for (var catName in byCat) {
+          var items = byCat[catName];
+          html += '<div class="cat-section"><h2 class="cat-title">' + escapeHtml(catName) + ' <span class="cat-count">(' + items.length + ')</span></h2><div class="products-grid">';
+          items.forEach(function(p) { html += renderCard(p); });
+          html += '</div></div>';
+        }
+        count.textContent = '共 ' + filtered.length + ' 款产品';
+      } else {
+        var subCats = CATEGORY_DATA[currentCat];
+        if (!subCats) {
+          html += '<div class="products-grid">';
+          filtered.forEach(function(p) { html += renderCard(p); });
+          html += '</div>';
+          count.textContent = '共 ' + filtered.length + ' 款产品';
+        } else {
+          html += '<div class="sub-cat-list">';
+          for (var subName in subCats) {
+            var subProds = getSubCatProducts(subName, filtered);
+            if (subProds.length === 0 && searchQuery) continue;
+            var isActive = currentSubCat === subName;
+            html += '<div class="sub-cat-item' + (isActive ? ' active' : '') + '">';
+            html += '<button class="sub-cat-btn" onclick="selectSubCat(\'' + subName.replace(/'/g, '\'') + '\')">' + escapeHtml(subName) + ' <span class="sub-count">' + subProds.length + '</span><span class="sub-arrow">' + (isActive ? '▼' : '▶') + '</span></button>';
+            html += '<div class="sub-cat-content"' + (isActive ? '' : ' style="display:none"') + '>';
+            if (subProds.length === 0) {
+              html += '<p class="no-prods">该分类下暂无相关产品</p>';
+            } else {
+              html += '<div class="products-grid">';
+              subProds.forEach(function(p) { html += renderCard(p); });
+              html += '</div>';
+            }
+            html += '</div></div>';
+          }
+          html += '</div>';
+          count.textContent = '共 ' + filtered.length + ' 款产品';
+        }
+      }
+
+      container.innerHTML = html;
     }
 
-    // Init
-    document.addEventListener('DOMContentLoaded', () => {
-      // Read category from URL params (e.g. products.html?cat=grind)
-      const params = new URLSearchParams(window.location.search);
-      const catParam = params.get('cat');
-      if (catParam) {
-        currentCategory = catParam;
-        document.getElementById('categoryFilter').value = catParam;
+    function renderCard(p) {
+      var model = p.model;
+      var name = p.name;
+      var doc = p.docs && p.docs[0] ? p.docs[0] : '';
+      var docUrl = '#';
+      if (doc) {
+        var pdfUrl = doc.replace(/.docx?$/, '.pdf');
+        docUrl = 'https://truir-eng.github.io/gztruit/' + pdfUrl;
       }
-      renderProducts();
-    });
+      var desc = window.__PRODUCT_DESCRIPTIONS__ && window.__PRODUCT_DESCRIPTIONS__[model];
+      var descText = desc && desc.zh ? desc.zh : '';
+      var detailUrl = 'product.html?model=' + encodeURIComponent(model);
+      return '<div class="product-card"><h3 class="product-model">' + escapeHtml(model) + '</h3><p class="product-name">' + escapeHtml(name) + '</p>' + (descText ? '<p class="product-desc">' + escapeHtml(descText) + '</p>' : '') + '<div class="product-actions"><a href="' + detailUrl + '" class="btn-detail">查看详情</a><a href="' + docUrl + '" class="btn-doc" target="_blank">下载资料</a></div></div>';
+    }
+
+    document.addEventListener('DOMContentLoaded', renderProducts);
   </script>
-
-<script>
-// Dynamic meta description based on category filter
-var CATEGORY_DESCRIPTIONS = {
-  "all": "腾瑞仪器（广州）有限公司专业生产涂料检测仪器，包括粘度计、盐雾箱、光泽度仪、测厚仪、硬度计等172款产品，符合GB/T、ISO、ASTM标准，销往全球。",
-  "grind": "腾瑞仪器（广州）有限公司分散搅拌研磨设备：高速分散机、篮式砂磨机、三辊机、卧式砂磨机、顶置式搅拌器，品质可靠，畅销国内外。",
-  "raw": "腾瑞仪器（广州）有限公司原料性能检验仪器：粘度计、细度计、密度杯、色差仪、浊度仪、白度仪、折射仪等，符合GB/T、ISO标准。",
-  "film": "腾瑞仪器（广州）有限公司成膜后检验设备：光泽度仪、硬度计、测厚仪、冲击仪、附着力测试仪、柔韧性测试仪等。",
-  "aging": "腾瑞仪器（广州）有限公司环境老化测试设备：盐雾箱、UV老化箱、氙灯老化箱、碳弧老化箱等，符合ISO 9227、ASTM标准。",
-  "lab": "腾瑞仪器（广州）有限公司实验室通用仪器：电子秒表、干燥箱、水浴锅、真空泵等，实验室必备设备。"
-};
-var originalTitle = document.title;
-var originalDesc = document.querySelector('meta[name="description"]');
-var originalOgDesc = document.querySelector('meta[property="og:description"]');
-
-function handleCategoryChange(cat) {
-  if (!cat || cat === 'all') {
-    document.title = originalTitle;
-    if (originalDesc) originalDesc.content = '腾瑞仪器（广州）有限公司（TRUIT）专注仪器制造二十年，专业生产涂料检测仪器170+款：粘度计、盐雾箱、光泽度仪、测厚仪、硬度计、色差仪、分散机等，符合GB/T、ISO、ASTM标准，销往全球。';
-    if (originalOgDesc) originalOgDesc.content = '腾瑞仪器（广州）有限公司（TRUIT）专注仪器制造二十年，涂料检测仪器170+款出口全球，符合GB/T、ISO、ASTM标准。';
-    return;
-  }
-  var desc = CATEGORY_DESCRIPTIONS[cat];
-  if (!desc) return;
-  // Update page title with category
-  var catNames = {'grind':'分散搅拌','raw':'原料检验','film':'成膜检验','aging':'环境老化','lab':'实验室仪器'};
-  if (catNames[cat]) {
-    document.title = catNames[cat] + ' | 涂料检测仪器 | 腾瑞仪器（广州）有限公司 TRUIT';
-  }
-  if (originalDesc) originalDesc.content = desc;
-  if (originalOgDesc) originalOgDesc.content = desc;
-}
-</script>
-
-</body>
-</html>
