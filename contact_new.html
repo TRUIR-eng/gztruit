@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - 腾瑞仪器 TRUIT</title>
+  <meta name="description" content="腾瑞仪器（广州）有限公司联系方式，销售热线：020-31706520">
+  <link rel="stylesheet" href="style_new.css">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      padding: 56px 0 48px;
+      text-align: center;
+    }
+    .page-header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
+    .page-header p { color: rgba(255,255,255,0.8); }
+
+    .contact-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    /* 联系信息卡片 */
+    .contact-info-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px var(--shadow);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .contact-info-header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      padding: 16px 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .contact-info-body { padding: 24px; }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .info-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .info-content h4 { font-size: 0.82rem; color: var(--text-gray); font-weight: 500; margin-bottom: 4px; }
+    .info-content p { font-size: 1rem; color: var(--text); font-weight: 600; line-height: 1.4; }
+    .info-content a { color: var(--primary); }
+
+    /* 二维码区域 */
+    .qr-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px var(--shadow);
+      padding: 24px;
+    }
+    .qr-section h3 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .qr-item {
+      text-align: center;
+      padding: 14px;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      transition: all 0.2s;
+    }
+    .qr-item:hover { background: rgba(0,90,156,0.08); }
+    .qr-item img {
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      object-fit: cover;
+    }
+    .qr-item p { font-size: 0.82rem; color: var(--text-gray); line-height: 1.4; }
+
+    /* 联系表单 */
+    .contact-form-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px var(--shadow);
+      overflow: hidden;
+    }
+    .contact-form-header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      padding: 16px 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .contact-form-body { padding: 24px; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .form-group label span { color: red; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--primary);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 8px;
+    }
+    .form-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,90,156,0.3);
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* 地图区域 */
+    .map-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px var(--shadow);
+      overflow: hidden;
+      margin-top: 40px;
+    }
+    .map-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .map-container {
+      height: 350px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+
+    /* 分公司 */
+    .branches-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+    }
+    .branches-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .branch-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    .branch-card h4 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .branch-card p {
+      font-size: 0.88rem;
+      color: var(--text-gray);
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    /* FAQ */
+    .faq-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+    .faq-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px var(--shadow);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: var(--bg); }
+    .faq-question .toggle { color: var(--primary); font-size: 0.8rem; transition: transform 0.3s; }
+    .faq-item.open .faq-question .toggle { transform: rotate(45deg); }
+    .faq-answer {
+      display: none;
+      padding: 0 20px 14px;
+      font-size: 0.88rem;
+      color: var(--text-gray);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    .top-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar-right { display: flex; gap: 12px; }
+    .top-bar-right a { color: rgba(255,255,255,0.8); }
+    .top-bar-right a:hover { color: white; }
+    .top-bar-right span { color: rgba(255,255,255,0.4); }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .form-group-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .qr-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .qr-item img { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部信息栏 -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span>📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com</span>
+      <span class="top-bar-right">
+        <a href="contact_new.html">联系我们</a>
+        <span>|</span>
+        <a href="https://github.com/TRUIR-eng" target="_blank">English</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- 导航栏 -->
+  <header>
+    <div class="header-inner">
+      <a href="index_new.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
+      <div class="header-brand">
+        <h1>TR<span>U</span>IR <em>腾瑞仪器</em></h1>
+        <p>涂料检测仪器专业制造商</p>
+      </div>
+      <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+      <nav id="mainNav">
+        <a href="index_new.html">首页</a>
+        <a href="products_new.html">检测仪器</a>
+        <a href="documents.html">标准下载</a>
+        <a href="about.html">关于我们</a>
+        <a href="contact_new.html" class="active">联系我们</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页面标题 -->
+  <div class="page-header">
+    <h1>📞 联系我们</h1>
+    <p>专业的销售团队和技术支持团队为您提供全程服务</p>
+  </div>
+
+  <!-- 联系内容 -->
+  <div class="contact-layout">
+    <!-- 左侧：联系信息和表单 -->
+    <div>
+      <!-- 联系信息 -->
+      <div class="contact-info-card">
+        <div class="contact-info-header">🏢 公司信息</div>
+        <div class="contact-info-body">
+          <div class="info-item">
+            <div class="info-icon">🏭</div>
+            <div class="info-content">
+              <h4>公司名称</h4>
+              <p>腾瑞仪器（广州）有限公司</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h4>公司地址</h4>
+              <p>广州市增城区宁西街香山大道44号8号楼1单元1201</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-content">
+              <h4>销售热线</h4>
+              <p><a href="tel:020-31706520">020-31706520</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-content">
+              <h4>电子邮箱</h4>
+              <p><a href="mailto:sales@gztruit.com">sales@gztruit.com</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🌐</div>
+            <div class="info-content">
+              <h4>官方网站</h4>
+              <p><a href="https://www.gztruit.com">www.gztruit.com</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">⏰</div>
+            <div class="info-content">
+              <h4>工作时间</h4>
+              <p>周一至周五 9:00-18:00<br>周六 9:00-12:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 二维码 -->
+      <div class="qr-section">
+        <h3>📱 扫码联系 / Scan to Contact</h3>
+        <div class="qr-grid">
+          <div class="qr-item">
+            <img src="qr-wechat.png" alt="微信公众号" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div style="width:100px;height:100px;background:#f0f0f0;border-radius:8px;display:none;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 8px;">📱</div>
+            <p>国内联系<br>公众号/销售微信</p>
+          </div>
+          <div class="qr-item">
+            <img src="whatsapp_qr.png" alt="WhatsApp" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div style="width:100px;height:100px;background:#f0f0f0;border-radius:8px;display:none;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 8px;">💬</div>
+            <p>外贸联系<br>Wechat / WhatsApp</p>
+          </div>
+          <div class="qr-item">
+            <img src="qr-sales-1.png" alt="销售顾问1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div style="width:100px;height:100px;background:#f0f0f0;border-radius:8px;display:none;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 8px;">👤</div>
+            <p>销售顾问 - 小陈</p>
+          </div>
+          <div class="qr-item">
+            <img src="qr-sales-2.png" alt="销售顾问2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div style="width:100px;height:100px;background:#f0f0f0;border-radius:8px;display:none;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 8px;">👤</div>
+            <p>销售顾问 - 小林</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧：联系表单 -->
+    <div>
+      <div class="contact-form-card">
+        <div class="contact-form-header">✉️ 在线留言 / Online Message</div>
+        <div class="contact-form-body">
+          <form id="contactForm" onsubmit="submitContactForm(event)">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label>您的姓名 / Name <span>*</span></label>
+                <input type="text" name="name" placeholder="请输入您的姓名" required>
+              </div>
+              <div class="form-group">
+                <label>公司名称 / Company</label>
+                <input type="text" name="company" placeholder="请输入公司名称">
+              </div>
+            </div>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label>联系电话 / Phone <span>*</span></label>
+                <input type="tel" name="phone" placeholder="请输入联系电话" required>
+              </div>
+              <div class="form-group">
+                <label>邮箱 / Email <span>*</span></label>
+                <input type="email" name="email" placeholder="请输入邮箱地址" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>咨询类型 / Inquiry Type</label>
+              <select name="type">
+                <option value="product">产品询价 / Product Inquiry</option>
+                <option value="tech">技术支持 / Technical Support</option>
+                <option value="price">报价咨询 / Price Consultation</option>
+                <option value="order">订单跟进 / Order Status</option>
+                <option value="other">其他 / Others</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>产品型号 / Product Model</label>
+              <input type="text" name="model" placeholder="如：TR 1001/1（选填）">
+            </div>
+            <div class="form-group">
+              <label>留言内容 / Message <span>*</span></label>
+              <textarea name="message" rows="5" placeholder="请详细描述您的需求，我们会尽快回复您..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit-btn">📤 提交留言 / Submit Message</button>
+            <p class="form-note">提交后我们将尽快与您联系，通常在1个工作日内回复</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 地图 -->
+  <div class="container" style="padding-bottom:40px;">
+    <div class="map-section">
+      <div class="map-header">📍 公司位置 / Location</div>
+      <div class="map-container">
+        <div style="text-align:center;">
+          <p style="font-size:1.5rem;margin-bottom:8px;">📍</p>
+          <p>广州市增城区宁西街香山大道44号8号楼1单元1201</p>
+          <p style="margin-top:8px;font-size:0.85rem;color:var(--text-light);">（地图可通过百度地图或高德地图搜索"腾瑞仪器"查看）</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 分公司 -->
+  <div class="branches-section">
+    <div class="branches-title">🏢 分公司 / Branches</div>
+    <div class="branches-grid">
+      <div class="branch-card">
+        <h4>🇨🇳 广州总部</h4>
+        <p>📍 广州市增城区宁西街香山大道44号8号楼1单元1201</p>
+        <p>📞 020-31706520</p>
+        <p>📧 sales@gztruit.com</p>
+      </div>
+      <div class="branch-card">
+        <h4>🇨🇳 上海办事处</h4>
+        <p>📍 上海市青浦区朱枫公路1111号8楼601室</p>
+        <p>📞 021-XXXX-XXXX</p>
+        <p>📧 shanghai@gztruit.com</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="faq-title">❓ 常见问题 / FAQ</div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>产品交货周期一般是多久？</span>
+        <span class="toggle">+</span>
+      </div>
+      <div class="faq-answer">常规产品有库存，付款后3-7个工作日发货。定制产品根据具体规格，交货周期为15-30天。具体时间以合同约定为准。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>产品有质保期吗？</span>
+        <span class="toggle">+</span>
+      </div>
+      <div class="faq-answer">所有产品均提供12个月质保期（耗材除外）。质保期内如因产品质量问题导致的故障，我们提供免费维修或更换。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>支持哪些付款方式？</span>
+        <span class="toggle">+</span>
+      </div>
+      <div class="faq-answer">我们支持支付宝、微信转账、银行转账、对公账户打款等多种付款方式。外贸订单支持T/T、PayPal等国际支付方式。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>可以提供样品测试吗？</span>
+        <span class="toggle">+</span>
+      </div>
+      <div class="faq-answer">可以。部分产品支持样品测试服务，请联系我们的销售顾问了解详情。样品通常需要支付一定费用，批量采购后可抵扣货款。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>产品有出口认证吗？</span>
+        <span class="toggle">+</span>
+      </div>
+      <div class="faq-answer">我们的产品符合CE、ASTM等国际认证标准，支持外贸出口。产品远销美国、德国、日本、俄罗斯、东南亚等50多个国家和地区。</div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>TRUIT 腾瑞仪器</h3>
+          <p>专注仪器制造二十年，专业生产涂料检测仪器和实验室设备。</p>
+        </div>
+        <div class="footer-col">
+          <h4>产品分类</h4>
+          <ul>
+            <li><a href="products_new.html?cat=grind">分散/搅拌/研磨</a></li>
+            <li><a href="products_new.html?cat=raw">原料性能检验</a></li>
+            <li><a href="products_new.html?cat=film">成膜后检验</a></li>
+            <li><a href="products_new.html?cat=aging">环境老化测试</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="index_new.html">首页</a></li>
+            <li><a href="documents.html">资料下载</a></li>
+            <li><a href="contact_new.html">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>联系方式</h4>
+          <ul>
+            <li>📞 020-31706520</li>
+            <li>📧 sales@gztruit.com</li>
+            <li>🌐 www.gztruit.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 腾瑞仪器（广州）有限公司 版权所有</span>
+        <span>粤ICP备XXXXXXXX号</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 悬浮按钮 -->
+  <div class="floating-buttons">
+    <div class="float-service-btn" onclick="toggleServicePanel()">💬</div>
+    <button class="float-btn float-whatsapp" onclick="window.open('https://wa.me/8612345678901','_blank')">📱</button>
+    <button class="float-btn float-email" onclick="location.href='mailto:sales@gztruit.com'">✉️</button>
+    <button class="float-btn float-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  </div>
+
+  <!-- 客服面板 -->
+  <div class="service-panel" id="servicePanel">
+    <div class="service-panel-header">
+      <span>💬 在线咨询</span>
+      <button onclick="toggleServicePanel()">✕</button>
+    </div>
+    <div class="service-panel-body">
+      <div class="service-item">
+        <div class="service-avatar">售</div>
+        <div class="service-info"><div class="service-name">销售顾问 - 小陈</div><div class="service-status online">在线</div></div>
+        <button class="service-chat-btn" onclick="window.open('https://wa.me/8612345678901','_blank')">咨询</button>
+      </div>
+      <div class="service-item">
+        <div class="service-avatar">技</div>
+        <div class="service-info"><div class="service-name">技术支持 - 李工</div><div class="service-status online">在线</div></div>
+        <button class="service-chat-btn" onclick="window.open('mailto:sales@gztruit.com')">咨询</button>
+      </div>
+      <div class="service-item">
+        <div class="service-avatar">贸</div>
+        <div class="service-info"><div class="service-name">外贸专线 - Mary</div><div class="service-status online">在线</div></div>
+        <button class="service-chat-btn" onclick="window.open('https://wa.me/8612345678902','_blank')">咨询</button>
+      </div>
+      <div class="service-divider"></div>
+      <div class="service-contact">
+        <p>📞 热线：<strong style="color:var(--primary);font-size:1.1rem;">020-31706520</strong></p>
+        <p style="margin-top:8px;">📧 sales@gztruit.com</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .top-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar-right { display: flex; gap: 12px; }
+    .top-bar-right a { color: rgba(255,255,255,0.8); }
+    .top-bar-right a:hover { color: white; }
+    .top-bar-right span { color: rgba(255,255,255,0.4); }
+
+    .float-service-btn {
+      width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #ff6b35, #f7c948);
+      color: white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+      cursor: pointer; box-shadow: 0 4px 16px rgba(255,107,53,0.4); transition: all 0.3s;
+    }
+    .float-service-btn:hover { transform: scale(1.1); }
+    .service-panel { position: fixed; right: 80px; bottom: 20px; width: 280px; background: white; border-radius: 12px; box-shadow: 0 8px 40px rgba(0,0,0,0.15); z-index: 9998; display: none; overflow: hidden; }
+    .service-panel.show { display: block; }
+    .service-panel-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+    .service-panel-header button { background: none; border: none; color: white; cursor: pointer; }
+    .service-panel-body { padding: 12px; }
+    .service-item { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; transition: background 0.2s; }
+    .service-item:hover { background: var(--bg); }
+    .service-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
+    .service-info { flex: 1; }
+    .service-name { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+    .service-status { font-size: 0.72rem; color: #52c41a; }
+    .service-chat-btn { padding: 4px 12px; background: var(--primary); color: white; border: none; border-radius: 12px; font-size: 0.75rem; cursor: pointer; }
+    .service-divider { height: 1px; background: var(--border); margin: 8px 0; }
+    .service-contact { text-align: center; padding: 8px; font-size: 0.85rem; color: var(--text-gray); }
+
+    @media (max-width: 768px) {
+      .service-panel { right: 60px; bottom: 80px; }
+    }
+  </style>
+
+  <script>
+    // 联系表单提交
+    function submitContactForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      const msg = `【在线留言】
+姓名: ${data.get('name')}
+公司: ${data.get('company') || '未填写'}
+电话: ${data.get('phone')}
+邮箱: ${data.get('email')}
+类型: ${data.get('type')}
+产品型号: ${data.get('model') || '未填写'}
+内容: ${data.get('message')}`;
+      const encoded = encodeURIComponent(msg);
+      window.open(`https://wa.me/8612345678901?text=${encoded}`, '_blank');
+      alert('感谢您的留言！我们将尽快与您联系。');
+      form.reset();
+    }
+
+    // FAQ折叠
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      item.classList.toggle('open');
+    }
+
+    // 客服面板
+    function toggleServicePanel() {
+      document.getElementById('servicePanel').classList.toggle('show');
+    }
+
+    // 移动端菜单
+    function toggleMobileMenu() {
+      document.getElementById('mainNav').classList.toggle('mobile-open');
+    }
+  </script>
+</body>
+</html>
