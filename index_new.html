@@ -34,6 +34,28 @@
     </div>
   </div>
 
+  <!-- 搜索栏（始终吸顶） -->
+  <div class="search-bar">
+    <div class="search-bar-inner">
+      <a href="index_new.html" class="search-logo">
+        <img src="logo.png" alt="TRUIT">
+        <span>TRUIT</span>
+      </a>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="请输入产品型号或关键词，如：蔡恩杯、光泽度仪、盐雾箱..." onkeydown="handleSearch(event)">
+        <button onclick="doSearch()">🔍 搜索</button>
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
+      <div class="search-hot">
+        <span>热门：</span>
+        <a href="products_new.html?cat=raw">蔡恩杯</a>
+        <a href="products_new.html?cat=raw">光泽度仪</a>
+        <a href="products_new.html?cat=aging">盐雾箱</a>
+        <a href="products_new.html?cat=film">附着力</a>
+      </div>
+    </div>
+  </div>
+
   <!-- 导航栏 -->
   <header>
     <div class="header-inner">
@@ -41,13 +63,6 @@
       <div class="header-brand">
         <h1>TR<span>U</span>IR <em>腾瑞仪器</em></h1>
         <p>涂料检测仪器专业制造商</p>
-      </div>
-
-      <!-- 搜索框 -->
-      <div class="header-search">
-        <input type="text" id="searchInput" placeholder="请输入产品型号或关键词..." onkeydown="handleSearch(event)">
-        <button onclick="doSearch()">🔍</button>
-        <div class="search-suggestions" id="searchSuggestions"></div>
       </div>
 
       <!-- 移动端菜单按钮 -->
