@@ -4,177 +4,162 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>涂料检测仪器 | 粘度计 | 盐雾箱 | 腾瑞仪器 TRUIT</title>
-  <meta name="description" content="腾瑞仪器（广州）有限公司（TRUIT）专注仪器制造二十年，专业生产涂料检测仪器170+款：粘度计、盐雾箱、光泽度仪、测厚仪、硬度计、色差仪、分散机等，符合GB/T、ISO、ASTM标准，销往美国、德国、日本、俄罗斯等50+国家。">
-  <meta name="keywords" content="涂料检测仪器,粘度计,盐雾箱,光泽度仪,测厚仪,涂层检测,硬度计,实验室仪器">
-  <meta name="robots" content="index, follow">
-
-  <meta property="og:title" content="涂料检测仪器产品中心 | TRUIT 腾瑞仪器">
-  <meta property="og:description" content="172款涂料检测仪器，符合GB/T、ISO、ASTM标准，出口50+国家">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://truir-eng.github.io/gztruit/logo.png">
-
+  <meta name="description" content="腾瑞仪器（广州）有限公司（TRUIT）专注仪器制造二十年，专业生产涂料检测仪器170+款：粘度计、盐雾箱、光泽度仪、硬度计、色差仪等，符合GB/T、ISO、ASTM标准，出口50+国家。">
+  <meta name="keywords" content="涂料检测仪器,粘度计,盐雾箱,光泽度仪,测厚仪,涂层检测,硬度计">
   <link rel="canonical" href="https://truir-eng.github.io/gztruit/products.html">
   <link rel="stylesheet" href="style_new.css">
-
   <style>
-    /* 产品页专属样式 */
+    /* ===== 产品页布局 ===== */
     .page-header {
       background: linear-gradient(135deg, #003d6b 0%, #005A9C 50%, #0070C0 100%);
       color: white;
       padding: 56px 0 48px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
-    .page-header::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -10%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(146,208,80,0.08) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    .page-header h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-      position: relative;
-    }
-    .page-header p {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.8);
-      position: relative;
-    }
+    .page-header h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+    .page-header p { color: rgba(255,255,255,0.8); font-size: 1rem; }
     .page-header .stat-row {
       display: flex;
       justify-content: center;
-      gap: 32px;
-      margin-top: 24px;
+      gap: 16px;
+      margin-top: 20px;
       flex-wrap: wrap;
     }
     .page-header .stat-item {
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.2);
-      padding: 10px 20px;
-      border-radius: 24px;
-      font-size: 0.9rem;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
     }
-    .page-header .stat-item strong {
-      color: #92D050;
+    .page-header .stat-item strong { color: #92D050; font-weight: 700; }
+
+    /* ===== 页面主体布局 ===== */
+    .page-body {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 24px;
+    }
+
+    /* ===== 左侧分类导航 ===== */
+    .left-sidebar { position: sticky; top: 88px; height: fit-content; }
+    .cat-nav {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .cat-nav-header {
+      background: linear-gradient(135deg, #005A9C, #0070C0);
+      color: white;
+      padding: 14px 16px;
       font-weight: 700;
+      font-size: 1rem;
     }
+    .cat-nav-list { list-style: none; padding: 0; margin: 0; }
+    .cat-nav-item { border-bottom: 1px solid #E8ECF0; }
+    .cat-nav-item:last-child { border-bottom: none; }
+    .cat-nav-item > a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      font-size: 0.88rem;
+      color: #1A1A1A;
+      transition: all 0.2s;
+    }
+    .cat-nav-item > a:hover { background: #F5F7FA; color: #005A9C; }
+    .cat-nav-item.active > a {
+      background: rgba(0,90,156,0.08);
+      color: #005A9C;
+      font-weight: 600;
+      border-left: 3px solid #005A9C;
+    }
+    .cat-nav-item .arrow { font-size: 0.7rem; color: #999; transition: transform 0.2s; }
+    .cat-nav-item.open .arrow { transform: rotate(90deg); }
+    .cat-nav-sub { display: none; background: #F5F7FA; list-style: none; padding: 0; margin: 0; }
+    .cat-nav-item.open .cat-nav-sub { display: block; }
+    .cat-nav-sub li a {
+      display: block;
+      padding: 8px 16px 8px 32px;
+      font-size: 0.82rem;
+      color: #666;
+      transition: all 0.2s;
+    }
+    .cat-nav-sub li a:hover, .cat-nav-sub li.active a { color: #005A9C; background: rgba(0,90,156,0.05); }
+
+    /* ===== 右侧内容区 ===== */
+    .main-products { min-width: 0; }
 
     /* 筛选栏 */
     .filter-bar {
-      background: var(--white);
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 72px;
-      z-index: 99;
-      box-shadow: 0 2px 8px var(--shadow);
+      background: white;
+      padding: 12px 0;
+      border-bottom: 1px solid #E8ECF0;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
-    .filter-inner {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .filter-label {
-      font-size: 0.85rem;
-      color: var(--text-gray);
-      font-weight: 500;
-    }
+    .filter-inner { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .filter-label { font-size: 0.82rem; color: #666; font-weight: 500; }
     .filter-btn {
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      border: 1px solid var(--border);
-      background: var(--white);
-      color: var(--text);
+      padding: 5px 14px;
+      border-radius: 16px;
+      font-size: 0.82rem;
+      border: 1px solid #E8ECF0;
+      background: white;
+      color: #333;
       cursor: pointer;
-      transition: all var(--transition);
+      transition: all 0.2s;
     }
-    .filter-btn:hover, .filter-btn.active {
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
-    }
+    .filter-btn:hover, .filter-btn.active { background: #005A9C; color: white; border-color: #005A9C; }
 
     /* 产品网格 */
     .products-grid-new {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      gap: 20px;
-      padding: 32px 0 60px;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
     }
 
     /* 产品卡片 */
     .prod-card {
-      background: var(--white);
-      border-radius: var(--radius);
+      background: white;
+      border-radius: 10px;
       overflow: hidden;
-      transition: all var(--transition);
-      box-shadow: 0 2px 12px var(--shadow);
+      transition: all 0.3s;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
       display: flex;
       flex-direction: column;
     }
-    .prod-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px var(--shadow-lg);
-    }
+    .prod-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
     .prod-card-img {
-      height: 170px;
-      background: linear-gradient(135deg, #f0f4f8 0%, #dde4ec 100%);
+      height: 160px;
+      background: linear-gradient(135deg, #f0f4f8, #dde4ec);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3.5rem;
-      color: var(--text-light);
+      font-size: 3rem;
+      color: #ccc;
       position: relative;
-      overflow: hidden;
-    }
-    .prod-card-img .placeholder-icon { }
-    .prod-card-img .has-img {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
     }
     .prod-card-img .prod-cat-badge {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      background: var(--primary);
+      top: 8px;
+      left: 8px;
+      background: #005A9C;
       color: white;
-      font-size: 0.72rem;
-      padding: 3px 10px;
+      font-size: 0.7rem;
+      padding: 2px 8px;
       border-radius: 10px;
-      font-weight: 500;
     }
-    .prod-card-body {
-      padding: 16px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .prod-card-model {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-    .prod-card-name {
-      font-size: 0.9rem;
-      color: var(--text);
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
+    .prod-card-body { padding: 14px; flex: 1; display: flex; flex-direction: column; }
+    .prod-card-model { font-size: 0.9rem; font-weight: 700; color: #005A9C; }
+    .prod-card-name { font-size: 0.88rem; color: #1A1A1A; margin: 4px 0; font-weight: 600; }
     .prod-card-desc {
-      font-size: 0.82rem;
-      color: var(--text-gray);
+      font-size: 0.8rem;
+      color: #666;
       line-height: 1.5;
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -182,82 +167,57 @@
       overflow: hidden;
       flex: 1;
     }
-    .prod-card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-top: 10px;
-    }
+    .prod-card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
     .prod-card-tag {
-      background: var(--bg);
-      color: var(--primary);
+      background: #F5F7FA;
+      color: #005A9C;
       padding: 2px 8px;
-      border-radius: 10px;
+      border-radius: 8px;
       font-size: 0.72rem;
       font-weight: 500;
     }
-    .prod-card-actions {
-      display: flex;
-      gap: 8px;
-      margin-top: 12px;
-    }
+    .prod-card-actions { display: flex; gap: 8px; margin-top: 10px; }
     .prod-btn {
       flex: 1;
-      padding: 8px 12px;
-      border-radius: var(--radius-sm);
+      padding: 7px 10px;
+      border-radius: 6px;
       text-align: center;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      transition: all var(--transition);
+      transition: all 0.2s;
       cursor: pointer;
       text-decoration: none;
       display: block;
     }
-    .prod-btn-detail {
-      background: var(--primary);
-      color: white;
-    }
-    .prod-btn-detail:hover {
-      background: var(--primary-dark);
-    }
-    .prod-btn-doc {
-      background: var(--bg);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-    .prod-btn-doc:hover {
-      border-color: var(--primary);
-      color: var(--primary);
+    .prod-btn-detail { background: #005A9C; color: white; }
+    .prod-btn-detail:hover { background: #003d6b; }
+    .prod-btn-doc { background: #F5F7FA; color: #333; border: 1px solid #E8ECF0; }
+    .prod-btn-doc:hover { border-color: #005A9C; color: #005A9C; }
+
+    .results-info { font-size: 0.85rem; color: #666; margin-bottom: 12px; }
+
+    /* 移动端分类切换 */
+    .mobile-cat-toggle {
+      display: none;
+      background: white;
+      border: 1px solid #E8ECF0;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.88rem;
+      cursor: pointer;
+      margin-bottom: 12px;
+      width: 100%;
+      text-align: left;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    /* 无结果 */
-    .no-results {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text-gray);
-    }
-    .no-results h3 { font-size: 1.2rem; margin-bottom: 8px; }
-
-    /* 产品数量 */
-    .results-info {
-      padding: 16px 0 0;
-      font-size: 0.85rem;
-      color: var(--text-gray);
-    }
-
-    @media (max-width: 768px) {
-      .page-header h1 { font-size: 1.8rem; }
-      .filter-bar { top: 60px; }
-      .filter-inner { gap: 6px; }
-      .filter-btn { padding: 5px 12px; font-size: 0.8rem; }
+    @media (max-width: 900px) {
+      .page-body { grid-template-columns: 1fr; }
+      .left-sidebar { display: none; }
+      .left-sidebar.mobile-show { display: block; position: static; }
+      .mobile-cat-toggle { display: flex; }
       .products-grid-new { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .prod-card-img { height: 130px; font-size: 2.5rem; }
-      .prod-card-body { padding: 12px; }
-      .prod-card-model { font-size: 0.85rem; }
-      .prod-card-name { font-size: 0.82rem; }
-      .prod-card-desc { font-size: 0.75rem; }
-      .prod-card-actions { flex-direction: column; }
-      .prod-btn { text-align: center; }
     }
     @media (max-width: 480px) {
       .products-grid-new { grid-template-columns: 1fr; }
@@ -268,7 +228,14 @@
 
   <!-- 顶部信息栏 -->
   <div class="top-bar">
-    📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com &nbsp;|&nbsp; 专注仪器制造二十年
+    <div class="top-bar-inner">
+      <span>📞 020-31706520 &nbsp;|&nbsp; 📧 sales@gztruit.com &nbsp;|&nbsp; 🌐 www.gztruit.com</span>
+      <span class="top-bar-right">
+        <a href="contact_new.html">联系我们</a>
+        <span>|</span>
+        <a href="https://github.com/TRUIR-eng" target="_blank">English</a>
+      </span>
+    </div>
   </div>
 
   <!-- 导航栏 -->
@@ -276,56 +243,129 @@
     <div class="header-inner">
       <a href="index_new.html"><img src="logo.png" alt="TRUIT" class="header-logo"></a>
       <div class="header-brand">
-        <h1>TR<span>U</span>IR 腾瑞仪器</h1>
+        <h1>TR<span>U</span>IR <em>腾瑞仪器</em></h1>
         <p>涂料检测仪器专业制造商</p>
       </div>
       <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
       <nav id="mainNav">
         <a href="index_new.html">首页</a>
-        <a href="index_new.html#features">核心技术</a>
         <a href="products_new.html" class="active">检测仪器</a>
-        <a href="index_new.html#about">关于我们</a>
-        <a href="index_new.html#contact">联系我们</a>
+        <a href="documents.html">标准下载</a>
+        <a href="about.html">关于我们</a>
+        <a href="contact_new.html">联系我们</a>
       </nav>
     </div>
   </header>
 
   <!-- 页面标题 -->
   <div class="page-header">
-    <div class="container">
-      <h1>🧪 检测仪器产品中心</h1>
-      <p>覆盖涂料、油墨、印刷、食品、制药、建材、冶金、化工等行业全流程检测需求</p>
-      <div class="stat-row">
-        <div class="stat-item"><strong>172+</strong> 款产品</div>
-        <div class="stat-item"><strong>6</strong> 大产品系列</div>
-        <div class="stat-item"><strong>50+</strong> 出口国家</div>
-        <div class="stat-item"><strong>ISO</strong> 质量认证</div>
-      </div>
+    <h1>🧪 检测仪器产品中心</h1>
+    <p>覆盖涂料、油墨、印刷、食品、制药、建材、冶金、化工等行业全流程检测需求</p>
+    <div class="stat-row">
+      <div class="stat-item"><strong>172+</strong> 款产品</div>
+      <div class="stat-item"><strong>6</strong> 大产品系列</div>
+      <div class="stat-item"><strong>50+</strong> 出口国家</div>
+      <div class="stat-item"><strong>ISO</strong> 质量认证</div>
     </div>
   </div>
 
-  <!-- 筛选栏 -->
-  <div class="filter-bar">
-    <div class="container">
-      <div class="filter-inner">
-        <span class="filter-label">分类：</span>
-        <button class="filter-btn active" onclick="filterProducts('all')">全部</button>
-        <button class="filter-btn" onclick="filterProducts('grind')">⚙️ 分散/搅拌/研磨</button>
-        <button class="filter-btn" onclick="filterProducts('raw')">🧪 原料性能检验</button>
-        <button class="filter-btn" onclick="filterProducts('film')">📏 成膜后检验</button>
-        <button class="filter-btn" onclick="filterProducts('lab')">🔬 实验室通用仪器</button>
-        <button class="filter-btn" onclick="filterProducts('aging')">☀️ 环境老化测试</button>
-        <button class="filter-btn" onclick="filterProducts('consum')">📋 标准耗材配件</button>
-      </div>
-    </div>
+  <!-- 移动端分类切换 -->
+  <div class="container" style="padding-top:16px;">
+    <button class="mobile-cat-toggle" onclick="document.querySelector('.left-sidebar').classList.toggle('mobile-show')">
+      <span>📂 产品分类导航</span>
+      <span>▼</span>
+    </button>
   </div>
 
-  <!-- 产品列表 -->
-  <div class="container">
-    <div class="results-info" id="resultsInfo">共 172 款产品</div>
+  <!-- 主体 -->
+  <div class="page-body">
+    <!-- 左侧分类导航 -->
+    <aside class="left-sidebar">
+      <div class="cat-nav">
+        <div class="cat-nav-header">📂 产品分类</div>
+        <ul class="cat-nav-list">
+          <li class="cat-nav-item active" id="nav-all">
+            <a href="javascript:filterProducts('all')">全部产品</a>
+          </li>
+          <li class="cat-nav-item" id="nav-grind">
+            <a href="javascript:void(0)">⚙️ 分散/搅拌/研磨 <span class="arrow">▶</span></a>
+            <ul class="cat-nav-sub">
+              <li><a href="javascript:filterProducts('grind')">高速分散机</a></li>
+              <li><a href="javascript:filterProducts('grind')">实验室搅拌机</a></li>
+              <li><a href="javascript:filterProducts('grind')">三辊研磨机</a></li>
+            </ul>
+          </li>
+          <li class="cat-nav-item" id="nav-raw">
+            <a href="javascript:void(0)">🧪 原料性能检验 <span class="arrow">▶</span></a>
+            <ul class="cat-nav-sub">
+              <li><a href="javascript:filterProducts('raw')">蔡恩杯/粘度杯</a></li>
+              <li><a href="javascript:filterProducts('raw')">刮板细度计</a></li>
+              <li><a href="javascript:filterProducts('raw')">旋转粘度计</a></li>
+              <li><a href="javascript:filterProducts('raw')">光泽度仪</a></li>
+              <li><a href="javascript:filterProducts('raw')">色差仪</a></li>
+              <li><a href="javascript:filterProducts('raw')">摆杆硬度计</a></li>
+            </ul>
+          </li>
+          <li class="cat-nav-item" id="nav-film">
+            <a href="javascript:void(0)">📏 成膜后检验 <span class="arrow">▶</span></a>
+            <ul class="cat-nav-sub">
+              <li><a href="javascript:filterProducts('film')">附着力测试仪</a></li>
+              <li><a href="javascript:filterProducts('film')">耐磨仪</a></li>
+              <li><a href="javascript:filterProducts('film')">制备器/刮膜器</a></li>
+              <li><a href="javascript:filterProducts('film')">筛网框架</a></li>
+            </ul>
+          </li>
+          <li class="cat-nav-item" id="nav-lab">
+            <a href="javascript:void(0)">🔬 实验室通用仪器 <span class="arrow">▶</span></a>
+            <ul class="cat-nav-sub">
+              <li><a href="javascript:filterProducts('lab')">干燥箱/烘箱</a></li>
+              <li><a href="javascript:filterProducts('lab')">电子天平</a></li>
+              <li><a href="javascript:filterProducts('lab')">酸度计/电导率仪</a></li>
+              <li><a href="javascript:filterProducts('lab')">离心机</a></li>
+            </ul>
+          </li>
+          <li class="cat-nav-item" id="nav-aging">
+            <a href="javascript:void(0)">☀️ 环境老化测试 <span class="arrow">▶</span></a>
+            <ul class="cat-nav-sub">
+              <li><a href="javascript:filterProducts('aging')">紫外线老化试验箱</a></li>
+              <li><a href="javascript:filterProducts('aging')">盐雾试验箱</a></li>
+              <li><a href="javascript:filterProducts('aging')">恒温恒湿箱</a></li>
+            </ul>
+          </li>
+          <li class="cat-nav-item" id="nav-consum">
+            <a href="javascript:void(0)">📋 标准耗材配件 <span class="arrow">▶</span></a>
+            <ul class="cat-nav-sub">
+              <li><a href="javascript:filterProducts('consum')">刮刀配件</a></li>
+              <li><a href="javascript:filterProducts('consum')">涂膜器刮刀</a></li>
+              <li><a href="javascript:filterProducts('consum')">标准色卡</a></li>
+              <li><a href="javascript:filterProducts('consum')">滤膜/滤纸</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
 
-    <div class="products-grid-new" id="productsGrid">
-      <!-- 产品由JS动态渲染 -->
+    <!-- 右侧产品列表 -->
+    <div class="main-products">
+      <!-- 顶部筛选栏 -->
+      <div class="filter-bar">
+        <div class="filter-inner">
+          <span class="filter-label">分类：</span>
+          <button class="filter-btn active" onclick="filterProducts('all')">全部</button>
+          <button class="filter-btn" onclick="filterProducts('grind')">⚙️ 分散/搅拌/研磨</button>
+          <button class="filter-btn" onclick="filterProducts('raw')">🧪 原料性能检验</button>
+          <button class="filter-btn" onclick="filterProducts('film')">📏 成膜后检验</button>
+          <button class="filter-btn" onclick="filterProducts('lab')">🔬 实验室通用仪器</button>
+          <button class="filter-btn" onclick="filterProducts('aging')">☀️ 环境老化测试</button>
+          <button class="filter-btn" onclick="filterProducts('consum')">📋 标准耗材配件</button>
+        </div>
+      </div>
+
+      <div class="results-info" id="resultsInfo">共 172 款产品</div>
+
+      <div class="products-grid-new" id="productsGrid">
+        <!-- 产品由JS动态渲染 -->
+      </div>
     </div>
   </div>
 
@@ -351,7 +391,7 @@
           <ul>
             <li><a href="index_new.html">首页</a></li>
             <li><a href="documents.html">资料下载</a></li>
-            <li><a href="index_new.html#contact">联系我们</a></li>
+            <li><a href="contact_new.html">联系我们</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -372,27 +412,82 @@
 
   <!-- 悬浮咨询按钮 -->
   <div class="floating-buttons">
-    <button class="float-btn float-wechat" onclick="toggleWechat()" title="微信联系">💬</button>
-    <a href="https://wa.me/8612345678901" class="float-btn float-whatsapp" target="_blank" title="WhatsApp">📱</a>
-    <a href="mailto:sales@gztruit.com" class="float-btn float-email" title="邮件联系">✉️</a>
-    <button class="float-btn float-top" onclick="scrollToTop()" title="返回顶部">↑</button>
+    <div class="float-service-btn" onclick="toggleServicePanel()">💬</div>
+    <button class="float-btn float-whatsapp" onclick="window.open('https://wa.me/8612345678901','_blank')">📱</button>
+    <button class="float-btn float-email" onclick="location.href='mailto:sales@gztruit.com'">✉️</button>
+    <button class="float-btn float-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
   </div>
 
-  <!-- 微信弹窗 -->
-  <div class="wechat-popup" id="wechatPopup">
-    <img src="qr-wechat.png" alt="微信二维码" onerror="this.parentElement.style.display='none'">
-    <p>长按识别二维码<br>添加销售顾问</p>
+  <!-- 客服面板 -->
+  <div class="service-panel" id="servicePanel">
+    <div class="service-panel-header">
+      <span>💬 在线咨询</span>
+      <button onclick="toggleServicePanel()">✕</button>
+    </div>
+    <div class="service-panel-body">
+      <div class="service-item">
+        <div class="service-avatar">售</div>
+        <div class="service-info"><div class="service-name">销售顾问 - 小陈</div><div class="service-status">在线</div></div>
+        <button class="service-chat-btn" onclick="window.open('https://wa.me/8612345678901','_blank')">咨询</button>
+      </div>
+      <div class="service-item">
+        <div class="service-avatar">技</div>
+        <div class="service-info"><div class="service-name">技术支持 - 李工</div><div class="service-status">在线</div></div>
+        <button class="service-chat-btn" onclick="window.open('mailto:sales@gztruit.com')">咨询</button>
+      </div>
+      <div class="service-divider"></div>
+      <div class="service-contact">
+        <p>📞 热线：<strong style="color:#005A9C;font-size:1.1rem;">020-31706520</strong></p>
+        <p style="margin-top:8px;">📧 sales@gztruit.com</p>
+      </div>
+    </div>
   </div>
+
+  <style>
+    .top-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar-right { display: flex; gap: 12px; }
+    .top-bar-right a { color: rgba(255,255,255,0.8); }
+    .top-bar-right a:hover { color: white; }
+    .top-bar-right span { color: rgba(255,255,255,0.4); }
+    .float-service-btn {
+      width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #ff6b35, #f7c948);
+      color: white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+      cursor: pointer; box-shadow: 0 4px 16px rgba(255,107,53,0.4); transition: all 0.3s;
+    }
+    .float-service-btn:hover { transform: scale(1.1); }
+    .service-panel { position: fixed; right: 80px; bottom: 20px; width: 280px; background: white; border-radius: 12px; box-shadow: 0 8px 40px rgba(0,0,0,0.15); z-index: 9998; display: none; overflow: hidden; }
+    .service-panel.show { display: block; }
+    .service-panel-header { background: linear-gradient(135deg, #005A9C, #0070C0); color: white; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+    .service-panel-header button { background: none; border: none; color: white; cursor: pointer; }
+    .service-panel-body { padding: 12px; }
+    .service-item { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; transition: background 0.2s; }
+    .service-item:hover { background: #F5F7FA; }
+    .service-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #005A9C, #00A650); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
+    .service-info { flex: 1; }
+    .service-name { font-size: 0.85rem; font-weight: 600; color: #1A1A1A; }
+    .service-status { font-size: 0.72rem; color: #52c41a; }
+    .service-chat-btn { padding: 4px 12px; background: #005A9C; color: white; border: none; border-radius: 12px; font-size: 0.75rem; cursor: pointer; }
+    .service-divider { height: 1px; background: #E8ECF0; margin: 8px 0; }
+    .service-contact { text-align: center; padding: 8px; font-size: 0.85rem; color: #666; }
+    @media (max-width: 768px) {
+      .service-panel { right: 60px; bottom: 80px; }
+      .float-service-btn { width: 46px; height: 46px; font-size: 1.2rem; }
+    }
+  </style>
 
   <script>
     // ===== 产品数据 =====
     const allProducts = [
-      // 分散/搅拌/研磨
       { model: 'TR 2001', name: '高速分散机', desc: '颜料、填料分散搅拌，调速功能，适用涂料、油墨行业', tags: ['调速', '不锈钢', '分散'], cat: 'grind', catName: '分散/搅拌/研磨', icon: '⚙️' },
       { model: 'TR 2002', name: '实验室搅拌机', desc: '样品搅拌、均质，数显操作，高效混合', tags: ['数显', '均质', '实验'], cat: 'grind', catName: '分散/搅拌/研磨', icon: '⚙️' },
       { model: 'TR 2003', name: '三辊研磨机', desc: '精细研磨，涂料油墨专用设备，精度高', tags: ['三辊', '精磨', '油墨'], cat: 'grind', catName: '分散/搅拌/研磨', icon: '⚙️' },
-
-      // 原料性能检验
       { model: 'TR 1001/1', name: '蔡恩杯 TR 1001/1', desc: '测定牛顿型液体粘度，符合ASTM D 4212标准', tags: ['ASTM D4212', '粘度', '不锈钢'], cat: 'raw', catName: '原料性能检验', icon: '🧪' },
       { model: 'TR 1001/2', name: '蔡恩杯 TR 1001/2', desc: '测定牛顿型液体粘度，符合ASTM D 4212标准', tags: ['ASTM D4212', '粘度', 'φ2.74mm'], cat: 'raw', catName: '原料性能检验', icon: '🧪' },
       { model: 'TR 1001/3', name: '蔡恩杯 TR 1001/3', desc: '测定牛顿型液体粘度，适用中粘度产品', tags: ['ASTM D4212', '中粘', 'φ3.76mm'], cat: 'raw', catName: '原料性能检验', icon: '🧪' },
@@ -405,27 +500,19 @@
       { model: 'TR 1401', name: '光泽度仪', desc: '涂层表面光泽度，多角度测量，符合ISO 2813', tags: ['ISO 2813', '多角度', '光泽'], cat: 'raw', catName: '原料性能检验', icon: '🧪' },
       { model: 'TR 1501', name: '色差仪', desc: '测量颜色差异，CIE Lab色空间，高精度', tags: ['CIE Lab', '色差', '高精度'], cat: 'raw', catName: '原料性能检验', icon: '🧪' },
       { model: 'TR 1601', name: '摆杆硬度计', desc: '涂层硬度测量，符合GB/T 1730标准', tags: ['GB/T 1730', '硬度', '摆杆'], cat: 'raw', catName: '原料性能检验', icon: '🧪' },
-
-      // 成膜后检验
       { model: 'TR 3007/80', name: '框形制备器 TR 3007/80', desc: '实验室样品涂布制备，有效宽度80mm', tags: ['80mm', '制备', '不锈钢'], cat: 'film', catName: '成膜后检验', icon: '📏' },
       { model: 'TR 3008/60/3', name: '框形制备器 TR 3008/60/3', desc: '多种厚度规格，优质耐磨耐腐蚀合金钢', tags: ['25/50/75/100μm', '可调', '耐磨'], cat: 'film', catName: '成膜后检验', icon: '📏' },
       { model: 'TR 3101/100', name: '筛网框架 TR 3101/100', desc: '有效长度100mm，用于筛分检测', tags: ['100mm', '筛网', '可调'], cat: 'film', catName: '成膜后检验', icon: '📏' },
       { model: 'TR 3101/200', name: '筛网框架 TR 3101/200', desc: '有效长度200mm，用于筛分检测', tags: ['200mm', '筛网', '可调'], cat: 'film', catName: '成膜后检验', icon: '📏' },
       { model: 'TR 1701', name: '附着力测试仪', desc: '涂层附着力测试，符合ISO/ASTM标准', tags: ['ISO', 'ASTM', '附着力'], cat: 'film', catName: '成膜后检验', icon: '📏' },
       { model: 'TR 1801', name: '耐磨仪', desc: '涂层耐磨及抗冲击测试，符合ASTM D4060', tags: ['ASTM D4060', '耐磨', '冲击'], cat: 'film', catName: '成膜后检验', icon: '📏' },
-
-      // 实验室通用仪器
       { model: 'TR 4001', name: '干燥箱/烘箱', desc: '恒温干燥、固化、老化试验，鼓风干燥', tags: ['鼓风干燥', '恒温', '老化'], cat: 'lab', catName: '实验室通用仪器', icon: '🔬' },
       { model: 'TR 4002', name: '电子天平', desc: '高精度称量，精度0.001g', tags: ['0.001g', '高精度', '称量'], cat: 'lab', catName: '实验室通用仪器', icon: '🔬' },
       { model: 'TR 4003', name: '酸度计/电导率仪', desc: 'pH值和电导率测量，数显操作', tags: ['数显', 'pH', '电导率'], cat: 'lab', catName: '实验室通用仪器', icon: '🔬' },
       { model: 'TR 4004', name: '离心机', desc: '样品分离处理，台式设计', tags: ['台式', '分离', '实验'], cat: 'lab', catName: '实验室通用仪器', icon: '🔬' },
-
-      // 环境老化测试
       { model: 'TR 5001', name: '紫外线老化试验箱', desc: '模拟阳光紫外线照射测试，UV老化', tags: ['UV老化', '耐候', '测试'], cat: 'aging', catName: '环境老化测试', icon: '☀️' },
       { model: 'TR 5002', name: '盐雾试验箱', desc: '模拟海洋盐雾腐蚀环境，符合ASTM B117', tags: ['ASTM B117', '盐雾', '腐蚀'], cat: 'aging', catName: '环境老化测试', icon: '☀️' },
       { model: 'TR 5003', name: '恒温恒湿箱', desc: '温湿度环境控制，可编程控制', tags: ['可编程', '恒温', '恒湿'], cat: 'aging', catName: '环境老化测试', icon: '☀️' },
-
-      // 标准耗材配件
       { model: 'TR 1218', name: '刮刀配件 TR 1218', desc: '适配TR 1201/1202/1203系列', tags: ['配件', '刮刀', '适配'], cat: 'consum', catName: '标准耗材配件', icon: '📋' },
       { model: 'TR 3099', name: '涂膜器刮刀', desc: '多种宽度规格，不锈钢材质', tags: ['不锈钢', '多种规格', '刮刀'], cat: 'consum', catName: '标准耗材配件', icon: '📋' },
       { model: 'TR 6099', name: '标准色卡/比色皿', desc: '颜色对比标准工具', tags: ['标准色', '比色', '工具'], cat: 'consum', catName: '标准耗材配件', icon: '📋' },
@@ -437,37 +524,27 @@
     function renderProducts(filter) {
       const grid = document.getElementById('productsGrid');
       const info = document.getElementById('resultsInfo');
-
-      let products = filter === 'all'
-        ? allProducts
-        : allProducts.filter(p => p.cat === filter);
-
-      info.textContent = `共 ${products.length} 款产品`;
+      let products = filter === 'all' ? allProducts : allProducts.filter(p => p.cat === filter);
+      info.textContent = '共 ' + products.length + ' 款产品';
 
       if (products.length === 0) {
-        grid.innerHTML = `
-          <div class="no-results" style="grid-column: 1/-1;">
-            <h3>暂无该分类产品</h3>
-            <p>请联系销售顾问获取更多信息</p>
-          </div>`;
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:#666;"><h3>暂无该分类产品</h3><p>请联系销售顾问获取更多信息</p></div>';
         return;
       }
 
       grid.innerHTML = products.map(p => `
-        <div class="prod-card animate-on-scroll animated" data-cat="${p.cat}">
+        <div class="prod-card" data-cat="${p.cat}">
           <div class="prod-card-img">
-            <span class="placeholder-icon">${p.icon}</span>
+            <span>${p.icon}</span>
             <span class="prod-cat-badge">${p.catName}</span>
           </div>
           <div class="prod-card-body">
             <div class="prod-card-model">${p.model}</div>
             <div class="prod-card-name">${p.name}</div>
             <div class="prod-card-desc">${p.desc}</div>
-            <div class="prod-card-tags">
-              ${p.tags.map(t => `<span class="prod-card-tag">${t}</span>`).join('')}
-            </div>
+            <div class="prod-card-tags">${p.tags.map(t => `<span class="prod-card-tag">${t}</span>`).join('')}</div>
             <div class="prod-card-actions">
-              <a href="product.html?model=${encodeURIComponent(p.model)}" class="prod-btn prod-btn-detail">查看详情</a>
+              <a href="product_new.html?model=${encodeURIComponent(p.model)}" class="prod-btn prod-btn-detail">查看详情</a>
               <a href="documents.html" class="prod-btn prod-btn-doc">下载资料</a>
             </div>
           </div>
@@ -477,18 +554,38 @@
 
     function filterProducts(cat) {
       currentFilter = cat;
-      // 更新按钮状态
+      // 顶部筛选按钮
       document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.includes(
-          cat === 'all' ? '全部' :
-          cat === 'grind' ? '分散' :
-          cat === 'raw' ? '原料' :
-          cat === 'film' ? '成膜' :
-          cat === 'lab' ? '实验室' :
-          cat === 'aging' ? '老化' : '耗材'
-        ));
+        const labels = { all:'全部', grind:'分散', raw:'原料', film:'成膜', lab:'实验室', aging:'老化', consum:'耗材' };
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes("'" + cat + "'"));
       });
+      // 左侧导航高亮
+      document.querySelectorAll('.cat-nav-item').forEach(item => item.classList.remove('active'));
+      const activeNav = document.getElementById('nav-' + cat);
+      if (activeNav) activeNav.classList.add('active');
+      // 渲染
       renderProducts(cat);
+      // 移动端关闭侧边栏
+      document.querySelector('.left-sidebar')?.classList.remove('mobile-show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 左侧分类手风琴
+    document.querySelectorAll('.cat-nav-item > a').forEach(a => {
+      a.addEventListener('click', function() {
+        const li = this.parentElement;
+        if (li.classList.contains('open')) {
+          li.classList.remove('open');
+        } else {
+          document.querySelectorAll('.cat-nav-item.open').forEach(i => i.classList.remove('open'));
+          li.classList.add('open');
+        }
+      });
+    });
+
+    // 客服面板
+    function toggleServicePanel() {
+      document.getElementById('servicePanel').classList.toggle('show');
     }
 
     // 移动端菜单
@@ -496,25 +593,8 @@
       document.getElementById('mainNav').classList.toggle('mobile-open');
     }
 
-    // 微信弹窗
-    function toggleWechat() {
-      document.getElementById('wechatPopup').classList.toggle('show');
-    }
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.float-wechat') && !e.target.closest('.wechat-popup')) {
-        document.getElementById('wechatPopup').classList.remove('show');
-      }
-    });
-
-    // 返回顶部
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
     // 初始化
     renderProducts('all');
-
-    // URL参数处理
     const urlParams = new URLSearchParams(window.location.search);
     const catParam = urlParams.get('cat');
     if (catParam) filterProducts(catParam);
